@@ -240,13 +240,26 @@ The label “Full-Stack Systems Engineer” should not currently be used as a fo
 
 **Working title:** Booking API
 
-**Status:** Functional MVP; ongoing learning project.
+**Status:** Coherent source-level functional-MVP candidate; runtime state unverified.
 
 **Project type:** Individual backend engineering project.
 
+**Maturity:** Educational backend MVP; not production-ready.
+
+**Internal verification context:** Static read-only audit of repository `https://github.com/nattapong18-en/booking_api`, branch `main`, commit `d2f754fdd2fd5581ecca9f9e16539504020f6361`. Evidence record: `reference/audits/PRJ-01-booking-api-evidence.md`. Findings apply to that commit only and do not establish runtime or deployment behavior.
+
 **What it does:**
 
-The project is a booking API developed with Rust. It is intended to explore how a backend system stores booking information, handles users, protects private data, and manages concurrent booking operations.
+The project is a booking API developed with Rust and Axum. The audited router registers six source-level route purposes using GET, POST, and PATCH:
+
+- public registration;
+- public login;
+- public room-availability lookup;
+- authenticated booking creation;
+- authenticated current-user booking listing; and
+- authenticated current-user booking cancellation.
+
+No PUT or DELETE route is registered at the audited commit. The source contains a coherent main workflow, but the application was not built or run during the audit.
 
 **Why it was built:**
 
@@ -266,26 +279,41 @@ The main learning goals include:
 
 Nattapong designed and developed the backend application as an individual project.
 
-The work includes API implementation, data modeling, database integration, authentication-related design, deployment configuration, and debugging.
+The internal record attributes API implementation, data modeling, PostgreSQL integration, registration/login/JWT work, source-level booking ownership checks, Docker and CI configuration, and debugging to Nattapong.
 
-The exact completion level of each feature should be verified from the current repository before publication.
+This individual-project description is confirmed internal context. The repository contains two Git author identities, so Git metadata alone does not prove sole authorship or contribution boundaries.
 
-**Technologies currently associated with the project:**
+**Verified or qualified technology roles at the audited commit:**
 
-- Rust
-- Axum
-- PostgreSQL
-- Redis
-- JWT
-- Docker
-- Render
-- Vercel
+- Rust and Axum implement the API.
+- Tokio supports the asynchronous runtime.
+- SQLx integrates PostgreSQL queries, migrations, and transactions.
+- PostgreSQL source integration covers users, rooms, and bookings across all six handlers; runtime persistence is unverified.
+- Redis/deadpool-redis implements a 60-second room-availability response cache; current key construction and invalidation are inconsistent.
+- bcrypt hashes and verifies passwords.
+- jsonwebtoken/JWT issues login tokens and validates Bearer tokens for protected handlers.
+- Serde, validator, chrono, dotenvy, tower-http, and tracing support serialization, registration validation, date/time and expiry handling, environment configuration, CORS, tracing, and logging.
+- A Dockerfile is present but was not built.
+- GitHub Actions configuration is present, but current execution and success are unverified.
+- Render and Vercel are README documentation claims only. No active deployment or Vercel role in this backend repository was verified.
 
-Each technology should appear publicly only when its actual role is documented and confirmed in the repository.
+Technology names should appear publicly only with their verified roles and relevant qualifications.
+
+**Authentication and authorization context:**
+
+The source includes registration, login, bcrypt password hashing and verification, JWT issuance, JWT validation and claims extraction, and protected create/list/cancel booking handlers. Authentication is therefore not registration-only.
+
+Authenticated user identity is used to associate new bookings, filter current-user booking lists, and constrain cancellation lookup and update. These are source-level ownership checks, not runtime proof of cross-user isolation or a complete role/permission system. Authentication and authorization security remain unverified.
+
+**Persistence and concurrency context:**
+
+The current PostgreSQL schema defines users, rooms, and bookings with unique usernames and user/room foreign keys. Booking creation performs its overlap check and insert inside one PostgreSQL transaction.
+
+The current schema has no overlap exclusion constraint, and no row locking, serializable isolation request, optimistic-concurrency mechanism, Redis lock, or idempotency mechanism was found. Concurrent double-booking prevention is not established.
 
 **Current result:**
 
-A functional MVP exists and demonstrates the main backend workflow.
+A coherent source-level functional-MVP candidate implements registration, login, availability lookup, booking creation, current-user listing, and cancellation. Runtime correctness remains unverified.
 
 The project has provided practical understanding of:
 
@@ -296,34 +324,44 @@ The project has provided practical understanding of:
 - Protecting user-specific information
 - Debugging integration problems
 
-**Limitations:**
+**Testing context:**
+
+Seven automated test functions are tracked: five room-availability tests and two registration-handler tests. They were not run during the audit. Current passing status and coverage are unverified, and the handler tests depend on PostgreSQL and Redis. GitHub Actions configuration does not prove that the intended tests currently run or pass.
+
+**Limitations and publication boundaries:**
 
 The application has not reached the maturity of a serious production booking platform.
 
-Potential limitations that should be verified before public presentation include:
+Current limitations include:
 
-- Concurrent booking guarantees
-- Transaction handling
-- Authorization coverage
-- Error handling
-- Testing depth
-- Security hardening
-- Deployment reliability
-- Monitoring
-- Production scalability
+- no build, test, migration, database, Redis, API, container, or deployment execution during the audit;
+- partial authentication lifecycle and no runtime security verification;
+- source-level ownership checks without runtime cross-user verification or a broader role system;
+- Redis cache-key and invalidation inconsistencies and request-path sensitivity to Redis failure;
+- no established concurrent double-booking guarantee;
+- seven tracked but unexecuted test functions with limited known coverage;
+- Docker and GitHub Actions configuration without verified results;
+- Render and Vercel documentation claims without verified deployment behavior;
+- no verified load testing, monitoring, production scalability, or formal security review; and
+- a historical tracked `.env` path that requires private owner review before prominent repository promotion.
 
-No production-level reliability, scale, or security claims should be made without supporting evidence.
+The historical environment-file values were deliberately not inspected or reproduced. Any potentially affected credential should be rotated when appropriate. No claim is made that a current valid secret is exposed.
 
-**Evidence available:**
+Do not claim build success, passing tests, live deployment, runtime endpoint correctness, secure authentication, complete authorization, correct Redis invalidation, concurrent booking safety, production reliability, scale, or production readiness.
 
-- GitHub repository
-- Source code
-- Commit history
-- API implementation
-- Database-related code
-- Authentication-related code
-- Deployment configuration, when available
-- Personal development notes, when available
+**Potential internal evidence candidates:**
+
+- fixed audited commit;
+- curated source-tree overview;
+- curated six-route table;
+- migration-derived users/rooms/bookings model;
+- registration, login, bcrypt, JWT, and claims-extraction excerpts;
+- ownership-check excerpts;
+- qualified test excerpts;
+- Dockerfile presence; and
+- carefully reviewed commit-history summary.
+
+These are not approved public artifacts. The repository URL and history should not receive prominent public promotion until the historical `.env` review, redaction review, and publication authorization are complete.
 
 **Repository:**
 

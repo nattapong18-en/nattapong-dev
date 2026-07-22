@@ -106,21 +106,21 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, and CON-01 public-profile verification are complete. Together they establish the static Astro architecture, repository-local content direction, bilingual policy, and verified profile boundaries; they do not authorize implementation or publish content.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, CON-01 public-profile verification, and PRJ-01 static Booking API evidence audit are complete. Together they establish the static Astro architecture, repository-local content direction, bilingual policy, verified profile boundaries, and commit-scoped Booking API source evidence; they do not authorize implementation, runtime claims, repository promotion, or publication.
 
 The next preparation candidates are:
 
 1. Prepare `DEC-03 — Decide theme and asset-handling direction` when representative bilingual content and artifacts are sufficient.
 2. Prepare `DEC-04 — Decide testing, quality, and supported-environment approach` when its evidence and decision-owner scope are ready.
 3. Prepare `DEC-05 — Decide deployment, analytics, and privacy direction` without deploying or selecting unneeded services.
-4. Prepare explicit external-repository authorization for `PRJ-01 — Verify Rust Booking API implementation and evidence`.
-5. Prepare explicit external-repository authorization for `PRJ-02 — Verify CourtFit implementation, privacy, and evidence`.
+4. Prepare explicit external-repository authorization for `PRJ-02 — Verify CourtFit implementation, privacy, and evidence`.
+5. Prepare a separately authorized Booking API runtime-evidence scope only after the historical environment-file risk and safe test resources are addressed.
 
-These are candidates, not silently activated tasks. Representative verified entries, exact collection and schema design, public-content prototypes, project evidence, public-ready artifacts, package-manager choice, testing, routes and navigation, deployment, and the first vertical path remain unresolved. Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
+These are candidates, not silently activated tasks. Representative verified entries, exact collection and schema design, public-content prototypes, CourtFit evidence, public-ready artifacts, package-manager choice, testing, routes and navigation, deployment, and the first vertical path remain unresolved. Booking API build, test, migration, runtime, authorization, concurrency, Redis, container, deployment, secret-history, redaction, and publication questions also remain unresolved. Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completing DEC-01, DEC-02, and CON-01 does not authorize implementation or automatically promote any Next task.
+The Now queue is empty. Completing DEC-01, DEC-02, CON-01, and the static scope of PRJ-01 does not authorize implementation, runtime verification, publication, or automatic promotion of any Next task.
 
 # Next — Decision and Evidence Tasks
 
@@ -172,23 +172,6 @@ These tasks follow the immediate queue or require additional evidence and author
 - **Dependencies / blockers:** AUD-02 findings, DEC-01, and a decision owner.
 - **Prohibited:** Deploying, enabling tracking, or choosing provider from familiarity alone.
 - **Documentation / report:** Record authorized decisions and deferred operations.
-
-## Rust Booking API Verification
-
-**PRJ-01 — Verify Rust Booking API implementation and evidence**  
-**Status:** Next · **Priority:** P0
-
-- **Source:** Phase 2/8; project inventory, content specification, project rules.
-- **Objective / why now:** Replace project questions with bounded evidence before public implementation.
-- **Reading:** Booking inventory/rules and authorized repository/deployment instructions.
-- **Authorization:** External repository/deployment review must be explicit; no mutation unless separately authorized.
-- **Inputs:** Repository, Git history, configuration, runtime/build/test/deployment evidence.
-- **Boundaries:** Inspect structure, dependencies, endpoints/methods, data model, registration, password/JWT/authorization behavior, Redis purpose/expiration, transactions/conflicts, tests, build/runtime, deployment, and safe artifacts.
-- **Deliverable:** Dated claim matrix, evidence inventory, limitations, public-safe artifacts, and unresolved questions.
-- **Acceptance / validation:** Current wording remains until evidence changes: Major Project, individual, Functional MVP, educational/non-production-ready, Rust/Axum, PostgreSQL, Redis temporary data, registration-related authentication only, GET/POST/PUT, no automated tests, Deployment To be verified.
-- **Dependencies / blockers:** The local baseline is complete; external repository and deployment review still require explicit authorization.
-- **Prohibited:** Turning a verification question into a claim or modifying the project.
-- **Documentation / report:** Authorized inventory/content updates, inspected sources, and unverified items.
 
 ## CourtFit Verification
 
@@ -369,11 +352,11 @@ All tasks here remain dependent on audit, blocking decisions, and content readin
 - **Objective / why now:** Publish a verified, honest Major Project experience after shared foundations exist.
 - **Reading:** PRJ-01 evidence; relevant specs/rules.
 - **Authorization:** Project content and implementation files specified later.
-- **Inputs:** Verified capabilities/evidence, role, Functional MVP, educational/non-production-ready maturity, registration-only scope, PostgreSQL/Redis roles, no tests, deployment state.
+- **Inputs:** PRJ-01's commit-scoped six-route source evidence, individual-project context, educational/non-production-ready maturity, partial registration/login/JWT coverage, source-level ownership checks, PostgreSQL integration, Redis availability-cache role and inconsistencies, seven unexecuted tests, concurrency limitations, historical environment-file risk, and unverified deployment state.
 - **Boundaries:** Introduction, capabilities, metadata, API/repository evidence, limitations, test/deployment status, responsive/access/privacy behavior.
 - **Deliverable:** Project experience with evidence and direct-entry context.
-- **Acceptance / validation:** Endpoint/architecture/security/deployment claims appear only if PRJ-01 verified them; limitations remain prominent.
-- **Dependencies / blockers:** PRJ-01, FND/NAV/VRT, CMP/EVD as needed.
+- **Acceptance / validation:** Static source claims remain tied to PRJ-01's audited commit; no build, passing-test, runtime, security, concurrency, cache-correctness, or deployment claim appears without separate evidence; limitations remain prominent.
+- **Dependencies / blockers:** PRJ-01 static evidence, unresolved runtime/secret-history/publication blockers, FND/NAV/VRT, and CMP/EVD as needed.
 - **Prohibited:** Production, scale, security, or conflict-correctness claims without evidence.
 - **Documentation / report:** Claims published, sources, tests, changed files, unresolved items.
 
@@ -627,6 +610,8 @@ The content-storage, authoring, internal/public-separation, and bilingual-direct
 
 The general public-profile confirmation blocker is resolved through CON-01. The internal record confirms approved public fields while preserving the Thai name, LinkedIn, Facebook, contact-purpose statement, precise location, phone number, private accounts, credentials, university identifiers, and private documents within their recorded restrictions. External account behavior and ownership remain unverified.
 
+The Booking API static repository-evidence question is resolved only for audited branch `main` at commit `d2f754fdd2fd5581ecca9f9e16539504020f6361` through PRJ-01. The audit verified source and configuration facts and corrected internal records; it did not resolve build, test, migration, runtime, security, concurrency, Redis correctness, container, deployment, secret-history, artifact-redaction, or publication questions.
+
 The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
@@ -634,7 +619,12 @@ The following unresolved blockers govern activation:
 | Exact content model, collection boundaries, schema, and representative entries unresolved | Complete enough verified CON-02 material, then separately authorize FND-01 design and implementation scope | CON-02, FND-01 | Collection, schema, validation-code, or public-content implementation |
 | Theme/asset direction unresolved | Approve DEC-03 where blocking | FND-02 | Final theme/assets or motif |
 | Package manager and implementation scope unresolved | Approve them through a separate bounded implementation decision or prompt | FND-01, FND-02 | Scaffolding, manifests, lockfiles, or dependency installation |
-| External project inspection not authorized or verified | Explicitly authorize and complete PRJ-01/PRJ-02 | PRJ-03/PRJ-04, technical motion | External inspection or public technical claims/demonstrations |
+| CourtFit external project inspection not authorized or verified | Explicitly authorize and complete PRJ-02 | PRJ-04, technical motion | CourtFit external inspection or public technical claims/demonstrations |
+| Booking API historical `.env` not privately reviewed | Owner reviews history without publishing values and rotates any potentially affected credential when appropriate | PRJ-03, CON-02, PRV-01 | Prominent repository/history promotion or artifact publication |
+| Booking API build, tests, migrations, routes, and cross-user behavior not runtime-verified | Separately authorize safe build/test/runtime work with isolated PostgreSQL and Redis resources | PRJ-03, CON-02, QA-01 | Passing, runtime-correctness, persistence, or authorization-isolation claims |
+| Booking API concurrency integrity and Redis correctness unresolved | Establish an integrity design, correct cache keys/invalidation, and verify both under authorized runtime conditions | PRJ-03, EVD-01, technical motion | Concurrent-safety, correct-conflict, or correct-cache claims/demonstrations |
+| Booking API Docker, Render/Vercel, and public artifacts unverified | Verify container/deployment evidence separately and complete artifact redaction/public-readiness review | PRJ-03, CON-02, EVD-01, PRV-01 | Active-deployment claims, repository promotion, or public evidence use |
+| Pre-audit Booking summaries remain in `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` | Separately authorize a narrow governance/planning consistency update using PRJ-01 evidence | PRJ-03 and future project-specific agent work | Reliance on stale registration-only, GET/POST/PUT, no-test, or generic Redis wording |
 | CourtFit key behavior unverified | Complete PRJ-02 privacy review | PRJ-04, PRV-01 | Key-security or request-flow claims |
 | No public-ready artifact set | Complete CON-02 | VRT-01/VRT-02/EVD-01 | Placeholder-led design validation |
 | Routes and navigation unresolved | Establish verified content destinations and separately authorize NAV-01 | NAV-01, VRT-02 | Final routes, language URLs, labels, or navigation implementation |
@@ -672,7 +662,7 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Validation:** Paths outside the workspace, external repositories, deployments, network access, and secret-value inspection were explicitly excluded.
 - **Files changed:** None.
 - **Known limitations:** External project and deployment inspection still require separate authorization.
-- **Follow-up:** Its local scope enabled AUD-02; external scope remains governed by PRJ-01 and PRJ-02 prompts.
+- **Follow-up:** Its local scope enabled AUD-02. PRJ-01 later completed a separately authorized static Booking API audit; Booking runtime/deployment work and PRJ-02 remain governed by separate prompts.
 
 **AUD-02 — Audit workspace structure and preserve existing work**  
 **Status:** Done · **Priority:** P0
@@ -740,6 +730,29 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Known limitations:** Public readiness may change; GitHub ownership and current behavior remain externally unverified; no opportunity or availability wording is approved.
 - **Follow-up:** Use the verified fields as input to later content readiness work while preserving the remaining project-evidence, account-readiness, authoring, artifact, testing, deployment, and first-vertical gates.
 
+## Completed Project Evidence
+
+**PRJ-01 — Verify Rust Booking API implementation and evidence**
+
+**Status:** Done · **Priority:** P0
+
+- **Completed scope:** Static read-only repository implementation and evidence audit only. This status does not include build, test, migration, runtime, database, Redis, API, container, deployment, or public-artifact verification.
+- **Repository snapshot:** `https://github.com/nattapong18-en/booking_api`, audited on default branch `main` at commit `d2f754fdd2fd5581ecca9f9e16539504020f6361`.
+- **Audit record:** `reference/audits/PRJ-01-booking-api-evidence.md`.
+- **Static result:** Six routes were verified in the router for public registration, public login, public room availability, authenticated booking creation, authenticated current-user listing, and authenticated cancellation. The registered methods are GET, POST, and PATCH—not PUT.
+- **Authentication correction:** Source includes registration, login, bcrypt password hashing/verification, JWT issuance, JWT validation/claims extraction, and protected create/list/cancel handlers. The lifecycle remains partial, and runtime/security behavior is unverified.
+- **Authorization evidence:** Authenticated user identity associates new bookings and constrains current-user listing and cancellation lookup/update. These source-level ownership checks are not runtime cross-user verification or proof of complete authorization security.
+- **Persistence and concurrency:** PostgreSQL source integration covers all six handlers and the users/rooms/bookings schema. Booking overlap check and insert use one transaction, but no current database overlap constraint, row lock, serializable isolation request, optimistic concurrency, Redis lock, or idempotency mechanism establishes concurrent safety.
+- **Redis correction:** Redis is a 60-second room-availability response cache, not session, JWT, lock, rate-limit, idempotency, or booking-record storage. Key construction and invalidation are inconsistent, and Redis failure can affect request paths.
+- **Test correction:** Seven automated test functions are tracked—five availability tests and two registration-handler tests. They were not run; passing status and coverage remain unverified. The handler tests depend on PostgreSQL and Redis, and GitHub Actions configuration does not prove intended tests run or pass.
+- **Deployment evidence:** A Dockerfile and GitHub Actions workflow are present as configuration only. Render and Vercel are README claims; no active deployment or Vercel role in this backend tree was verified.
+- **Sensitive-history boundary:** A tracked `.env` path existed in history and was later deleted. Values were not inspected or reproduced. Private owner review and any appropriate credential rotation remain required before prominent repository/history promotion.
+- **Internal records:** Corrected `reference/synthesis/project-inventory.md` and the Rust Booking API portion of `reference/synthesis/personal-profile.md` using the audit's commit-scoped evidence and qualifications.
+- **Validation:** Audit findings, internal corrections, runtime-claim boundaries, privacy/secret language, and the four-file staged scope were reviewed. No external repository mutation or execution occurred.
+- **Implementation and publication:** No source implementation, public content, deployment, repository promotion, build, test, migration, database, Redis, API, container, or runtime verification occurred.
+- **Known limitations:** Current canonical commit, runtime behavior, test results/coverage, cross-user isolation, concurrency integrity, Redis correctness, container behavior, deployments, historical credential state, and artifact public readiness remain unresolved. `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` still contain pre-audit Booking summaries and were outside this task's authorized edit scope.
+- **Follow-up:** Use this static evidence as an input to CON-02 and later project-content work only after preserving all blockers. PRJ-01 alone does not authorize a public project page or stronger claim.
+
 ## Cancelled Audit History
 
 **AUD-03 — Audit capabilities, public boundaries, and privacy risks**  
@@ -761,7 +774,9 @@ GOV-01 (Done) ──────────────────────
 AUD-01 (Done) ─► AUD-02 (Done) ─► GOV-02 (Done) ─► DEC-01 (Done)
 AUD-02 (Done) ─► AUD-03 (Cancelled: current scope covered by AUD-02)
 DEC-01 (Done) ─► DEC-02 (Done); DEC-03 / DEC-04 / DEC-05 remain separately gated
-DEC-02 (Done) + CON-01 (Done) + authorized PRJ-01 + PRJ-02 + research/learning evidence ─► CON-02 ─► VRT-01
+authorized PRJ-01 static audit (Done) ─► corrected internal Booking evidence
+PRJ-01 runtime / secret-history / publication requirements ─► remain separately blocked
+DEC-02 (Done) + CON-01 (Done) + PRJ-01 static evidence (Done) + authorized PRJ-02 + research/learning evidence ─► CON-02 ─► VRT-01
 DEC-01 (Done) + DEC-02 (Done) + CON-02 + separate implementation authorization ─► FND-01 ─┐
 DEC-01 + DEC-03 + DEC-04 + FND-01 ─► FND-02 ─────┼─► NAV-01 ─► VRT-02
 VRT-01 ───────────────────────────────────────────┘
@@ -771,7 +786,7 @@ representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. DEC-03 readiness and authorization preparation for PRJ-01/PRJ-02 are recommended next candidates but remain Next until separately authorized and sufficiently ready. DEC-02 and CON-01 are inputs to CON-02; project verification and representative research/learning evidence remain required. Approved DEC-01 and DEC-02 and completed CON-01 are dependencies, not implementation authority.
+The Now queue is empty. DEC-03 readiness, PRJ-02 authorization preparation, and a separately scoped Booking API runtime-evidence task are recommended candidates but remain inactive until separately authorized and sufficiently ready. DEC-02, CON-01, and PRJ-01's static evidence are inputs to CON-02; CourtFit and representative research/learning evidence remain required. PRJ-01's static completion does not authorize a public project page, runtime claims, repository promotion, or implementation. Approved decisions and completed evidence tasks are dependencies, not implementation authority.
 
 # Validation and Completion Rules
 
@@ -812,7 +827,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, and CON-01; recommended next candidates remain inactive until separately authorized and ready.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, CON-01, and PRJ-01's static audit scope; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
@@ -829,7 +844,15 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - Which exact metadata, requiredness rules, schema constraints, and semantic checks are justified by real content?
 - How should translated siblings be reviewed when shared status, limitations, evidence, or corrections change?
 - Which compact public records, if any, should use structured repository data rather than Markdown bodies?
-- Which external project repositories and deployments may PRJ-01 and PRJ-02 inspect?
+- Which CourtFit repository, deployment, browser, and device evidence may PRJ-02 inspect?
+- Is Booking API commit `d2f754fdd2fd5581ecca9f9e16539504020f6361` still the canonical state for later runtime verification and publication review?
+- Does the Booking API build, migrate, and run with safe isolated PostgreSQL and Redis resources?
+- Which tracked Booking API tests run and pass, and what coverage remains absent?
+- Do runtime cross-user checks confirm the source-level ownership restrictions?
+- Which integrity design will prevent concurrent overlapping bookings?
+- How should Redis key construction, overlapping-range invalidation, and failure behavior be corrected and verified?
+- Did the historical Booking API `.env` contain any usable credential, and has any affected credential been rotated?
+- Are the README's Render destination and externally referenced Vercel frontend current, source-corresponding, and safe to present?
 - Which implementation-specific rules, if any, should later be added to `AGENTS.md` after they become stable?
 - When, if ever, will LinkedIn or Facebook become public-ready?
 - Should a public contact-purpose statement be approved later, and what evidence or intent would support it?
