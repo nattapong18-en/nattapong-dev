@@ -106,40 +106,27 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, and CON-01 public-profile verification are complete. The verified profile boundaries are recorded internally; they do not publish content or authorize implementation.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, and CON-01 public-profile verification are complete. Together they establish the static Astro architecture, repository-local content direction, bilingual policy, and verified profile boundaries; they do not authorize implementation or publish content.
 
 The next preparation candidates are:
 
-1. Prepare `DEC-02` readiness using the approved DEC-01 constraints and representative content evidence.
-2. Prepare explicit external-repository authorization for `PRJ-01` when Booking API verification is ready.
-3. Prepare explicit external-repository authorization for `PRJ-02` when CourtFit verification is ready.
+1. Prepare `DEC-03 — Decide theme and asset-handling direction` when representative bilingual content and artifacts are sufficient.
+2. Prepare `DEC-04 — Decide testing, quality, and supported-environment approach` when its evidence and decision-owner scope are ready.
+3. Prepare `DEC-05 — Decide deployment, analytics, and privacy direction` without deploying or selecting unneeded services.
+4. Prepare explicit external-repository authorization for `PRJ-01 — Verify Rust Booking API implementation and evidence`.
+5. Prepare explicit external-repository authorization for `PRJ-02 — Verify CourtFit implementation, privacy, and evidence`.
 
-These are candidates, not silently activated tasks. Project evidence, content authoring, public-ready artifacts, testing, deployment, and first-vertical decisions remain unresolved. Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
+These are candidates, not silently activated tasks. Representative verified entries, exact collection and schema design, public-content prototypes, project evidence, public-ready artifacts, package-manager choice, testing, routes and navigation, deployment, and the first vertical path remain unresolved. Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completing DEC-01 and CON-01 does not authorize implementation or automatically promote any Next task.
+The Now queue is empty. Completing DEC-01, DEC-02, and CON-01 does not authorize implementation or automatically promote any Next task.
 
 # Next — Decision and Evidence Tasks
 
 These tasks follow the immediate queue or require additional evidence and authorization.
 
 ## Decision Gates
-
-**DEC-02 — Decide content storage, authoring, and bilingual behavior**  
-**Status:** Next · **Priority:** P1
-
-- **Source:** Phases 1 and 3; Content, layout, and component specifications.
-- **Objective / why now:** Provide an authorable content direction before implementing the model.
-- **Reading:** Content specification, inventories, implementation plan, audit and DEC-01 results.
-- **Authorization:** Decision documentation only until implementation scope is approved.
-- **Inputs:** Real content samples, maintenance capacity, internal/public separation, Thai/English needs.
-- **Boundaries:** Decide direction, not a speculative CMS or complete schema.
-- **Deliverable:** Storage/authoring/bilingual decision record with migration and fallback implications.
-- **Acceptance / validation:** Represents both projects, Research Preparation, and non-project content honestly.
-- **Dependencies / blockers:** Completed audit/Git baseline, DEC-01 where stack constrains options, and representative content.
-- **Prohibited:** Invented taxonomies or automatic content generation.
-- **Documentation / report:** Authorized updates and unresolved editorial choices.
 
 **DEC-03 — Decide theme and asset-handling direction**  
 **Status:** Next · **Priority:** P1
@@ -636,18 +623,23 @@ The active workspace, local read-only scope, audited scaffold state, and recover
 
 The stack/rendering blocker is resolved through approved DEC-01: Astro is the framework, static HTML is the default, and client JavaScript is limited to separately justified local islands. This resolution does not authorize implementation or resolve the remaining gates.
 
+The content-storage, authoring, internal/public-separation, and bilingual-direction blocker is resolved through approved DEC-02: repository-local Astro build-time content collections use the current Content Layer API; plain Markdown is the default long-form format; structural, referential-integrity, and project-specific semantic validation remain distinct responsibilities; public-ready content uses a separate allowlisted source; and translations are optional, explicit siblings. This resolution does not authorize collection, schema, content, route, or page implementation.
+
 The general public-profile confirmation blocker is resolved through CON-01. The internal record confirms approved public fields while preserving the Thai name, LinkedIn, Facebook, contact-purpose statement, precise location, phone number, private accounts, credentials, university identifiers, and private documents within their recorded restrictions. External account behavior and ownership remain unverified.
 
 The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
 | --- | --- | --- | --- |
-| Content storage/authoring unresolved | Approve DEC-02 | FND-01 | Final content model implementation |
+| Exact content model, collection boundaries, schema, and representative entries unresolved | Complete enough verified CON-02 material, then separately authorize FND-01 design and implementation scope | CON-02, FND-01 | Collection, schema, validation-code, or public-content implementation |
 | Theme/asset direction unresolved | Approve DEC-03 where blocking | FND-02 | Final theme/assets or motif |
+| Package manager and implementation scope unresolved | Approve them through a separate bounded implementation decision or prompt | FND-01, FND-02 | Scaffolding, manifests, lockfiles, or dependency installation |
 | External project inspection not authorized or verified | Explicitly authorize and complete PRJ-01/PRJ-02 | PRJ-03/PRJ-04, technical motion | External inspection or public technical claims/demonstrations |
 | CourtFit key behavior unverified | Complete PRJ-02 privacy review | PRJ-04, PRV-01 | Key-security or request-flow claims |
 | No public-ready artifact set | Complete CON-02 | VRT-01/VRT-02/EVD-01 | Placeholder-led design validation |
+| Routes and navigation unresolved | Establish verified content destinations and separately authorize NAV-01 | NAV-01, VRT-02 | Final routes, language URLs, labels, or navigation implementation |
 | First vertical path unselected | Complete VRT-01 | VRT-02/CMP-01 | Broad page/component implementation |
+| Testing and supported-environment direction unresolved | Complete DEC-04 | FND-02, QA-01 | Final quality tooling or support claims |
 | Deployment direction unresolved | Complete DEC-05 | REL-01 | Deployment or public operational claims |
 
 Blocked means a named prerequisite is absent, not merely low priority.
@@ -712,10 +704,26 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Decision:** Generate static HTML by default. Add client JavaScript only through separately justified local islands. No request-time renderer, server adapter, or continuously running application server is approved.
 - **Reconsideration:** Introducing request-time server rendering, a server adapter, or an application server requires reopening or superseding DEC-01 through a separately approved decision.
 - **Decision record:** `reference/decisions/DEC-01-stack-and-rendering.md`.
-- **Validation:** The record retains the audited baseline, alternatives, tradeoffs, risks, reversibility, official sources, and deferred decisions. Approval was explicit and does not resolve DEC-02 through DEC-05.
+- **Validation:** The record retains the audited baseline, alternatives, tradeoffs, risks, reversibility, official sources, and deferred decisions. Approval was explicit and did not itself resolve DEC-02 through DEC-05; DEC-02 was approved later through its own decision.
 - **Implementation:** No Astro project was scaffolded, no dependency was selected or installed, and no implementation or configuration was created.
-- **Known limitations:** Content storage, package manager, styling, testing, deployment, routes, assets, themes, and other deferred choices remain unresolved.
+- **Known limitations:** Content-model implementation, package manager, styling, testing, deployment, routes, assets, themes, and other deferred choices remain unresolved. DEC-02 later resolved the content direction only.
 - **Follow-up:** Use DEC-01 as an approved dependency for later decision records while keeping implementation blocked until the remaining required evidence, decisions, and authorization exist.
+
+**DEC-02 — Decide content storage, authoring, and bilingual behavior**  
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Decision owner Nattapong explicitly approved the repository-local content, authoring, validation, internal/public-boundary, and bilingual direction.
+- **Storage and API direction:** Use Astro build-time content collections through the current Content Layer API for repository-local public content.
+- **Authoring:** Use plain Markdown by default for long-form content and structured, schema-validated metadata for recurring content state and relationships.
+- **Validation responsibilities:** Treat structural schema validation, explicit referential-integrity validation, and project-specific semantic validation as separate responsibilities. Required broken relationships fail the static build; optional relationships may be absent only when their approved content model permits absence.
+- **Internal/public boundary:** Public-ready content must use a separate allowlisted source. `docs/` and `reference/` remain internal and must not be imported wholesale into public output.
+- **Bilingual direction:** Use one primary language per entry. Thai-only, English-only, and mixed-language entries are allowed; separately authored translated siblings are optional. Translation is neither mandatory nor automatic, and language switching is suppressed when no public-ready sibling resolves.
+- **Deferred:** MDX and an external CMS remain deferred until a verified need justifies a new decision. Exact collections, paths, schemas, routes, language URLs, tooling, and other recorded implementation choices remain unresolved.
+- **Decision record:** `reference/decisions/DEC-02-content-storage-authoring-bilingual.md`.
+- **Decision owner and evidence:** Nattapong; explicit user confirmation.
+- **Implementation and publication:** No content collection, schema, content migration, public entry, route, page, package-manager choice, dependency selection, installation, or publication occurred.
+- **Known limitations:** Representative verified entries, project evidence, public-ready artifacts, exact collection/schema design, translation review workflow, testing, navigation, first vertical, and deployment remain gated.
+- **Follow-up:** Use DEC-02 as an approved input to later content-readiness, foundation, navigation, validation, and vertical tasks without treating it as implementation authority.
 
 ## Completed Content Verification
 
@@ -752,9 +760,9 @@ The approved planning documents `reference/design-dna.md` and `docs/00` through 
 GOV-01 (Done) ──────────────────────────────► governed agent work
 AUD-01 (Done) ─► AUD-02 (Done) ─► GOV-02 (Done) ─► DEC-01 (Done)
 AUD-02 (Done) ─► AUD-03 (Cancelled: current scope covered by AUD-02)
-DEC-01 (Done) ─► DEC-02 / DEC-03 / DEC-04 / DEC-05 (remain separately gated)
-CON-01 (Done) + authorized PRJ-01 + PRJ-02 + research/learning evidence ─► CON-02 ─► VRT-01
-DEC-01 + DEC-02 + CON-02 ─► FND-01 ──────────────┐
+DEC-01 (Done) ─► DEC-02 (Done); DEC-03 / DEC-04 / DEC-05 remain separately gated
+DEC-02 (Done) + CON-01 (Done) + authorized PRJ-01 + PRJ-02 + research/learning evidence ─► CON-02 ─► VRT-01
+DEC-01 (Done) + DEC-02 (Done) + CON-02 + separate implementation authorization ─► FND-01 ─┐
 DEC-01 + DEC-03 + DEC-04 + FND-01 ─► FND-02 ─────┼─► NAV-01 ─► VRT-02
 VRT-01 ───────────────────────────────────────────┘
 VRT-02 ─► CMP-01 / EVD-01 / STA-01 ─► PRJ-03 / PRJ-04 / RES-01 / LRN-01..04
@@ -763,7 +771,7 @@ representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. DEC-02 readiness and authorization preparation for PRJ-01/PRJ-02 are recommended next candidates but remain Next until separately authorized and sufficiently ready. CON-01 is one input to CON-02; project verification and representative research/learning evidence remain required. Approved DEC-01 and completed CON-01 are dependencies, not implementation authority.
+The Now queue is empty. DEC-03 readiness and authorization preparation for PRJ-01/PRJ-02 are recommended next candidates but remain Next until separately authorized and sufficiently ready. DEC-02 and CON-01 are inputs to CON-02; project verification and representative research/learning evidence remain required. Approved DEC-01 and DEC-02 and completed CON-01 are dependencies, not implementation authority.
 
 # Validation and Completion Rules
 
@@ -804,7 +812,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** The Now queue is empty after completion of DEC-01 and CON-01; recommended next candidates remain inactive until separately authorized and ready.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, and CON-01; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
@@ -816,15 +824,20 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 
 # Open Task-List Questions
 
-- Which implementation foundation should be created after DEC-01 and DEC-02 are approved?
+- Which representative verified entries should test the approved DEC-02 direction before implementation expands?
+- Which recurring content families justify distinct collection boundaries, and which should share a model?
+- Which exact metadata, requiredness rules, schema constraints, and semantic checks are justified by real content?
+- How should translated siblings be reviewed when shared status, limitations, evidence, or corrections change?
+- Which compact public records, if any, should use structured repository data rather than Markdown bodies?
 - Which external project repositories and deployments may PRJ-01 and PRJ-02 inspect?
 - Which implementation-specific rules, if any, should later be added to `AGENTS.md` after they become stable?
-- How will content be stored, validated, and edited?
 - When, if ever, will LinkedIn or Facebook become public-ready?
 - Should a public contact-purpose statement be approved later, and what evidence or intent would support it?
 - What separate evidence, if needed, should verify ownership and current behavior of the confirmed public GitHub destination?
 - Which project artifacts are safe and public-ready?
 - Which first vertical content path should be selected?
+- Which routes, language URL behavior, default site language, and navigation model should be approved?
+- What verified content need, if any, would justify MDX?
 - Which components recur after vertical validation?
 - Which content families belong in the first release?
 - Which motion needs are real and verified?
