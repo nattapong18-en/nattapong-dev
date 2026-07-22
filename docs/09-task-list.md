@@ -106,7 +106,7 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, CON-01 public-profile verification, and PRJ-01 static Booking API evidence audit are complete. Together they establish the static Astro architecture, repository-local content direction, bilingual policy, verified profile boundaries, and commit-scoped Booking API source evidence; they do not authorize implementation, runtime claims, repository promotion, or publication.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, CON-01 public-profile verification, PRJ-01 static Booking API evidence audit, and GOV-04 Booking API governance synchronization are complete. Together they establish the static Astro architecture, repository-local content direction, bilingual policy, verified profile boundaries, commit-scoped Booking API source evidence, and consistent governance summaries; they do not authorize implementation, runtime claims, repository promotion, or publication.
 
 The next preparation candidates are:
 
@@ -120,7 +120,7 @@ These are candidates, not silently activated tasks. Representative verified entr
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completing DEC-01, DEC-02, CON-01, and the static scope of PRJ-01 does not authorize implementation, runtime verification, publication, or automatic promotion of any Next task.
+The Now queue is empty. Completing DEC-01, DEC-02, CON-01, the static scope of PRJ-01, and GOV-04 does not authorize implementation, runtime verification, publication, or automatic promotion of any Next task.
 
 # Next — Decision and Evidence Tasks
 
@@ -624,7 +624,6 @@ The following unresolved blockers govern activation:
 | Booking API build, tests, migrations, routes, and cross-user behavior not runtime-verified | Separately authorize safe build/test/runtime work with isolated PostgreSQL and Redis resources | PRJ-03, CON-02, QA-01 | Passing, runtime-correctness, persistence, or authorization-isolation claims |
 | Booking API concurrency integrity and Redis correctness unresolved | Establish an integrity design, correct cache keys/invalidation, and verify both under authorized runtime conditions | PRJ-03, EVD-01, technical motion | Concurrent-safety, correct-conflict, or correct-cache claims/demonstrations |
 | Booking API Docker, Render/Vercel, and public artifacts unverified | Verify container/deployment evidence separately and complete artifact redaction/public-readiness review | PRJ-03, CON-02, EVD-01, PRV-01 | Active-deployment claims, repository promotion, or public evidence use |
-| Pre-audit Booking summaries remain in `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` | Separately authorize a narrow governance/planning consistency update using PRJ-01 evidence | PRJ-03 and future project-specific agent work | Reliance on stale registration-only, GET/POST/PUT, no-test, or generic Redis wording |
 | CourtFit key behavior unverified | Complete PRJ-02 privacy review | PRJ-04, PRV-01 | Key-security or request-flow claims |
 | No public-ready artifact set | Complete CON-02 | VRT-01/VRT-02/EVD-01 | Placeholder-led design validation |
 | Routes and navigation unresolved | Establish verified content destinations and separately authorize NAV-01 | NAV-01, VRT-02 | Final routes, language URLs, labels, or navigation implementation |
@@ -686,6 +685,19 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Network:** No network action occurred.
 - **Known limitation:** Git does not track empty `.agents/`, `.codex/`, `src/`, `public/`, `reference/decisions/`, `reference/screenshots/`, or `reference/wireframes/` directories.
 - **Follow-up:** Use the clean baseline to review every later diff; do not add placeholders merely to track empty directories.
+
+**GOV-04 — Synchronize stale Booking API governance summaries with committed PRJ-01 evidence**
+
+**Status:** Done · **Priority:** P0
+
+- **Completion reason:** Booking API summaries in `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` were synchronized with the committed PRJ-01 evidence, and this task list was updated to close the governance inconsistency.
+- **Evidence:** `reference/audits/PRJ-01-booking-api-evidence.md`, covering branch `main` at audited commit `d2f754fdd2fd5581ecca9f9e16539504020f6361` only.
+- **Completed scope:** Corrected route methods, authentication, source-level authorization, PostgreSQL, Redis, concurrency, automated-test, Docker/CI, deployment, and historical environment-file summaries without repeating the full audit.
+- **Validation:** The four authorized governance files were reviewed for stale statements, unsupported runtime claims, privacy or secret exposure, and commit-scoped evidence language.
+- **Files changed:** `AGENTS.md`, `docs/07-project-rules.md`, `docs/08-implementation-plan.md`, and `docs/09-task-list.md`.
+- **External boundary:** No external repository or deployment was accessed, and no new verification occurred.
+- **Known limitations:** Build, migration, test execution, runtime behavior, cross-user isolation, concurrency integrity, Redis correctness, Docker operation, Render/Vercel status, historical credential safety, artifact redaction, and publication approval remain unresolved.
+- **Follow-up:** Use the synchronized summaries for later authorized work while treating the PRJ-01 audit record as the detailed authority.
 
 **DEC-01 — Decide stack and rendering strategy**  
 **Status:** Done · **Priority:** P1
@@ -750,7 +762,7 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Internal records:** Corrected `reference/synthesis/project-inventory.md` and the Rust Booking API portion of `reference/synthesis/personal-profile.md` using the audit's commit-scoped evidence and qualifications.
 - **Validation:** Audit findings, internal corrections, runtime-claim boundaries, privacy/secret language, and the four-file staged scope were reviewed. No external repository mutation or execution occurred.
 - **Implementation and publication:** No source implementation, public content, deployment, repository promotion, build, test, migration, database, Redis, API, container, or runtime verification occurred.
-- **Known limitations:** Current canonical commit, runtime behavior, test results/coverage, cross-user isolation, concurrency integrity, Redis correctness, container behavior, deployments, historical credential state, and artifact public readiness remain unresolved. `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` still contain pre-audit Booking summaries and were outside this task's authorized edit scope.
+- **Known limitations:** Current canonical commit, runtime behavior, test results/coverage, cross-user isolation, concurrency integrity, Redis correctness, container behavior, deployments, historical credential state, and artifact public readiness remain unresolved. GOV-04 later synchronized the previously stale governance summaries without adding new verification.
 - **Follow-up:** Use this static evidence as an input to CON-02 and later project-content work only after preserving all blockers. PRJ-01 alone does not authorize a public project page or stronger claim.
 
 ## Cancelled Audit History
@@ -774,7 +786,7 @@ GOV-01 (Done) ──────────────────────
 AUD-01 (Done) ─► AUD-02 (Done) ─► GOV-02 (Done) ─► DEC-01 (Done)
 AUD-02 (Done) ─► AUD-03 (Cancelled: current scope covered by AUD-02)
 DEC-01 (Done) ─► DEC-02 (Done); DEC-03 / DEC-04 / DEC-05 remain separately gated
-authorized PRJ-01 static audit (Done) ─► corrected internal Booking evidence
+authorized PRJ-01 static audit (Done) ─► corrected internal Booking evidence ─► GOV-04 (Done) ─► synchronized governance summaries
 PRJ-01 runtime / secret-history / publication requirements ─► remain separately blocked
 DEC-02 (Done) + CON-01 (Done) + PRJ-01 static evidence (Done) + authorized PRJ-02 + research/learning evidence ─► CON-02 ─► VRT-01
 DEC-01 (Done) + DEC-02 (Done) + CON-02 + separate implementation authorization ─► FND-01 ─┐
@@ -786,7 +798,7 @@ representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. DEC-03 readiness, PRJ-02 authorization preparation, and a separately scoped Booking API runtime-evidence task are recommended candidates but remain inactive until separately authorized and sufficiently ready. DEC-02, CON-01, and PRJ-01's static evidence are inputs to CON-02; CourtFit and representative research/learning evidence remain required. PRJ-01's static completion does not authorize a public project page, runtime claims, repository promotion, or implementation. Approved decisions and completed evidence tasks are dependencies, not implementation authority.
+The Now queue is empty. DEC-03 readiness, PRJ-02 authorization preparation, and a separately scoped Booking API runtime-evidence task are recommended candidates but remain inactive until separately authorized and sufficiently ready. DEC-02, CON-01, PRJ-01's static evidence, and GOV-04's synchronized governance are inputs to later work; CourtFit and representative research/learning evidence remain required for CON-02. PRJ-01 and GOV-04 do not authorize a public project page, runtime claims, repository promotion, or implementation. Approved decisions and completed evidence tasks are dependencies, not implementation authority.
 
 # Validation and Completion Rules
 
@@ -827,7 +839,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, CON-01, and PRJ-01's static audit scope; recommended next candidates remain inactive until separately authorized and ready.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, CON-01, PRJ-01's static audit scope, and GOV-04; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.

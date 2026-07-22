@@ -91,17 +91,23 @@ Technical artifacts must retain source, purpose, conditions, supported claim, ve
 
 ## Rust Booking API
 
-Current approved wording:
+Use the static evidence record at `reference/audits/PRJ-01-booking-api-evidence.md`, covering repository `https://github.com/nattapong18-en/booking_api`, branch `main`, commit `d2f754fdd2fd5581ecca9f9e16539504020f6361`. It covers that commit only and does not prove build, test, migration, runtime, deployment, security, or operational behavior.
 
-- Major Project; individual backend project.
-- Functional MVP; educational and non-production-ready.
-- Rust and Axum; PostgreSQL; Redis used for temporary data.
-- Registration-related authentication only.
-- GET, POST, and PUT operations.
-- No automated tests.
-- Deployment To be verified.
+Current evidence-bounded wording:
 
-Do not claim exact endpoints, complete authentication or authorization, password hashing, JWT behavior, Redis expiration, transactions, conflict correctness, scalability, security, production readiness, or deployment without verification.
+- Major Project; individual educational backend learning project from Nattapong's confirmed internal record.
+- Coherent source-level functional-MVP candidate; not production-ready; runtime state unverified.
+- Six registered routes for public registration, public login, public room availability, authenticated booking creation, authenticated current-user listing, and authenticated cancellation. Methods are GET, POST, and PATCH—not PUT or DELETE.
+- Registration, login, bcrypt hashing/verification, JWT issuance/validation, and JWT-protected create/list/cancel handlers exist in source. The lifecycle and runtime security remain incomplete and unverified.
+- Source-level authenticated-user ownership checks cover booking association, current-user listing, and cancellation lookup/update. Runtime cross-user isolation and broader authorization remain unverified; no role or permission system is established.
+- PostgreSQL is integrated across all six handlers; users, rooms, bookings, username uniqueness, foreign keys, and a booking-creation transaction are present in source. Runtime persistence and migrations were not executed.
+- Redis is a 60-second room-availability response cache, not generic booking storage. Key construction/invalidation are inconsistent, some Redis acquisition failures affect requests, and correct cache behavior is not established.
+- The transaction contains an application-level overlap check and insert, but no current overlap constraint, locking or serializable guarantee, optimistic concurrency, Redis lock, or idempotency mechanism establishes concurrent safety.
+- Seven test functions are tracked—five availability and two registration-handler tests—but were not run. Passing status and coverage are unverified; the handler tests depend on PostgreSQL and Redis.
+- A Dockerfile and GitHub Actions workflow are configuration evidence only. Render and Vercel are README claims only; deployment remains To be verified.
+- A historical tracked `.env` path requires private owner review and any appropriate credential rotation. Never inspect or reproduce values without separate authorization; prominent repository-history publication remains blocked.
+
+Do not claim successful build or tests, runtime correctness or security, complete authorization, correct cache invalidation, concurrent-booking safety, scalability, production readiness, or active deployment without separate appropriate evidence.
 
 ## CourtFit
 

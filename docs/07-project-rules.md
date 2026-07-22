@@ -131,9 +131,23 @@ Reclassification requires changed scope and evidence, not improved presentation.
 
 # Rust Booking API Rules
 
-Content must describe the Rust Booking API as an individual backend project with Functional MVP status and educational, non-production-ready maturity. Current technology claims are Rust and Axum, PostgreSQL for persistent storage, and Redis for temporary data. Authentication-related implementation is registration-only. Current operations include GET, POST, and PUT. No automated tests exist. Deployment is To be verified.
+Booking API repository-native claims must use `reference/audits/PRJ-01-booking-api-evidence.md`, which covers `https://github.com/nattapong18-en/booking_api`, branch `main`, commit `d2f754fdd2fd5581ecca9f9e16539504020f6361`. The evidence applies to that commit only and must not be generalized to later source, builds, runtime behavior, or deployments.
 
-The project must not claim exact endpoints before repository review; complete authentication or authorization; secure authentication; password hashing or JWT behavior before verification; Redis expiration or exact role before verification; transactions; correct booking-conflict or concurrency handling; scalability; production readiness; monitoring; or a current deployment before verification.
+Content must classify the project as an individual educational backend learning project from Nattapong's confirmed internal record and a coherent source-level functional-MVP candidate. It must remain explicitly non-production-ready with build, test, migration, runtime, deployment, security, and operational behavior unverified.
+
+The audited router has six source-level routes for public registration, public login, public room availability, authenticated booking creation, authenticated current-user listing, and authenticated cancellation. Current methods are GET, POST, and PATCH; content must not claim PUT or DELETE.
+
+Authentication wording may state that source implements registration, login, bcrypt password hashing/verification, JWT issuance, Bearer-token extraction/validation, and JWT-protected create/list/cancel handlers. It must also state that the lifecycle is incomplete and runtime security is unverified. Source-level authenticated-user ownership checks associate bookings and restrict listing and cancellation lookup/update, but content must not infer runtime cross-user isolation, complete authorization, or a role/permission system.
+
+PostgreSQL wording may state that all six handlers integrate it at source level and that the current users/rooms/bookings schema includes username uniqueness and relational foreign keys. Booking creation performs an application-level overlap check and insert in one transaction. Runtime persistence and migrations were not executed, and no current overlap constraint, row lock, serializable-isolation guarantee, optimistic concurrency, Redis lock, or idempotency mechanism establishes concurrent safety.
+
+Redis must be described specifically as a 60-second room-availability response cache. It is not session, JWT, lock, rate-limit, idempotency, or booking-record storage in the audited source. Cache key construction and invalidation are inconsistent, Redis acquisition failure affects some request paths, and correct cache behavior is not established.
+
+Testing wording must state that seven automated test functions are tracked—five availability tests and two registration-handler tests—but were not run; passing status and coverage remain unverified, and handler tests depend on PostgreSQL and Redis. A Dockerfile and GitHub Actions workflow are configuration evidence only. Render and Vercel are README documentation claims only, and current deployment remains To be verified.
+
+A historical tracked `.env` path must remain an internal publication blocker. Its values were deliberately not inspected or reproduced; private owner review and any appropriate credential rotation are required before prominent repository-history publication.
+
+The project must not claim successful build or tests, runtime endpoint correctness, secure or complete authentication, complete authorization, correct cache invalidation, concurrent-booking safety, scalability, production readiness, monitoring, or active deployment without separate evidence appropriate to that claim.
 
 Any new claim requires repository, runtime, test, deployment, or measurement evidence appropriate to that claim. Limitations must remain visible beside capability summaries.
 
@@ -439,7 +453,7 @@ The following remain Unresolved until the final implementation stack, repository
 - Which accessibility, performance, media, and quality rules need numeric thresholds later?
 - Who may approve temporary and permanent exceptions?
 - How often should project rules and their source documents be reviewed?
-- Which Rust Booking API rules may change after repository, deployment, and test verification?
+- Which Rust Booking API rules may change after build, migration, runtime, test, concurrency, Redis, historical-secret, and deployment verification extends the completed static repository audit?
 - Which CourtFit rules may change after source, deployment, API-key, browser, device, accessibility, and recommendation review?
 - Who owns public-content verification, correction, and last-reviewed updates?
 - What release, rollback, incident, backup, or monitoring rules become necessary after deployment architecture is chosen?

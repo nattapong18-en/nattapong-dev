@@ -32,6 +32,7 @@ The plan may order and gate work, but it must not override governing documents. 
 
 - nattapong.dev is a living personal engineering website, not primarily a portfolio, product landing page, gallery, blog, agency showcase, or template.
 - Rust Booking API and CourtFit are the two current Major Projects.
+- PRJ-01 completed a static read-only audit of the Booking API at repository `https://github.com/nattapong18-en/booking_api`, branch `main`, commit `d2f754fdd2fd5581ecca9f9e16539504020f6361`; `reference/audits/PRJ-01-booking-api-evidence.md` governs commit-scoped source claims only.
 - Graduation-project Research Preparation is an important current direction; no final topic is selected.
 - Learning, technical notes, experiments, and coursework require distinct but related treatment.
 - Governing documents `00` through `07` are complete as planning authority.
@@ -42,7 +43,7 @@ The plan may order and gate work, but it must not override governing documents. 
 
 **Approved assumptions:** The website serves multiple reading depths; content and evidence drive layout; Thai, English, and mixed-language content must work; accessibility, performance, privacy, and maintenance are foundational; the initial implementation should remain proportionate to one maintainer.
 
-**Requires verification:** Public identity details and contact methods; Booking API endpoints, architecture, authentication, Redis, database, tests, and deployment; CourtFit deployment, API-key behavior, request flow, browser/device/accessibility testing, and recommendation evaluation; publishable artifacts; coursework and learning evidence; research sources and available hardware.
+**Requires verification:** Public identity details and contact methods where not already confirmed; Booking API build, migration, test execution, runtime routes, cross-user isolation, concurrency integrity, Redis correction/runtime behavior, Docker operation, Render/Vercel status, historical environment-file risk, and artifact publication readiness; CourtFit deployment, API-key behavior, request flow, browser/device/accessibility testing, and recommendation evaluation; publishable artifacts; coursework and learning evidence; research sources and available hardware. Booking API route registration, static authentication coverage, source-level ownership checks, PostgreSQL integration, Redis cache role, transaction presence, and test-function presence are resolved only for the PRJ-01 audited commit.
 
 **Technical decisions not made:** Stack, rendering strategy, repository organization, content storage and authoring, asset pipeline, internationalization behavior, testing and quality tools, analytics, deployment, operational monitoring, and supported-environment policy.
 
@@ -119,7 +120,7 @@ For every decision, record the governing requirement, options considered, eviden
 
 **Why now:** Content fields, components, evidence surfaces, and responsive behavior cannot be validated with idealized placeholders.
 
-**Main work:** Verify personal profile details, public name presentation, and contact readiness. Review authorized evidence for the Booking API and CourtFit; confirm repository and deployment destinations; collect representative screenshots, code, terminal evidence, and records; identify artifacts that cannot be published. Record status, maturity, role, contribution, limitations, certainty, verification, and last-reviewed context. Prepare Thai, English, and mixed-language samples. Prepare Research Preparation content without selecting a graduation topic. Curate a small number of learning and coursework examples. Complete redaction and privacy review and identify content gaps.
+**Main work:** Verify personal profile details, public name presentation, and contact readiness. Use the committed PRJ-01 record for Booking API static facts rather than re-accessing its repository without new authorization; preserve its runtime, historical-secret, redaction, and publication blockers. Review separately authorized CourtFit evidence; confirm repository and deployment destinations; collect representative screenshots, code, terminal evidence, and records; identify artifacts that cannot be published. Record status, maturity, role, contribution, limitations, certainty, verification, and last-reviewed context. Prepare Thai, English, and mixed-language samples. Prepare Research Preparation content without selecting a graduation topic. Curate a small number of learning and coursework examples. Complete redaction and privacy review and identify content gaps.
 
 **Deliverables:** A public-ready candidate content set, internal verification record, artifact set, redaction decisions, and a blocking-gap list.
 
@@ -207,9 +208,17 @@ For every decision, record the governing requirement, options considered, eviden
 
 ## Rust Booking API
 
-Plan a project overview with individual role, Functional MVP status, educational and non-production-ready maturity, verified capabilities, GET/POST/PUT context, registration-only authentication wording, PostgreSQL role, Redis temporary-data role, no automated tests, limitations, repository evidence, and Deployment To be verified.
+Use the PRJ-01 evidence record for the audited commit only. Plan the project as an individual educational backend learning project from Nattapong's confirmed internal record and a coherent source-level functional-MVP candidate, not a production-ready system. Build, migration, test, runtime, deployment, security, and operational behavior remain unverified.
 
-Use technical evidence only after source review. Do not publish unverified endpoints, schema, password hashing, JWT, authorization, transactions, conflict correctness, scalability, security, deployment, or architecture.
+The source-level overview may cover six routes for public registration, public login, public room availability, authenticated booking creation, authenticated current-user listing, and authenticated cancellation. Methods are GET, POST, and PATCH. Registration, login, bcrypt password handling, JWT issuance/validation, and protected create/list/cancel handlers are present in source, but the authentication lifecycle and runtime security remain incomplete and unverified.
+
+Present source-level ownership checks for booking association, listing, and cancellation only with the limitation that runtime cross-user isolation, broader authorization, and any role/permission system are unverified. Present PostgreSQL integration, the users/rooms/bookings schema, uniqueness and foreign keys, and the booking-creation transaction as static evidence; do not imply runtime persistence or migration success.
+
+Describe Redis only as a 60-second room-availability response cache with known key/invalidation inconsistencies and request-path sensitivity to acquisition failure. Do not describe it as generic temporary booking storage or claim correct caching. Explain that the overlap check and insert share one transaction while no current database overlap constraint, row lock, serializable guarantee, optimistic concurrency, Redis lock, or idempotency mechanism establishes concurrent double-booking safety.
+
+Record seven tracked but unexecuted tests—five availability tests and two registration-handler tests whose setup depends on PostgreSQL and Redis. Treat the Dockerfile and GitHub Actions workflow as unverified configuration, and Render/Vercel as README claims only; deployment remains To be verified.
+
+Before any repository/history promotion, require private review of the historical tracked `.env` path and any appropriate credential rotation without reproducing values. Build, migration, test execution, runtime routes, cross-user authorization, concurrency integrity, Redis correction, Docker behavior, deployment, artifact redaction, and publication approval remain explicit gates.
 
 ## CourtFit
 
@@ -408,7 +417,7 @@ Gates define what must be true, not specific commands or tools.
 - **Excessive motion:** Prevent with static-first delivery; detect through purpose/reduced-motion review; respond by reducing or removing.
 - **Insufficient bilingual testing:** Prevent with early real samples; detect through wrap, fallback, and reading tests; respond by correcting typography, content, or layout.
 - **Hidden limitations or weak evidence context:** Prevent through required first-layer fields; detect in content review; respond by relocating and clarifying evidence and limits.
-- **Privacy leakage and API-key misunderstanding:** Prevent through redaction and source review; detect through repository/network/media audit; respond by removing exposure, correcting claims, and reassessing release.
+- **Privacy leakage and API-key misunderstanding:** Prevent through redaction and source review, including the unresolved private review of the Booking API's historical `.env` path; detect through authorized repository/network/media audit; respond by removing exposure, rotating potentially affected credentials when appropriate, correcting claims, and reassessing release.
 - **Dependency growth:** Prevent through dependency gates; detect through inventory and bundle/runtime review; respond by removing, consolidating, or documenting.
 - **Incomplete accessibility or mobile evidence failure:** Prevent throughout phases; detect with real artifacts and systematic validation; respond by blocking release or substituting accessible evidence.
 - **Documentation drift and maintenance burden:** Prevent with concurrent updates and limited systems; detect during quality/maintenance review; respond with corrections, archive decisions, and simplification.
@@ -485,7 +494,7 @@ The following require repository audit, code inspection, stack decisions, conten
 - How should content be stored, validated, and edited?
 - Which page or content path should become the first vertical experience?
 - Which project artifacts are safe and public-ready?
-- Which Booking API endpoints, architecture, authentication, Redis, testing, and deployment claims can be verified?
+- Is the PRJ-01 audited Booking API commit still canonical, and what separate evidence can verify buildability, migrations, test results and coverage, runtime routes, cross-user isolation, concurrency integrity, corrected Redis behavior, Docker operation, Render/Vercel status, historical credential safety, and public-ready artifacts?
 - Which CourtFit capabilities, deployment, API-key flow, browser/device behavior, accessibility, and recommendation limits can be verified?
 - Which content families belong in the first release?
 - Is more than one theme justified by real content and maintenance capacity?
