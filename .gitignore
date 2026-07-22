@@ -1,0 +1,37 @@
+# Local environment values
+.env
+.env.*
+!.env.example
+
+# Secrets, credentials, and private key material
+.secrets/
+.credentials/
+*.secret
+*.credentials
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# Operating-system and editor metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs, temporary data, caches, and backups
+*.log
+logs/
+*.tmp
+*.temp
+tmp/
+temp/
+.cache/
+*.bak
+*.backup
+*.orig
