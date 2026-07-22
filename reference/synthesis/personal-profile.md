@@ -10,17 +10,38 @@ Information in this document should not be exaggerated, generalized beyond the a
 
 Unresolved or changing information should remain clearly labeled.
 
+# Verification and Visibility Labels
+
+- **Confirmed public:** Nattapong explicitly approved the field for public presentation. This does not prove external account ownership, institutional records, employment, or current third-party behavior.
+- **Confirmed private:** Nattapong explicitly withheld the field from public presentation, or set a public boundary that excludes more detail.
+- **Not public-ready:** Do not publish, link, display, or imply the field or account until Nattapong explicitly changes its status.
+- **Not stated:** No public statement has been authorized. Do not supply one by inference.
+- **To be verified:** The current internal record is insufficient for a public factual claim and requires the appropriate evidence.
+- **Internal planning context:** Information retained to guide later content decisions. It is not automatically approved public wording.
+
+The confirmation recorded in this document establishes only Nattapong's publication choices for the named fields. No verification date, publication date, legal identity check, account-ownership check, university-record review, employment verification, or external account inspection is implied.
+
 # Basic Information
 
-**Name:** Nattapong Sangsana
+**Public name — Confirmed public:** Nattapong Sangsana
 
-**Current role:** Undergraduate Computer Engineering student working toward Senior Graduation Projects 1 and 2.
+**Thai name — Not public-ready:** Do not publish. No Thai-name spelling has been supplied for public use; do not infer, transliterate, or invent one.
 
-**Education:** Bachelor of Engineering in Computer Engineering, Nakhon Phanom University.
+**Public title — Confirmed public:** Computer Engineering Student
 
-**Current academic period:** Final-year preparation in 2026.
+**University — Confirmed public:** Nakhon Phanom University
 
-**Location:** Not currently intended for public display.
+**Approved education wording — Confirmed public:** Computer Engineering student at Nakhon Phanom University.
+
+**Student-status boundary:** The public title and education wording describe current student status, not professional employment. Do not replace them with Computer Engineer, Software Engineer, Backend Engineer, Embedded Engineer, Professional Engineer, Expert, or Specialist.
+
+**Current role — Internal planning context:** Undergraduate Computer Engineering student working toward Senior Graduation Projects 1 and 2.
+
+**Degree context — Internal planning context / To be verified for public use:** Bachelor of Engineering in Computer Engineering, Nakhon Phanom University.
+
+**Current academic period — Internal planning context / To be verified at publication:** Final-year preparation in 2026.
+
+**Public location — Confirmed public:** Thailand. Country-level location is the maximum approved public detail. Do not infer or publish a more precise location or any availability for relocation, remote work, onsite work, or travel.
 
 # Current Priority
 
@@ -32,24 +53,29 @@ Other projects may continue to be improved, but the graduation project currently
 
 # Career Direction
 
-Nattapong is exploring several areas of Computer Engineering and Software Engineering. These interests represent possible directions rather than established professional specialization.
+Nattapong is exploring several areas of Computer Engineering and Software Engineering. These interests represent current learning directions and possible career directions rather than established professional specialization, employment experience, mastery, production responsibility, security authority, or seniority.
 
-The main fields currently being considered are:
+**Confirmed primary interests — Confirmed public:**
 
 - Software Engineering
 - Embedded Systems and IoT
-- Cybersecurity
-- Network and Infrastructure
 - Systems Programming
 
-The entry-level roles currently being considered after graduation include:
+**Confirmed secondary interests — Confirmed public:**
+
+- Network and Infrastructure
+- Cybersecurity
+
+Suitable framing includes “current interests,” “interested in,” “exploring,” and “learning.” These classifications do not authorize final homepage copy or promotional claims. More specific interests elsewhere in this document remain internal planning context unless separately approved.
+
+**Possible entry-level roles — Internal planning context, not a public availability statement:**
 
 - Junior Backend Developer
 - Embedded Software Developer
 - IoT Engineer
 - Junior Network Engineer
 
-These choices are not final. The preferred direction may become clearer through research, project work, internships, self-study, and practical experience during the coming year.
+These choices are not final. They do not authorize claims that Nattapong is open to work, seeking an internship or role, available for freelance work, collaboration, research discussion, consulting, or other opportunities. The preferred direction may become clearer through research, project work, internships, self-study, and practical experience during the coming year.
 
 # Areas of Interest
 
@@ -200,7 +226,9 @@ AI should not be presented as the center of Nattapong’s identity unless the ac
 
 # Current Engineering Profile
 
-A more accurate current description is:
+The only confirmed public title is **Computer Engineering Student**.
+
+The following is an internal descriptive summary, not a public title or final website copy:
 
 > Computer Engineering student developing practical experience across backend systems, Rust, Linux, embedded systems, networking, and AI-assisted applications.
 
@@ -641,21 +669,67 @@ This includes:
 
 # Contact Information
 
-The following information is currently available internally for website planning.
+This section records publication boundaries for contact destinations. It does not publish them or establish a public contact-purpose statement.
 
-**Email:** zpoloa0@gmail.com
+## Confirmed Public Destinations
 
-**GitHub:** https://github.com/nattapong18-en
+**Email — Confirmed public:** `zpoloa0@gmail.com`
 
-**Facebook page:** Not created yet. A public page may be created after the website is ready.
+Nattapong explicitly authorized this address for public display as a general contact destination. This approval does not authorize newsletters, marketing, automated outreach, account recovery, or any other inferred use.
 
-**LinkedIn:** Account exists or is planned, but identity verification and public readiness are not yet complete.
+**GitHub — Confirmed public:** `https://github.com/nattapong18-en`
 
-Before publication, confirm which contact details should be publicly displayed.
+Nattapong explicitly authorized public display of this destination. No external inspection was performed. This approval does not establish that every repository is public-ready, pinned repositories were reviewed, commit history is free of sensitive information, or the account proves any project behavior.
+
+## Not Public-Ready Accounts
+
+**LinkedIn — Not public-ready:** Do not display a link, icon, placeholder, username, or inferred account. Account existence is not established or implied by this record.
+
+**Facebook — Not public-ready:** Do not display a link, icon, placeholder, username, or inferred account. Account existence is not established or implied by this record.
+
+Account existence does not equal publication approval. External inspection or a change in public readiness requires a separate authorized task and explicit confirmation.
+
+## Contact Purpose
+
+**Public contact-purpose statement — Not stated:** Do not add an availability or opportunity statement. In particular, do not claim that Nattapong is open to work, seeking internships, seeking junior roles, available for freelance work, available for collaboration, available for research discussion, available for consulting, or available for opportunities.
+
+Email and GitHub may be presented as confirmed public destinations without assigning a public opportunity, availability, or marketing purpose.
+
+## Verification Evidence
+
+These publication decisions were established by explicit user confirmation from Nattapong. The evidence supports only that Nattapong approved or withheld the listed fields for public presentation.
+
+It does not establish a verification date, publication date, legal identity check, account ownership, external account inspection, university-record verification, employment verification, repository safety, or external service behavior.
+
+# Privacy and Publication Boundaries
+
+## Confirmed Private Exclusions
+
+The following must remain private and must not be published as profile or contact content:
+
+- Exact home address
+- Village, district, and precise current location
+- Coordinates and location history
+- Personal phone number
+- Private social accounts
+- Account credentials
+- API keys and tokens
+- University IDs
+- Private university documents
+- Other private documents
+
+The public location boundary is **Thailand** only. Education, repositories, screenshots, logs, metadata, or earlier material must not be used to infer a more specific public location.
+
+Broader existing privacy protections remain in force for environment values, repository secrets, logs, screenshots, real user data, research data, personal paths, third-party information, and other sensitive material. This confirmation does not weaken those rules.
 
 # Accuracy and Publication Notes
 
 - Do not present areas of interest as established expertise.
+- Use **Computer Engineering Student** as the confirmed public title and preserve the distinction between student status and professional employment.
+- Public profile information is limited to the fields explicitly marked Confirmed public; internal planning context is not automatically public-ready.
+- Email and GitHub are confirmed for public display, but their external behavior and account ownership were not verified in this task.
+- LinkedIn and Facebook remain Not public-ready, and no public contact-purpose statement is authorized.
+- Thailand is the maximum approved public location detail.
 - Do not use “Full-Stack Systems Engineer” as a formal current title.
 - Do not describe the booking API as production-ready.
 - Do not describe CourtFit recommendations as verified purchasing advice.
@@ -663,5 +737,5 @@ Before publication, confirm which contact details should be publicly displayed.
 - Verify technologies and completed features against repositories before publication.
 - Distinguish coursework, learning exercises, experiments, and major projects.
 - Clearly label work that used AI assistance, tutorials, documentation, or external guidance when that context materially affects ownership.
-- Do not publish private contact or location information without confirmation.
+- Do not publish private contact, identity, account, document, or location information beyond the confirmed boundaries.
 - Preserve uncertainty when information is still changing.

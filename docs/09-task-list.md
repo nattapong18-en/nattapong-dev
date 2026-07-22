@@ -106,36 +106,19 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, and DEC-01 stack/rendering decision are complete. DEC-01 approves Astro with static HTML by default and separately justified local islands, while implementation, content evidence, tooling details, and external project evidence remain unresolved.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, and CON-01 public-profile verification are complete. The verified profile boundaries are recorded internally; they do not publish content or authorize implementation.
 
-The immediate direction is:
+The next preparation candidates are:
 
-1. Complete `CON-01` to verify public profile and contact information independently of technical implementation.
-2. Prepare `DEC-02` using the approved DEC-01 constraints when representative content evidence and authoring questions are sufficiently ready.
-3. Prepare explicit external-repository authorization for `PRJ-01` and `PRJ-02` when project verification is ready.
+1. Prepare `DEC-02` readiness using the approved DEC-01 constraints and representative content evidence.
+2. Prepare explicit external-repository authorization for `PRJ-01` when Booking API verification is ready.
+3. Prepare explicit external-repository authorization for `PRJ-02` when CourtFit verification is ready.
 
-Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
+These are candidates, not silently activated tasks. Project evidence, content authoring, public-ready artifacts, testing, deployment, and first-vertical decisions remain unresolved. Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
 
 # Now — Immediate Tasks
 
-The immediate queue is intentionally limited to one public-content verification task. DEC-01 is retained under Done and Historical Tasks.
-
-## Public Content Verification
-
-**CON-01 — Verify public profile and contact content**  
-**Status:** Now · **Priority:** P0
-
-- **Source:** Phase 2; Content and Privacy specifications; personal profile.
-- **Objective / why now:** Establish safe public identity and contact facts before direct-entry and release content.
-- **Reading:** Personal profile, content specification, project rules, and current privacy boundaries.
-- **Authorization:** Personal confirmation and authorized content records only.
-- **Inputs:** User confirmation for name presentation, student/education wording, interests, email, GitHub, LinkedIn, Facebook, contact context, and exclusions.
-- **Boundaries:** Verify; do not create accounts or publish contact details.
-- **Deliverable:** Public-ready fields, private exclusions, verification status, and last-reviewed context.
-- **Acceptance / validation:** Location and unapproved accounts remain private; interests do not become expertise.
-- **Dependencies / blockers:** User confirmation.
-- **Prohibited:** Inferring readiness from account existence.
-- **Documentation / report:** Update only authorized profile/content records and report withheld fields.
+The Now queue is empty. Completing DEC-01 and CON-01 does not authorize implementation or automatically promote any Next task.
 
 # Next — Decision and Evidence Tasks
 
@@ -653,13 +636,14 @@ The active workspace, local read-only scope, audited scaffold state, and recover
 
 The stack/rendering blocker is resolved through approved DEC-01: Astro is the framework, static HTML is the default, and client JavaScript is limited to separately justified local islands. This resolution does not authorize implementation or resolve the remaining gates.
 
+The general public-profile confirmation blocker is resolved through CON-01. The internal record confirms approved public fields while preserving the Thai name, LinkedIn, Facebook, contact-purpose statement, precise location, phone number, private accounts, credentials, university identifiers, and private documents within their recorded restrictions. External account behavior and ownership remain unverified.
+
 The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
 | --- | --- | --- | --- |
 | Content storage/authoring unresolved | Approve DEC-02 | FND-01 | Final content model implementation |
 | Theme/asset direction unresolved | Approve DEC-03 where blocking | FND-02 | Final theme/assets or motif |
-| Public profile unverified | Complete CON-01 | Public background/contact, REL-01 | Publishing personal/contact facts |
 | External project inspection not authorized or verified | Explicitly authorize and complete PRJ-01/PRJ-02 | PRJ-03/PRJ-04, technical motion | External inspection or public technical claims/demonstrations |
 | CourtFit key behavior unverified | Complete PRJ-02 privacy review | PRJ-04, PRV-01 | Key-security or request-flow claims |
 | No public-ready artifact set | Complete CON-02 | VRT-01/VRT-02/EVD-01 | Placeholder-led design validation |
@@ -733,6 +717,21 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Known limitations:** Content storage, package manager, styling, testing, deployment, routes, assets, themes, and other deferred choices remain unresolved.
 - **Follow-up:** Use DEC-01 as an approved dependency for later decision records while keeping implementation blocked until the remaining required evidence, decisions, and authorization exist.
 
+## Completed Content Verification
+
+**CON-01 — Verify public profile and contact content**  
+**Status:** Done · **Priority:** P0
+
+- **Completion reason:** Nattapong explicitly confirmed the public, withheld, private, and not-stated profile boundaries, and the internal synthesis was updated and reviewed against them.
+- **Confirmed public:** Public name `Nattapong Sangsana`; title `Computer Engineering Student`; university and approved wording `Computer Engineering student at Nakhon Phanom University.`; country-level location `Thailand`; email `zpoloa0@gmail.com`; and GitHub destination `https://github.com/nattapong18-en`.
+- **Interest boundaries:** Software Engineering, Embedded Systems and IoT, and Systems Programming are confirmed primary interests. Network and Infrastructure and Cybersecurity are confirmed secondary interests. They remain interests and learning directions, not expertise, specialization, employment, mastery, professional authority, or seniority.
+- **Withheld and private:** The Thai name is withheld; LinkedIn and Facebook are Not public-ready; contact purpose is Not stated. Precise location, phone number, private accounts, credentials, API keys and tokens, university IDs, private university documents, and other private documents remain private.
+- **Verification:** Evidence is explicit user confirmation from Nattapong. No legal identity, official enrollment, employment, external-account ownership or behavior, repository safety, verification date, or publication date was established.
+- **Internal record:** `reference/synthesis/personal-profile.md`.
+- **Publication and implementation:** No content was published, no account was inspected or modified, and no page or implementation was created.
+- **Known limitations:** Public readiness may change; GitHub ownership and current behavior remain externally unverified; no opportunity or availability wording is approved.
+- **Follow-up:** Use the verified fields as input to later content readiness work while preserving the remaining project-evidence, account-readiness, authoring, artifact, testing, deployment, and first-vertical gates.
+
 ## Cancelled Audit History
 
 **AUD-03 — Audit capabilities, public boundaries, and privacy risks**  
@@ -754,8 +753,7 @@ GOV-01 (Done) ──────────────────────
 AUD-01 (Done) ─► AUD-02 (Done) ─► GOV-02 (Done) ─► DEC-01 (Done)
 AUD-02 (Done) ─► AUD-03 (Cancelled: current scope covered by AUD-02)
 DEC-01 (Done) ─► DEC-02 / DEC-03 / DEC-04 / DEC-05 (remain separately gated)
-CON-01 (Now) ─────────────────────────────────────┐
-authorized PRJ-01 + PRJ-02 ───────────────────────┼─► CON-02 ─► VRT-01
+CON-01 (Done) + authorized PRJ-01 + PRJ-02 + research/learning evidence ─► CON-02 ─► VRT-01
 DEC-01 + DEC-02 + CON-02 ─► FND-01 ──────────────┐
 DEC-01 + DEC-03 + DEC-04 + FND-01 ─► FND-02 ─────┼─► NAV-01 ─► VRT-02
 VRT-01 ───────────────────────────────────────────┘
@@ -765,7 +763,7 @@ representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-CON-01 is the sole Now task. DEC-02 preparation and authorization preparation for PRJ-01/PRJ-02 may proceed only within their documented evidence and authorization boundaries. Approved DEC-01 is a dependency, not implementation authority; implementation work must not assume any remaining blocked gate.
+The Now queue is empty. DEC-02 readiness and authorization preparation for PRJ-01/PRJ-02 are recommended next candidates but remain Next until separately authorized and sufficiently ready. CON-01 is one input to CON-02; project verification and representative research/learning evidence remain required. Approved DEC-01 and completed CON-01 are dependencies, not implementation authority.
 
 # Validation and Completion Rules
 
@@ -806,7 +804,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** Only CON-01 is active after completion of the governance/audit baseline and DEC-01.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01 and CON-01; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
@@ -822,7 +820,9 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - Which external project repositories and deployments may PRJ-01 and PRJ-02 inspect?
 - Which implementation-specific rules, if any, should later be added to `AGENTS.md` after they become stable?
 - How will content be stored, validated, and edited?
-- Which public profile and contact details are confirmed?
+- When, if ever, will LinkedIn or Facebook become public-ready?
+- Should a public contact-purpose statement be approved later, and what evidence or intent would support it?
+- What separate evidence, if needed, should verify ownership and current behavior of the confirmed public GitHub destination?
 - Which project artifacts are safe and public-ready?
 - Which first vertical content path should be selected?
 - Which components recur after vertical validation?
