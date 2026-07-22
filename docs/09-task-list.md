@@ -106,106 +106,42 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, and DEC-01 stack/rendering decision are complete. DEC-01 approves Astro with static HTML by default and separately justified local islands, while implementation, content evidence, tooling details, and external project evidence remain unresolved.
+
 The immediate direction is:
 
-1. Create a concise `AGENTS.md` from stable operational rules through a separate explicitly authorized task.
-2. Confirm the active implementation target and authorization for inspection.
-3. Audit workspace, local instructions, capabilities, evidence, and privacy boundaries.
-4. Record unresolved product and technical decision gates.
-5. Prepare enough verified content and evidence to select the first vertical experience.
+1. Complete `CON-01` to verify public profile and contact information independently of technical implementation.
+2. Prepare `DEC-02` using the approved DEC-01 constraints when representative content evidence and authoring questions are sufficiently ready.
+3. Prepare explicit external-repository authorization for `PRJ-01` and `PRJ-02` when project verification is ready.
 
-This documentation task performs none of those actions. Foundation or page construction must not move to Now before the audit and blocking decisions pass.
+Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
 
 # Now — Immediate Tasks
 
-The immediate queue is intentionally limited to four governance and audit tasks.
+The immediate queue is intentionally limited to one public-content verification task. DEC-01 is retained under Done and Historical Tasks.
 
-## Governance
+## Public Content Verification
 
-**GOV-01 — Create concise implementation `AGENTS.md`**  
-**Status:** Now · **Priority:** P1
-
-- **Source:** Phase 0; `docs/07-project-rules.md`, `docs/08-implementation-plan.md`, and this list.
-- **Objective / why now:** Create a short operational derivative before repeated coding-agent work begins.
-- **Reading:** Project rules, implementation plan, this task list, current root instructions, and existing `AGENTS.md`.
-- **Authorization:** `AGENTS.md` only, explicitly authorized in a separate prompt; no edit in this task-list session.
-- **Inputs:** Stable rules for scope, authority, accuracy, verification, testing, privacy, and completion reporting.
-- **Boundaries:** Summarize; do not copy specifications, choose technologies, or replace governing documents.
-- **Deliverable:** Concise agent instructions with source hierarchy, file-scope, verification, test, and reporting rules.
-- **Acceptance / validation:** Every mandatory instruction traces to approved rules; unresolved choices remain open; the file is reviewed for conflicts and excessive breadth.
-- **Dependencies / blockers:** Requires explicit file authorization. No implementation dependency.
-- **Prohibited:** Editing other files, adding stack rules, or presenting `AGENTS.md` as sole authority.
-- **Documentation / report:** Report the changed file, validation, omissions, and any rule conflict.
-
-## Audit Preparation
-
-**AUD-01 — Confirm audit target, permissions, and exclusions**  
+**CON-01 — Verify public profile and contact content**  
 **Status:** Now · **Priority:** P0
 
-- **Source:** Phase 0; Scope, File, Privacy, and Git rules.
-- **Objective / why now:** Establish exactly which workspace is the implementation target and what may be inspected before any audit or mutation.
-- **Reading:** Project rules, implementation plan Phase 0, this task list, and current environment instructions.
-- **Authorization:** Read-only systems and paths must be named in the execution prompt; no mutation.
-- **Inputs:** User confirmation of active repository/workspace, implementation inspection authority, external repository/deployment authority, and private exclusions.
-- **Boundaries:** Confirm scope only; do not inspect external repositories, deploy, build, test, or modify files.
-- **Deliverable:** Audit authorization record naming target, allowed evidence, exclusions, and prohibited areas.
-- **Acceptance / validation:** Scope is explicit enough that AUD-02 and AUD-03 cannot cross an ambiguous boundary.
-- **Dependencies / blockers:** User authorization. Blocks all repository-dependent work.
-- **Prohibited:** Inferring permission from public URLs or the planning workspace.
-- **Documentation / report:** Record authorized scope and unanswered permission questions.
-
-## Repository and Workspace Audit
-
-**AUD-02 — Audit workspace structure and preserve existing work**  
-**Status:** Blocked · **Priority:** P0
-
-- **Source:** Phase 0; File Modification and Git Discipline rules.
-- **Objective / why now:** Establish implementation existence, structure, instructions, and user-owned changes without mutation.
-- **Reading:** AUD-01 result, local `AGENTS.md` and `CLAUDE.md`, project rules, implementation plan.
-- **Authorization:** Read-only paths from AUD-01; future implementation paths require audit discovery.
-- **Inputs:** Approved target and exclusions.
-- **Boundaries:** Read local instructions; inspect status and inventory files, directories, configuration, dependencies, assets, docs, and generated files. No builds, tests, formatting, or edits.
-- **Deliverable:** Workspace map, instruction summary, implementation-presence finding, dirty/user-owned change record, and unknowns.
-- **Acceptance / validation:** Every fact cites inspected local evidence; no user work changed; planning files are not mistaken for code.
-- **Dependencies / blockers:** Blocked by AUD-01.
-- **Prohibited:** Cleanup, dependency installation, repository-history rewrite, or implementation inference.
-- **Documentation / report:** Report inspected scope, no files changed, risks, and follow-up evidence needs.
-
-**AUD-03 — Audit capabilities, public boundaries, and privacy risks**  
-**Status:** Blocked · **Priority:** P0
-
-- **Source:** Phase 0; Verification, Testing, Performance, and Privacy rules.
-- **Objective / why now:** Determine existing framework/tooling only from evidence and identify capabilities and exposure risks before decisions.
-- **Reading:** AUD-01/AUD-02 results, local configuration and approved evidence, project rules.
-- **Authorization:** Read-only approved workspace and explicitly authorized deployment/project evidence.
-- **Inputs:** Workspace map and permission record.
-- **Boundaries:** Identify build/type/lint/test/format/deploy capabilities, dependencies, environment files, logs, screenshots, secrets risk, and public/private boundaries. Do not run commands or inspect unauthorized externals.
-- **Deliverable:** Capability matrix, privacy/secret findings, verified-vs-unknown baseline, and blocking gaps.
-- **Acceptance / validation:** Tool and framework claims cite files; no secret value is reproduced; deployment remains unknown unless authorized evidence proves it.
-- **Dependencies / blockers:** Blocked by AUD-01 and normally follows AUD-02.
-- **Prohibited:** Executing capabilities, exposing secrets, or treating dependency presence as working behavior.
-- **Documentation / report:** Report evidence, redactions, blockers, and recommended decision tasks.
+- **Source:** Phase 2; Content and Privacy specifications; personal profile.
+- **Objective / why now:** Establish safe public identity and contact facts before direct-entry and release content.
+- **Reading:** Personal profile, content specification, project rules, and current privacy boundaries.
+- **Authorization:** Personal confirmation and authorized content records only.
+- **Inputs:** User confirmation for name presentation, student/education wording, interests, email, GitHub, LinkedIn, Facebook, contact context, and exclusions.
+- **Boundaries:** Verify; do not create accounts or publish contact details.
+- **Deliverable:** Public-ready fields, private exclusions, verification status, and last-reviewed context.
+- **Acceptance / validation:** Location and unapproved accounts remain private; interests do not become expertise.
+- **Dependencies / blockers:** User confirmation.
+- **Prohibited:** Inferring readiness from account existence.
+- **Documentation / report:** Update only authorized profile/content records and report withheld fields.
 
 # Next — Decision and Evidence Tasks
 
-These tasks become eligible only after the audit establishes the relevant constraints.
+These tasks follow the immediate queue or require additional evidence and authorization.
 
 ## Decision Gates
-
-**DEC-01 — Decide stack and rendering strategy**  
-**Status:** Next · **Priority:** P1
-
-- **Source:** Phase 1; Vision, design, content, layout, rules, AUD results.
-- **Objective / why now:** Approve the minimum technical and rendering foundation needed before implementation.
-- **Reading:** Documents `00`–`08`, audit baseline, supported-content needs.
-- **Authorization:** Decision record only; implementation files specified later.
-- **Inputs:** Real repository state, options, bilingual/accessibility/performance/maintenance constraints, decision owner.
-- **Boundaries:** Evaluate stack and rendering together; do not choose content storage, deployment, or libraries not required by the gate.
-- **Deliverable:** Decision record with options, evidence, consequences, reversibility, and documentation target.
-- **Acceptance / validation:** Choice satisfies current scope without speculative infrastructure.
-- **Dependencies / blockers:** AUD-02/AUD-03; user decision.
-- **Prohibited:** Choosing from trends or reference-site appearance.
-- **Documentation / report:** Update only authorized decision sources; report unresolved consequences.
 
 **DEC-02 — Decide content storage, authoring, and bilingual behavior**  
 **Status:** Next · **Priority:** P1
@@ -218,7 +154,7 @@ These tasks become eligible only after the audit establishes the relevant constr
 - **Boundaries:** Decide direction, not a speculative CMS or complete schema.
 - **Deliverable:** Storage/authoring/bilingual decision record with migration and fallback implications.
 - **Acceptance / validation:** Represents both projects, Research Preparation, and non-project content honestly.
-- **Dependencies / blockers:** AUD tasks, DEC-01 where stack constrains options, representative content.
+- **Dependencies / blockers:** Completed audit/Git baseline, DEC-01 where stack constrains options, and representative content.
 - **Prohibited:** Invented taxonomies or automatic content generation.
 - **Documentation / report:** Authorized updates and unresolved editorial choices.
 
@@ -248,7 +184,7 @@ These tasks become eligible only after the audit establishes the relevant constr
 - **Boundaries:** Define categories and support policy; do not select extra tools without justified need.
 - **Deliverable:** Quality/test/support decision record with local and future CI implications.
 - **Acceptance / validation:** Covers bilingual, long content, keyboard, reflow, states, and real artifacts.
-- **Dependencies / blockers:** AUD-03 and DEC-01.
+- **Dependencies / blockers:** AUD-02 findings and DEC-01.
 - **Prohibited:** Treating tool presence as passing validation.
 - **Documentation / report:** Record omitted categories and future gates.
 
@@ -263,26 +199,9 @@ These tasks become eligible only after the audit establishes the relevant constr
 - **Boundaries:** Decide direction and whether analytics is needed; do not select extras by default.
 - **Deliverable:** Deployment/analytics/privacy decision records with reversibility and consent implications.
 - **Acceptance / validation:** No private data or unsupported operational claim is required.
-- **Dependencies / blockers:** AUD-03, DEC-01, decision owner.
+- **Dependencies / blockers:** AUD-02 findings, DEC-01, and a decision owner.
 - **Prohibited:** Deploying, enabling tracking, or choosing provider from familiarity alone.
 - **Documentation / report:** Record authorized decisions and deferred operations.
-
-## Personal and Public Content Verification
-
-**CON-01 — Verify public profile and contact content**  
-**Status:** Next · **Priority:** P0
-
-- **Source:** Phase 2; Content and Privacy specifications; personal profile.
-- **Objective / why now:** Establish safe public identity and contact facts before direct-entry and release content.
-- **Reading:** Personal profile, content specification, project rules.
-- **Authorization:** Personal confirmation and authorized content records only.
-- **Inputs:** User confirmation for name presentation, student/education wording, interests, email, GitHub, LinkedIn, Facebook, contact context, and exclusions.
-- **Boundaries:** Verify; do not create accounts or publish contact details.
-- **Deliverable:** Public-ready fields, private exclusions, verification status, and last-reviewed context.
-- **Acceptance / validation:** Location and unapproved accounts remain private; interests do not become expertise.
-- **Dependencies / blockers:** User confirmation.
-- **Prohibited:** Inferring readiness from account existence.
-- **Documentation / report:** Update authorized profile/content records and report withheld fields.
 
 ## Rust Booking API Verification
 
@@ -297,7 +216,7 @@ These tasks become eligible only after the audit establishes the relevant constr
 - **Boundaries:** Inspect structure, dependencies, endpoints/methods, data model, registration, password/JWT/authorization behavior, Redis purpose/expiration, transactions/conflicts, tests, build/runtime, deployment, and safe artifacts.
 - **Deliverable:** Dated claim matrix, evidence inventory, limitations, public-safe artifacts, and unresolved questions.
 - **Acceptance / validation:** Current wording remains until evidence changes: Major Project, individual, Functional MVP, educational/non-production-ready, Rust/Axum, PostgreSQL, Redis temporary data, registration-related authentication only, GET/POST/PUT, no automated tests, Deployment To be verified.
-- **Dependencies / blockers:** AUD-01 authorization and external review permission.
+- **Dependencies / blockers:** The local baseline is complete; external repository and deployment review still require explicit authorization.
 - **Prohibited:** Turning a verification question into a claim or modifying the project.
 - **Documentation / report:** Authorized inventory/content updates, inspected sources, and unverified items.
 
@@ -314,7 +233,7 @@ These tasks become eligible only after the audit establishes the relevant constr
 - **Boundaries:** Verify dependencies, provider integration, streaming, switching, Stop/Retry, bilingual/responsive/dark behavior, key storage/persistence/request path/logging, browsers/devices/accessibility, deployment URL, and evidence safety.
 - **Deliverable:** Dated claim/privacy matrix, public-safe artifacts, test scope, limitations, and unresolved items.
 - **Acceptance / validation:** Retain educational/experimental and all current limitations; Live URL remains To be verified until proven; no API-key security claim without source/data-flow evidence.
-- **Dependencies / blockers:** AUD-01 authorization and external review permission.
+- **Dependencies / blockers:** The local baseline is complete; external repository, deployment, and browser review still require explicit authorization.
 - **Prohibited:** Testing with exposed real keys or claiming full compatibility/accuracy.
 - **Documentation / report:** Authorized updates, redactions, and remaining privacy risks.
 
@@ -730,18 +649,18 @@ All tasks here remain dependent on audit, blocking decisions, and content readin
 
 # Blocked Tasks
 
-The following blockers govern activation:
+The active workspace, local read-only scope, audited scaffold state, and recoverable Git baseline are resolved through AUD-01, AUD-02, and GOV-02. AUD-03 is not an unresolved prerequisite because its current-scope questions were answered by AUD-02.
+
+The stack/rendering blocker is resolved through approved DEC-01: Astro is the framework, static HTML is the default, and client JavaScript is limited to separately justified local islands. This resolution does not authorize implementation or resolve the remaining gates.
+
+The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
 | --- | --- | --- | --- |
-| Active implementation target unknown | Complete AUD-01 | AUD-02, AUD-03, all implementation tasks | Repository inspection or mutation |
-| Inspection not authorized | Explicit read scope | AUD-02, AUD-03, PRJ-01, PRJ-02 | Local/external inspection |
-| Repository state unknown | Complete AUD-02/AUD-03 | DEC and FND tasks | Implementation assumptions or dependency changes |
-| Stack/rendering unresolved | Approve DEC-01 | FND-01/FND-02/NAV-01 | Framework-specific implementation |
 | Content storage/authoring unresolved | Approve DEC-02 | FND-01 | Final content model implementation |
 | Theme/asset direction unresolved | Approve DEC-03 where blocking | FND-02 | Final theme/assets or motif |
 | Public profile unverified | Complete CON-01 | Public background/contact, REL-01 | Publishing personal/contact facts |
-| Project access/evidence unverified | Complete PRJ-01/PRJ-02 | PRJ-03/PRJ-04, technical motion | Public technical claims/demonstrations |
+| External project inspection not authorized or verified | Explicitly authorize and complete PRJ-01/PRJ-02 | PRJ-03/PRJ-04, technical motion | External inspection or public technical claims/demonstrations |
 | CourtFit key behavior unverified | Complete PRJ-02 privacy review | PRJ-04, PRV-01 | Key-security or request-flow claims |
 | No public-ready artifact set | Complete CON-02 | VRT-01/VRT-02/EVD-01 | Placeholder-led design validation |
 | First vertical path unselected | Complete VRT-01 | VRT-02/CMP-01 | Broad page/component implementation |
@@ -759,25 +678,94 @@ Reconsider only when real content volume, visitor tasks, verified behavior, acce
 
 Done and Cancelled records retain stable ID, completion/cancellation reason, validation summary, changed files, known limitations, follow-up tasks, and relevant documentation updates. Do not delete history merely to shorten the queue.
 
-The approved planning documents `reference/design-dna.md` and `docs/00` through `docs/08` exist and support this list. This statement does not create fictional implementation tasks or imply implementation completion.
+## Completed Governance and Audit Baseline
+
+**GOV-01 — Create concise implementation `AGENTS.md`**  
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** `AGENTS.md` was created as a concise operational derivative of the approved specifications and project rules.
+- **Validation:** Its authority hierarchy, scope, factual-accuracy, verification, testing, privacy, completion-report, and stop rules were reviewed. It did not select unresolved technology or replace governing documents.
+- **Files changed:** `AGENTS.md` only.
+- **Known limitations:** It requires later review when stable implementation-specific rules exist.
+- **Follow-up:** Use it with the relevant governing documents during every authorized task.
+
+**AUD-01 — Confirm audit target, permissions, and exclusions**  
+**Status:** Done · **Priority:** P0
+
+- **Completion reason:** The active target was confirmed as `/home/nattapaong/Project/Web/nattapong-dev-template` and bounded read-only local inspection was authorized.
+- **Validation:** Paths outside the workspace, external repositories, deployments, network access, and secret-value inspection were explicitly excluded.
+- **Files changed:** None.
+- **Known limitations:** External project and deployment inspection still require separate authorization.
+- **Follow-up:** Its local scope enabled AUD-02; external scope remains governed by PRJ-01 and PRJ-02 prompts.
+
+**AUD-02 — Audit workspace structure and preserve existing work**  
+**Status:** Done · **Priority:** P0
+
+- **Completion reason:** The approved workspace was inspected read-only before implementation mutation.
+- **Validation:** The audit found completed planning/reference material, empty implementation-oriented directories, and no source files, manifests, lockfiles, framework/tool configuration, tests, deployment configuration, environment files, or Git repository. Public/private boundaries and secret-path risks were reviewed without mutation.
+- **Files changed:** None.
+- **Known limitations:** Runtime, deployment, and external project behavior were outside scope and remain unverified.
+- **Follow-up:** The audit supported GOV-02, DEC-01, and future evidence tasks.
+
+**GOV-02 — Establish recoverable Git baseline**  
+**Status:** Done · **Priority:** P0
+
+- **Objective / why required:** Make later changes observable and recoverable before implementation, tooling, environment, or dependency work begins.
+- **Authorized mutations:** Create `.git/` metadata and one root `.gitignore`, stage the approved baseline, and create one local commit using the existing Git identity.
+- **Deliverables:** Technology-neutral `.gitignore`; local Git repository on the observed `main` branch; one root baseline commit containing `.gitignore`, `AGENTS.md`, `CLAUDE.md`, `README.md`, `docs/`, and `reference/`.
+- **Validation:** Existing project-file checksums and modes remained unchanged; exactly 34 approved files were committed; final status was clean; no unexpected or sensitive path was staged.
+- **Commit:** `73244b0` — `Establish initial nattapong.dev planning baseline`.
+- **Filesystem files changed:** Created `.gitignore`; no existing project file changed.
+- **Git metadata:** Created under `.git/`; no remote, branch rename, tag, or additional commit was created.
+- **Network:** No network action occurred.
+- **Known limitation:** Git does not track empty `.agents/`, `.codex/`, `src/`, `public/`, `reference/decisions/`, `reference/screenshots/`, or `reference/wireframes/` directories.
+- **Follow-up:** Use the clean baseline to review every later diff; do not add placeholders merely to track empty directories.
+
+**DEC-01 — Decide stack and rendering strategy**  
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Decision owner Nattapong explicitly approved Astro as the nattapong.dev framework and closed the stack/rendering gate.
+- **Decision:** Generate static HTML by default. Add client JavaScript only through separately justified local islands. No request-time renderer, server adapter, or continuously running application server is approved.
+- **Reconsideration:** Introducing request-time server rendering, a server adapter, or an application server requires reopening or superseding DEC-01 through a separately approved decision.
+- **Decision record:** `reference/decisions/DEC-01-stack-and-rendering.md`.
+- **Validation:** The record retains the audited baseline, alternatives, tradeoffs, risks, reversibility, official sources, and deferred decisions. Approval was explicit and does not resolve DEC-02 through DEC-05.
+- **Implementation:** No Astro project was scaffolded, no dependency was selected or installed, and no implementation or configuration was created.
+- **Known limitations:** Content storage, package manager, styling, testing, deployment, routes, assets, themes, and other deferred choices remain unresolved.
+- **Follow-up:** Use DEC-01 as an approved dependency for later decision records while keeping implementation blocked until the remaining required evidence, decisions, and authorization exist.
+
+## Cancelled Audit History
+
+**AUD-03 — Audit capabilities, public boundaries, and privacy risks**  
+**Status:** Cancelled · **Priority:** P0
+
+- **Original objective:** Identify build/type/lint/test/format/deploy capabilities, framework/tooling evidence, environment and secret risks, and public/private boundaries.
+- **Cancellation reason:** AUD-02 already inspected these areas sufficiently for the current empty scaffold and found no implementation, tooling, configuration, environment files, or deployment behavior. A duplicate read-only audit would add no current evidence.
+- **Execution history:** No separate AUD-03 execution occurred.
+- **Files changed:** None.
+- **Known limitation:** The findings describe the pre-implementation scaffold only.
+- **Follow-up:** Re-audit capabilities and privacy after tooling, implementation, dependencies, environment files, deployment configuration, or public behavior exists.
+
+The approved planning documents `reference/design-dna.md` and `docs/00` through `docs/08` exist and support this history. Their existence does not imply implementation completion.
 
 # Task Dependency Map
 
 ```text
-GOV-01 ───────────────► repeated coding-agent work
-AUD-01 ─► AUD-02 ─► AUD-03 ─► DEC-01..05
-CON-01 ────────────────┐
-PRJ-01 + PRJ-02 ───────┼─► CON-02 ─► VRT-01
-DEC-01 + DEC-02 ─► FND-01 ─┐
-DEC-01 + DEC-03 ─► FND-02 ─┼─► NAV-01 ─► VRT-02
-VRT-01 ────────────────────┘
+GOV-01 (Done) ──────────────────────────────► governed agent work
+AUD-01 (Done) ─► AUD-02 (Done) ─► GOV-02 (Done) ─► DEC-01 (Done)
+AUD-02 (Done) ─► AUD-03 (Cancelled: current scope covered by AUD-02)
+DEC-01 (Done) ─► DEC-02 / DEC-03 / DEC-04 / DEC-05 (remain separately gated)
+CON-01 (Now) ─────────────────────────────────────┐
+authorized PRJ-01 + PRJ-02 ───────────────────────┼─► CON-02 ─► VRT-01
+DEC-01 + DEC-02 + CON-02 ─► FND-01 ──────────────┐
+DEC-01 + DEC-03 + DEC-04 + FND-01 ─► FND-02 ─────┼─► NAV-01 ─► VRT-02
+VRT-01 ───────────────────────────────────────────┘
 VRT-02 ─► CMP-01 / EVD-01 / STA-01 ─► PRJ-03 / PRJ-04 / RES-01 / LRN-01..04
 stable static scope + verified behavior ─► MOT-01
 representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-Safe parallel work includes CON-01, authorized PRJ-01/PRJ-02, and decision research after audit; bilingual sample preparation and privacy review may also proceed alongside technical decisions. Parallel work must not assume a blocked gate or publish evidence early.
+CON-01 is the sole Now task. DEC-02 preparation and authorization preparation for PRJ-01/PRJ-02 may proceed only within their documented evidence and authorization boundaries. Approved DEC-01 is a dependency, not implementation authority; implementation work must not assume any remaining blocked gate.
 
 # Validation and Completion Rules
 
@@ -818,22 +806,21 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** Only governance/audit work is active before readiness.
+- **Small immediate queue:** Only CON-01 is active after completion of the governance/audit baseline and DEC-01.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
 - **Maintainability:** The list remains proportionate to one maintainer.
 - **Project, research, learning, and coursework compatibility:** Each content family retains its documented status and needs.
-- **AGENTS.md compatibility:** GOV-01 can create a concise derivative without replacing authority.
+- **AGENTS.md compatibility:** The completed operational derivative remains subordinate to governing documents.
 - **One-task-at-a-time compatibility:** Records supply enough context for separate Codex prompts.
 - **Complexity resistance:** Optional systems remain Deferred until justified.
 
 # Open Task-List Questions
 
-- What is the current nattapong.dev implementation state?
-- Which files, systems, external repositories, and deployments may audit tasks inspect?
-- Which stable rules belong in `AGENTS.md`?
-- Which stack and rendering strategy will be approved?
+- Which implementation foundation should be created after DEC-01 and DEC-02 are approved?
+- Which external project repositories and deployments may PRJ-01 and PRJ-02 inspect?
+- Which implementation-specific rules, if any, should later be added to `AGENTS.md` after they become stable?
 - How will content be stored, validated, and edited?
 - Which public profile and contact details are confirmed?
 - Which project artifacts are safe and public-ready?
