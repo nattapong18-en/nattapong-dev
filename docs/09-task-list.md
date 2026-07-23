@@ -106,18 +106,18 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, DEC-03 theme/asset direction, DEC-04 testing/quality/supported-environment direction, CON-01 public-profile verification, PRJ-01/PRJ-02 commit-scoped static project audits, GOV-04/GOV-05 project-governance synchronizations, and CON-02's bounded internal representative content/evidence set are complete. DEC-01 through DEC-04 are Approved and Done. CON-02 remains the real-content basis for later work. The approved visual direction is one light-first shared foundation with contrasting semantic technical surfaces; the approved quality approach is layered hybrid validation, and the approved environment policy is tiered capability-based support.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, DEC-03 theme/asset direction, DEC-04 testing/quality/supported-environment direction, DEC-05 deployment/analytics/privacy direction, CON-01 public-profile verification, PRJ-01/PRJ-02 commit-scoped static project audits, GOV-04/GOV-05 project-governance synchronizations, and CON-02's bounded internal representative content/evidence set are complete. DEC-01 through DEC-05 are Approved and Done. CON-02 remains the real-content basis for later work. The approved visual direction is one light-first shared foundation with contrasting semantic technical surfaces; the approved quality approach is layered hybrid validation; the approved environment policy is tiered capability-based support; and the approved operational direction is provider-neutral managed static hosting with a reproducible static artifact and no analytics initially.
 
 The next preparation candidates are:
 
-1. Prepare `DEC-05 — Decide deployment, analytics, and privacy direction` without deploying or selecting unneeded services.
+1. Prepare the exact bounded `FND-01` semantic content-foundation scope and its unresolved implementation decisions without activating implementation.
 2. Prepare a separately authorized Booking API runtime-evidence scope only after the historical environment-file risk and safe test resources are addressed.
 
-These are candidates, not silently activated tasks. DEC-03 and DEC-04 approve direction only. DEC-04 establishes a smaller deterministic local baseline plus task-specific checks, future CI that mirrors reliable deterministic local checks after implementation exists, and manual review for affected changes, first vertical, and release. It selects no tool, command, exact environment, executable check, or implementation. Final public wording, exact collection/schema design, public-ready artifacts, package-manager choice, quality tooling/configuration, routes/navigation, deployment, and the first vertical path remain unresolved. CourtFit and Booking API runtime, privacy, artifact, testing, deployment, and publication questions retain their recorded blockers. FND-01, FND-02, NAV-01, VRT tasks, component/page work, and motion remain inactive until their documented dependencies, evidence, and separate authorizations pass.
+These are candidates, not silently activated tasks. DEC-03, DEC-04, and DEC-05 approve direction only. DEC-05 approves D1 provider-neutral managed static hosting, A1 no analytics initially, `nattapong.dev` with verified HTTPS for the first public release, separately reviewed remote previews through separate authorization, a static public email link direction, no third parties by default, no runtime secret for the initial static core, minimal purpose-limited logs, revision-mapped recovery, source/deployment-equivalence responsibility, and privacy-safe incident handling. It selects no provider, account, DNS value, certificate, configuration, command, deployment, release, or public content. Final public wording, exact collection/schema design, public-ready artifacts, package-manager choice, quality tooling/configuration, routes/navigation, provider selection, deployment execution, and the first vertical path remain unresolved. CourtFit and Booking API runtime, privacy, artifact, testing, deployment, and publication questions retain their recorded blockers. FND-01, FND-02, NAV-01, VRT tasks, component/page work, remote previews, and motion remain inactive until their documented dependencies, evidence, and separate authorizations pass.
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completing DEC-01, DEC-02, DEC-03, DEC-04, CON-01, CON-02's internal representative-set scope, the static scopes of PRJ-01 and PRJ-02, and governance synchronizations GOV-04 and GOV-05 does not authorize or activate DEC-05, FND-01, FND-02, NAV-01, VRT-01, VRT-02, tooling, CI, tests, components, public content, asset creation, implementation, runtime verification, release, deployment, publication, or automatic promotion of any Next task.
+The Now queue is empty. Completing DEC-01 through DEC-05, CON-01, CON-02's internal representative-set scope, the static scopes of PRJ-01 and PRJ-02, and governance synchronizations GOV-04 and GOV-05 does not authorize or activate FND-01, FND-02, NAV-01, VRT-01, VRT-02, provider selection, tooling, CI, tests, components, public content, asset creation, remote previews, implementation, runtime verification, release, deployment, publication, or automatic promotion of any Next task.
 
 # Next — Decision and Evidence Tasks
 
@@ -125,20 +125,7 @@ These tasks follow the immediate queue or require additional evidence and author
 
 ## Decision Gates
 
-**DEC-05 — Decide deployment, analytics, and privacy direction**  
-**Status:** Next · **Priority:** P1
-
-- **Source:** Phases 1, 16, and 18; Privacy, Performance, and Dependency rules.
-- **Objective / why now:** Define operational direction before release-sensitive architecture is fixed.
-- **Reading:** Project rules, audit, implementation plan, public-content/privacy needs.
-- **Authorization:** Decision records only; no deployment in this task.
-- **Inputs:** Approved stack, domain needs, third-party/privacy consequences, maintenance and recovery needs.
-- **Boundaries:** Decide direction and whether analytics is needed; do not select extras by default.
-- **Deliverable:** Deployment/analytics/privacy decision records with reversibility and consent implications.
-- **Acceptance / validation:** No private data or unsupported operational claim is required.
-- **Dependencies / blockers:** AUD-02 findings, DEC-01, and a decision owner.
-- **Prohibited:** Deploying, enabling tracking, or choosing provider from familiarity alone.
-- **Documentation / report:** Record authorized decisions and deferred operations.
+No decision-gate task is active. Any later decision requires separate authorization.
 
 # Next — Foundation and First Vertical Experience
 
@@ -553,6 +540,8 @@ DEC-03B resolves only the initial page-foundation direction, shared technical-su
 
 DEC-04B resolves only the overall layered-hybrid testing direction, Layers 0–8 responsibility model, smaller deterministic local baseline plus task-specific checks, future-CI mirroring direction, manual-review cadence, conditional-check policy, tiered capability-based supported-environment shape, risk-based release gates, non-numeric severity states, and explicit omission records. Exact quality tools, commands, configurations, CI provider/workflow, environment examples, thresholds, implementation, and executed evidence remain unresolved. No check result follows from approval.
 
+DEC-05B resolves only the initial deployment-model direction, initial analytics direction, public-domain/HTTPS release boundary, preview policy shape, public-contact direction, third-party default, secret/log direction, recovery/source-equivalence responsibility, post-deployment-validation direction, and privacy-incident direction. D1 provider-neutral managed static hosting and A1 no analytics initially are approved directionally. Provider selection, accounts, DNS, certificates, canonical-host behavior, commands, configuration, build artifacts, release scope, quality/privacy evidence, deployment execution, post-deployment verification, and recovery execution remain unresolved. No deployed or public behavior follows from approval.
+
 The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
@@ -571,15 +560,17 @@ The following unresolved blockers govern activation:
 | Routes and navigation unresolved | Establish verified content destinations and separately authorize NAV-01 | NAV-01, VRT-02 | Final routes, language URLs, labels, or navigation implementation |
 | First vertical path unselected | Complete VRT-01 | VRT-02/CMP-01 | Broad page/component implementation |
 | DEC-04 quality direction is approved, but exact tooling, commands, configuration, CI, environment examples, thresholds, implementation, and executed evidence remain unresolved | Select each method only after matching implementation and separate authorization; execute applicable checks within later authorized tasks | FND-01, FND-02, RWD-01, A11Y-01, PERF-01, PRV-01, QA-01 | Quality-tool installation/configuration, CI creation, support claims, or passing-result claims |
-| Deployment direction unresolved | Complete DEC-05 | REL-01 | Deployment or public operational claims |
+| DEC-05 deployment and privacy direction is approved, but provider selection, accounts, DNS, certificates, canonical-host behavior, commands, configuration, build artifacts, release scope, quality/privacy evidence, deployment execution, post-deployment verification, and recovery execution remain unresolved | Select and authorize each operational element only after implementation and QA/privacy readiness | REL-01, OPS-01 | Provider configuration, remote preview, deployment, release, recovery execution, or public operational claims |
 
 Blocked means a named prerequisite is absent, not merely low priority.
 
 # Deferred Tasks
 
-Deferred categories are complex search/filtering, large archives, contact form, analytics, comments, nattapong.dev authentication, personalization, content-management interface, interactive diagram system, heavy animation, ambient effects, multiple themes, complex project-specific visual systems, real-time data, recommendation algorithms, and automated content generation.
+Deferred categories are complex search/filtering, large archives, contact form, analytics implementation, comments, nattapong.dev authentication, personalization, content-management interface, interactive diagram system, heavy animation, ambient effects, multiple themes, complex project-specific visual systems, real-time data, recommendation algorithms, and automated content generation.
 
 Reconsider only when real content volume, visitor tasks, verified behavior, accessibility and performance benefit, privacy implications, maintenance capacity, and a decision owner justify the change. Deferred does not mean permanently rejected.
+
+DEC-05 approves no analytics for the initial release. A future A2 analytics proposal requires a demonstrated question and separate decision. Contact forms remain Deferred. Separately reviewed remote previews are allowed directionally only through separate authorization and are not active implementation.
 
 # Done and Historical Tasks
 
@@ -701,7 +692,7 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Files changed:** `reference/decisions/DEC-03-theme-and-asset-direction.md` and `docs/09-task-list.md`.
 - **Implementation/publication boundary:** No final visual value, actual asset, tool, dependency, implementation, public content, or publication was selected or authorized.
 - **Known limitations and deferred scope:** Actual light-theme behavior; Thai/English/mixed typography; contrast, focus, zoom, reflow, browser, device, screen-reader, responsive, and accessibility behavior remain untested. Actual screenshots and technical artifacts remain conditional or missing. Final colors, fonts, values, breakpoints, assets, tools, dependencies, pipelines, and implementation remain unresolved.
-- **Follow-up:** Use DEC-03 as an approved direction-level input. DEC-04 was approved later through its own decision; DEC-05 remains separate. FND-02 remains blocked by FND-01, exact implementation scope and choices, quality-tooling execution evidence, and separate authorization.
+- **Follow-up:** Use DEC-03 as an approved direction-level input. DEC-04 and DEC-05 were approved later through their own decisions. FND-02 remains blocked by FND-01, exact implementation scope and choices, quality-tooling execution evidence, and separate authorization.
 
 **DEC-04 — Decide testing, quality, and supported-environment approach**
 
@@ -723,7 +714,27 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Files changed:** `reference/decisions/DEC-04-testing-quality-and-supported-environments.md` and `docs/09-task-list.md`.
 - **Implementation/execution boundary:** DEC-04 approves responsibilities and gates only. It creates no tool, configuration, CI, test, implementation, release, deployment, or public content.
 - **Known limitations:** No implementation source, manifest, lockfile, schema, command, test source, quality configuration, CI, generated output, browser result, accessibility result, responsive result, privacy-safety result, performance result, release result, or deployment result exists. Exact tools and environment examples remain unresolved.
-- **Follow-up:** Use DEC-04 as direction-level input. DEC-05 remains a separate decision candidate. FND-01 remains blocked by the exact content model/schema/package manager and implementation authorization. FND-02 remains blocked by FND-01, exact implementation scope/choices, and separate authorization. Do not activate another task automatically.
+- **Follow-up:** Use DEC-04 as direction-level input. DEC-05 was approved later through its own decision. FND-01 remains blocked by the exact content model/schema/package manager and implementation authorization. FND-02 remains blocked by FND-01, exact implementation scope/choices, and separate authorization. Do not activate another task automatically.
+
+**DEC-05 — Decide deployment, analytics, and privacy direction**
+
+**Status:** Done · **Priority:** P1
+
+- **Decision owner:** Nattapong.
+- **Preparation and approval:** DEC-05A created and reviewed the Proposed package; DEC-05B explicitly approved the direction.
+- **Deployment:** D1 — provider-neutral managed static hosting using a reproducible static artifact, with no default request-time application server or provider-specific runtime function.
+- **Analytics:** A1 — no analytics initially; no initial analytics script, tracking cookie, visitor identifier, dashboard dependency, or analytics-specific consent UI.
+- **Domain and preview:** The first public release requires `nattapong.dev` with verified HTTPS. Separately reviewed remote previews are allowed directionally only through separate authorization and potentially-public treatment.
+- **Contact and third parties:** Initial contact direction is a static public email link only with separately approved wording. Third-party scripts and embeds are absent by default and require case-by-case review and authorization.
+- **Secrets and logs:** The initial static core requires no runtime secret. Future values require classification and generated-output review. Future build/deployment logs remain minimal, purpose-limited, and privacy-safe.
+- **Recovery and equivalence:** Releases map source, approved content, build/configuration, destination, observation date, and limitations; a known-good release or reproducible revision remains recoverable; recovery requires public verification; unknown equivalence remains To be verified.
+- **Incidents:** Contain → Assess → Remediate → Verify → Document and follow up, without reproducing private values or claiming unverified deletion.
+- **Decision record:** `reference/decisions/DEC-05-deployment-analytics-and-privacy-direction.md`.
+- **Validation:** D1–D3 and A1–A3 remain preserved. Domain/HTTPS, preview, secrets, logs, third parties, contact, recovery, equivalence, post-deployment validation, and incidents were reviewed. No provider, account, DNS value, certificate, analytics system, secret, configuration, command, retention period, or implementation was selected. No deployment, release, network, analytics, tracking, contact-form, rollback, or post-deployment action ran.
+- **Files changed:** `reference/decisions/DEC-05-deployment-analytics-and-privacy-direction.md` and `docs/09-task-list.md`.
+- **Operational/publication boundary:** DEC-05 approves direction only. It creates no provider account, DNS/certificate mutation, configuration, secret, analytics, cookie, consent UI, contact form, deployment, release, public content, or network action.
+- **Known limitations:** No implementation or static artifact exists. No provider is selected. Domain, DNS, certificate, HTTPS, preview, release, logs, rollback, incidents, source equivalence, and recovery have not been executed or verified. Exact tools, commands, configuration, accounts, environments, retention, provider capabilities, public wording, and release approval remain unresolved.
+- **Follow-up:** Use DEC-05 as direction-level input only. FND-01 remains blocked by the exact content model/schema/package manager, implementation scope, and separate authorization. REL-01 remains blocked by implementation, QA/privacy readiness, provider selection, deployment commands/configuration, and explicit release authorization. Do not activate another task automatically.
 
 ## Completed Content Verification
 
@@ -823,7 +834,7 @@ The approved planning documents `reference/design-dna.md` and `docs/00` through 
 GOV-01 (Done) ──────────────────────────────► governed agent work
 AUD-01 (Done) ─► AUD-02 (Done) ─► GOV-02 (Done) ─► DEC-01 (Done)
 AUD-02 (Done) ─► AUD-03 (Cancelled: current scope covered by AUD-02)
-DEC-01 (Done) ─► DEC-02 (Done) + DEC-03 (Done) + DEC-04 (Done); DEC-05 remains separately gated
+DEC-01 (Done) ─► DEC-02 (Done) + DEC-03 (Done) + DEC-04 (Done) + DEC-05 (Done)
 authorized PRJ-01 static audit (Done) ─► corrected internal Booking evidence ─► GOV-04 (Done) ─► synchronized governance summaries
 PRJ-01 runtime / secret-history / publication requirements ─► remain separately blocked
 authorized PRJ-02 static audit (Done) ─► corrected internal CourtFit evidence ─► GOV-05 (Done) ─► synchronized CourtFit governance summaries
@@ -836,12 +847,13 @@ NAV-01 + VRT-01 (separately authorized after existing gates) ─► VRT-02
 VRT-02 ─► CMP-01 / EVD-01 / STA-01 ─► PRJ-03 / PRJ-04 / RES-01 / LRN-01..04
 DEC-03 (Done) ─► theme/asset direction input for FND-02 / EVD-01 / RWD-01 / A11Y-01 / PERF-01 / PRV-01 / VRT-01; no task activation
 DEC-04 (Done) ─► quality direction input for FND-01 / FND-02 / NAV-01 / VRT-01 / VRT-02 / RWD-01 / A11Y-01 / PERF-01 / PRV-01 / QA-01 / REL-01 after DEC-05; no task activation
+DEC-05 (Done) ─► provider-independent content semantics / static core / direct-entry portability / VRT-01 / VRT-02 / EVD-01 / STA-01 / PERF-01 / PRV-01 / QA-01 / REL-01 / OPS-01; no task activation
 stable static scope + verified behavior ─► MOT-01
 representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. DEC-03 and DEC-04 are Approved and Done only as direction-level decisions; DEC-05 remains a separately authorized decision candidate, and a separately scoped Booking API runtime-evidence task remains inactive. CON-02 supplies real content states, DEC-03 supplies the light-first/shared-technical-surface direction, and DEC-04 supplies the layered-hybrid/tiered-capability quality direction. Actual public-ready artifacts, final visual values, typography, exact content model/schema, package manager, quality tooling/configuration, routes/navigation, first vertical, executed checks, deployment, and publication remain unresolved. FND-01, FND-02, NAV-01, VRT-01, and VRT-02 retain their existing dependencies and require separate authorization. These decisions and completed evidence tasks do not authorize a public page, tool/CI/test creation, asset publication, repository promotion, runtime/provider/privacy claims, implementation, release, or deployment.
+The Now queue is empty. DEC-03, DEC-04, and DEC-05 are Approved and Done only as direction-level decisions, and a separately scoped Booking API runtime-evidence task remains inactive. CON-02 supplies real content states; DEC-03 supplies the light-first/shared-technical-surface direction; DEC-04 supplies the layered-hybrid/tiered-capability quality direction; and DEC-05 supplies the provider-neutral static deployment, no-initial-analytics, privacy, recovery, and post-deployment direction. Actual public-ready artifacts, final visual values, typography, exact content model/schema, package manager, quality tooling/configuration, routes/navigation, first vertical, provider selection, executed checks, deployment, and publication remain unresolved. FND-01, FND-02, NAV-01, VRT-01, and VRT-02 retain their existing dependencies and require separate authorization. These decisions and completed evidence tasks do not authorize a public page, tool/CI/test creation, asset publication, repository promotion, runtime/provider/privacy claims, remote preview, implementation, release, or deployment.
 
 # Validation and Completion Rules
 
@@ -882,7 +894,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, DEC-03, DEC-04, CON-01, CON-02's bounded internal representative set, PRJ-01's and PRJ-02's static audit scopes, and GOV-04/GOV-05 governance synchronization; recommended next candidates remain inactive until separately authorized and ready.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01 through DEC-05, CON-01, CON-02's bounded internal representative set, PRJ-01's and PRJ-02's static audit scopes, and GOV-04/GOV-05 governance synchronization; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
@@ -897,6 +909,8 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 DEC-03B resolved the initial light-first versus dark-first direction, deferred selectable dual themes, approved bounded contrasting semantic technical surfaces, made screenshots optional, preferred lawful reviewed local assets over default remote use, approved honest text-first unavailable states, and limited the initial theme scope to one minimal foundation. Those direction questions are closed; implementation and validation questions remain open.
 
 DEC-04B resolved the overall testing approach, Layers 0–8, smaller deterministic local baseline plus task-specific checks, future-CI mirroring direction, affected-change/first-vertical/release manual cadence, conditional-check policy, tiered capability-based environment shape, risk-based release gates, non-numeric severity states, and explicit required-check omission records. Exact commands, tools, CI provider/workflow, executable checks, environment examples, accessibility target, thresholds, retention, and results remain open.
+
+DEC-05B resolved D1 provider-neutral managed static hosting, A1 no analytics initially, `nattapong.dev` with verified HTTPS as the first-public-release boundary, separately reviewed remote previews, a static public email-link direction, no third parties by default, no runtime secret for the initial static core, minimal purpose-limited logs, revision-mapped known-good recovery, source/deployment-equivalence responsibility, post-deployment validation, and privacy-safe incident handling. Exact providers/accounts, DNS/certificates, canonical-host behavior, commands/configuration, release artifacts, preview controls, operational retention, recovery execution, public wording, and observed results remain open.
 
 - Which actual colors, typefaces, font loading, typography scale, spacing, motif, logo, icon set, semantic tokens, and project-specific visual variation should later evidence and prototypes support?
 - Which breakpoints, asset directories/names, image formats, responsive widths, compression, optimization, syntax highlighting, diagram tooling, screenshot tooling, video, or embed behavior are justified by real implementation and assets?
@@ -946,7 +960,16 @@ DEC-04B resolved the overall testing approach, Layers 0–8, smaller determinist
 - Which numeric performance or coverage thresholds, if any, should actual measurement justify?
 - Which test-data, artifact-retention, and build-output-retention policies are proportionate and privacy-safe?
 - Which approved checks have actually run, and what results, omissions, and residual limitations were recorded?
-- Which deployment and recovery strategy will be approved?
+- Which exact deployment provider and account, if any, fit the approved D1 direction?
+- Which DNS provider, records, canonical host, and certificate implementation will later be authorized and verified?
+- Which provider-specific routing, redirects, headers, caching, preview, logging, and rollback capabilities are acceptable?
+- Which exact build/deployment commands, configuration, release artifact, and provenance method should later implementation establish?
+- Which preview access, expiry, withdrawal, and removal behavior is required for an authorized remote preview?
+- Which exact recovery, artifact-retention, and cache-purge procedure can later be executed and verified?
+- What actual post-deployment results and residual limitations are recorded after an authorized release?
+- What surrounding public wording, if any, should accompany the approved static email-link direction?
+- What specific future question, if any, would justify a separately decided A2 analytics proposal?
+- What release date and public-content scope will later receive explicit approval?
 - Who approves scope changes and rule exceptions?
 - How should Done/Cancelled history be maintained as this list grows?
 - Which Deferred features may later gain sufficient evidence and maintenance capacity?
