@@ -106,21 +106,20 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, CON-01 public-profile verification, PRJ-01 static Booking API evidence audit, and GOV-04 Booking API governance synchronization are complete. Together they establish the static Astro architecture, repository-local content direction, bilingual policy, verified profile boundaries, commit-scoped Booking API source evidence, and consistent governance summaries; they do not authorize implementation, runtime claims, repository promotion, or publication.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, CON-01 public-profile verification, PRJ-01 static Booking API evidence audit, GOV-04 Booking API governance synchronization, and PRJ-02 static CourtFit implementation/privacy-boundary audit are complete. Both major projects now have commit-scoped static evidence. These completed records establish source-level facts only; they do not authorize implementation, runtime/provider/privacy claims, repository promotion, public content, or publication.
 
 The next preparation candidates are:
 
 1. Prepare `DEC-03 — Decide theme and asset-handling direction` when representative bilingual content and artifacts are sufficient.
 2. Prepare `DEC-04 — Decide testing, quality, and supported-environment approach` when its evidence and decision-owner scope are ready.
 3. Prepare `DEC-05 — Decide deployment, analytics, and privacy direction` without deploying or selecting unneeded services.
-4. Prepare explicit external-repository authorization for `PRJ-02 — Verify CourtFit implementation, privacy, and evidence`.
-5. Prepare a separately authorized Booking API runtime-evidence scope only after the historical environment-file risk and safe test resources are addressed.
+4. Prepare a separately authorized Booking API runtime-evidence scope only after the historical environment-file risk and safe test resources are addressed.
 
-These are candidates, not silently activated tasks. Representative verified entries, exact collection and schema design, public-content prototypes, CourtFit evidence, public-ready artifacts, package-manager choice, testing, routes and navigation, deployment, and the first vertical path remain unresolved. Booking API build, test, migration, runtime, authorization, concurrency, Redis, container, deployment, secret-history, redaction, and publication questions also remain unresolved. Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
+These are candidates, not silently activated tasks. Representative verified entries, exact collection and schema design, public-content prototypes, public-ready CourtFit artifacts, package-manager choice, testing, routes and navigation, deployment, and the first vertical path remain unresolved. CourtFit build, provider compatibility, operational privacy, browser/accessibility behavior, artifacts, deployment, and publication remain unresolved. Booking API build, test, migration, runtime, authorization, concurrency, Redis, container, deployment, secret-history, redaction, and publication questions also remain unresolved. Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completing DEC-01, DEC-02, CON-01, the static scope of PRJ-01, and GOV-04 does not authorize implementation, runtime verification, publication, or automatic promotion of any Next task.
+The Now queue is empty. Completing DEC-01, DEC-02, CON-01, the static scopes of PRJ-01 and PRJ-02, and GOV-04 does not authorize implementation, runtime verification, publication, or automatic promotion of any Next task.
 
 # Next — Decision and Evidence Tasks
 
@@ -172,23 +171,6 @@ These tasks follow the immediate queue or require additional evidence and author
 - **Dependencies / blockers:** AUD-02 findings, DEC-01, and a decision owner.
 - **Prohibited:** Deploying, enabling tracking, or choosing provider from familiarity alone.
 - **Documentation / report:** Record authorized decisions and deferred operations.
-
-## CourtFit Verification
-
-**PRJ-02 — Verify CourtFit implementation, privacy, and evidence**  
-**Status:** Next · **Priority:** P0
-
-- **Source:** Phase 2/8; project inventory, content specification, project rules.
-- **Objective / why now:** Verify behavior and API-key risks before public project content or demonstrations.
-- **Reading:** CourtFit inventory/rules and authorized repository/deployment instructions.
-- **Authorization:** Explicit repository/deployment/browser inspection scope; no mutation unless separately authorized.
-- **Inputs:** Source, configuration, Git history, deployment, manual test records, browser/device evidence, safe screenshots/conversations.
-- **Boundaries:** Verify dependencies, provider integration, streaming, switching, Stop/Retry, bilingual/responsive/dark behavior, key storage/persistence/request path/logging, browsers/devices/accessibility, deployment URL, and evidence safety.
-- **Deliverable:** Dated claim/privacy matrix, public-safe artifacts, test scope, limitations, and unresolved items.
-- **Acceptance / validation:** Retain educational/experimental and all current limitations; Live URL remains To be verified until proven; no API-key security claim without source/data-flow evidence.
-- **Dependencies / blockers:** The local baseline is complete; external repository, deployment, and browser review still require explicit authorization.
-- **Prohibited:** Testing with exposed real keys or claiming full compatibility/accuracy.
-- **Documentation / report:** Authorized updates, redactions, and remaining privacy risks.
 
 ## Content and Evidence Readiness
 
@@ -369,11 +351,11 @@ All tasks here remain dependent on audit, blocking decisions, and content readin
 - **Objective / why now:** Publish a verified educational/experimental Major Project experience on the shared foundation.
 - **Reading:** PRJ-02 evidence; relevant specs/rules.
 - **Authorization:** Project content and implementation files specified later.
-- **Inputs:** Verified interface/provider/streaming/Stop-Retry/bilingual/responsive/dark/BYOK evidence, manual browser scope, key behavior, deployment, limitations.
-- **Boundaries:** Introduction, role, evidence, API-key explanation after verification, recommendation limits, repository/deployment destinations, access/responsive/privacy behavior.
+- **Inputs:** PRJ-02's commit-scoped one-page/one-route source evidence, browser → CourtFit server → provider key path, full-history behavior, buffered provider-stream consumption, source-level Stop/Retry/switching evidence, bilingual/responsive/dark source patterns, absent catalog/commerce/test/deployment evidence, and privacy/runtime limitations.
+- **Boundaries:** Introduction, role, source evidence, qualified API-key explanation, recommendation limits, repository/deployment destinations, access/responsive/privacy behavior, mobile action limitation, and plain-text message rendering.
 - **Deliverable:** Distinct CourtFit composition sharing common semantics and navigation.
 - **Acceptance / validation:** No database/price/stock/spec/auth/checkout/history/accuracy overclaim; key and live-link language matches PRJ-02.
-- **Dependencies / blockers:** PRJ-02, FND/NAV/VRT, CMP/EVD as needed.
+- **Dependencies / blockers:** PRJ-02 static evidence is Done; its runtime/privacy/artifact blockers remain separate. FND/NAV/VRT and CMP/EVD are required as needed.
 - **Prohibited:** Security, compatibility, professional-advice, or commercial claims.
 - **Documentation / report:** Published claims, privacy checks, artifacts, changed files, unresolved items.
 
@@ -612,6 +594,8 @@ The general public-profile confirmation blocker is resolved through CON-01. The 
 
 The Booking API static repository-evidence question is resolved only for audited branch `main` at commit `d2f754fdd2fd5581ecca9f9e16539504020f6361` through PRJ-01. The audit verified source and configuration facts and corrected internal records; it did not resolve build, test, migration, runtime, security, concurrency, Redis correctness, container, deployment, secret-history, artifact-redaction, or publication questions.
 
+The CourtFit static repository-evidence and source privacy-boundary questions are resolved only for audited branch `main` at commit `3c9cc65d00622731b4a381ddb785edc3713f8c46` through PRJ-02. The audit established one page route and one POST API route; browser → CourtFit server → selected provider key flow; full non-empty retained-history transmission each turn; server-buffered provider streams with one assembled browser event; source-level Stop, Retry, and provider-switching paths; absent structured catalog/commerce and automated tests; partial disclaimer and responsive/dark source evidence; and documentation-only Vercel context. It did not resolve build, provider compatibility, operational key/privacy controls, runtime behavior, incremental streaming, cancellation, retry, mobile correctness, browser/accessibility behavior, recommendation quality, artifacts, deployment, or publication.
+
 The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
@@ -619,12 +603,13 @@ The following unresolved blockers govern activation:
 | Exact content model, collection boundaries, schema, and representative entries unresolved | Complete enough verified CON-02 material, then separately authorize FND-01 design and implementation scope | CON-02, FND-01 | Collection, schema, validation-code, or public-content implementation |
 | Theme/asset direction unresolved | Approve DEC-03 where blocking | FND-02 | Final theme/assets or motif |
 | Package manager and implementation scope unresolved | Approve them through a separate bounded implementation decision or prompt | FND-01, FND-02 | Scaffolding, manifests, lockfiles, or dependency installation |
-| CourtFit external project inspection not authorized or verified | Explicitly authorize and complete PRJ-02 | PRJ-04, technical motion | CourtFit external inspection or public technical claims/demonstrations |
 | Booking API historical `.env` not privately reviewed | Owner reviews history without publishing values and rotates any potentially affected credential when appropriate | PRJ-03, CON-02, PRV-01 | Prominent repository/history promotion or artifact publication |
 | Booking API build, tests, migrations, routes, and cross-user behavior not runtime-verified | Separately authorize safe build/test/runtime work with isolated PostgreSQL and Redis resources | PRJ-03, CON-02, QA-01 | Passing, runtime-correctness, persistence, or authorization-isolation claims |
 | Booking API concurrency integrity and Redis correctness unresolved | Establish an integrity design, correct cache keys/invalidation, and verify both under authorized runtime conditions | PRJ-03, EVD-01, technical motion | Concurrent-safety, correct-conflict, or correct-cache claims/demonstrations |
 | Booking API Docker, Render/Vercel, and public artifacts unverified | Verify container/deployment evidence separately and complete artifact redaction/public-readiness review | PRJ-03, CON-02, EVD-01, PRV-01 | Active-deployment claims, repository promotion, or public evidence use |
-| CourtFit key behavior unverified | Complete PRJ-02 privacy review | PRJ-04, PRV-01 | Key-security or request-flow claims |
+| CourtFit runtime, provider compatibility, and operational privacy remain unverified | Separately authorize safe build/provider/runtime work and review deployed HTTPS, middleware, logs, observability, memory, provider retention, and whether raw BYOK through the server should remain | PRJ-04, PRV-01, QA-01 | Successful-provider, secure-key, complete-privacy, or runtime-correctness claims |
+| CourtFit streaming, Stop/Retry, mobile, accessibility, Markdown, recommendation, and test behavior remain unresolved | Decide incremental forwarding and message formatting; correct mobile action parity; verify cancellation/retry/responsive/accessibility/language behavior; obtain a verified shoe-data source where required; add an approved automated-test approach | PRJ-04, DEC-04, QA-01, A11Y-01, RWD-01 | Incremental-streaming, correct cancellation/retry, full responsive/accessibility, formatted-product, recommendation-accuracy, or passing-test claims |
+| CourtFit deployment and public artifacts remain unverified | Verify active deployment and source equivalence separately; review screenshots/artifacts, commit-author email, license/reuse terms, redaction, and publication approval | PRJ-04, CON-02, EVD-01, PRV-01, REL-01 | Active-deployment claims, prominent repository/history use, artifact publication, or public project content |
 | No public-ready artifact set | Complete CON-02 | VRT-01/VRT-02/EVD-01 | Placeholder-led design validation |
 | Routes and navigation unresolved | Establish verified content destinations and separately authorize NAV-01 | NAV-01, VRT-02 | Final routes, language URLs, labels, or navigation implementation |
 | First vertical path unselected | Complete VRT-01 | VRT-02/CMP-01 | Broad page/component implementation |
@@ -765,6 +750,29 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Known limitations:** Current canonical commit, runtime behavior, test results/coverage, cross-user isolation, concurrency integrity, Redis correctness, container behavior, deployments, historical credential state, and artifact public readiness remain unresolved. GOV-04 later synchronized the previously stale governance summaries without adding new verification.
 - **Follow-up:** Use this static evidence as an input to CON-02 and later project-content work only after preserving all blockers. PRJ-01 alone does not authorize a public project page or stronger claim.
 
+**PRJ-02 — Verify CourtFit implementation, privacy, and evidence**
+
+**Status:** Done · **Priority:** P0
+
+- **Completed scope:** Static read-only CourtFit repository implementation, evidence, and privacy-boundary audit only. This status does not include build, provider calls, runtime, browser/device, accessibility, testing, deployment, public-artifact, privacy-security, or publication verification.
+- **Repository snapshot:** `https://github.com/nattapong18-en/chat-bot-test`, audited on default branch `main` at commit `3c9cc65d00622731b4a381ddb785edc3713f8c46`.
+- **Audit record:** `reference/audits/PRJ-02-courtfit-evidence.md`.
+- **Architecture and routes:** Next.js App Router source defines one page route (`/`) and one dynamic Node API route (`POST /api/chat`) across a browser client, CourtFit server route, and server-only OpenAI/Google GenAI adapters.
+- **API-key correction:** The user key is held temporarily in React state and sent with every request and retry through the CourtFit server to the selected request-scoped provider client. No direct project persistence in localStorage, sessionStorage, cookies, a database, chat-message state, or analytics and no project key logging were found. Operational infrastructure, transport, memory, logging, provider retention, and privacy security remain unverified.
+- **Conversation privacy:** Chat history is React-memory-only in inspected project source. Every turn sends all current non-empty retained user and assistant messages through the CourtFit server to the selected provider. Provider or key changes clear conversation and key state.
+- **Provider and streaming correction:** OpenAI and Gemini server adapters, system instructions, history transformation, provider-stream consumption, and abort-signal paths are present. The server route buffers provider deltas and emits one assembled text event; incremental assistant display during provider generation is not established. Provider calls and current model/API compatibility were not tested.
+- **Stop and Retry:** Stop is wired from browser fetch through the route to both adapters, and Retry reuses an error-message slot, resends relevant history with the current provider/key, and makes a new request. Provider-side cancellation, partial preservation, races, billing effects, Retry success, and duplicate prevention remain runtime-unverified.
+- **Provider switching:** OpenAI and Gemini are selectable; provider/key change clears connection, key, draft, and history, so prior conversation is not intentionally retransmitted. No user model picker exists. Desktop controls are wired, while the mobile drawer's New Chat action is inert and provider/key action parity is incomplete.
+- **Product and disclaimer boundary:** No structured catalog, product database/API/images/cards/details, verified-product search/filter, live price/stock feed, cart, checkout, or commerce exists. Recommendations are model-generated and accuracy-unverified. Rendered source says guidance is simulated and real-time price/stock data are unavailable, but lacks an explicit educational-use/not-an-official-store disclaimer and a full AI-inaccuracy warning.
+- **Responsive, theme, and formatting:** Responsive classes, desktop/mobile shell, Radix drawer, adaptive widths, overflow handling, dynamic viewport height, and light/dark/system themes exist in source. No visual/device/browser testing occurred, mobile action parity is incomplete, and messages render as plain pre-wrapped text without Markdown support.
+- **Testing and deployment:** No automated test source, runner/framework, test script, coverage configuration, or CI workflow was found. Lint, type-check, format, and build configuration exists but was not run. Chrome/Firefox/Safari testing is self-reported and undocumented. Vercel is documentation context only; no live URL, Vercel configuration, workflow, or deployment result was found.
+- **Sensitive-history boundary:** No candidate credential value was found in the current tree or four available commits using the bounded method; `.env.example` is the only environment-named tracked path. One commit-author email differs from the confirmed public contact and requires owner privacy review before prominent history use. No value is reproduced, and the bounded review does not prove secrets never existed elsewhere.
+- **Internal records:** Corrected the CourtFit portions of `reference/synthesis/project-inventory.md` and `reference/synthesis/personal-profile.md` while preserving unrelated project and CON-01 boundaries.
+- **Validation:** The audit-to-record mapping, key flow, conversation history, buffered streaming, runtime/provider limits, privacy/secret language, and four-file staged scope were reviewed. No external repository was accessed during closure.
+- **Implementation and publication:** No code, public content, source implementation, dependency, provider, key, browser, test, build, deployment, or publication action occurred.
+- **Known limitations:** Whether the audited commit is canonical; build/tool execution; provider/model compatibility; successful calls; operational key/log/HTTPS/provider-retention behavior; raw BYOK architecture; incremental forwarding; Stop/Retry races; mobile parity; browser/responsive/accessibility behavior; Markdown; verified shoe data and recommendation quality; automated tests; deployment/source equivalence; artifacts/screenshots; author-email privacy; license/reuse; and publication approval remain unresolved.
+- **Follow-up:** Use the static record as an input to CON-02 and later representative-content, schema, and first-vertical work without treating it as public-page authorization or runtime/privacy proof.
+
 ## Cancelled Audit History
 
 **AUD-03 — Audit capabilities, public boundaries, and privacy risks**  
@@ -788,7 +796,9 @@ AUD-02 (Done) ─► AUD-03 (Cancelled: current scope covered by AUD-02)
 DEC-01 (Done) ─► DEC-02 (Done); DEC-03 / DEC-04 / DEC-05 remain separately gated
 authorized PRJ-01 static audit (Done) ─► corrected internal Booking evidence ─► GOV-04 (Done) ─► synchronized governance summaries
 PRJ-01 runtime / secret-history / publication requirements ─► remain separately blocked
-DEC-02 (Done) + CON-01 (Done) + PRJ-01 static evidence (Done) + authorized PRJ-02 + research/learning evidence ─► CON-02 ─► VRT-01
+authorized PRJ-02 static audit (Done) ─► corrected internal CourtFit evidence
+PRJ-02 runtime / provider / privacy / artifact / publication requirements ─► remain separately blocked
+DEC-02 (Done) + CON-01 (Done) + PRJ-01 static evidence (Done) + PRJ-02 static evidence (Done) + research/learning evidence ─► CON-02 ─► VRT-01
 DEC-01 (Done) + DEC-02 (Done) + CON-02 + separate implementation authorization ─► FND-01 ─┐
 DEC-01 + DEC-03 + DEC-04 + FND-01 ─► FND-02 ─────┼─► NAV-01 ─► VRT-02
 VRT-01 ───────────────────────────────────────────┘
@@ -798,7 +808,7 @@ representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. DEC-03 readiness, PRJ-02 authorization preparation, and a separately scoped Booking API runtime-evidence task are recommended candidates but remain inactive until separately authorized and sufficiently ready. DEC-02, CON-01, PRJ-01's static evidence, and GOV-04's synchronized governance are inputs to later work; CourtFit and representative research/learning evidence remain required for CON-02. PRJ-01 and GOV-04 do not authorize a public project page, runtime claims, repository promotion, or implementation. Approved decisions and completed evidence tasks are dependencies, not implementation authority.
+The Now queue is empty. DEC-03 readiness and a separately scoped Booking API runtime-evidence task are recommended candidates but remain inactive until separately authorized and sufficiently ready. DEC-02, CON-01, both projects' commit-scoped static evidence, and GOV-04's synchronized governance are inputs to later content, representative-content, schema, and first-vertical work; representative research/learning evidence and public-ready project artifacts remain required for CON-02. PRJ-01, PRJ-02, and GOV-04 do not authorize a public project page, runtime/provider/privacy claims, repository promotion, or implementation. Approved decisions and completed evidence tasks are dependencies, not implementation authority.
 
 # Validation and Completion Rules
 
@@ -839,7 +849,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, CON-01, PRJ-01's static audit scope, and GOV-04; recommended next candidates remain inactive until separately authorized and ready.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, CON-01, PRJ-01's and PRJ-02's static audit scopes, and GOV-04; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
@@ -856,7 +866,22 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - Which exact metadata, requiredness rules, schema constraints, and semantic checks are justified by real content?
 - How should translated siblings be reviewed when shared status, limitations, evidence, or corrections change?
 - Which compact public records, if any, should use structured repository data rather than Markdown bodies?
-- Which CourtFit repository, deployment, browser, and device evidence may PRJ-02 inspect?
+- Is CourtFit commit `3c9cc65d00622731b4a381ddb785edc3713f8c46` still the canonical state for later runtime verification and publication review?
+- Should CourtFit forward provider deltas incrementally, or retain one assembled client event?
+- Are the source-selected OpenAI and Gemini models/APIs currently compatible, and do provider calls succeed?
+- Is a CourtFit deployment active and source-equivalent?
+- Which deployed transport, middleware, process-memory, logging, observability, and other operational systems can access user keys or conversation content?
+- What retention and use policies apply to conversation content at each selected provider?
+- Should raw user-provided keys continue to pass through the CourtFit server?
+- How should mobile New Chat, provider selection, and key actions reach parity with desktop controls?
+- Should provider-specific error headings replace the current generic error label?
+- Should CourtFit add Markdown/product formatting, or keep plain-text messages?
+- Which automated and manual test matrix should cover providers, streaming, Stop/Retry, responsive behavior, browsers, and failure states?
+- Which accessibility standard and supported-environment policy should CourtFit verify?
+- Which verified basketball-shoe data source, if any, should support factual product claims?
+- Which CourtFit screenshots and source-derived artifacts are accurate, redacted, and public-ready?
+- Is the CourtFit commit-author email safe for prominent public history use?
+- What license and reuse terms apply to CourtFit source and derived artifacts?
 - Is Booking API commit `d2f754fdd2fd5581ecca9f9e16539504020f6361` still the canonical state for later runtime verification and publication review?
 - Does the Booking API build, migrate, and run with safe isolated PostgreSQL and Redis resources?
 - Which tracked Booking API tests run and pass, and what coverage remains absent?

@@ -371,15 +371,21 @@ https://github.com/nattapong18-en/booking_api
 
 **Project name:** CourtFit
 
-**Status:** Core development completed; currently in testing and refinement.
+**Status:** Educational and experimental source-level functional-MVP candidate; build, runtime, provider, testing, browser, and deployment state remain unverified.
 
-**Project type:** Individual full-stack and AI integration project.
+**Project type:** Individual project according to Nattapong’s confirmed internal record; domain-specific full-stack and AI integration source.
+
+**Repository:** https://github.com/nattapong18-en/chat-bot-test
+
+**Audited branch and commit:** `main` at `3c9cc65d00622731b4a381ddb785edc3713f8c46`
+
+**Evidence record:** `reference/audits/PRJ-02-courtfit-evidence.md`; source findings cover only the recorded commit.
 
 **What it does:**
 
-CourtFit is a web-based basketball shoe recommendation chatbot.
+CourtFit is an educational and experimental basketball-shoe recommendation chatbot. It is a conversational prototype without a structured product catalog or commerce system, not a real store.
 
-It recommends suitable basketball shoes based on information such as:
+Its prompt and interface collect factors such as:
 
 - Playing position
 - Court type
@@ -396,56 +402,60 @@ The project was also used to practice creating a domain-specific AI application 
 
 **Contribution:**
 
-Nattapong designed and developed the application.
+Nattapong’s confirmed internal record identifies it as an individual project. The audit verifies the repository implementation, not every contribution boundary.
 
-The work includes:
+The audited source includes:
 
-- Responsive user interface
+- Responsive interface patterns and light/dark/system themes
 - Basketball-specific conversation flow
-- AI provider integration
-- Streaming responses
+- Server-side OpenAI and Google GenAI adapters
+- Provider-stream consumption buffered by the server route into one assembled client event
 - Provider switching
 - Error handling
-- Bring Your Own Key workflow
-- Recommendation behavior testing
-- User experience refinement
+- Stop and Retry source paths
+- A user-provided-key workflow through the CourtFit server
+- Thai/English interface and prompt intent
 
 **Technologies:**
 
-- Next.js
-- React
-- TypeScript
+- Next.js App Router, React, and TypeScript
 - Tailwind CSS
-- shadcn/ui
-- OpenAI API
-- Google Gemini API
-- REST APIs
-- Git
-- GitHub
-- Vercel
+- Local shadcn-style components using Radix primitives
+- OpenAI SDK and Google GenAI SDK
+- Zod, next-themes, and Lucide icons
+
+The source defines one page route (`/`) and one API route (`POST /api/chat`). The browser client calls the CourtFit server route, and server-only adapters call the selected provider.
 
 **Current result:**
 
-The application currently supports:
+The source supports:
 
-- OpenAI and Google Gemini providers
-- Thai and English conversations
-- Streaming responses
-- Stop controls
-- Retry controls
-- Provider switching
-- Responsive layouts
-- Dark mode
+- OpenAI and Gemini selection through server-side provider adapters
+- Thai/English interface and prompt intent, including Thai-character detection and same-language-response instructions
+- Stop and Retry controls wired through shared source paths
+- Provider switching that clears the current conversation and key state
+- Responsive layout patterns with a mobile Radix drawer
+- Light, dark, and system theme switching
 - Basketball-specific recommendation shortcuts
-- User-provided API keys kept temporarily in session memory
+- User-provided API keys held temporarily in React state
 
-These behaviors should be verified against the latest deployed version before being presented as final public claims.
+The key flow is browser React state → CourtFit server route → selected provider. The key is sent to the CourtFit server with every request and retry, then passed to the selected request-scoped provider client. No direct project persistence was found in localStorage, sessionStorage, cookies, a database, chat-message state, or analytics, and no key logging was found in audited project code. This is not a client-only BYOK flow and is not evidence of secure key handling.
+
+Chat history exists in React memory only in inspected project source. Every turn sends all current non-empty retained user and assistant messages through the CourtFit server to the selected provider. Refresh does not preserve the conversation through project code, and a provider or key change clears it. Operational logging, deployed transport, infrastructure, process memory, browser extensions, same-origin scripts, provider retention, and platform observability remain unverified.
+
+Both provider adapters consume provider streaming APIs, but the audited server route buffers provider deltas and returns one assembled text event. The client can read NDJSON events, but incremental assistant display during provider generation is not established.
+
+The Stop signal is wired from browser fetch through the route to both adapters, and Retry reuses an error-message slot and creates a new request with relevant history and the current provider/key. Provider cancellation, partial-response preservation, races, billing effects, Retry success, and duplicate prevention remain runtime-unverified.
+
+Desktop provider/key controls are wired. Mobile drawer action parity is incomplete: its New Chat action is inert and provider/key actions are absent. Responsive and theme behavior has source support only; no browser, device, viewport, keyboard, orientation, zoom/reflow, or visual verification occurred.
+
+Messages render as plain pre-wrapped text. No Markdown rendering dependency or implementation was found, so Markdown-like formatting requested by the prompt may appear literally.
 
 **Limitations:**
 
-CourtFit does not currently use a verified basketball shoe product database or real-time retailer information.
+CourtFit has no structured shoe catalog, product database, product API, product images, product cards, detail pages, verified-product search/filter, price or stock feed, cart, checkout, or commerce transaction.
 
-It cannot reliably confirm:
+Recommendations are model-generated from instructions and conversation. Accuracy was not tested, and product information may be inaccurate or fabricated. CourtFit cannot reliably confirm:
 
 - Current prices
 - Stock availability
@@ -455,32 +465,30 @@ It cannot reliably confirm:
 
 Recommendations should be verified before a purchase.
 
-The application currently does not include:
+The rendered source says guidance is simulated and real-time price/stock data are unavailable, and it shows API-key responsibility/provider-charge guidance. It does not contain an explicit “educational use only” or “not an official store” disclaimer, and visible UI does not fully explain AI-output inaccuracy.
 
-- User authentication
-- Checkout
-- Persistent chat history
-- Verified product catalog
-- Real-time inventory
-- Commercial transaction functionality
+Static accessibility evidence includes labels, named controls, Radix dialog primitives, focus-visible styles, alert/status/live-region use, IME-aware input behavior, and some reduced-motion handling. The root language is fixed to English; heading and announcement concerns remain. No keyboard, screen-reader, contrast, zoom/reflow, touch, language-markup, or device testing was performed, so accessibility compliance is not established.
 
-The project should be labeled as an educational and experimental application.
+No automated test source, test runner/framework, test script, coverage configuration, or CI workflow was found. Lint, type-check, format, and build configuration exists but was not executed. Chrome, Firefox, and Safari testing remains self-reported and undocumented.
 
-**Evidence available:**
+Vercel appears only in README and technical documentation. No live URL, Vercel configuration, CI/deployment workflow, or deployment result was found; active deployment remains To be verified.
 
-- Source code
-- GitHub repository
-- Deployed application
-- Screenshots
-- Responsive interface demonstrations
-- API integration logs
-- Build validation results
-- Project documentation
-- Live chatbot testing
+**Conditional evidence candidates:**
 
-**Repository:** To be added.
+- Repository URL and fixed audited commit
+- Curated source-tree and one-page/one-route overviews
+- Browser/server/provider and API-key-boundary diagrams derived from source
+- Curated provider-adapter, buffering, Stop, Retry, responsive, and system-instruction excerpts
+- Static preview mode for future screenshot creation
+- Privacy-reviewed commit-history summary
 
-**Live application:** To be added.
+These are not approved public artifacts. No deployed application, build/test/CI result, browser matrix, screenshot, product image, integration log, or deployment result was supplied or verified.
+
+The bounded review found no candidate credential value in the current tree or four available commits. `.env.example` was the only environment-named tracked path, with no real tracked `.env`. One Git author email in commit metadata differs from the confirmed public contact; do not reproduce it, and complete owner privacy review before prominent history use. This bounded review does not prove secrets never existed elsewhere.
+
+**Live application:** To be verified.
+
+All runtime, provider/model compatibility, API-key operational privacy, conversation/provider retention, browser, accessibility, recommendation-quality, artifact, and deployment claims remain subject to separate verification.
 
 # Learning Progress
 
