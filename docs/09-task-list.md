@@ -106,40 +106,24 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, DEC-03 theme/asset direction, CON-01 public-profile verification, PRJ-01/PRJ-02 commit-scoped static project audits, GOV-04/GOV-05 project-governance synchronizations, and CON-02's bounded internal representative content/evidence set are complete. DEC-01, DEC-02, and DEC-03 are Approved and Done. CON-02 remains the real-content basis for later work. The approved initial direction is one light-first shared foundation with contrasting semantic technical surfaces; selectable light/dark themes are deferred.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, DEC-03 theme/asset direction, DEC-04 testing/quality/supported-environment direction, CON-01 public-profile verification, PRJ-01/PRJ-02 commit-scoped static project audits, GOV-04/GOV-05 project-governance synchronizations, and CON-02's bounded internal representative content/evidence set are complete. DEC-01 through DEC-04 are Approved and Done. CON-02 remains the real-content basis for later work. The approved visual direction is one light-first shared foundation with contrasting semantic technical surfaces; the approved quality approach is layered hybrid validation, and the approved environment policy is tiered capability-based support.
 
 The next preparation candidates are:
 
-1. Prepare `DEC-04 — Decide testing, quality, and supported-environment approach` when its evidence and decision-owner scope are ready.
-2. Prepare `DEC-05 — Decide deployment, analytics, and privacy direction` without deploying or selecting unneeded services.
-3. Prepare a separately authorized Booking API runtime-evidence scope only after the historical environment-file risk and safe test resources are addressed.
+1. Prepare `DEC-05 — Decide deployment, analytics, and privacy direction` without deploying or selecting unneeded services.
+2. Prepare a separately authorized Booking API runtime-evidence scope only after the historical environment-file risk and safe test resources are addressed.
 
-These are candidates, not silently activated tasks. DEC-03 approves direction only: no final visual value, real asset, styling, theme control, tool, dependency, or implementation is approved. Final public wording, exact collection/schema design, public-ready artifacts, package-manager choice, testing, routes/navigation, deployment, and the first vertical path remain unresolved. CourtFit build, provider compatibility, operational privacy, browser/accessibility behavior, artifacts, deployment, and publication remain unresolved. Booking API build, test, migration, runtime, authorization, concurrency, Redis, container, deployment, secret-history, redaction, and publication questions also remain unresolved. FND-01, FND-02, NAV-01, VRT tasks, component/page work, and motion must remain inactive until their documented dependencies, decisions, evidence, and separate authorizations pass.
+These are candidates, not silently activated tasks. DEC-03 and DEC-04 approve direction only. DEC-04 establishes a smaller deterministic local baseline plus task-specific checks, future CI that mirrors reliable deterministic local checks after implementation exists, and manual review for affected changes, first vertical, and release. It selects no tool, command, exact environment, executable check, or implementation. Final public wording, exact collection/schema design, public-ready artifacts, package-manager choice, quality tooling/configuration, routes/navigation, deployment, and the first vertical path remain unresolved. CourtFit and Booking API runtime, privacy, artifact, testing, deployment, and publication questions retain their recorded blockers. FND-01, FND-02, NAV-01, VRT tasks, component/page work, and motion remain inactive until their documented dependencies, evidence, and separate authorizations pass.
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completing DEC-01, DEC-02, DEC-03, CON-01, CON-02's internal representative-set scope, the static scopes of PRJ-01 and PRJ-02, and governance synchronizations GOV-04 and GOV-05 does not authorize or activate DEC-04, DEC-05, FND-01, FND-02, NAV-01, VRT-01, VRT-02, components, public content, asset creation, implementation, runtime verification, publication, or automatic promotion of any Next task.
+The Now queue is empty. Completing DEC-01, DEC-02, DEC-03, DEC-04, CON-01, CON-02's internal representative-set scope, the static scopes of PRJ-01 and PRJ-02, and governance synchronizations GOV-04 and GOV-05 does not authorize or activate DEC-05, FND-01, FND-02, NAV-01, VRT-01, VRT-02, tooling, CI, tests, components, public content, asset creation, implementation, runtime verification, release, deployment, publication, or automatic promotion of any Next task.
 
 # Next — Decision and Evidence Tasks
 
 These tasks follow the immediate queue or require additional evidence and authorization.
 
 ## Decision Gates
-
-**DEC-04 — Decide testing, quality, and supported-environment approach**  
-**Status:** Next · **Priority:** P1
-
-- **Source:** Phases 1, 14–17; Project Testing and Accessibility rules.
-- **Objective / why now:** Establish applicable checks before foundation implementation expands.
-- **Reading:** Project rules, implementation plan, audit capabilities, accessibility/responsive requirements.
-- **Authorization:** Decision/config files only when separately authorized.
-- **Inputs:** Existing tools, stack decision, target content and interaction risks.
-- **Boundaries:** Define categories and support policy; do not select extra tools without justified need.
-- **Deliverable:** Quality/test/support decision record with local and future CI implications.
-- **Acceptance / validation:** Covers bilingual, long content, keyboard, reflow, states, and real artifacts.
-- **Dependencies / blockers:** AUD-02 findings and DEC-01.
-- **Prohibited:** Treating tool presence as passing validation.
-- **Documentation / report:** Record omitted categories and future gates.
 
 **DEC-05 — Decide deployment, analytics, and privacy direction**  
 **Status:** Next · **Priority:** P1
@@ -565,14 +549,16 @@ The CourtFit static repository-evidence and source privacy-boundary questions ar
 
 The stale CourtFit-governance inconsistency is resolved through GOV-05: `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` now use the committed PRJ-02 evidence and preserve its runtime, provider, privacy, mobile, accessibility, Markdown, recommendation, testing, artifact, deployment, licensing, author-email, and publication blockers. This synchronization adds no new verification or implementation authority.
 
-DEC-03B resolves only the initial page-foundation direction, shared technical-surface direction, initial dual-theme status, one-maintainer maintenance direction, screenshot optionality, local/remote asset direction, and honest missing/unavailable-asset behavior. It approves one light-first shared foundation with bounded contrasting semantic technical surfaces and defers selectable dual themes. Actual colors, typography, theme and technical-surface implementation, contrast/focus, responsive and bilingual behavior, asset selection, privacy/redaction, rights/licensing, formats/delivery, tooling/dependencies, DEC-04, schema/package-manager, navigation/routes, first vertical, deployment, and publication remain unresolved.
+DEC-03B resolves only the initial page-foundation direction, shared technical-surface direction, initial dual-theme status, one-maintainer maintenance direction, screenshot optionality, local/remote asset direction, and honest missing/unavailable-asset behavior. It approves one light-first shared foundation with bounded contrasting semantic technical surfaces and defers selectable dual themes. Actual colors, typography, theme and technical-surface implementation, contrast/focus, responsive and bilingual behavior, asset selection, privacy/redaction, rights/licensing, formats/delivery, quality tooling/execution, schema/package-manager, navigation/routes, first vertical, deployment, and publication remain unresolved.
+
+DEC-04B resolves only the overall layered-hybrid testing direction, Layers 0–8 responsibility model, smaller deterministic local baseline plus task-specific checks, future-CI mirroring direction, manual-review cadence, conditional-check policy, tiered capability-based supported-environment shape, risk-based release gates, non-numeric severity states, and explicit omission records. Exact quality tools, commands, configurations, CI provider/workflow, environment examples, thresholds, implementation, and executed evidence remain unresolved. No check result follows from approval.
 
 The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
 | --- | --- | --- | --- |
 | Exact content model, collection boundaries, schema, and implementation scope unresolved | Use the completed CON-02 representative set to decide the exact model/schema separately, then separately authorize FND-01 implementation | FND-01 | Collection, schema, validation-code, or public-content implementation |
-| Theme direction is approved, but final visual values, typography, actual assets, implementation, and validation remain unresolved | Complete DEC-04 and FND-01; separately decide implementation scope; select/review real assets; validate contrast, focus, bilingual reading, responsive behavior, accessibility, privacy/rights, and performance | FND-02, EVD-01, RWD-01, A11Y-01, PERF-01, PRV-01 | CSS/theme implementation, technical-surface implementation, asset publication, or claims of visual/accessibility correctness |
+| Theme and quality directions are approved, but final visual values, typography, actual assets, implementation, tooling, and executed validation remain unresolved | Complete FND-01; separately decide implementation scope and quality tooling; select/review real assets; validate contrast, focus, bilingual reading, responsive behavior, accessibility, privacy/rights, and performance | FND-02, EVD-01, RWD-01, A11Y-01, PERF-01, PRV-01 | CSS/theme implementation, technical-surface implementation, asset publication, or claims of visual/accessibility correctness |
 | Package manager and implementation scope unresolved | Approve them through a separate bounded implementation decision or prompt | FND-01, FND-02 | Scaffolding, manifests, lockfiles, or dependency installation |
 | Booking API historical `.env` not privately reviewed | Owner reviews history without publishing values and rotates any potentially affected credential when appropriate | PRJ-03, EVD-01, PRV-01 | Prominent repository/history promotion or artifact publication |
 | Booking API build, tests, migrations, routes, and cross-user behavior not runtime-verified | Separately authorize safe build/test/runtime work with isolated PostgreSQL and Redis resources | PRJ-03, QA-01 | Passing, runtime-correctness, persistence, or authorization-isolation claims |
@@ -584,7 +570,7 @@ The following unresolved blockers govern activation:
 | No public-ready artifact set | Select actual artifacts, verify source/context, and complete redaction, rights, accessibility, and publication review | VRT-01/VRT-02/EVD-01/PRV-01 | Artifact-dependent implementation, repository promotion, or public evidence use |
 | Routes and navigation unresolved | Establish verified content destinations and separately authorize NAV-01 | NAV-01, VRT-02 | Final routes, language URLs, labels, or navigation implementation |
 | First vertical path unselected | Complete VRT-01 | VRT-02/CMP-01 | Broad page/component implementation |
-| Testing and supported-environment direction unresolved | Complete DEC-04 | FND-02, QA-01 | Final quality tooling or support claims |
+| DEC-04 quality direction is approved, but exact tooling, commands, configuration, CI, environment examples, thresholds, implementation, and executed evidence remain unresolved | Select each method only after matching implementation and separate authorization; execute applicable checks within later authorized tasks | FND-01, FND-02, RWD-01, A11Y-01, PERF-01, PRV-01, QA-01 | Quality-tool installation/configuration, CI creation, support claims, or passing-result claims |
 | Deployment direction unresolved | Complete DEC-05 | REL-01 | Deployment or public operational claims |
 
 Blocked means a named prerequisite is absent, not merely low priority.
@@ -715,7 +701,29 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Files changed:** `reference/decisions/DEC-03-theme-and-asset-direction.md` and `docs/09-task-list.md`.
 - **Implementation/publication boundary:** No final visual value, actual asset, tool, dependency, implementation, public content, or publication was selected or authorized.
 - **Known limitations and deferred scope:** Actual light-theme behavior; Thai/English/mixed typography; contrast, focus, zoom, reflow, browser, device, screen-reader, responsive, and accessibility behavior remain untested. Actual screenshots and technical artifacts remain conditional or missing. Final colors, fonts, values, breakpoints, assets, tools, dependencies, pipelines, and implementation remain unresolved.
-- **Follow-up:** Use DEC-03 as an approved direction-level input. DEC-04 and DEC-05 remain separate decision candidates. FND-02 remains blocked by DEC-04, FND-01, exact implementation scope, and separate authorization.
+- **Follow-up:** Use DEC-03 as an approved direction-level input. DEC-04 was approved later through its own decision; DEC-05 remains separate. FND-02 remains blocked by FND-01, exact implementation scope and choices, quality-tooling execution evidence, and separate authorization.
+
+**DEC-04 — Decide testing, quality, and supported-environment approach**
+
+**Status:** Done · **Priority:** P1
+
+- **Decision owner:** Nattapong.
+- **Preparation and approval:** DEC-04A created and reviewed the Proposed package; DEC-04B explicitly approved the direction.
+- **Testing approach:** Alternative C — Layered hybrid validation.
+- **Quality responsibilities:** Layers 0–8 cover authority/factual integrity, content/structure, static generation/output, representative reading/responsive behavior, conditional interaction, accessibility, privacy/rights/evidence safety, performance/resilience, and release/post-deployment handoff.
+- **Local checks:** Use a smaller fast deterministic baseline plus task-specific checks after matching implementation exists.
+- **Future CI:** Mirror approved reliable deterministic non-interactive local checks only after they work reliably and safely in the local workflow.
+- **Manual cadence:** Relevant affected changes, first-vertical validation, and release validation.
+- **Conditional checks:** Apply only to included features; absence is Not applicable, not Passed.
+- **Supported environments:** E3 tiered capability-based policy using Primary supported, Secondary / best effort, Not evaluated, and justified Explicitly unsupported obsolete capability sets.
+- **Release and severity:** Risk-based release gates use Blocking, Required before scope expansion, Advisory, Not applicable, and Not evaluated / omitted.
+- **Omitted checks:** Every omitted required check requires an explicit reason, affected scope, consequence, risk, follow-up, and blocking effect.
+- **Decision record:** `reference/decisions/DEC-04-testing-quality-and-supported-environments.md`.
+- **Validation:** Three testing approaches, E1–E3, all eight CON-02 stress cases, Layers 0–8, and the complete check matrix remain. No executable application check ran and no quality result was reported as passing. No tool, command, dependency, provider, exact environment, threshold, configuration, or workflow was selected.
+- **Files changed:** `reference/decisions/DEC-04-testing-quality-and-supported-environments.md` and `docs/09-task-list.md`.
+- **Implementation/execution boundary:** DEC-04 approves responsibilities and gates only. It creates no tool, configuration, CI, test, implementation, release, deployment, or public content.
+- **Known limitations:** No implementation source, manifest, lockfile, schema, command, test source, quality configuration, CI, generated output, browser result, accessibility result, responsive result, privacy-safety result, performance result, release result, or deployment result exists. Exact tools and environment examples remain unresolved.
+- **Follow-up:** Use DEC-04 as direction-level input. DEC-05 remains a separate decision candidate. FND-01 remains blocked by the exact content model/schema/package manager and implementation authorization. FND-02 remains blocked by FND-01, exact implementation scope/choices, and separate authorization. Do not activate another task automatically.
 
 ## Completed Content Verification
 
@@ -747,7 +755,7 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **External/network boundary:** No external repository, deployment, provider, network destination, source application, or runtime system was accessed.
 - **Implementation/publication boundary:** No public copy, artifact, schema, collection, field requiredness, route, component, package manager, theme, test tool, first vertical, deployment, or graduation-project topic was created, selected, or approved.
 - **Known limitations:** Final public wording, translation relationships, initial public scope, exact content model/schema/collections, routes/navigation, package manager, theme/assets, testing/support policy, project runtime evidence, actual screenshots/artifacts, research sources/hardware/scope/topic, coursework selection, deployment, and publication approval remain unresolved.
-- **Downstream readiness:** Real English/Thai/mixed samples and honest evidence states are available for separately authorized DEC-03 and DEC-04 preparation, later FND-01 planning, and VRT-01 comparison. No downstream task is activated; FND-01 and VRT tasks retain their existing gates and require separate authorization.
+- **Downstream readiness:** Real English/Thai/mixed samples and honest evidence states supplied the separately completed DEC-03 and DEC-04 decisions and remain available for later FND-01 planning and VRT-01 comparison. No downstream task is activated; FND-01 and VRT tasks retain their existing gates and require separate authorization.
 
 ## Completed Project Evidence
 
@@ -815,7 +823,7 @@ The approved planning documents `reference/design-dna.md` and `docs/00` through 
 GOV-01 (Done) ──────────────────────────────► governed agent work
 AUD-01 (Done) ─► AUD-02 (Done) ─► GOV-02 (Done) ─► DEC-01 (Done)
 AUD-02 (Done) ─► AUD-03 (Cancelled: current scope covered by AUD-02)
-DEC-01 (Done) ─► DEC-02 (Done) + DEC-03 (Done); DEC-04 / DEC-05 remain separately gated
+DEC-01 (Done) ─► DEC-02 (Done) + DEC-03 (Done) + DEC-04 (Done); DEC-05 remains separately gated
 authorized PRJ-01 static audit (Done) ─► corrected internal Booking evidence ─► GOV-04 (Done) ─► synchronized governance summaries
 PRJ-01 runtime / secret-history / publication requirements ─► remain separately blocked
 authorized PRJ-02 static audit (Done) ─► corrected internal CourtFit evidence ─► GOV-05 (Done) ─► synchronized CourtFit governance summaries
@@ -823,16 +831,17 @@ PRJ-02 runtime / provider / privacy / artifact / publication requirements ─►
 DEC-02 (Done) + CON-01 (Done) + PRJ-01/PRJ-02 static evidence (Done) + GOV-04/GOV-05 synchronized governance (Done) + research/learning context ─► CON-02 representative set (Done)
 CON-02 representative set (Done) ─► DEC-03 theme/asset direction (Done) + inputs for FND-01 planning / VRT-01 comparison; no public-page authorization
 DEC-01 (Done) + DEC-02 (Done) + CON-02 (Done) + unresolved exact model/schema/package-manager decisions + separate implementation authorization ─► FND-01
-DEC-01 (Done) + DEC-03 (Done) + DEC-04 (unresolved) + FND-01 (blocked) + exact implementation scope/authorization ─► FND-02 ─► NAV-01
+DEC-01 (Done) + DEC-03 (Done) + DEC-04 (Done) + FND-01 (blocked) + exact implementation scope/authorization ─► FND-02 ─► NAV-01
 NAV-01 + VRT-01 (separately authorized after existing gates) ─► VRT-02
 VRT-02 ─► CMP-01 / EVD-01 / STA-01 ─► PRJ-03 / PRJ-04 / RES-01 / LRN-01..04
-DEC-03 (Done) ─► direction input for DEC-04 / FND-02 / EVD-01 / RWD-01 / A11Y-01 / PERF-01 / PRV-01 / VRT-01; no task activation
+DEC-03 (Done) ─► theme/asset direction input for FND-02 / EVD-01 / RWD-01 / A11Y-01 / PERF-01 / PRV-01 / VRT-01; no task activation
+DEC-04 (Done) ─► quality direction input for FND-01 / FND-02 / NAV-01 / VRT-01 / VRT-02 / RWD-01 / A11Y-01 / PERF-01 / PRV-01 / QA-01 / REL-01 after DEC-05; no task activation
 stable static scope + verified behavior ─► MOT-01
 representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. DEC-03 is Approved and Done only as a direction-level decision; DEC-04 and DEC-05 remain separately authorized decision candidates, and a separately scoped Booking API runtime-evidence task remains inactive. CON-02 supplies real language/content/evidence states, and DEC-03 supplies the approved light-first/shared-technical-surface direction, but actual public-ready artifacts, final visual values, typography, exact content model/schema, package manager, routes/navigation, first vertical, testing, deployment, and publication remain unresolved. FND-01, FND-02, NAV-01, VRT-01, and VRT-02 retain their existing dependencies and require separate authorization. DEC-03, CON-02, and the completed audits/governance tasks do not authorize a public page, asset creation/publication, repository promotion, runtime/provider/privacy claims, or implementation.
+The Now queue is empty. DEC-03 and DEC-04 are Approved and Done only as direction-level decisions; DEC-05 remains a separately authorized decision candidate, and a separately scoped Booking API runtime-evidence task remains inactive. CON-02 supplies real content states, DEC-03 supplies the light-first/shared-technical-surface direction, and DEC-04 supplies the layered-hybrid/tiered-capability quality direction. Actual public-ready artifacts, final visual values, typography, exact content model/schema, package manager, quality tooling/configuration, routes/navigation, first vertical, executed checks, deployment, and publication remain unresolved. FND-01, FND-02, NAV-01, VRT-01, and VRT-02 retain their existing dependencies and require separate authorization. These decisions and completed evidence tasks do not authorize a public page, tool/CI/test creation, asset publication, repository promotion, runtime/provider/privacy claims, implementation, release, or deployment.
 
 # Validation and Completion Rules
 
@@ -873,7 +882,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, DEC-03, CON-01, CON-02's bounded internal representative set, PRJ-01's and PRJ-02's static audit scopes, and GOV-04/GOV-05 governance synchronization; recommended next candidates remain inactive until separately authorized and ready.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, DEC-03, DEC-04, CON-01, CON-02's bounded internal representative set, PRJ-01's and PRJ-02's static audit scopes, and GOV-04/GOV-05 governance synchronization; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
@@ -886,6 +895,8 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 # Open Task-List Questions
 
 DEC-03B resolved the initial light-first versus dark-first direction, deferred selectable dual themes, approved bounded contrasting semantic technical surfaces, made screenshots optional, preferred lawful reviewed local assets over default remote use, approved honest text-first unavailable states, and limited the initial theme scope to one minimal foundation. Those direction questions are closed; implementation and validation questions remain open.
+
+DEC-04B resolved the overall testing approach, Layers 0–8, smaller deterministic local baseline plus task-specific checks, future-CI mirroring direction, affected-change/first-vertical/release manual cadence, conditional-check policy, tiered capability-based environment shape, risk-based release gates, non-numeric severity states, and explicit required-check omission records. Exact commands, tools, CI provider/workflow, executable checks, environment examples, accessibility target, thresholds, retention, and results remain open.
 
 - Which actual colors, typefaces, font loading, typography scale, spacing, motif, logo, icon set, semantic tokens, and project-specific visual variation should later evidence and prototypes support?
 - Which breakpoints, asset directories/names, image formats, responsive widths, compression, optimization, syntax highlighting, diagram tooling, screenshot tooling, video, or embed behavior are justified by real implementation and assets?
@@ -929,7 +940,12 @@ DEC-03B resolved the initial light-first versus dark-first direction, deferred s
 - Which components recur after vertical validation?
 - Which content families belong in the first release?
 - Which motion needs are real and verified?
-- Which checks belong locally and in continuous integration?
+- Which exact local commands and separately selected tools should implement the approved deterministic baseline after FND-01/FND-02 create matching scope?
+- Which CI provider, workflow, caching, logging, and retention choices can safely mirror the approved reliable local checks?
+- Which exact browsers, devices, operating systems, assistive technologies, accessibility target, and support duration should later evidence justify?
+- Which numeric performance or coverage thresholds, if any, should actual measurement justify?
+- Which test-data, artifact-retention, and build-output-retention policies are proportionate and privacy-safe?
+- Which approved checks have actually run, and what results, omissions, and residual limitations were recorded?
 - Which deployment and recovery strategy will be approved?
 - Who approves scope changes and rule exceptions?
 - How should Done/Cancelled history be maintained as this list grows?
