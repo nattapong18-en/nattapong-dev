@@ -39,6 +39,68 @@ This file is an operational derivative and does not override those sources. When
 
 Handle one bounded task at a time where practical. A task's presence in the list does not authorize execution; the prompt must authorize the work and its files or systems.
 
+# Codex Persistent Working Rules
+
+## Task Scope and Authorization
+
+- Work on one bounded task at a time.
+- Do not implement, install, scaffold, build, test, deploy, stage, commit, push, or change system configuration unless the current task explicitly authorizes that exact action.
+- Recommendations, proposals, preflight findings, and copy-ready authorization packages are not approvals.
+- A task remains **Blocked** until Nattapong explicitly authorizes it.
+- Do not activate downstream tasks automatically after completing the current task.
+- Do not silently broaden file, command, network, or mutation scope.
+
+## Repository and User-Work Safety
+
+- Confirm the expected workspace, branch, HEAD, Git state, and remote state before every bounded task.
+- Stop when the baseline differs unless the task explicitly authorizes handling that difference.
+- Never clean, reset, restore, checkout, stash, delete, overwrite, or hide user work to make the workspace appear clean.
+- Stop on unexpected files, unrelated diffs, conflicting lockfiles, secret-like material, prompts requiring an unapproved decision, or environment mismatches.
+- Modify only explicitly allowlisted files.
+- Generated outputs must never be committed unless separately authorized.
+- Never publish internal documents, audits, private paths, credentials, tokens, or unsupported claims.
+
+## Network and Sources
+
+- Use network access only when the current task explicitly authorizes it.
+- When authorized, use official or primary sources appropriate to the task.
+- Do not use unofficial instructions to justify system, dependency, security, or deployment changes unless the task explicitly permits them.
+- Do not execute downloaded scripts or curl-pipe-shell installers without explicit authorization.
+
+## Reporting Behavior
+
+- Keep completion reports concise but complete.
+- Include what was inspected or changed, exact files changed, commands executed, validation performed, unresolved risks or owner decisions, final Git state, and what remains unauthorized.
+- For a final report of 150 lines or fewer, print it directly in the Codex response.
+- For a final report expected to exceed 150 lines, write exactly one Markdown report file outside the repository under `/tmp/`, using a task-specific filename such as `/tmp/<task-id>-report.md`.
+- A report file may contain only the final completion report.
+- Never place automatic report files inside the repository.
+- Never create more than one report file unless the current task explicitly authorizes it.
+- After creating a `/tmp/` report, print only the report path, confirmation that the report is complete, a short mutation summary, and the final Git state.
+- Do not create a report file for a small task when the response can remain under 150 lines.
+- Report-file creation under `/tmp/` is a reporting exception only; it does not authorize repository, system, package, shell, or configuration changes.
+
+## Decision Language
+
+Use these labels consistently:
+
+- **Approved**
+- **Proposed**
+- **Blocked**
+- **Done**
+- **Cancelled**
+- **To be verified**
+- **Not evaluated**
+- **Not applicable**
+
+Do not describe a **Proposed** item as selected, accepted, implemented, verified, or **Approved**.
+
+## Task-Specific Authority
+
+- The current task prompt takes precedence only when it explicitly overrides one of these standing rules.
+- An override must name the permitted action, files or system scope, commands or command classes, network scope, expected side effects, and stop conditions.
+- Ambiguous permission must be treated as not authorized.
+
 # Required Reading by Work Type
 
 - **Content:** Vision, content specification, relevant inventory, and supporting evidence.
