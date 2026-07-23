@@ -153,11 +153,31 @@ Any new claim requires repository, runtime, test, deployment, or measurement evi
 
 # CourtFit Rules
 
-Content must describe CourtFit as an individual full-stack and AI integration project, an educational and experimental basketball shoe recommendation chatbot. Current technologies are Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, OpenAI integration, and Google Gemini integration. Current described capabilities include streaming responses, provider switching, Stop and Retry controls, Thai and English interaction, responsive behavior, dark mode, and a BYOK workflow. Current testing is manual in Chrome, Firefox, and Safari. Vercel is the deployment platform; the live URL is To be verified.
+CourtFit repository-native claims must use `reference/audits/PRJ-02-courtfit-evidence.md`, which covers `https://github.com/nattapong18-en/chat-bot-test`, branch `main`, commit `3c9cc65d00622731b4a381ddb785edc3713f8c46`. The evidence applies to that commit only and must not be generalized to later source, builds, runtime/provider behavior, operational privacy, browser/device behavior, accessibility, tests, or deployments.
 
-Every meaningful overview must state that CourtFit has no verified product database, real-time prices, real-time stock, verified current product specifications, authentication, checkout, persistent chat history, or guaranteed recommendation accuracy.
+Content must describe CourtFit as an individual project according to Nattapong's confirmed internal record, an educational and experimental basketball-shoe recommendation chatbot, a domain-specific conversational prototype, and a source-level functional-MVP candidate with full-stack and AI integration source. It is not a real store or production-ready.
 
-The project must not claim API-key security, exact key storage, direct provider request behavior, full browser compatibility, professional footwear advice, injury prevention, commercial readiness, or a live URL before verification. Recommendations must remain informational model output requiring independent verification.
+Architecture wording may state that the audited Next.js App Router source uses React, TypeScript, Tailwind CSS, and local shadcn-style components backed by Radix primitives. It defines one page route (`/`) and one dynamic Node API route (`POST /api/chat`) across browser React state, the CourtFit application-server route, and server-only OpenAI and Google GenAI adapters. No planning-only route or product endpoint may be presented as implemented.
+
+API-key wording must preserve the source-level flow: browser React state → `POST /api/chat` → CourtFit application server → selected OpenAI or Gemini adapter → selected provider. Users supply the key; it is held temporarily in React state and sent through CourtFit's server with every request and Retry to a request-scoped provider client. No direct project persistence in localStorage, sessionStorage, cookies, a database, chat-message state, or analytics and no project key logging were found. The browser does not send the key directly to the provider. Deployment infrastructure, middleware, HTTPS, process memory, logs/observability, browser extensions, same-origin scripts, operational controls, and provider retention remain unverified; BYOK does not establish privacy or security.
+
+Conversation wording must state that history is kept in React state without direct project persistence and that every turn sends all current non-empty retained user and assistant messages through CourtFit's server to the selected provider. Provider or key changes clear conversation and key state. No project analytics or message/key logging was found, but deployed transport, operational logging/observability, provider retention, browser-extension access, and complete privacy remain unverified.
+
+OpenAI and Google GenAI server adapters, normalized history/shared instructions, provider-stream consumption, and abort-signal wiring exist in source. Successful provider calls, current API/model compatibility, provider behavior, and retention were not tested. Streaming must be described as: “Provider streams are consumed server-side, but the audited route buffers the output and sends one assembled response event to the client.” The client has an NDJSON event reader, but incremental/token-by-token assistant display during generation is not established.
+
+Stop and Retry are source-level paths only. Stop wires an `AbortController` through browser fetch, the route request, and both adapters; provider-side cancellation, races, useful partial preservation, and billing effects remain unverified, and route buffering generally prevents useful partial text before completion. Retry reuses an error assistant slot, resends relevant history with the current provider/key, and creates a new request; runtime success, rapid-click behavior, and duplicate prevention remain unverified. OpenAI/Gemini switching clears key and conversation state and does not intentionally retransmit earlier messages to the new provider. No model picker exists; desktop controls are wired, while mobile drawer New Chat and provider/key action parity are incomplete.
+
+Every meaningful overview must state that CourtFit is a conversational recommendation prototype without a structured product catalog or commerce system. It has no shoe database, product/commerce API, product images/cards/detail routes, verified price/stock feed, cart, checkout, or transaction behavior. Recommendations are model-generated; accuracy is unverified and product information may be inaccurate or fabricated.
+
+The rendered disclaimer boundary is partial: simulated guidance, unavailable real-time price/stock, and key/provider-charge responsibility are visible. Explicit educational-use-only, not-an-official-store, AI-inaccuracy, no-purchase/checkout, and complete recommendation-limit wording remain absent. Messages render as plain pre-wrapped text; no Markdown renderer, syntax highlighting, or code-copy support was found, and Markdown-like prompt output may render literally.
+
+Responsive classes, desktop/mobile layout patterns, a Radix drawer, adaptive widths/overflow, dynamic viewport height, light/dark/system themes, named controls, focus-visible styles, status/live-region usage, IME-aware input, and some reduced-motion handling are source evidence only. No rendered visual, browser, physical-device, keyboard, screen-reader, contrast, zoom/reflow, touch, orientation, virtual-keyboard, or accessibility testing occurred. Mobile action parity is incomplete, the root document language is fixed to English, and accessibility compliance is not established.
+
+No automated test source, framework/runner, test script, coverage configuration, or CI workflow was found. Build, lint, type-check, and format configuration exists but was not run; preview states and `data-testid` attributes are aids, not tests. Chrome, Firefox, and Safari testing remains self-reported and undocumented. Vercel appears only in README/technical documentation; no live URL, Vercel configuration, workflow, or deployment result was verified, and the dynamic Node route requires a server runtime.
+
+The bounded audit found no candidate credential value in the current tree or four available commits; `.env.example` was the only environment-named tracked path and no real tracked `.env` was found. A non-public Git author email requires owner privacy review before prominent history use and must never be reproduced. This bounded result does not prove no secret existed elsewhere.
+
+The project must not claim successful build/checks/tests, successful provider calls, current model support, client-only or secure BYOK, complete privacy, incremental UI streaming, runtime-correct Stop/Retry, full responsive/mobile/browser behavior, accessibility compliance, verified recommendation accuracy, commercial capability, active deployment, or production readiness without separate evidence appropriate to that claim.
 
 # Design Integrity Rules
 
@@ -284,7 +304,7 @@ API keys, tokens, environment variables, repository secrets, logs, screenshots, 
 - Research data requires applicable consent, ownership, privacy, and publication review.
 - Security and privacy claims require direct supporting evidence.
 
-CourtFit API-key storage, persistence, logging, request flow, and backend involvement require source review before publication or security claims.
+CourtFit's source-level key/request boundary is governed by the PRJ-02 audit: keys are held in React state and pass through the CourtFit server to the selected provider. Any publication or security claim must preserve that boundary and the unresolved operational transport, infrastructure, logging, memory, browser, and provider-retention risks.
 
 # Dependency Rules
 
@@ -454,7 +474,7 @@ The following remain Unresolved until the final implementation stack, repository
 - Who may approve temporary and permanent exceptions?
 - How often should project rules and their source documents be reviewed?
 - Which Rust Booking API rules may change after build, migration, runtime, test, concurrency, Redis, historical-secret, and deployment verification extends the completed static repository audit?
-- Which CourtFit rules may change after source, deployment, API-key, browser, device, accessibility, and recommendation review?
+- Which CourtFit rules may change after build/provider/runtime verification, operational API-key/privacy review, deployment/source-equivalence review, browser/device/accessibility testing, recommendation evaluation, artifact review, and publication approval?
 - Who owns public-content verification, correction, and last-reviewed updates?
 - What release, rollback, incident, backup, or monitoring rules become necessary after deployment architecture is chosen?
 

@@ -111,19 +111,24 @@ Do not claim successful build or tests, runtime correctness or security, complet
 
 ## CourtFit
 
-Current approved wording:
+Use the static evidence record at `reference/audits/PRJ-02-courtfit-evidence.md`, covering repository `https://github.com/nattapong18-en/chat-bot-test`, branch `main`, commit `3c9cc65d00622731b4a381ddb785edc3713f8c46`. It covers that commit only and does not prove build, runtime, provider compatibility, privacy security, browser/device behavior, accessibility, testing, deployment, recommendation accuracy, or production readiness.
 
-- Major Project; individual full-stack and AI integration project.
-- Educational and experimental basketball shoe recommendation chatbot.
-- Next.js, React, TypeScript, Tailwind CSS, and shadcn/ui.
-- OpenAI and Gemini integration; streaming responses; provider switching; Stop and Retry.
-- Thai and English interaction; responsive behavior; dark mode; BYOK workflow.
-- Manual Chrome, Firefox, and Safari testing.
-- Vercel platform context; Live URL To be verified.
+Current evidence-bounded wording:
 
-Preserve these limitations: no verified product database, real-time prices, real-time stock, verified current product specifications, authentication, checkout, persistent chat history, or guaranteed recommendation accuracy.
+- Major Project; individual project according to Nattapong's confirmed internal record; educational and experimental basketball-shoe recommendation chatbot; domain-specific conversational prototype and source-level functional-MVP candidate, not a real store or production-ready system.
+- Next.js App Router, React, TypeScript, Tailwind CSS, and local shadcn-style components using Radix primitives. The source has one page route (`/`) and one dynamic Node route (`POST /api/chat`) across browser React state, the CourtFit server route, and server-only OpenAI and Google GenAI adapters.
+- User-provided keys follow browser React state → CourtFit server → selected provider. Each request and Retry sends the key through the server to a request-scoped provider client. No direct project persistence or project key logging was found, but operational infrastructure, HTTPS, logs, memory, browser extensions/scripts, and provider retention were not verified.
+- Chat history is React-memory-only in inspected project source. Every turn sends all current non-empty retained user and assistant messages through the CourtFit server to the selected provider. Provider or key changes clear conversation and key state.
+- Both provider adapters consume provider streams, but the route buffers output and sends one assembled response event to the client. Incremental assistant display during generation is not established.
+- Stop and Retry paths are wired in source, not runtime-verified. Provider switching supports OpenAI and Gemini and clears incompatible state; no model picker exists, and mobile drawer New Chat/provider/key action parity is incomplete.
+- The source has no structured product catalog, product database/API/images/cards/details, verified price/stock feed, cart, checkout, or commerce. Recommendations are model-generated and may be inaccurate or fabricated.
+- The rendered disclaimer boundary is partial: simulated guidance, unavailable live price/stock, and key/provider-charge responsibility are visible, but explicit educational-use/not-official-store and full AI-inaccuracy wording are absent.
+- Responsive and light/dark/system theme patterns exist in source; visual, browser, physical-device, and accessibility behavior were not tested. Messages render as plain pre-wrapped text without Markdown support.
+- No automated tests or CI were found. Build, lint, type-check, and format configuration exists but was not run. Chrome, Firefox, and Safari testing is self-reported and undocumented.
+- Vercel is documentation context only; no live URL, Vercel configuration, deployment workflow, or deployment result was verified.
+- The bounded review found no candidate credential value in the current tree or four available commits. Commit-history use still requires owner review of a non-public author email without reproducing it; the review does not prove no secret existed elsewhere.
 
-Do not claim API-key security, exact storage, request path, full browser compatibility, professional advice, injury prevention, commercial readiness, or live deployment without verification.
+Do not claim client-only BYOK, secure key handling, complete conversation privacy, incremental/token-by-token streaming, runtime-correct Stop or Retry, full mobile/browser/accessibility support, verified product facts, recommendation accuracy, passing checks, active deployment, commercial readiness, or production readiness without separate appropriate evidence.
 
 # Content and Design Integrity
 
@@ -175,7 +180,7 @@ Do not select or add an animation library without a separate approved decision.
 
 Protect API keys, tokens, environment variables, repository secrets, logs, screenshots, user data, personal information, location, research data, and third-party information.
 
-Use safe test data, redact before publication, keep secrets out of source control/examples/logs/screenshots/errors, confirm public readiness for contact information, and make no privacy or security claim without evidence. CourtFit's API-key flow requires source review before public claims. Never reproduce secret values in reports.
+Use safe test data, redact before publication, keep secrets out of source control/examples/logs/screenshots/errors, confirm public readiness for contact information, and make no privacy or security claim without evidence. CourtFit public claims must use the committed PRJ-02 source boundary and retain all operational key, logging, transport, browser, provider-retention, and privacy unknowns. Never reproduce secret values in reports.
 
 # Testing and Validation
 

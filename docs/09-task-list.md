@@ -106,7 +106,7 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, CON-01 public-profile verification, PRJ-01 static Booking API evidence audit, GOV-04 Booking API governance synchronization, and PRJ-02 static CourtFit implementation/privacy-boundary audit are complete. Both major projects now have commit-scoped static evidence. These completed records establish source-level facts only; they do not authorize implementation, runtime/provider/privacy claims, repository promotion, public content, or publication.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, CON-01 public-profile verification, PRJ-01/PRJ-02 commit-scoped static project audits, and GOV-04/GOV-05 project-governance synchronizations are complete. Both major-project audits and both governance synchronization tasks are complete, so governance now reflects the committed PRJ-01 and PRJ-02 static evidence. These records establish source-level facts only; they do not authorize implementation, runtime/provider/privacy claims, repository promotion, public content, or publication.
 
 The next preparation candidates are:
 
@@ -119,7 +119,7 @@ These are candidates, not silently activated tasks. Representative verified entr
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completing DEC-01, DEC-02, CON-01, the static scopes of PRJ-01 and PRJ-02, and GOV-04 does not authorize implementation, runtime verification, publication, or automatic promotion of any Next task.
+The Now queue is empty. Completing DEC-01, DEC-02, CON-01, the static scopes of PRJ-01 and PRJ-02, and governance synchronizations GOV-04 and GOV-05 does not authorize implementation, runtime verification, publication, or automatic promotion of any Next task.
 
 # Next — Decision and Evidence Tasks
 
@@ -596,6 +596,8 @@ The Booking API static repository-evidence question is resolved only for audited
 
 The CourtFit static repository-evidence and source privacy-boundary questions are resolved only for audited branch `main` at commit `3c9cc65d00622731b4a381ddb785edc3713f8c46` through PRJ-02. The audit established one page route and one POST API route; browser → CourtFit server → selected provider key flow; full non-empty retained-history transmission each turn; server-buffered provider streams with one assembled browser event; source-level Stop, Retry, and provider-switching paths; absent structured catalog/commerce and automated tests; partial disclaimer and responsive/dark source evidence; and documentation-only Vercel context. It did not resolve build, provider compatibility, operational key/privacy controls, runtime behavior, incremental streaming, cancellation, retry, mobile correctness, browser/accessibility behavior, recommendation quality, artifacts, deployment, or publication.
 
+The stale CourtFit-governance inconsistency is resolved through GOV-05: `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` now use the committed PRJ-02 evidence and preserve its runtime, provider, privacy, mobile, accessibility, Markdown, recommendation, testing, artifact, deployment, licensing, author-email, and publication blockers. This synchronization adds no new verification or implementation authority.
+
 The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
@@ -683,6 +685,20 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **External boundary:** No external repository or deployment was accessed, and no new verification occurred.
 - **Known limitations:** Build, migration, test execution, runtime behavior, cross-user isolation, concurrency integrity, Redis correctness, Docker operation, Render/Vercel status, historical credential safety, artifact redaction, and publication approval remain unresolved.
 - **Follow-up:** Use the synchronized summaries for later authorized work while treating the PRJ-01 audit record as the detailed authority.
+
+**GOV-05 — Synchronize stale CourtFit governance summaries with committed PRJ-02 evidence**
+
+**Status:** Done · **Priority:** P0
+
+- **Completion reason:** CourtFit summaries in `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` were synchronized with committed PRJ-02 evidence, and this task list was updated to close the governance inconsistency.
+- **Evidence:** `reference/audits/PRJ-02-courtfit-evidence.md`, covering branch `main` at audited commit `3c9cc65d00622731b4a381ddb785edc3713f8c46` only.
+- **Completed scope:** Corrected the browser → CourtFit server → selected provider API-key and conversation-data flow; corrected server-buffered provider-stream behavior; corrected source-level maturity and non-commerce framing; corrected Stop, Retry, switching, responsive/theme, Markdown, testing, and deployment summaries; and preserved privacy, runtime, accessibility, recommendation, artifact, licensing, author-email, and publication boundaries.
+- **Evidence boundary:** Used committed PRJ-02 evidence and the already corrected internal CourtFit records only. No external access or new verification occurred.
+- **Files changed:** `AGENTS.md`, `docs/07-project-rules.md`, `docs/08-implementation-plan.md`, and `docs/09-task-list.md`.
+- **Validation:** The four authorized governance files were reviewed for stale CourtFit statements, unsupported runtime/provider/privacy claims, key/history flow, buffered streaming, absent catalog/tests/deployment evidence, mobile/Markdown/accessibility limits, privacy or secret exposure, and commit-scoped evidence language.
+- **Implementation and publication:** No source, public content, dependency, route, provider, key, browser, build/check/test, deployment, or publication action occurred.
+- **Known limitations:** Whether the audited commit is canonical; build/lint/format/type-check execution; provider/model compatibility and successful calls; operational key/log/HTTPS/provider-retention behavior; raw server-mediated BYOK direction; incremental forwarding; Stop/Retry runtime behavior; mobile parity; browser/responsive/accessibility behavior; Markdown/product formatting; verified shoe data and recommendation quality; automated tests; artifacts/screenshots; deployment/source equivalence; author-email privacy; licensing; and publication approval remain unresolved.
+- **Follow-up:** Use synchronized governance as an input to later evidence/content work without treating it as public-page, runtime, privacy, provider, or implementation authorization.
 
 **DEC-01 — Decide stack and rendering strategy**  
 **Status:** Done · **Priority:** P1
@@ -796,7 +812,7 @@ AUD-02 (Done) ─► AUD-03 (Cancelled: current scope covered by AUD-02)
 DEC-01 (Done) ─► DEC-02 (Done); DEC-03 / DEC-04 / DEC-05 remain separately gated
 authorized PRJ-01 static audit (Done) ─► corrected internal Booking evidence ─► GOV-04 (Done) ─► synchronized governance summaries
 PRJ-01 runtime / secret-history / publication requirements ─► remain separately blocked
-authorized PRJ-02 static audit (Done) ─► corrected internal CourtFit evidence
+authorized PRJ-02 static audit (Done) ─► corrected internal CourtFit evidence ─► GOV-05 (Done) ─► synchronized CourtFit governance summaries
 PRJ-02 runtime / provider / privacy / artifact / publication requirements ─► remain separately blocked
 DEC-02 (Done) + CON-01 (Done) + PRJ-01 static evidence (Done) + PRJ-02 static evidence (Done) + research/learning evidence ─► CON-02 ─► VRT-01
 DEC-01 (Done) + DEC-02 (Done) + CON-02 + separate implementation authorization ─► FND-01 ─┐
@@ -808,7 +824,7 @@ representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. DEC-03 readiness and a separately scoped Booking API runtime-evidence task are recommended candidates but remain inactive until separately authorized and sufficiently ready. DEC-02, CON-01, both projects' commit-scoped static evidence, and GOV-04's synchronized governance are inputs to later content, representative-content, schema, and first-vertical work; representative research/learning evidence and public-ready project artifacts remain required for CON-02. PRJ-01, PRJ-02, and GOV-04 do not authorize a public project page, runtime/provider/privacy claims, repository promotion, or implementation. Approved decisions and completed evidence tasks are dependencies, not implementation authority.
+The Now queue is empty. CON-02 and DEC-03/DEC-04/DEC-05 remain preparation candidates subject to their existing evidence, decision-owner, and authorization gates; a separately scoped Booking API runtime-evidence task also remains inactive. DEC-02, CON-01, both projects' commit-scoped static evidence, and GOV-04/GOV-05 synchronized governance are inputs to later content, representative-content, schema, and first-vertical work; representative research/learning evidence and public-ready project artifacts remain required for CON-02. PRJ-01, PRJ-02, GOV-04, and GOV-05 do not authorize a public project page, runtime/provider/privacy claims, repository promotion, or implementation. Approved decisions and completed evidence/governance tasks are dependencies, not implementation authority.
 
 # Validation and Completion Rules
 
@@ -849,7 +865,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, CON-01, PRJ-01's and PRJ-02's static audit scopes, and GOV-04; recommended next candidates remain inactive until separately authorized and ready.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, CON-01, PRJ-01's and PRJ-02's static audit scopes, and GOV-04/GOV-05 governance synchronization; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
