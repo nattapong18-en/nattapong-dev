@@ -1,0 +1,24 @@
+{
+  "name": "nattapong.dev",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "26.1.0",
+    "npm": "11.16.0"
+  },
+  "scripts": {
+    "sync": "astro sync",
+    "check": "astro check"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true,
+    "fsevents@2.3.3": false
+  },
+  "dependencies": {
+    "astro": "7.1.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.9",
+    "typescript": "6.0.3"
+  }
+}

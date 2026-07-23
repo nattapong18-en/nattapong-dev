@@ -35,3 +35,8 @@ temp/
 *.bak
 *.backup
 *.orig
+
+# Astro and Node generated output
+node_modules/
+.astro/
+dist/
