@@ -106,7 +106,7 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, CON-01 public-profile verification, PRJ-01/PRJ-02 commit-scoped static project audits, and GOV-04/GOV-05 project-governance synchronizations are complete. Both major-project audits and both governance synchronization tasks are complete, so governance now reflects the committed PRJ-01 and PRJ-02 static evidence. These records establish source-level facts only; they do not authorize implementation, runtime/provider/privacy claims, repository promotion, public content, or publication.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, DEC-01 stack/rendering decision, DEC-02 content direction, CON-01 public-profile verification, PRJ-01/PRJ-02 commit-scoped static project audits, GOV-04/GOV-05 project-governance synchronizations, and CON-02's bounded internal representative content/evidence set are complete. Both major projects have synchronized static evidence, and representative English, Thai, and mixed-language material now exists for internal comparison. No sample is approved final public copy, no artifact is approved for publication, and no implementation decision is resolved.
 
 The next preparation candidates are:
 
@@ -115,11 +115,11 @@ The next preparation candidates are:
 3. Prepare `DEC-05 — Decide deployment, analytics, and privacy direction` without deploying or selecting unneeded services.
 4. Prepare a separately authorized Booking API runtime-evidence scope only after the historical environment-file risk and safe test resources are addressed.
 
-These are candidates, not silently activated tasks. Representative verified entries, exact collection and schema design, public-content prototypes, public-ready CourtFit artifacts, package-manager choice, testing, routes and navigation, deployment, and the first vertical path remain unresolved. CourtFit build, provider compatibility, operational privacy, browser/accessibility behavior, artifacts, deployment, and publication remain unresolved. Booking API build, test, migration, runtime, authorization, concurrency, Redis, container, deployment, secret-history, redaction, and publication questions also remain unresolved. Foundation, navigation, component, page, and motion implementation must remain inactive until their documented decisions, evidence, and authorizations pass.
+These are candidates, not silently activated tasks. Final public wording, exact collection/schema design, public-ready artifacts, package-manager choice, testing, routes/navigation, deployment, and the first vertical path remain unresolved. CourtFit build, provider compatibility, operational privacy, browser/accessibility behavior, artifacts, deployment, and publication remain unresolved. Booking API build, test, migration, runtime, authorization, concurrency, Redis, container, deployment, secret-history, redaction, and publication questions also remain unresolved. FND-01, FND-02, NAV-01, VRT tasks, component/page work, and motion must remain inactive until their documented dependencies, decisions, evidence, and separate authorizations pass.
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completing DEC-01, DEC-02, CON-01, the static scopes of PRJ-01 and PRJ-02, and governance synchronizations GOV-04 and GOV-05 does not authorize implementation, runtime verification, publication, or automatic promotion of any Next task.
+The Now queue is empty. Completing DEC-01, DEC-02, CON-01, CON-02's internal representative-set scope, the static scopes of PRJ-01 and PRJ-02, and governance synchronizations GOV-04 and GOV-05 does not authorize implementation, runtime verification, publication, or automatic promotion of any Next task.
 
 # Next — Decision and Evidence Tasks
 
@@ -171,23 +171,6 @@ These tasks follow the immediate queue or require additional evidence and author
 - **Dependencies / blockers:** AUD-02 findings, DEC-01, and a decision owner.
 - **Prohibited:** Deploying, enabling tracking, or choosing provider from familiarity alone.
 - **Documentation / report:** Record authorized decisions and deferred operations.
-
-## Content and Evidence Readiness
-
-**CON-02 — Assemble representative public-content and evidence set**  
-**Status:** Next · **Priority:** P1
-
-- **Source:** Phase 2; content, layout, component specifications.
-- **Objective / why now:** Provide real material for content modeling and vertical selection.
-- **Reading:** Verified outputs from CON-01/PRJ-01/PRJ-02, inventories, content specification.
-- **Authorization:** Content/artifact files named in execution prompt.
-- **Inputs:** Verified profile/project data, Research Preparation sources, learning/coursework candidates, bilingual samples.
-- **Boundaries:** Record status, maturity, role, contribution, verification, limitations, review date; collect safe artifacts and identify gaps. Do not publish.
-- **Deliverable:** Candidate content set, Thai/English/mixed samples, redaction record, Research Preparation with no final topic, curated non-project examples, blocker list.
-- **Acceptance / validation:** No filler; each artifact supports a claim and passes privacy review.
-- **Dependencies / blockers:** CON-01 and enough PRJ verification; research/learning evidence.
-- **Prohibited:** Invented copy, selected graduation topic, or every exercise as content.
-- **Documentation / report:** Authorized content records and gap/follow-up tasks.
 
 # Next — Foundation and First Vertical Experience
 
@@ -602,17 +585,17 @@ The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
 | --- | --- | --- | --- |
-| Exact content model, collection boundaries, schema, and representative entries unresolved | Complete enough verified CON-02 material, then separately authorize FND-01 design and implementation scope | CON-02, FND-01 | Collection, schema, validation-code, or public-content implementation |
+| Exact content model, collection boundaries, schema, and implementation scope unresolved | Use the completed CON-02 representative set to decide the exact model/schema separately, then separately authorize FND-01 implementation | FND-01 | Collection, schema, validation-code, or public-content implementation |
 | Theme/asset direction unresolved | Approve DEC-03 where blocking | FND-02 | Final theme/assets or motif |
 | Package manager and implementation scope unresolved | Approve them through a separate bounded implementation decision or prompt | FND-01, FND-02 | Scaffolding, manifests, lockfiles, or dependency installation |
-| Booking API historical `.env` not privately reviewed | Owner reviews history without publishing values and rotates any potentially affected credential when appropriate | PRJ-03, CON-02, PRV-01 | Prominent repository/history promotion or artifact publication |
-| Booking API build, tests, migrations, routes, and cross-user behavior not runtime-verified | Separately authorize safe build/test/runtime work with isolated PostgreSQL and Redis resources | PRJ-03, CON-02, QA-01 | Passing, runtime-correctness, persistence, or authorization-isolation claims |
+| Booking API historical `.env` not privately reviewed | Owner reviews history without publishing values and rotates any potentially affected credential when appropriate | PRJ-03, EVD-01, PRV-01 | Prominent repository/history promotion or artifact publication |
+| Booking API build, tests, migrations, routes, and cross-user behavior not runtime-verified | Separately authorize safe build/test/runtime work with isolated PostgreSQL and Redis resources | PRJ-03, QA-01 | Passing, runtime-correctness, persistence, or authorization-isolation claims |
 | Booking API concurrency integrity and Redis correctness unresolved | Establish an integrity design, correct cache keys/invalidation, and verify both under authorized runtime conditions | PRJ-03, EVD-01, technical motion | Concurrent-safety, correct-conflict, or correct-cache claims/demonstrations |
-| Booking API Docker, Render/Vercel, and public artifacts unverified | Verify container/deployment evidence separately and complete artifact redaction/public-readiness review | PRJ-03, CON-02, EVD-01, PRV-01 | Active-deployment claims, repository promotion, or public evidence use |
+| Booking API Docker, Render/Vercel, and public artifacts unverified | Verify container/deployment evidence separately and complete artifact redaction/public-readiness review | PRJ-03, EVD-01, PRV-01 | Active-deployment claims, repository promotion, or public evidence use |
 | CourtFit runtime, provider compatibility, and operational privacy remain unverified | Separately authorize safe build/provider/runtime work and review deployed HTTPS, middleware, logs, observability, memory, provider retention, and whether raw BYOK through the server should remain | PRJ-04, PRV-01, QA-01 | Successful-provider, secure-key, complete-privacy, or runtime-correctness claims |
 | CourtFit streaming, Stop/Retry, mobile, accessibility, Markdown, recommendation, and test behavior remain unresolved | Decide incremental forwarding and message formatting; correct mobile action parity; verify cancellation/retry/responsive/accessibility/language behavior; obtain a verified shoe-data source where required; add an approved automated-test approach | PRJ-04, DEC-04, QA-01, A11Y-01, RWD-01 | Incremental-streaming, correct cancellation/retry, full responsive/accessibility, formatted-product, recommendation-accuracy, or passing-test claims |
-| CourtFit deployment and public artifacts remain unverified | Verify active deployment and source equivalence separately; review screenshots/artifacts, commit-author email, license/reuse terms, redaction, and publication approval | PRJ-04, CON-02, EVD-01, PRV-01, REL-01 | Active-deployment claims, prominent repository/history use, artifact publication, or public project content |
-| No public-ready artifact set | Complete CON-02 | VRT-01/VRT-02/EVD-01 | Placeholder-led design validation |
+| CourtFit deployment and public artifacts remain unverified | Verify active deployment and source equivalence separately; review screenshots/artifacts, commit-author email, license/reuse terms, redaction, and publication approval | PRJ-04, EVD-01, PRV-01, REL-01 | Active-deployment claims, prominent repository/history use, artifact publication, or public project content |
+| No public-ready artifact set | Select actual artifacts, verify source/context, and complete redaction, rights, accessibility, and publication review | VRT-01/VRT-02/EVD-01/PRV-01 | Artifact-dependent implementation, repository promotion, or public evidence use |
 | Routes and navigation unresolved | Establish verified content destinations and separately authorize NAV-01 | NAV-01, VRT-02 | Final routes, language URLs, labels, or navigation implementation |
 | First vertical path unselected | Complete VRT-01 | VRT-02/CMP-01 | Broad page/component implementation |
 | Testing and supported-environment direction unresolved | Complete DEC-04 | FND-02, QA-01 | Final quality tooling or support claims |
@@ -743,6 +726,23 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Known limitations:** Public readiness may change; GitHub ownership and current behavior remain externally unverified; no opportunity or availability wording is approved.
 - **Follow-up:** Use the verified fields as input to later content readiness work while preserving the remaining project-evidence, account-readiness, authoring, artifact, testing, deployment, and first-vertical gates.
 
+**CON-02 — Assemble the internal representative content and evidence set**
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** One bounded internal record now provides real, varied material for later content-model, decision, layout, component, responsive, bilingual, accessibility, evidence, and privacy comparison without creating public content or implementation.
+- **Sources used:** CON-01 boundaries; the corrected personal profile, project inventory, and learning inventory; committed PRJ-01 and PRJ-02 audit records; existing Research Preparation context in local records; governing content/layout/component/rules/plan/task documents; DEC-01 and DEC-02.
+- **Output:** `reference/content/CON-02-representative-content-and-evidence.md`.
+- **Review date:** 2026-07-23.
+- **Completed scope:** Created eight internal entries covering About in independently authored English and Thai, the Booking API in English, CourtFit in Thai, mixed-language Research Preparation, guided Rust HTTP/thread-pool learning, mixed-language Linux workflow learning, and an honest unavailable Coursework state.
+- **Editorial/evidence coverage:** Recorded status, maturity, role, contribution context, verification, visibility, evidence sources, limitations, redaction, candidate artifacts, readiness, blockers, review triggers, and representative text or an unavailable state. Evidence/redaction and missing/blocker registers cover profile, projects, learning, research, coursework, bilingual review, artifacts, and implementation decisions.
+- **Evidence boundaries:** Used the fixed PRJ-01 and PRJ-02 audited commits only for repository-native project claims. Preserved non-production/runtime/privacy/deployment limitations, guided-learning attribution, assisted Linux troubleshooting, the no-final-graduation-topic state, and absent coursework evidence.
+- **Validation:** Reviewed all eight IDs and content-family/language coverage; checked claim-to-source boundaries, audit qualifications, missing states, privacy/redaction rules, no-final-topic wording, guided/assisted attribution, prohibited decisions/claims, Markdown structure, duplicate IDs, and changed paths.
+- **Files changed:** `reference/content/CON-02-representative-content-and-evidence.md` and `docs/09-task-list.md`.
+- **External/network boundary:** No external repository, deployment, provider, network destination, source application, or runtime system was accessed.
+- **Implementation/publication boundary:** No public copy, artifact, schema, collection, field requiredness, route, component, package manager, theme, test tool, first vertical, deployment, or graduation-project topic was created, selected, or approved.
+- **Known limitations:** Final public wording, translation relationships, initial public scope, exact content model/schema/collections, routes/navigation, package manager, theme/assets, testing/support policy, project runtime evidence, actual screenshots/artifacts, research sources/hardware/scope/topic, coursework selection, deployment, and publication approval remain unresolved.
+- **Downstream readiness:** Real English/Thai/mixed samples and honest evidence states are available for separately authorized DEC-03 and DEC-04 preparation, later FND-01 planning, and VRT-01 comparison. No downstream task is activated; FND-01 and VRT tasks retain their existing gates and require separate authorization.
+
 ## Completed Project Evidence
 
 **PRJ-01 — Verify Rust Booking API implementation and evidence**
@@ -814,17 +814,18 @@ authorized PRJ-01 static audit (Done) ─► corrected internal Booking evidence
 PRJ-01 runtime / secret-history / publication requirements ─► remain separately blocked
 authorized PRJ-02 static audit (Done) ─► corrected internal CourtFit evidence ─► GOV-05 (Done) ─► synchronized CourtFit governance summaries
 PRJ-02 runtime / provider / privacy / artifact / publication requirements ─► remain separately blocked
-DEC-02 (Done) + CON-01 (Done) + PRJ-01 static evidence (Done) + PRJ-02 static evidence (Done) + research/learning evidence ─► CON-02 ─► VRT-01
-DEC-01 (Done) + DEC-02 (Done) + CON-02 + separate implementation authorization ─► FND-01 ─┐
+DEC-02 (Done) + CON-01 (Done) + PRJ-01/PRJ-02 static evidence (Done) + GOV-04/GOV-05 synchronized governance (Done) + research/learning context ─► CON-02 representative set (Done)
+CON-02 representative set (Done) ─► inputs available for separately authorized DEC-03 / FND-01 planning / VRT-01 comparison; no public-page authorization
+DEC-01 (Done) + DEC-02 (Done) + CON-02 (Done) + unresolved exact model/schema/package-manager decisions + separate implementation authorization ─► FND-01 ─┐
 DEC-01 + DEC-03 + DEC-04 + FND-01 ─► FND-02 ─────┼─► NAV-01 ─► VRT-02
-VRT-01 ───────────────────────────────────────────┘
+VRT-01 (separately authorized after existing gates) ──────────┘
 VRT-02 ─► CMP-01 / EVD-01 / STA-01 ─► PRJ-03 / PRJ-04 / RES-01 / LRN-01..04
 stable static scope + verified behavior ─► MOT-01
 representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. CON-02 and DEC-03/DEC-04/DEC-05 remain preparation candidates subject to their existing evidence, decision-owner, and authorization gates; a separately scoped Booking API runtime-evidence task also remains inactive. DEC-02, CON-01, both projects' commit-scoped static evidence, and GOV-04/GOV-05 synchronized governance are inputs to later content, representative-content, schema, and first-vertical work; representative research/learning evidence and public-ready project artifacts remain required for CON-02. PRJ-01, PRJ-02, GOV-04, and GOV-05 do not authorize a public project page, runtime/provider/privacy claims, repository promotion, or implementation. Approved decisions and completed evidence/governance tasks are dependencies, not implementation authority.
+The Now queue is empty. CON-02 is complete only for its internal representative-set scope. DEC-03, DEC-04, and DEC-05 remain separately authorized decision candidates, and a separately scoped Booking API runtime-evidence task remains inactive. The representative set supplies real language/content/evidence states for later decision and planning work, but actual public-ready artifacts, final wording, exact content model/schema, package manager, routes/navigation, first vertical, testing, deployment, and publication remain unresolved. FND-01, FND-02, NAV-01, and VRT tasks retain their existing dependencies and require separate authorization. CON-02 and the completed audits/governance tasks do not authorize a public page, artifact publication, repository promotion, runtime/provider/privacy claims, or implementation.
 
 # Validation and Completion Rules
 
@@ -865,7 +866,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, CON-01, PRJ-01's and PRJ-02's static audit scopes, and GOV-04/GOV-05 governance synchronization; recommended next candidates remain inactive until separately authorized and ready.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01, DEC-02, CON-01, CON-02's bounded internal representative set, PRJ-01's and PRJ-02's static audit scopes, and GOV-04/GOV-05 governance synchronization; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
@@ -877,7 +878,6 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 
 # Open Task-List Questions
 
-- Which representative verified entries should test the approved DEC-02 direction before implementation expands?
 - Which recurring content families justify distinct collection boundaries, and which should share a model?
 - Which exact metadata, requiredness rules, schema constraints, and semantic checks are justified by real content?
 - How should translated siblings be reviewed when shared status, limitations, evidence, or corrections change?
