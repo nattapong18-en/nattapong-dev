@@ -1,0 +1,393 @@
+/*
+ * Concrete values in this file are reversible First Visual Vertical
+ * implementation defaults, not approved permanent design tokens.
+ */
+
+:root {
+  color-scheme: light;
+  --color-page: #f5f3ed;
+  --color-surface: #fffefa;
+  --color-evidence-surface: #edf3ef;
+  --color-limitation-surface: #f6eee4;
+  --color-text: #202724;
+  --color-secondary-text: #52605a;
+  --color-accent: #235f50;
+  --color-accent-strong: #16483c;
+  --color-border: #cbd2cd;
+  --color-strong-border: #9a7650;
+  --color-focus: #9a4d00;
+  --font-body:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Thai",
+    "Noto Sans", sans-serif;
+  --font-mono:
+    ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --step--1: clamp(0.82rem, 0.8rem + 0.1vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.1rem);
+  --step-1: clamp(1.2rem, 1.08rem + 0.58vw, 1.55rem);
+  --step-2: clamp(1.48rem, 1.25rem + 1vw, 2.05rem);
+  --step-3: clamp(2rem, 1.55rem + 2vw, 3.25rem);
+  --step-4: clamp(2.6rem, 1.8rem + 3.4vw, 5rem);
+  --space-content: clamp(0.8rem, 0.7rem + 0.45vw, 1.15rem);
+  --space-component: clamp(1.25rem, 1rem + 1.1vw, 2rem);
+  --space-section: clamp(2.5rem, 2rem + 2.3vw, 4.5rem);
+  --space-major: clamp(4.5rem, 3.2rem + 5vw, 8rem);
+  --measure-reading: 68ch;
+  --measure-wide: 76rem;
+  --radius-surface: 0.45rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-page);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 100%;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-width: 18rem;
+  margin: 0;
+  background: var(--color-page);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-accent-strong);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.09em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.16em;
+}
+
+:focus-visible {
+  outline: 0.2rem solid var(--color-focus);
+  outline-offset: 0.22rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+h1 {
+  max-width: 16ch;
+  margin-block: 0;
+  font-size: var(--step-4);
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: var(--step-2);
+}
+
+h3 {
+  font-size: var(--step-1);
+}
+
+p,
+li,
+dd {
+  overflow-wrap: anywhere;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  inset-block-start: 0.75rem;
+  inset-inline-start: 0.75rem;
+  padding: 0.7rem 1rem;
+  transform: translateY(-160%);
+  border: 2px solid var(--color-focus);
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.wide-container,
+.page-shell {
+  width: min(100% - 2rem, var(--measure-wide));
+  margin-inline: auto;
+}
+
+.site-header {
+  border-block-end: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-content) var(--space-component);
+  min-height: 4.5rem;
+  padding-block: 0.75rem;
+}
+
+.site-identity {
+  color: var(--color-text);
+  font-size: var(--step-0);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.site-nav a {
+  min-height: 2.75rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: var(--radius-surface);
+  color: var(--color-secondary-text);
+  text-decoration: none;
+}
+
+.site-nav a[aria-current] {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-weight: 700;
+  box-shadow: inset 0 -0.18rem 0 var(--color-accent);
+}
+
+.page-shell {
+  padding-block: var(--space-major);
+}
+
+.page-intro {
+  max-width: var(--measure-reading);
+}
+
+.context-label {
+  margin-block: 0 0.75rem;
+  color: var(--color-secondary-text);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.lede {
+  max-width: 54ch;
+  margin-block: var(--space-component) 0;
+  font-size: var(--step-1);
+  line-height: 1.55;
+}
+
+.orientation-grid {
+  display: grid;
+  gap: var(--space-section);
+  margin-block-start: var(--space-major);
+}
+
+.orientation-grid section {
+  min-width: 0;
+}
+
+.orientation-grid h2,
+.project-list h2,
+.project-detail h2 {
+  margin-block-start: 0;
+}
+
+.interest-list,
+.scope-list,
+.technology-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.interest-list li {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
+}
+
+.scope-list {
+  display: grid;
+  gap: 0.65rem;
+  font-size: var(--step-1);
+}
+
+.primary-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-block-start: var(--space-component);
+  padding: 0.55rem 0;
+  font-weight: 750;
+}
+
+.limitation-note {
+  max-width: var(--measure-reading);
+  padding: var(--space-component);
+  border: 1px solid var(--color-strong-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-limitation-surface);
+}
+
+.home-boundary {
+  margin-block-start: var(--space-section);
+}
+
+.home-boundary h2 {
+  margin-block-start: 0;
+}
+
+.project-list {
+  display: grid;
+  gap: 0;
+  margin-block-start: var(--space-section);
+  border-block-start: 1px solid var(--color-border);
+}
+
+.project-summary {
+  display: grid;
+  gap: var(--space-component);
+  padding-block: var(--space-section);
+  border-block-end: 1px solid var(--color-border);
+}
+
+.project-summary__primary {
+  min-width: 0;
+}
+
+.project-summary__primary > *:last-child {
+  margin-block-end: 0;
+}
+
+.project-summary h2 {
+  font-size: var(--step-3);
+}
+
+.project-facts {
+  display: grid;
+  gap: var(--space-component);
+  margin: 0;
+}
+
+.project-facts div {
+  min-width: 0;
+}
+
+.project-facts dt,
+.technology-list strong {
+  color: var(--color-secondary-text);
+  font-size: var(--step--1);
+  font-weight: 750;
+}
+
+.project-facts dd {
+  margin: 0.35rem 0 0;
+}
+
+.technology-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.technology-list li {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.project-detail__intro {
+  max-width: var(--measure-reading);
+}
+
+.project-detail__facts,
+.project-detail__technologies,
+.project-narrative {
+  margin-block-start: var(--space-section);
+}
+
+.project-narrative {
+  max-width: var(--measure-reading);
+}
+
+.prose > :first-child {
+  margin-block-start: 0;
+}
+
+.prose > :last-child {
+  margin-block-end: 0;
+}
+
+@media (min-width: 48rem) {
+  .wide-container,
+  .page-shell {
+    width: min(100% - 4rem, var(--measure-wide));
+  }
+
+  .orientation-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(15rem, 0.8fr);
+    align-items: start;
+  }
+
+  .orientation-grid section:nth-child(2) {
+    margin-block-start: var(--space-component);
+  }
+
+  .project-summary {
+    grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
+    column-gap: var(--space-section);
+  }
+
+  .project-facts {
+    align-content: start;
+  }
+}
+
+@media (max-width: 31rem) {
+  .site-header__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-nav {
+    width: 100%;
+  }
+
+  .site-nav a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

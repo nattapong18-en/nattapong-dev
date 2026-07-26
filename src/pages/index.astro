@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getPublicContent } from "../lib/public-content.ts";
+
+const { about } = await getPublicContent();
+const boundary = about.data.limitations?.[0];
+---
+
+<BaseLayout
+  title={`${about.data.title} — Nattapong Sangsana`}
+  description={about.data.summary}
+  currentPath="/"
+>
+  <div class="page-shell">
+    <header class="page-intro">
+      <p class="context-label">Computer Engineering Student</p>
+      <h1>{about.data.title}</h1>
+      <p class="lede">{about.data.summary}</p>
+    </header>
+
+    <div class="orientation-grid">
+      <section aria-labelledby="engineering-direction-title">
+        <h2 id="engineering-direction-title">Engineering direction</h2>
+        <p>{about.data.direction}</p>
+        <ul class="interest-list" aria-label="Learning directions">
+          {about.data.interests.map((interest) => <li>{interest}</li>)}
+        </ul>
+      </section>
+
+      <section aria-labelledby="public-record-title">
+        <h2 id="public-record-title">Public record</h2>
+        <ul class="scope-list">
+          <li>Projects</li>
+          <li>Research</li>
+          <li>Learning</li>
+        </ul>
+        <a class="primary-link" href="/projects/">View projects</a>
+      </section>
+    </div>
+
+    {
+      boundary && (
+        <aside
+          class="limitation-note home-boundary"
+          aria-labelledby="current-boundary-title"
+        >
+          <h2 id="current-boundary-title">Current boundary</h2>
+          <p>{boundary.statement}</p>
+        </aside>
+      )
+    }
+  </div>
+</BaseLayout>

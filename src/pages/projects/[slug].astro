@@ -1,0 +1,87 @@
+---
+import {
+  render,
+  type CollectionEntry,
+} from "astro:content";
+
+import EvidenceTrace from "../../components/EvidenceTrace.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublicContent } from "../../lib/public-content.ts";
+
+export async function getStaticPaths() {
+  const { projects } = await getPublicContent();
+
+  return projects.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"projects">;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const currentPath = `/projects/${entry.data.slug}/`;
+---
+
+<BaseLayout
+  title={`${entry.data.title} — Nattapong Sangsana`}
+  description={entry.data.summary}
+  currentPath={currentPath}
+>
+  <article class="page-shell project-detail">
+    <header class="project-detail__intro">
+      <p class="context-label">Project</p>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">{entry.data.purpose}</p>
+    </header>
+
+    <dl class="project-facts project-detail__facts">
+      <div>
+        <dt>Role</dt>
+        <dd>{entry.data.role}</dd>
+      </div>
+      <div>
+        <dt>Current result</dt>
+        <dd>{entry.data.currentResult}</dd>
+      </div>
+      <div>
+        <dt>Verification boundary</dt>
+        <dd>{entry.data.verificationScope}</dd>
+      </div>
+    </dl>
+
+    <section
+      class="project-detail__technologies"
+      aria-labelledby="technology-roles-title"
+    >
+      <h2 id="technology-roles-title">Technology roles</h2>
+      <ul class="technology-list">
+        {
+          entry.data.technologies.map((technology) => (
+            <li>
+              <strong>{technology.name}</strong>
+              <span>{technology.role}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="project-narrative" aria-labelledby="project-narrative-title">
+      <h2 id="project-narrative-title">Project narrative</h2>
+      <div class="prose">
+        <Content />
+      </div>
+    </section>
+
+    <EvidenceTrace
+      claims={entry.data.claims}
+      evidence={entry.data.evidence}
+      sources={entry.data.sources}
+      limitations={entry.data.limitations}
+    />
+  </article>
+</BaseLayout>

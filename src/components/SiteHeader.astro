@@ -1,0 +1,24 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const homeCurrent = currentPath === "/" ? "page" : undefined;
+const projectsCurrent =
+  currentPath === "/projects/"
+    ? "page"
+    : currentPath.startsWith("/projects/")
+      ? "location"
+      : undefined;
+---
+
+<header class="site-header">
+  <div class="wide-container site-header__inner">
+    <a class="site-identity" href="/">Nattapong Sangsana</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/" aria-current={homeCurrent}>Home</a>
+      <a href="/projects/" aria-current={projectsCurrent}>Projects</a>
+    </nav>
+  </div>
+</header>

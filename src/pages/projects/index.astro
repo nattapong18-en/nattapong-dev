@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublicContent } from "../../lib/public-content.ts";
+
+const { projects } = await getPublicContent();
+---
+
+<BaseLayout title="Projects — Nattapong Sangsana" currentPath="/projects/">
+  <div class="page-shell">
+    <header class="page-intro">
+      <p class="context-label">Public engineering record</p>
+      <h1>Projects</h1>
+    </header>
+
+    <div class="project-list">
+      {
+        projects.map((project) => {
+          const primaryLimitation =
+            project.data.limitations.find(
+              (limitation) => limitation.claimIds?.length,
+            ) ?? project.data.limitations[0];
+
+          return (
+            <article class="project-summary">
+              <div class="project-summary__primary">
+                <h2>
+                  <a href={`/projects/${project.data.slug}/`}>
+                    {project.data.title}
+                  </a>
+                </h2>
+                <p class="lede">{project.data.summary}</p>
+
+                <h3>Technology roles</h3>
+                <ul class="technology-list">
+                  {project.data.technologies.map((technology) => (
+                    <li>
+                      <strong>{technology.name}</strong>
+                      <span>{technology.role}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <dl class="project-facts">
+                  <div>
+                    <dt>Current result</dt>
+                    <dd>{project.data.currentResult}</dd>
+                  </div>
+                  <div>
+                    <dt>Verification boundary</dt>
+                    <dd>{project.data.verificationScope}</dd>
+                  </div>
+                </dl>
+
+                {primaryLimitation && (
+                  <p class="limitation-note">
+                    <strong>Limitation:</strong>{" "}
+                    {primaryLimitation.statement}
+                  </p>
+                )}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</BaseLayout>
