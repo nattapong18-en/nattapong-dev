@@ -789,6 +789,16 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Files changed:** `reference/decisions/DEC-06-url-and-language-routing-direction.md` and `docs/09-task-list.md`.
 - **Follow-up:** Do not activate a route or page task automatically.
 
+**VIS-01B — Record Nattapong Visual Direction**
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Recorded the owner-approved visual direction after VIS-01A preparation and VIS-01A-R's targeted Aristide evidence review.
+- **Decision record:** `reference/decisions/VIS-01-nattapong-visual-direction.md`.
+- **Decision:** Evidence-led editorial engineering journal; one light-first shared foundation, Evidence Trace motif, and First Visual Vertical Option 2 as a future implementation boundary.
+- **Implementation boundary:** The First Visual Vertical, routes, pages, UI, styling, components, assets, fonts, motion, client-side navigation, packages, deployment, analytics, and publication remain Blocked until separately authorized.
+- **Files changed:** `reference/decisions/VIS-01-nattapong-visual-direction.md` and `docs/09-task-list.md`.
+- **Follow-up:** Do not activate implementation automatically.
+
 ## Completed Content Verification
 
 **CON-01 — Verify public profile and contact content**  
