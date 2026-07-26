@@ -22,9 +22,9 @@ Nattapong is the governing center of the visual direction. The design must be co
 
 This decision is informed by:
 
-- [DEC-01 — Framework and Rendering Strategy](DEC-01-framework-and-rendering-strategy.md): static HTML remains the default.
-- [DEC-02 — Content Model and Authoring Direction](DEC-02-content-model-and-authoring-direction.md): content, translation, review, and evidence boundaries.
-- [DEC-03 — Theme and Visual Evidence Direction](DEC-03-theme-and-visual-evidence-direction.md): light-first shared foundation and evidence-led technical surfaces.
+- [DEC-01 — Framework and Rendering Strategy](DEC-01-stack-and-rendering.md): static HTML remains the default.
+- [DEC-02 — Content Model and Authoring Direction](DEC-02-content-storage-authoring-bilingual.md): content, translation, review, and evidence boundaries.
+- [DEC-03 — Theme and Visual Evidence Direction](DEC-03-theme-and-asset-direction.md): light-first shared foundation and evidence-led technical surfaces.
 - [DEC-04 — Testing and Quality Direction](DEC-04-testing-and-quality-and-supported-environments.md): quality and accessibility responsibilities.
 - [DEC-05 — Deployment, Analytics, and Privacy Direction](DEC-05-deployment-analytics-and-privacy-direction.md): privacy and deployment boundaries.
 - [DEC-06 — URL and Language Routing Direction](DEC-06-url-and-language-routing-direction.md): static route and language constraints.

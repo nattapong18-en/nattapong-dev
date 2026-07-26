@@ -106,15 +106,15 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 # Current Focus
 
-The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, CON-01, CON-02, the PRJ-01/PRJ-02 static audits, and GOV-04/GOV-05 synchronizations are complete. DEC-01 through DEC-05 remain Approved and Done. FND-01A prepared the semantic content-foundation scope, and FND-01B approved its direction; both preparation stages are complete without completing or activating FND-01 implementation.
+The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, CON-01, CON-02, the PRJ-01/PRJ-02 static audits, and GOV-04/GOV-05 synchronizations are complete. DEC-01 through DEC-06 are Approved and Done. FND-01 was implemented in commit `9290ec1` and public v0.1 content in commit `210280b`; VIS-01 is Approved.
 
-The approved FND-01 direction is M3 hybrid with bounded About / Projects / Research / Learning families. Learning has four explicit initial kinds: Learning Progress, Technical Note, Experiment, and Coursework. Stable internal IDs with independent slugs, B2 translation groups, hybrid Markdown with bounded claim/evidence/source/limitation records, the P1 dedicated public allowlist, V1–V4 responsibilities, and non-public synthetic/redacted fixture direction are Approved. PM3 is Approved, meaning package-manager selection is deferred rather than made. The literal bounded implementation paths are approved as direction only; Astro/API compatibility and implementation authorization remain absent.
+Implemented foundation: the minimal Astro and TypeScript foundation with manifest, lockfile, dependencies, and source configuration; the FND-01 semantic content foundation with four collections, shared and family schemas, V2/V3 validation modules, and non-public fixtures; and four approved public v0.1 records for About, Projects, Research, and Learning. DEC-06 records the static route direction, and VIS-01 records the visual direction and selected First Visual Vertical.
 
-No package manager, manifest, lockfile, dependency, source, content configuration, schema, validation code, fixture, public content, route, page, or component is approved or created. The next candidate is a separately authorized bounded FND-01 implementation preflight. A separately authorized Booking API runtime-evidence scope remains an inactive candidate only after the historical environment-file risk and safe test resources are addressed. FND-01 implementation, FND-02, NAV-01, VRT-01, VRT-02, component/page work, tooling, remote previews, motion, deployment, and publication remain inactive until their documented dependencies, evidence, and separate authorizations pass.
+Not implemented: public routes, pages, layouts, components, styling, the First Visual Vertical, visual assets, browser interaction, deployment, and publication. Selection of the First Visual Vertical does not authorize implementation. A separately authorized Booking API runtime-evidence scope remains an inactive candidate only after the historical environment-file risk and safe test resources are addressed.
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completion of FND-01A/FND-01B and the earlier decisions, evidence scopes, and governance synchronizations does not automatically activate FND-01 implementation, FND-02, NAV-01, VRT-01, VRT-02, package-manager execution, manifest or lockfile creation, dependencies, schemas, fixtures, public content, tooling, CI, tests, deployment, publication, or any other Next task.
+The Now queue is empty. Completion of the implemented foundation, approved content, and governing decisions does not automatically activate FND-02, NAV-01, VRT-02, route or page implementation, tooling, CI, tests, deployment, publication, or any other Next task.
 
 # Next — Decision and Evidence Tasks
 
@@ -131,24 +131,25 @@ All tasks here remain dependent on audit, blocking decisions, and content readin
 ## Content Foundation
 
 **FND-01 — Implement and validate the semantic content foundation**  
-**Status:** Blocked · **Priority:** P1
+**Status:** Done · **Priority:** P1
 
 - **Source:** Phase 3; content/component rules.
 - **Objective / why now:** Represent approved content semantics before repeated page construction.
 - **Reading:** DEC-01/DEC-02, `reference/decisions/FND-01-semantic-content-foundation-scope.md`, content/component specs, and CON-02 samples.
-- **Authorization:** Requires a separately authorized implementation preflight followed by separate implementation authorization; exact compatible files must be specified in that prompt.
+- **Completion:** Implemented in commit `9290ec1c54c951a6279ac200b1bb2c04b93b006c` (`Implement semantic content foundation`).
 - **Inputs:** Approved storage direction; approved FND-01 semantic scope; and real pressure sources from both projects, Research Preparation, and non-project families.
 - **Boundaries:** Preserve classification, status, maturity, verification, limitations, contribution, dates, visibility, relationships, bilingual content, missing/archived/incomplete fields, and internal/public separation.
-- **Deliverable:** Implementation-compatible model and validated examples; no final CMS/schema invented here.
-- **Acceptance / validation:** Components cannot infer claims; missing fields remain honest; examples validate without fake data.
-- **Dependencies / blockers:** DEC-01, DEC-02, CON-02, and approved FND-01 direction are complete inputs. Implementation remains blocked by local package-manager availability inspection; exact manager and commands; manifest and lockfile responsibility; Astro/dependency version or resolution policy; Astro API/path compatibility; exact synthetic/redacted fixtures; validation invocation/checks; exact compatible implementation paths; separate implementation authorization; and implementation commit authorization.
+- **Deliverable:** Four bounded Astro content collections with shared and family schemas, separate V2 referential and V3 family-semantic validation, and non-public synthetic/redacted fixtures.
+- **Acceptance / validation:** Stable IDs, independent slugs, visibility/review states, family semantics, and fixture pressure cases are represented without inferring claims; missing fields remain honest.
+- **Dependencies / blockers:** DEC-01, DEC-02, CON-02, and approved FND-01 direction were complete inputs. Later route, page, UI, and publication work remains separately blocked.
 - **Prohibited:** General publishing platform or speculative taxonomy.
 - **Documentation / report:** Changed files, validation, schema decisions, unresolved gaps.
 
-### Completed preparation
+### Completed preparation and implementation
 
 - FND-01A prepared the decision package.
 - FND-01B approved the direction.
+- FND-01 implemented the approved bounded foundation; no route, page, UI, or public presentation was created by that task.
 - Decision record: `reference/decisions/FND-01-semantic-content-foundation-scope.md`.
 
 ### Approved direction
@@ -162,23 +163,12 @@ All tasks here remain dependent on audit, blocking decisions, and content readin
 - P1 dedicated public allowlist with internal sources excluded.
 - V1 structural, V2 referential, V3 family-semantic, and V4 factual/publication responsibilities.
 - Non-public synthetic/redacted fixture direction.
-- PM3 package-manager deferral.
+- PM3 package-manager deferral was resolved within the bounded implementation authorization.
 - Bounded implementation-path direction.
 
-### Remaining implementation blockers
+### Continuing boundary
 
-- Local package-manager availability inspection.
-- Exact package-manager approval and exact commands.
-- Manifest scope and lockfile responsibility.
-- Astro and dependency version or resolution policy.
-- Exact Astro API and approved-path compatibility.
-- Exact authorized implementation paths after compatibility review.
-- Exact synthetic/redacted fixture content.
-- Exact validation invocation, checks, and commands.
-- Separate implementation authorization.
-- Implementation commit authorization.
-
-No implementation mutation occurs until these blockers are resolved. This completed preparation does not make the parent FND-01 task Done and does not create a second actionable FND-01 task.
+Four public v0.1 records were authored later in the separately completed content task. The semantic foundation does not implement routes, pages, layouts, components, styling, visual assets, browser behavior, deployment, or publication.
 
 ## Visual and Technical Foundation
 
@@ -193,7 +183,7 @@ No implementation mutation occurs until these blockers are resolved. This comple
 - **Boundaries:** Semantic structure, typography roles after decision, color/surface roles, spacing, borders/radius/elevation, focus, links/controls, artifact reading, reduced motion, responsive foundation. No full component library.
 - **Deliverable:** Minimal foundation demonstrated with real long bilingual prose, metadata, code, terminal content, and controls.
 - **Acceptance / validation:** Keyboard focus, reflow, mixed language, contrast relationships, long content, and reduced motion work.
-- **Dependencies / blockers:** AUD, DEC-01/03/04, FND-01.
+- **Dependencies / blockers:** AUD, DEC-01/03/04, and implemented FND-01 are inputs. FND-02 remains separately blocked pending an authorized visual and technical foundation scope.
 - **Prohibited:** Copied motif, arbitrary values, decorative tech styling.
 - **Documentation / report:** Decisions established, files, checks, and deferred roles.
 
@@ -210,26 +200,26 @@ No implementation mutation occurs until these blockers are resolved. This comple
 - **Boundaries:** Site identity, landmarks, skip link, global/mobile behavior if justified, footer, current location, parent context, direct entry, deep links, back/forward, keyboard/focus. Validate statically first.
 - **Deliverable:** Shared orientation shell.
 - **Acceptance / validation:** Works without motion across narrow layouts, direct links, keyboard, and browser history.
-- **Dependencies / blockers:** FND-01/FND-02 and navigation decision.
+- **Dependencies / blockers:** Implemented FND-01 and Approved DEC-06 provide content and route-direction inputs. FND-02 and a separately authorized navigation implementation scope remain required.
 - **Prohibited:** Inventing final labels/routes, mega menus, or page transitions.
 - **Documentation / report:** Changed files, destinations tested, unresolved sitemap issues.
 
 ## First Vertical Experience
 
 **VRT-01 — Select the first vertical content path**  
-**Status:** Blocked · **Priority:** P1
+**Status:** Done · **Priority:** P1
 
 - **Source:** Phase 6; validation gates.
 - **Objective / why now:** Choose a real path complex enough to expose system weaknesses before broad implementation.
 - **Reading:** CON-02, FND decisions, implementation plan, layout/content/component specs.
-- **Authorization:** Decision record only.
+- **Completion:** Selected through DEC-06 and VIS-01 as the future boundary `/`, `/projects/`, and `/projects/booking-api-source-review/`.
 - **Inputs:** Candidate content/evidence readiness and audience value.
 - **Boundaries:** Compare candidates against metadata, evidence, limitations, bilingual, responsive, access, optional fields, and failure needs. Do not implement.
-- **Deliverable:** Selection record, scope, required content, blockers, and acceptance cases.
+- **Deliverable:** Approved selection record, scope, required content, blockers, and acceptance cases.
 - **Acceptance / validation:** Choice is evidence-based and does not imply final homepage prominence.
-- **Dependencies / blockers:** CON-02, FND-01 direction, content readiness gate.
+- **Dependencies / blockers:** CON-02 and implemented FND-01 supplied the selection inputs. The selected boundary remains unimplemented and requires separate preparation and owner authorization before VRT-02.
 - **Prohibited:** Selecting from visual polish alone.
-- **Documentation / report:** Decision target and downstream task updates.
+- **Documentation / report:** `reference/decisions/DEC-06-url-and-language-routing-direction.md` and `reference/decisions/VIS-01-nattapong-visual-direction.md`; selection is not implementation authorization.
 
 **VRT-02 — Implement and validate the first static vertical experience**  
 **Status:** Blocked · **Priority:** P1
@@ -242,7 +232,7 @@ No implementation mutation occurs until these blockers are resolved. This comple
 - **Boundaries:** Implement one static path with introduction, hierarchy, metadata, status/maturity/verification, limitation, evidence, relationships, responsive/bilingual/access behavior, and applicable unavailable/error states.
 - **Deliverable:** End-to-end representative experience and review findings.
 - **Acceptance / validation:** Direct entry, long reading, claim/evidence proximity, missing fields, keyboard, focus, touch, reflow, privacy, and optional failure pass.
-- **Dependencies / blockers:** FND-01/FND-02, NAV-01, VRT-01.
+- **Dependencies / blockers:** FND-01 and VRT-01 are resolved inputs. FND-02, NAV-01, separate implementation preparation, owner authorization, and later validation remain required.
 - **Prohibited:** Broad page-family buildout or motion before static acceptance.
 - **Documentation / report:** Changed files, checks, discovered structural problems, and authorized decision updates.
 
@@ -259,7 +249,7 @@ No implementation mutation occurs until these blockers are resolved. This comple
 - **Boundaries:** Metadata, status/maturity/verification, figures/captions, callouts, disclosures, related content, documentation, and realistic tests as recurring need proves.
 - **Deliverable:** Lean components with contracts, states, bilingual/responsive/access behavior, misuse notes.
 - **Acceptance / validation:** No universal card, boolean explosion, or page-specific duplicate without reason.
-- **Dependencies / blockers:** VRT-02 Done.
+- **Dependencies / blockers:** VRT-02 remains a required later completion.
 - **Prohibited:** Full speculative inventory.
 - **Documentation / report:** Components added/removed, evidence of recurrence, test coverage.
 
@@ -558,7 +548,7 @@ The active workspace, local read-only scope, audited scaffold state, and recover
 
 The stack/rendering blocker is resolved through approved DEC-01: Astro is the framework, static HTML is the default, and client JavaScript is limited to separately justified local islands. This resolution does not authorize implementation or resolve the remaining gates.
 
-The content-storage, authoring, internal/public-separation, and bilingual-direction blocker is resolved through approved DEC-02: repository-local Astro build-time content collections use the current Content Layer API; plain Markdown is the default long-form format; structural, referential-integrity, and project-specific semantic validation remain distinct responsibilities; public-ready content uses a separate allowlisted source; and translations are optional, explicit siblings. This resolution does not authorize collection, schema, content, route, or page implementation.
+The content-storage, authoring, internal/public-separation, and bilingual-direction blocker is resolved through approved DEC-02 and implemented FND-01: repository-local Astro build-time content collections use the current Content Layer API; plain Markdown is the default long-form format; structural, referential-integrity, and project-specific semantic validation remain distinct responsibilities; public-ready content uses a separate allowlisted source; and translations are optional, explicit siblings. This does not authorize routes or pages.
 
 The general public-profile confirmation blocker is resolved through CON-01. The internal record confirms approved public fields while preserving the Thai name, LinkedIn, Facebook, contact-purpose statement, precise location, phone number, private accounts, credentials, university identifiers, and private documents within their recorded restrictions. External account behavior and ownership remain unverified.
 
@@ -568,21 +558,19 @@ The CourtFit static repository-evidence and source privacy-boundary questions ar
 
 The stale CourtFit-governance inconsistency is resolved through GOV-05: `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` now use the committed PRJ-02 evidence and preserve its runtime, provider, privacy, mobile, accessibility, Markdown, recommendation, testing, artifact, deployment, licensing, author-email, and publication blockers. This synchronization adds no new verification or implementation authority.
 
-DEC-03B resolves only the initial page-foundation direction, shared technical-surface direction, initial dual-theme status, one-maintainer maintenance direction, screenshot optionality, local/remote asset direction, and honest missing/unavailable-asset behavior. It approves one light-first shared foundation with bounded contrasting semantic technical surfaces and defers selectable dual themes. Actual colors, typography, theme and technical-surface implementation, contrast/focus, responsive and bilingual behavior, asset selection, privacy/redaction, rights/licensing, formats/delivery, quality tooling/execution, schema/package-manager, navigation/routes, first vertical, deployment, and publication remain unresolved.
+DEC-03B resolves only the initial page-foundation direction, shared technical-surface direction, initial dual-theme status, one-maintainer maintenance direction, screenshot optionality, local/remote asset direction, and honest missing/unavailable-asset behavior. It approves one light-first shared foundation with bounded contrasting semantic technical surfaces and defers selectable dual themes. Actual colors, typography, theme and technical-surface implementation, contrast/focus, responsive and bilingual behavior, asset selection, privacy/redaction, rights/licensing, formats/delivery, quality tooling/execution, navigation and route implementation, First Visual Vertical implementation, deployment, and publication remain unresolved.
 
 DEC-04B resolves only the overall layered-hybrid testing direction, Layers 0–8 responsibility model, smaller deterministic local baseline plus task-specific checks, future-CI mirroring direction, manual-review cadence, conditional-check policy, tiered capability-based supported-environment shape, risk-based release gates, non-numeric severity states, and explicit omission records. Exact quality tools, commands, configurations, CI provider/workflow, environment examples, thresholds, implementation, and executed evidence remain unresolved. No check result follows from approval.
 
 DEC-05B resolves only the initial deployment-model direction, initial analytics direction, public-domain/HTTPS release boundary, preview policy shape, public-contact direction, third-party default, secret/log direction, recovery/source-equivalence responsibility, post-deployment-validation direction, and privacy-incident direction. D1 provider-neutral managed static hosting and A1 no analytics initially are approved directionally. Provider selection, accounts, DNS, certificates, canonical-host behavior, commands, configuration, build artifacts, release scope, quality/privacy evidence, deployment execution, post-deployment verification, and recovery execution remain unresolved. No deployed or public behavior follows from approval.
 
-FND-01B resolves the semantic content-model, family-boundary, stable-identity, relationship, bilingual, claims/evidence, public-allowlist, missing/unavailable-state, validation, representative-fixture, package-manager-deferral, and bounded-path directions. It approves M3, the About / Projects / Research / Learning topology, explicit initial Learning kinds, B2, P1, V1–V4, non-public fixtures, PM3 deferral, and the bounded path direction. It does not select a package manager, verify Astro/API compatibility, authorize implementation, or establish any schema, fixture, validation, build, or publication result.
+FND-01B resolved the semantic content-model, family-boundary, stable-identity, relationship, bilingual, claims/evidence, public-allowlist, missing/unavailable-state, validation, representative-fixture, package-manager-deferral, and bounded-path directions. FND-01 later implemented the approved content foundation in commit `9290ec1`, including schemas, validation modules, fixtures, and the four family collections. The later public-content commit `210280b` created four approved v0.1 records. Neither commit implemented routes, pages, layouts, components, styling, browser behavior, deployment, or publication.
 
 The following unresolved blockers govern activation:
 
 | Blocking condition | Required resolution | Related tasks | Work that must not proceed |
 | --- | --- | --- | --- |
-| FND-01 semantic direction is approved, but implementation inputs and authorization remain unresolved | Complete a separately authorized preflight covering local package-manager availability, exact manager/commands, manifest/lockfile scope, dependency/version policy, Astro API/path compatibility, exact synthetic/redacted fixtures, validation invocation/checks, authorized files, and implementation/commit authorization | FND-01 | Collection, schema, validation-code, fixture, or public-content implementation |
-| Theme and quality directions are approved, but final visual values, typography, actual assets, implementation, tooling, and executed validation remain unresolved | Complete FND-01; separately decide implementation scope and quality tooling; select/review real assets; validate contrast, focus, bilingual reading, responsive behavior, accessibility, privacy/rights, and performance | FND-02, EVD-01, RWD-01, A11Y-01, PERF-01, PRV-01 | CSS/theme implementation, technical-surface implementation, asset publication, or claims of visual/accessibility correctness |
-| PM3 package-manager deferral is approved; the actual manager and execution scope remain unselected | Separately authorize the preflight, inspect local availability, and obtain explicit approval for the exact manager, commands, manifest scope, lockfile responsibility, version/resolution policy, dependencies, and validation commands | FND-01, FND-02 | Package-manager execution, scaffolding, manifests, lockfiles, dependency installation, or silent manager substitution |
+| Theme and quality directions are approved, but visual implementation, actual assets, tooling, and executed validation remain unresolved | Separately authorize implementation scope and quality tooling; select/review real assets; validate contrast, focus, bilingual reading, responsive behavior, accessibility, privacy/rights, and performance | FND-02, EVD-01, RWD-01, A11Y-01, PERF-01, PRV-01 | CSS/theme implementation, technical-surface implementation, asset publication, or claims of visual/accessibility correctness |
 | Booking API historical `.env` not privately reviewed | Owner reviews history without publishing values and rotates any potentially affected credential when appropriate | PRJ-03, EVD-01, PRV-01 | Prominent repository/history promotion or artifact publication |
 | Booking API build, tests, migrations, routes, and cross-user behavior not runtime-verified | Separately authorize safe build/test/runtime work with isolated PostgreSQL and Redis resources | PRJ-03, QA-01 | Passing, runtime-correctness, persistence, or authorization-isolation claims |
 | Booking API concurrency integrity and Redis correctness unresolved | Establish an integrity design, correct cache keys/invalidation, and verify both under authorized runtime conditions | PRJ-03, EVD-01, technical motion | Concurrent-safety, correct-conflict, or correct-cache claims/demonstrations |
@@ -591,8 +579,8 @@ The following unresolved blockers govern activation:
 | CourtFit streaming, Stop/Retry, mobile, accessibility, Markdown, recommendation, and test behavior remain unresolved | Decide incremental forwarding and message formatting; correct mobile action parity; verify cancellation/retry/responsive/accessibility/language behavior; obtain a verified shoe-data source where required; add an approved automated-test approach | PRJ-04, DEC-04, QA-01, A11Y-01, RWD-01 | Incremental-streaming, correct cancellation/retry, full responsive/accessibility, formatted-product, recommendation-accuracy, or passing-test claims |
 | CourtFit deployment and public artifacts remain unverified | Verify active deployment and source equivalence separately; review screenshots/artifacts, commit-author email, license/reuse terms, redaction, and publication approval | PRJ-04, EVD-01, PRV-01, REL-01 | Active-deployment claims, prominent repository/history use, artifact publication, or public project content |
 | No public-ready artifact set | Select actual artifacts, verify source/context, and complete redaction, rights, accessibility, and publication review | VRT-01/VRT-02/EVD-01/PRV-01 | Artifact-dependent implementation, repository promotion, or public evidence use |
-| Routes and navigation unresolved | Establish verified content destinations and separately authorize NAV-01 | NAV-01, VRT-02 | Final routes, language URLs, labels, or navigation implementation |
-| First vertical path unselected | Complete VRT-01 | VRT-02/CMP-01 | Broad page/component implementation |
+| Routes and navigation implementation is not authorized | DEC-06 resolves the v0.1 URL and language direction; separately authorize route and navigation implementation | NAV-01, VRT-02 | Route, page, language-switching, or navigation implementation |
+| First Visual Vertical is selected but not implemented | DEC-06 and VIS-01 select `/`, `/projects/`, and `/projects/booking-api-source-review/`; separately prepare and authorize implementation | VRT-02/CMP-01 | Route, page, layout, component, styling, or browser implementation |
 | DEC-04 quality direction is approved, but exact tooling, commands, configuration, CI, environment examples, thresholds, implementation, and executed evidence remain unresolved | Select each method only after matching implementation and separate authorization; execute applicable checks within later authorized tasks | FND-01, FND-02, RWD-01, A11Y-01, PERF-01, PRV-01, QA-01 | Quality-tool installation/configuration, CI creation, support claims, or passing-result claims |
 | DEC-05 deployment and privacy direction is approved, but provider selection, accounts, DNS, certificates, canonical-host behavior, commands, configuration, build artifacts, release scope, quality/privacy evidence, deployment execution, post-deployment verification, and recovery execution remain unresolved | Select and authorize each operational element only after implementation and QA/privacy readiness | REL-01, OPS-01 | Provider configuration, remote preview, deployment, release, recovery execution, or public operational claims |
 
@@ -688,8 +676,8 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Reconsideration:** Introducing request-time server rendering, a server adapter, or an application server requires reopening or superseding DEC-01 through a separately approved decision.
 - **Decision record:** `reference/decisions/DEC-01-stack-and-rendering.md`.
 - **Validation:** The record retains the audited baseline, alternatives, tradeoffs, risks, reversibility, official sources, and deferred decisions. Approval was explicit and did not itself resolve DEC-02 through DEC-05; DEC-02 was approved later through its own decision.
-- **Implementation:** No Astro project was scaffolded, no dependency was selected or installed, and no implementation or configuration was created.
-- **Known limitations:** Content-model implementation, package manager, styling, testing, deployment, routes, assets, themes, and other deferred choices remain unresolved. DEC-02 later resolved the content direction only.
+- **Implementation at decision time:** No Astro project was scaffolded, no dependency was selected or installed, and no implementation or configuration was created.
+- **Known limitations:** Content-model implementation and package-manager selection were unresolved at decision time. FND-01 later implemented the content foundation; styling, testing, deployment, routes, assets, themes, and other deferred choices remain unresolved.
 - **Follow-up:** Use DEC-01 as an approved dependency for later decision records while keeping implementation blocked until the remaining required evidence, decisions, and authorization exist.
 
 **DEC-02 — Decide content storage, authoring, and bilingual behavior**  
@@ -701,11 +689,11 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Validation responsibilities:** Treat structural schema validation, explicit referential-integrity validation, and project-specific semantic validation as separate responsibilities. Required broken relationships fail the static build; optional relationships may be absent only when their approved content model permits absence.
 - **Internal/public boundary:** Public-ready content must use a separate allowlisted source. `docs/` and `reference/` remain internal and must not be imported wholesale into public output.
 - **Bilingual direction:** Use one primary language per entry. Thai-only, English-only, and mixed-language entries are allowed; separately authored translated siblings are optional. Translation is neither mandatory nor automatic, and language switching is suppressed when no public-ready sibling resolves.
-- **Deferred:** MDX and an external CMS remain deferred until a verified need justifies a new decision. Exact collections, paths, schemas, routes, language URLs, tooling, and other recorded implementation choices remain unresolved.
+- **Deferred:** MDX and an external CMS remain deferred until a verified need justifies a new decision. FND-01 later implemented the collections, paths, schemas, and validation responsibilities; DEC-06 later recorded v0.1 route and language direction. Route and page implementation, future translation routing, tooling, and other deferred choices remain unresolved.
 - **Decision record:** `reference/decisions/DEC-02-content-storage-authoring-bilingual.md`.
 - **Decision owner and evidence:** Nattapong; explicit user confirmation.
-- **Implementation and publication:** No content collection, schema, content migration, public entry, route, page, package-manager choice, dependency selection, installation, or publication occurred.
-- **Known limitations:** Representative verified entries, project evidence, public-ready artifacts, exact collection/schema design, translation review workflow, testing, navigation, first vertical, and deployment remain gated.
+- **Implementation and publication at decision time:** No content collection, schema, content migration, public entry, route, page, package-manager choice, dependency selection, installation, or publication occurred.
+- **Known limitations:** FND-01 later implemented the collection/schema design and public v0.1 records were later approved. Translation review workflow, testing, navigation implementation, First Visual Vertical implementation, artifacts, and deployment remain gated.
 - **Follow-up:** Use DEC-02 as an approved input to later content-readiness, foundation, navigation, validation, and vertical tasks without treating it as implementation authority.
 
 **DEC-03 — Decide theme and asset-handling direction**
@@ -747,8 +735,8 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Validation:** Three testing approaches, E1–E3, all eight CON-02 stress cases, Layers 0–8, and the complete check matrix remain. No executable application check ran and no quality result was reported as passing. No tool, command, dependency, provider, exact environment, threshold, configuration, or workflow was selected.
 - **Files changed:** `reference/decisions/DEC-04-testing-quality-and-supported-environments.md` and `docs/09-task-list.md`.
 - **Implementation/execution boundary:** DEC-04 approves responsibilities and gates only. It creates no tool, configuration, CI, test, implementation, release, deployment, or public content.
-- **Known limitations:** No implementation source, manifest, lockfile, schema, command, test source, quality configuration, CI, generated output, browser result, accessibility result, responsive result, privacy-safety result, performance result, release result, or deployment result exists. Exact tools and environment examples remain unresolved.
-- **Follow-up:** Use DEC-04 as direction-level input. DEC-05 and the FND-01 semantic scope direction were approved later through their own decisions. FND-01 implementation remains blocked by the package-manager/Astro API preflight, exact implementation details, and separate authorization. FND-02 remains blocked by FND-01 implementation, exact implementation scope/choices, and separate authorization. Do not activate another task automatically.
+- **Known limitations:** At decision time, no implementation source, manifest, lockfile, schema, command, test source, quality configuration, CI, generated output, browser result, accessibility result, responsive result, privacy-safety result, performance result, release result, or deployment result existed. FND-01 later established the foundation; quality configuration, browser and accessibility results, release results, deployment, and exact tools/environment examples remain unresolved.
+- **Follow-up:** Use DEC-04 as direction-level input. DEC-05 and the FND-01 semantic scope direction were approved later through their own decisions. FND-01 is implemented. FND-02 remains blocked by its exact implementation scope/choices, quality-tooling execution evidence, and separate authorization. Do not activate another task automatically.
 
 **DEC-05 — Decide deployment, analytics, and privacy direction**
 
@@ -768,7 +756,7 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Files changed:** `reference/decisions/DEC-05-deployment-analytics-and-privacy-direction.md` and `docs/09-task-list.md`.
 - **Operational/publication boundary:** DEC-05 approves direction only. It creates no provider account, DNS/certificate mutation, configuration, secret, analytics, cookie, consent UI, contact form, deployment, release, public content, or network action.
 - **Known limitations:** No implementation or static artifact exists. No provider is selected. Domain, DNS, certificate, HTTPS, preview, release, logs, rollback, incidents, source equivalence, and recovery have not been executed or verified. Exact tools, commands, configuration, accounts, environments, retention, provider capabilities, public wording, and release approval remain unresolved.
-- **Follow-up:** Use DEC-05 as direction-level input only. The FND-01 semantic scope direction was approved later; FND-01 implementation remains blocked by the package-manager/Astro API preflight, exact implementation details, and separate authorization. REL-01 remains blocked by implementation, QA/privacy readiness, provider selection, deployment commands/configuration, and explicit release authorization. Do not activate another task automatically.
+- **Follow-up:** Use DEC-05 as direction-level input only. FND-01 was implemented later; REL-01 remains blocked by route/page implementation, QA/privacy readiness, provider selection, deployment commands/configuration, and explicit release authorization. Do not activate another task automatically.
 
 **DEC-06A — URL and Language Routing Direction Preparation**
 **Status:** Done · **Priority:** P1
@@ -827,9 +815,9 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Validation:** Reviewed all eight IDs and content-family/language coverage; checked claim-to-source boundaries, audit qualifications, missing states, privacy/redaction rules, no-final-topic wording, guided/assisted attribution, prohibited decisions/claims, Markdown structure, duplicate IDs, and changed paths.
 - **Files changed:** `reference/content/CON-02-representative-content-and-evidence.md` and `docs/09-task-list.md`.
 - **External/network boundary:** No external repository, deployment, provider, network destination, source application, or runtime system was accessed.
-- **Implementation/publication boundary:** No public copy, artifact, schema, collection, field requiredness, route, component, package manager, theme, test tool, first vertical, deployment, or graduation-project topic was created, selected, or approved.
-- **Known limitations:** Final public wording, translation relationships, initial public scope, exact content model/schema/collections, routes/navigation, package manager, theme/assets, testing/support policy, project runtime evidence, actual screenshots/artifacts, research sources/hardware/scope/topic, coursework selection, deployment, and publication approval remain unresolved.
-- **Downstream readiness:** Real English/Thai/mixed samples and honest evidence states supplied the separately completed DEC-03 and DEC-04 decisions and remain available for later FND-01 planning and VRT-01 comparison. No downstream task is activated; FND-01 and VRT tasks retain their existing gates and require separate authorization.
+- **Implementation/publication boundary at completion:** No public copy, artifact, schema, collection, field requiredness, route, component, package manager, theme, test tool, first vertical, deployment, or graduation-project topic was created, selected, or approved.
+- **Known limitations:** Public v0.1 wording, the semantic content foundation, and the selected First Visual Vertical were later resolved through separate authorized work. Translation relationships, route/navigation implementation, theme/assets, testing/support policy, project runtime evidence, actual screenshots/artifacts, research sources/hardware/scope/topic, coursework selection, deployment, and publication approval remain unresolved.
+- **Downstream readiness:** Real English/Thai/mixed samples and honest evidence states supplied DEC-03, DEC-04, FND-01, and later vertical selection. No downstream implementation task is activated; VRT-02 and related implementation work retain their separate authorization gates.
 
 ## Completed Project Evidence
 
@@ -903,21 +891,21 @@ PRJ-01 runtime / secret-history / publication requirements ─► remain separat
 authorized PRJ-02 static audit (Done) ─► corrected internal CourtFit evidence ─► GOV-05 (Done) ─► synchronized CourtFit governance summaries
 PRJ-02 runtime / provider / privacy / artifact / publication requirements ─► remain separately blocked
 DEC-02 (Done) + CON-01 (Done) + PRJ-01/PRJ-02 static evidence (Done) + GOV-04/GOV-05 synchronized governance (Done) + research/learning context ─► CON-02 representative set (Done)
-CON-02 representative set (Done) ─► DEC-03 theme/asset direction (Done) + FND-01 semantic scope direction (Approved) + VRT-01 comparison input; no public-page authorization
-DEC-01 (Done) + DEC-02 (Done) + CON-02 (Done) + FND-01 semantic scope direction (Approved) + package-manager and Astro API preflight (Blocked) + exact commands/dependencies/fixtures/checks + separate implementation authorization ─► FND-01 implementation (Blocked)
-FND-01 implementation (Blocked) ─► FND-02 ─► NAV-01
-NAV-01 + VRT-01 (separately authorized after existing gates) ─► VRT-02
+CON-02 representative set (Done) ─► DEC-03 theme/asset direction (Done) + FND-01 semantic scope direction (Approved) ─► FND-01 implementation (Done) ─► public v0.1 content (Done)
+FND-01 implementation (Done) + public v0.1 content (Done) ─► DEC-06 (Approved) + VIS-01 (Approved) ─► First Visual Vertical selected: `/`, `/projects/`, `/projects/booking-api-source-review/`
+FND-01 implementation (Done) ─► FND-02 (Blocked) and NAV-01 (Blocked)
+FND-02 + NAV-01 + selected First Visual Vertical + separate implementation preparation and owner authorization ─► VRT-02 (Blocked)
 VRT-02 ─► CMP-01 / EVD-01 / STA-01 ─► PRJ-03 / PRJ-04 / RES-01 / LRN-01..04
 DEC-03 (Done) ─► theme/asset direction input for FND-02 / EVD-01 / RWD-01 / A11Y-01 / PERF-01 / PRV-01 / VRT-01; no task activation
 DEC-04 (Done) ─► quality direction input for FND-01 / FND-02 / NAV-01 / VRT-01 / VRT-02 / RWD-01 / A11Y-01 / PERF-01 / PRV-01 / QA-01 / REL-01 after DEC-05; no task activation
 DEC-05 (Done) ─► provider-independent content semantics / static core / direct-entry portability / VRT-01 / VRT-02 / EVD-01 / STA-01 / PERF-01 / PRV-01 / QA-01 / REL-01 / OPS-01; no task activation
-FND-01 semantic scope direction (Approved) ─► inputs for FND-02 / NAV-01 / VRT-01 / VRT-02 / shared components / project content / Research and Learning content / RWD-01 / PRV-01 / QA-01; no task activation
+FND-01 implementation (Done) + DEC-06 (Approved) + VIS-01 (Approved) ─► inputs for FND-02 / NAV-01 / VRT-02 / shared components / project content / Research and Learning content / RWD-01 / PRV-01 / QA-01; no task activation
 stable static scope + verified behavior ─► MOT-01
 representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. DEC-01 through DEC-05 remain Approved and Done, and FND-01A/FND-01B scope preparation is complete. CON-02 supplies real content pressures; the approved FND-01 direction supplies M3, the bounded family topology, stable identities, B2, hybrid claim/evidence records, P1, V1–V4, non-public fixtures, PM3 deferral, and bounded path direction. FND-01 implementation remains Blocked by the package-manager/Astro API preflight, exact commands/dependencies/fixtures/checks, and separate implementation and commit authorization. FND-02, NAV-01, VRT-01, and VRT-02 remain inactive. No direction decision authorizes a public page, package-manager execution, manifest, lockfile, dependency, schema, fixture, tool/CI/test creation, asset publication, repository promotion, runtime/provider/privacy claim, remote preview, implementation, release, or deployment.
+The Now queue is empty. DEC-01 through DEC-06 are Approved and Done; FND-01 and public v0.1 content are implemented; and VIS-01 is Approved. The First Visual Vertical is selected but unimplemented. FND-02, NAV-01, and VRT-02 remain Blocked and inactive. No governing decision authorizes route, page, layout, component, styling, asset, browser-interaction, deployment, or publication implementation.
 
 # Validation and Completion Rules
 
@@ -958,7 +946,7 @@ Generating files, rendering an ideal example, or receiving no tool error is not 
 - **Scope clarity:** Authorized and prohibited work are explicit.
 - **Stable identity:** IDs survive status and wording changes.
 - **Dependencies:** Gates and safe parallel work are accurate.
-- **Small immediate queue:** The Now queue is empty after completion of DEC-01 through DEC-05, FND-01A/FND-01B scope preparation, CON-01, CON-02's bounded internal representative set, PRJ-01's and PRJ-02's static audit scopes, and GOV-04/GOV-05 governance synchronization; recommended next candidates remain inactive until separately authorized and ready.
+- **Small immediate queue:** The Now queue is empty after completion of DEC-01 through DEC-06, FND-01, public v0.1 content, VIS-01, CON-01, CON-02's bounded internal representative set, PRJ-01's and PRJ-02's static audit scopes, and GOV-04/GOV-05 governance synchronization; recommended next candidates remain inactive until separately authorized and ready.
 - **Decision preservation:** Unknown technology and product choices remain blocked gates.
 - **Evidence and factual integrity:** Verification precedes publication.
 - **Accessibility, responsive, performance, and privacy integration:** These appear within delivery tasks and dedicated gates.
@@ -976,19 +964,7 @@ DEC-04B resolved the overall testing approach, Layers 0–8, smaller determinist
 
 DEC-05B resolved D1 provider-neutral managed static hosting, A1 no analytics initially, `nattapong.dev` with verified HTTPS as the first-public-release boundary, separately reviewed remote previews, a static public email-link direction, no third parties by default, no runtime secret for the initial static core, minimal purpose-limited logs, revision-mapped known-good recovery, source/deployment-equivalence responsibility, post-deployment validation, and privacy-safe incident handling. Exact providers/accounts, DNS/certificates, canonical-host behavior, commands/configuration, release artifacts, preview controls, operational retention, recovery execution, public wording, and observed results remain open.
 
-FND-01B resolved the universal/separate/hybrid model choice, bounded About / Projects / Research / Learning topology, stable-ID versus slug identity, B2 translation-group strategy, hybrid claim/evidence representation direction, P1 public allowlist, V1–V4 responsibility layers, non-public fixture boundary, PM3 package-manager deferral, and bounded path direction. Those direction questions are closed. The following implementation questions remain open:
-
-- Which exact package manager is locally available and owner-approved?
-- Which exact commands may create the scaffold, manifest, and lockfile?
-- Which Astro/dependency version or resolution policy is approved?
-- Do the approved direction-level paths match the verified Astro API?
-- What exact final field names, requiredness, and enum values are proportionate?
-- What exact synthetic/redacted fixtures are authorized?
-- How are V1–V3 invoked and validated?
-- Which checks and commands must pass?
-- Which exact files may the implementation task edit?
-- What implementation commit is authorized?
-- Which routes, public entries, and first vertical are approved later?
+FND-01B resolved the universal/separate/hybrid model choice, bounded About / Projects / Research / Learning topology, stable-ID versus slug identity, B2 translation-group strategy, hybrid claim/evidence representation direction, P1 public allowlist, V1–V4 responsibility layers, non-public fixture boundary, PM3 package-manager deferral, and bounded path direction. FND-01 later implemented the compatible Astro foundation and validation responsibilities, and the public v0.1 records were later authored separately. Route and page implementation, including the selected First Visual Vertical, remains a separate blocked scope.
 
 - Which actual colors, typefaces, font loading, typography scale, spacing, motif, logo, icon set, semantic tokens, and project-specific visual variation should later evidence and prototypes support?
 - Which breakpoints, asset directories/names, image formats, responsive widths, compression, optimization, syntax highlighting, diagram tooling, screenshot tooling, video, or embed behavior are justified by real implementation and assets?
@@ -1024,7 +1000,7 @@ FND-01B resolved the universal/separate/hybrid model choice, bounded About / Pro
 - Should a public contact-purpose statement be approved later, and what evidence or intent would support it?
 - What separate evidence, if needed, should verify ownership and current behavior of the confirmed public GitHub destination?
 - Which project artifacts are safe and public-ready?
-- Which language URL behavior, default site language, and navigation model should be approved after route scope is selected?
+- Which default-language behavior, future translation-routing policy, and navigation model should be approved after the DEC-06 v0.1 route contract?
 - What verified content need, if any, would justify MDX?
 - Which components recur after vertical validation?
 - Which content families belong in the first release?
