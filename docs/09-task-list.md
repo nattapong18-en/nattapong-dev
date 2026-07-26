@@ -770,6 +770,25 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Known limitations:** No implementation or static artifact exists. No provider is selected. Domain, DNS, certificate, HTTPS, preview, release, logs, rollback, incidents, source equivalence, and recovery have not been executed or verified. Exact tools, commands, configuration, accounts, environments, retention, provider capabilities, public wording, and release approval remain unresolved.
 - **Follow-up:** Use DEC-05 as direction-level input only. The FND-01 semantic scope direction was approved later; FND-01 implementation remains blocked by the package-manager/Astro API preflight, exact implementation details, and separate authorization. REL-01 remains blocked by implementation, QA/privacy readiness, provider selection, deployment commands/configuration, and explicit release authorization. Do not activate another task automatically.
 
+**DEC-06A — URL and Language Routing Direction Preparation**
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Prepared the bounded static routing and language-direction options against the approved public content, semantic foundation, and Astro static-output boundary.
+- **Validation:** Confirmed unprefixed routing avoids implied translations, preserves the mixed-language Research record as one entry, and keeps routes, pages, navigation, and language switching inactive.
+- **Files changed:** None.
+- **Follow-up:** DEC-06B records the owner-approved direction; implementation remains separately blocked.
+
+**DEC-06B — Record URL and Language Routing Direction**
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Decision owner approved Option C: unprefixed v0.1 canonical routes with an explicit future translation-routing migration boundary.
+- **Decision record:** `reference/decisions/DEC-06-url-and-language-routing-direction.md`.
+- **Decision:** `/` is a bounded orientation layer; `/about/` is the canonical About detail route; eligible Project, Research, and Learning details use approved family-prefixed slugs with trailing-slash route convention.
+- **Validation:** Route eligibility requires V1–V3 success, `public-ready` visibility, approved review, and future route-specific validation. Stable IDs and filenames never enter URLs; translations remain separately authored and explicit.
+- **Implementation boundary:** Route and page implementation, navigation, redirects, canonical metadata, language switching, and all presentation, deployment, analytics, and publication work remain Blocked and inactive until separately authorized.
+- **Files changed:** `reference/decisions/DEC-06-url-and-language-routing-direction.md` and `docs/09-task-list.md`.
+- **Follow-up:** Do not activate a route or page task automatically.
+
 ## Completed Content Verification
 
 **CON-01 — Verify public profile and contact content**  
