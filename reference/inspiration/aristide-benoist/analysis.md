@@ -1,350 +1,647 @@
+# Aristide Benoist Portfolio — Visual and Interaction Design Research
+
+> **Reference:** Aristide Benoist
+> **Document type:** Visual and interaction design research
+> **Status:** Reference material only; not an approved design decision for `nattapong.dev`
+> **Evidence basis:** User-provided analysis containing source-reported observations, secondary-source context, inferences, and estimates
+> **Observation date:** Not recorded in the source document
+> **Measurement note:** All dimensions are estimates, not official specifications
+> **Verification note:** Time-sensitive claims and linked sources were not reverified during this revision
+> **Usage rule:** Reuse principles, not layouts, brand devices, copy, typography, colors, or interaction sequences
+
+## Evidence Labels
+
+This document uses the following labels:
+
+- **Source-reported observation:** A behavior or characteristic described as observed in the original analysis.
+- **Secondary-source context:** Background information attributed to an external profile or indexed page.
+- **Inference:** A reasoned interpretation that was not directly verified.
+- **Estimate:** An approximate visual measurement.
+- **Recommendation:** A transformed lesson for `nattapong.dev`, constrained by its approved direction.
+
 # Website Overview
 
-Figma’s homepage presents the platform as a broad, collaborative workspace for designing, building, and shipping digital products. Its current positioning extends beyond interface design into AI-assisted creation, developer handoff, whiteboarding, presentations, illustration, animation, website publishing, and branded content production. ([Figma][1])
+Aristide Benoist’s portfolio is presented as a highly experimental showcase for an independent creative developer working with motion, interaction, and bespoke digital experiences.
 
-The page functions as both a product overview and an ecosystem map. Rather than explaining one tool in depth, it demonstrates how multiple Figma products support the complete product-development process.
+The site is not framed as a conventional résumé or detailed engineering archive. Its interface acts as part of the work sample: the visitor experiences the type of motion-led frontend craft that the portfolio is intended to represent.
 
-The overall experience is expressive, energetic, experimental, and strongly product-led. Visual examples are used as evidence of capability instead of decoration alone.
+The portfolio prioritizes:
+
+- Selected projects
+- Motion and interaction craftsmanship
+- Large-format art direction
+- Minimal biographical information
+- Professional credibility
+- Direct paths to project exploration and contact
+
+**Source-reported observation:** At the time of the original review, the site relied heavily on JavaScript, while the static fallback exposed very little usable content. This suggests that transitions, animation, and client-side rendering were treated as central parts of the experience rather than optional enhancement. ([aristidebenoist.com][1])
+
+**Secondary-source context:** The original analysis describes Benoist as an independent developer with long-term experience creating bespoke websites. This context helps explain the site’s confident positioning, but it is not itself evidence about layout, interaction quality, or technical implementation. Any reuse of this biographical claim should be reverified. ([LinkedIn][2])
 
 # Design Philosophy
 
-The design follows several clear principles:
+The strongest design principle is **experience as evidence**.
 
-* Show the product through real creative output.
-* Make complexity feel playful rather than technical.
-* Treat collaboration as a central product benefit.
-* Combine expressive visual design with precise interface details.
-* Present the brand as both a professional platform and a creative playground.
-* Use variety to demonstrate that the product supports many workflows.
+Instead of relying only on claims about creative-development ability, the portfolio attempts to demonstrate that ability through:
 
-The homepage avoids a conservative enterprise-software appearance. It communicates confidence through oversized typography, bold compositions, experimental imagery, and frequent shifts in visual rhythm.
+- Unusual navigation
+- Cinematic transitions
+- Custom pointer behavior
+- Large responsive typography
+- Continuous visual movement
+- Image distortion and masking
+- Precise timing
+- Coordination between design and engineering
+
+The site treats layout, motion, input behavior, loading, and transitions as one art-directed system.
+
+Its aesthetic is deliberately less neutral than conventional product or documentation websites. It favors personality, rhythm, tension, and surprise over immediate familiarity.
+
+A second principle is selective presentation. The portfolio does not attempt to explain every project or expose every technical detail. It presents a curated body of work designed to establish a distinctive creative identity.
+
+## Principle to Extract
+
+For `nattapong.dev`, the reusable lesson is not “add more effects.” The useful principle is:
+
+> Let the interface demonstrate the same care, structure, and engineering judgment that the content describes.
+
+For Nattapong’s site, this demonstration must remain compatible with static HTML, honest evidence, readable technical detail, and complete no-JavaScript access.
 
 # Target Audience
 
-The site addresses a wide audience while remaining centered on digital product creation:
+**Inference from the original analysis:** The portfolio appears oriented toward audiences such as:
 
-* Product and interface designers
-* UX professionals
-* Developers and engineering teams
-* Product managers
-* Creative teams
-* Brand and marketing teams
-* Students and educators
-* Enterprise organizations
+- Creative agencies
+- Art directors
+- Digital design studios
+- Production teams
+- Brands seeking custom interactive work
+- Designers seeking a development partner
+- Award-oriented creative-web audiences
 
-The content repeatedly connects design, development, collaboration, and production. Product categories such as Figma Design, Dev Mode, FigJam, Slides, Sites, Make, Motion, Draw, and Buzz allow different audiences to identify a relevant entry point. ([Figma][1])
+The site assumes visitors already understand the value of creative frontend work.
+
+It is not primarily optimized for:
+
+- Visitors scanning a technology checklist
+- Learners seeking tutorials
+- Readers looking for detailed engineering documentation
+- Users who need immediate access to structured factual content
+
+Its primary goal appears to be emotional impact and specialist differentiation.
+
+**Secondary-source context:** The source document references professional recognition to explain this positioning. Such recognition is contextual and time-sensitive; it should not be treated as a reusable design requirement for `nattapong.dev`. ([LinkedIn][2])
 
 # Information Architecture
 
-The primary navigation is organized around major user questions:
+The portfolio is described as having a deliberately shallow structure:
 
-* What products are available?
-* What problems can Figma solve?
-* Who is the platform for?
-* What community and learning resources exist?
-* How can users start or purchase?
+1. Introductory identity
+2. Selected work
+3. Individual project experiences
+4. About or professional information
+5. Recognition
+6. Contact and social links
 
-The main navigation groups are Products, Solutions, Community, Resources, Pricing, Log in, Contact sales, and Get started. Products and Solutions contain extensive categorized menus covering tools, use cases, roles, and organization types. ([Figma][1])
+Projects act as the primary navigation objects.
 
-The homepage content follows this approximate structure:
+Instead of dividing work into many categories, the experience encourages movement directly between selected projects.
 
-1. Brand promise
-2. Workspace overview
-3. Design and build pathways
-4. AI collaboration
-5. Product capability demonstrations
-6. Customer validation
-7. Community resources
-8. Expanded footer navigation
+**Source-reported observation:** Indexed project pages under Benoist’s domain include examples such as Canals, Jenny Johannesson, TM, and earlier portfolio versions. ([aristidebenoist.com][3])
 
-This creates a progression from broad positioning to proof, credibility, and exploration.
+## Principle to Extract
+
+A shallow structure can reduce clutter when the content set is carefully curated.
+
+For `nattapong.dev`, this should be transformed into:
+
+- A clear global structure
+- Predictable family routes
+- Editorial indexes rather than a card wall
+- Distinct detail pages that still share one visual foundation
+
+Projects, Research, Learning, and About must not become separate microsites with unrelated navigation or visual systems.
 
 # Layout and Grid
 
-The page uses a wide responsive container with layouts that frequently break away from a rigid editorial grid.
+The original analysis describes a flexible editorial grid rather than a conventional card-based portfolio.
 
-Estimated desktop characteristics:
+**Estimates from the source:**
 
-* Maximum page container: approximately 1,300–1,440 px
-* Main text measure: approximately 600–900 px
-* Outer page padding: approximately 24–48 px
-* Common grid: 12-column or flexible CSS grid
-* Major section spacing: approximately 120–220 px
-* Card gaps: approximately 16–32 px
+- Maximum visual canvas: approximately `1,400–1,800 px`
+- Outer margins: approximately `24–60 px`
+- Conceptual grid: approximately `8–12 columns`
+- Main text width: approximately `500–750 px`
+- Project imagery width: often `70–100%` of the viewport
+- Major section spacing: approximately `120–240 px`
 
-Large sections alternate between centered compositions, split layouts, image clusters, and horizontally arranged product examples.
+Elements may cross grid boundaries. Oversized text, cropped imagery, asymmetrical alignment, and off-screen composition create visual tension.
 
-The grid behaves as a foundation rather than a visible constraint. Elements often overlap, rotate, extend beyond containers, or use intentionally irregular dimensions.
+The grid supplies discipline, but it may remain visually hidden because motion alters scale, position, clipping, and depth.
+
+## Principle to Extract
+
+The reusable principle is **controlled freedom inside a stable underlying grid**.
+
+For `nattapong.dev`:
+
+- Use a stable reading structure.
+- Permit rare asymmetry only when it clarifies hierarchy, evidence, or sequence.
+- Do not let text overlap or off-screen composition reduce access to factual content.
+- Do not copy Benoist’s estimated dimensions as design tokens.
 
 # Visual Hierarchy
 
-Hierarchy is created primarily through scale, contrast, position, and movement.
+The source describes a hierarchy dominated by:
 
-The strongest elements are:
+1. Project imagery
+2. Oversized project names
+3. Motion
+4. Current navigation state
+5. Small metadata
+6. Supporting copy
 
-* Very large headlines
-* Full-width product demonstrations
-* Saturated visual compositions
-* High-contrast calls to action
-* Oversized statistics and customer proof
-* Large sectional statements
+Motion itself becomes a hierarchy tool. An active project may enlarge, move toward the center, sharpen, reveal more color, or displace surrounding elements.
 
-Supporting copy is usually concise. The page does not rely on long paragraphs to explain the platform. Instead, each section combines a strong statement with a visual example.
+Typography and imagery may intentionally compete, producing a poster-like composition.
 
-Section headings often function as campaign messages rather than neutral labels, such as positioning Figma as an AI-native canvas or emphasizing precision and expressive capability. ([Figma][1])
+Small labels provide contrast against the expressive content and may identify years, roles, project numbers, or categories.
+
+## Principle to Extract
+
+For `nattapong.dev`, motion and scale must never outrank the factual record.
+
+The transformed hierarchy should be:
+
+1. Page purpose
+2. Supported claim or question
+3. Current status and verification
+4. Evidence or source context
+5. Limitation or next question
+6. Optional expressive detail
 
 # Navigation
 
-The desktop navigation balances exploration and conversion.
+**Inference from the source:** Navigation appears interaction-led rather than based only on a conventional persistent header.
 
-Product discovery is handled through large dropdown menus containing:
+Patterns associated with the reviewed portfolio include:
 
-* Product names
-* Short descriptions
-* Use cases
-* Role-based pathways
-* Learning resources
+- Full-screen menus
+- Project-to-project navigation
+- Drag- or wheel-based browsing
+- Animated transitions
+- Custom cursor states
+- Minimal persistent labels
+- Index-based project selection
 
-Conversion actions remain visible through Log in, Contact sales, and Get started.
+An earlier secondary source describes full-page navigation and a strong focus on the work collection. ([img1.wsimg.com][4])
 
-The navigation supports Figma’s expanded product ecosystem, but its density also reflects the difficulty of presenting many products within one brand.
+This approach can increase memorability, but it also increases the cost of learning the interface.
 
-On smaller screens, this structure likely collapses into a menu system with grouped expandable sections rather than preserving the desktop mega-menu.
+## Principle to Extract
+
+For `nattapong.dev`:
+
+- Keep global navigation conventional and immediately understandable.
+- Preserve semantic links beneath any optional enhancement.
+- Never require gestures to discover core routes.
+- Use focus and hover feedback as reinforcement, not as the only explanation.
+- Do not replace the standard cursor.
+- Do not introduce client-side routing merely to imitate continuity.
 
 # Hero Section
 
-The hero is built around the statement:
+**Inference from the original analysis:** The hero likely functions as both an introduction and an immediate demonstration of creative direction.
 
-> The intelligent canvas for infinite creativity
+Possible characteristics described in the source include:
 
-This message positions Figma as a flexible creation environment rather than a single-purpose design application. ([Figma][1])
+- Minimal identity statement
+- Independent-developer positioning
+- Large animated typography
+- Project preview or abstract visual
+- Invitation to explore
+- Cursor or scroll feedback
 
-The hero prioritizes:
+**Estimates from the source:**
 
-* A highly memorable headline
-* Strong brand confidence
-* Product-related imagery
-* A direct Get started action
-* Minimal explanatory copy
+- Primary headline: approximately `72–160 px` on desktop
+- Mobile headline: approximately `42–76 px`
+- Supporting labels: approximately `11–15 px`
+- Hero height: approximately `90–100vh`
 
-Its strength comes from emotional positioning. “Infinite creativity” communicates possibility, while “intelligent canvas” introduces the platform’s AI direction.
+These values are not official and should not be reused directly.
 
-The hero does not attempt to explain every product. It creates interest first, then lets subsequent sections reveal the ecosystem.
+## Principle to Extract
+
+For `nattapong.dev`, the first screen should establish:
+
+- Nattapong’s identity as a Computer Engineering Student
+- The site’s purpose as a record of Projects, Research, and Learning
+- One clear path into substantive content
+- A restrained signature, not a cinematic introduction
+
+The hero must not imply professional status, software-developer employment, client availability, or expertise beyond the approved content.
 
 # Key Components
 
-## Mega Menus
+## Project Preview
 
-Large grouped navigation panels help users explore products, workflows, roles, organizations, and educational resources.
+The source describes a project preview combining image, title, metadata, and interaction state.
 
-## Product Showcases
+A restrained default state may reveal additional imagery or scale during hover, drag, or scroll.
 
-Visual demonstrations display interface fragments, creative outputs, editing tools, vectors, imagery, and connected workflows. These sections make the product feel tangible.
+### Adaptation Boundary
 
-## Split Pathways
+For `nattapong.dev`, project previews should remain semantic links and must work without hover, animation, or imagery.
 
-The “Design” and “Build” pathways separate creative exploration from production and development while keeping both inside one ecosystem. ([Figma][1])
+Use:
 
-## Feature Statements
+- Title
+- Purpose
+- Current state
+- Verification
+- Limitation
+- Optional reviewed evidence
 
-Large headlines introduce each capability with a compact explanation and product link.
+Do not require screenshots or decorative motion.
 
-## Social Proof
+## Full-Screen Transition
 
-The page combines a customer quotation, recognizable company logos, and the statement that 95% of the Fortune 500 uses Figma, based on March 2025 data. ([Figma][1])
+The source describes transitions that connect an index preview to a project page, creating spatial continuity.
 
-## Community Carousel
+### Adaptation Boundary
 
-A browsable gallery highlights resources such as UI kits, websites, social-media assets, mobile apps, presentations, wireframes, illustrations, portfolios, advertisements, and icons. ([Figma][1])
+A future transition may be considered only when:
 
-## Footer Directory
+- The static navigation already works
+- Reduced motion is supported
+- The transition is short and optional
+- It does not delay content
+- It is not copied from Benoist
+- It proves an engineering purpose rather than decorative ambition
 
-The footer acts as a secondary information architecture system, organizing products, plans, use cases, resources, company information, support, and legal links.
+No such transition is approved for the current v0.1 implementation.
+
+## Custom Cursor
+
+The original analysis describes cursor states such as:
+
+- View
+- Open
+- Drag
+- Next
+- Close
+
+### Adaptation Boundary
+
+Do not replace the standard cursor on `nattapong.dev`.
+
+A standard pointer, visible focus, text labels, and semantic controls must communicate actions directly.
+
+## Project Index
+
+The source describes a compact editorial index using project names, numbers, dates, and metadata.
+
+### Adaptation Boundary
+
+This is one of the most relevant reusable principles.
+
+For `nattapong.dev`, the Project index may become an edited record list with varied information depth rather than a wall of identical cards.
+
+Only approved metadata should appear. Do not invent project numbers, dates, roles, or technologies when the content model does not support them.
+
+## Recognition Summary
+
+The source discusses awards as evidence of Benoist’s professional standing.
+
+### Adaptation Boundary
+
+This is not applicable to `nattapong.dev` v0.1.
+
+Do not create awards, achievement, milestone, testimonial, or credibility sections without approved evidence.
+
+## Project Microsite
+
+The source describes project pages that may adopt distinct art direction. ([mank.aristidebenoist.com][5])
+
+### Adaptation Boundary
+
+Do not make each Nattapong project a separate visual system.
+
+Variation may occur in evidence density or approved media, but typography, navigation, state language, accessibility, and the shared page foundation must remain consistent.
 
 # Typography
 
-Typography is one of the site’s most important brand tools.
+The source presents typography as expressive and structural.
 
-Key characteristics include:
+Reported characteristics include:
 
-* Oversized display headlines
-* Bold geometric letterforms
-* Tight headline line-height
-* Strong contrast between display and body sizes
-* Compact supporting paragraphs
-* Occasional expressive or transformed lettering
+- Large sans-serif display text
+- Tight line-height
+- Strong contrast between display and metadata
+- Uppercase labels
+- Deliberate letter spacing
+- Text used as a moving visual surface
 
-Estimated type scale:
+**Estimates from the source:**
 
-* Hero headline: approximately 72–120 px on large screens
-* Section headlines: approximately 48–80 px
-* Card titles: approximately 24–40 px
-* Body text: approximately 16–22 px
-* Navigation text: approximately 14–16 px
+- Display titles: approximately `72–160 px`
+- Section titles: approximately `40–80 px`
+- Body copy: approximately `16–22 px`
+- Navigation: approximately `12–16 px`
+- Metadata: approximately `10–13 px`
 
-The scale creates energy and confidence, while short copy prevents the layouts from becoming text-heavy.
+## Principle to Extract
+
+For `nattapong.dev`:
+
+- Use typography to establish editorial rhythm.
+- Keep body text and metadata readable.
+- Use expressive scale selectively.
+- Do not use text motion as a substitute for hierarchy.
+- Preserve Thai, English, and mixed-language readability.
+- Use monospace only for authentic technical material.
+- Do not copy Benoist’s typefaces, proportions, or exact scale.
 
 # Color System
 
-The core interface uses a relatively neutral foundation, allowing product imagery and creative demonstrations to carry most of the color.
+The source describes a restrained foundation that allows project imagery to dominate.
 
-The system includes:
+Possible characteristics include:
 
-* Black or near-black typography
-* White or light neutral backgrounds
-* Strong primary accent colors
-* Saturated pinks, purples, blues, greens, and yellows
-* Multicolor compositions derived from creative work
-* High-contrast dark sections where needed
+- Warm white or off-white
+- Near-black
+- Neutral gray
+- Muted borders
+- Project-specific accent colors
 
-Color changes frequently between sections. Rather than enforcing one dominant campaign color, the page uses controlled variety to express creativity and product breadth.
+**Inference:** The environment may change color when a project becomes active.
+
+## Principle to Extract
+
+For `nattapong.dev`:
+
+- Preserve the approved light-first foundation.
+- Use contrasting technical surfaces only for genuine structured evidence.
+- Do not let every project create a separate theme.
+- Do not depend on screenshots for color.
+- Do not copy a monochrome creative-portfolio identity.
+- Final color values remain a later decision.
 
 # Spacing and White Space
 
-Spacing is generous at the section level but intentionally dense within product demonstrations.
+The source describes whitespace as a tool for pacing and suspense.
 
-This contrast is important:
+**Estimates from the source:**
 
-* Large blank areas give headlines authority.
-* Compact visual clusters communicate creative abundance.
-* Wide margins prevent complex imagery from overwhelming the page.
-* Short copy blocks preserve scanability.
-* Large vertical transitions separate distinct product narratives.
+- Outer viewport padding: approximately `24–60 px`
+- Major vertical gaps: approximately `120–240 px`
+- Metadata gaps: approximately `8–20 px`
+- Project sequence separation: approximately `80–180 px`
 
-Estimated section padding frequently exceeds 120 px on desktop, while internal card padding is approximately 20–40 px.
+In Benoist’s work, empty space may create room for movement, reveals, or objects entering and leaving the viewport.
+
+## Principle to Extract
+
+For `nattapong.dev`, whitespace should serve comprehension rather than spectacle.
+
+Use broad space around:
+
+- Identity
+- Section transitions
+- Reflective prose
+- Major questions
+
+Use compact density for:
+
+- Metadata
+- Verification
+- Sources
+- Evidence
+- Limitations
+
+Do not copy the estimated spacing values directly.
 
 # Motion and Interaction
 
-Motion is likely used to make the site feel like an active canvas rather than a static brochure.
+Motion is presented as the defining feature of the reviewed portfolio.
 
-Common interaction patterns include:
+The source lists possible techniques such as:
 
-* Animated product previews
-* Cursor-inspired movements
-* Layer transitions
-* Horizontal carousels
-* Hover transformations
-* Navigation dropdown transitions
-* Scrolling logo bands
-* Visual elements entering or rearranging during scroll
-* Interface demonstrations that simulate editing
+- Smooth or inertial movement
+- Image displacement
+- WebGL or canvas effects
+- Masked image reveals
+- Text splitting
+- Scale interpolation
+- Parallax
+- Page-transition choreography
+- Hover distortion
+- Animated cursor states
 
-Motion supports the brand when it illustrates creation, collaboration, or transformation. It is not limited to decorative fade-ins.
+The strongest principle is coordination: navigation, typography, images, and transitions follow one timing system rather than behaving as unrelated effects.
+
+**Source-reported risk:** Heavy JavaScript dependence can leave little meaningful fallback content. ([aristidebenoist.com][1])
+
+## Principle to Extract
+
+For `nattapong.dev`:
+
+- Motion may support feedback, orientation, or a verified sequence.
+- Content must appear immediately.
+- No long loader or cinematic intro.
+- No scroll hijacking.
+- No global forced smooth scrolling.
+- No custom cursor.
+- No continuous decorative motion.
+- No essential information hidden behind reveals.
+- Reduced-motion behavior must be complete.
+- No-JavaScript behavior must preserve all content and navigation.
+- Do not reproduce Benoist’s timing, easing, masks, transitions, or choreography.
 
 # Responsive Strategy
 
-The page likely adapts through structural simplification rather than proportional shrinking.
+**Inference from the source:** Mobile likely preserves the concept while reducing simultaneous complexity.
 
-Expected responsive behavior includes:
+Possible adaptations include:
 
-* Mega menus replaced by expandable mobile navigation
-* Multi-column sections stacked vertically
-* Oversized headlines reduced significantly
-* Product imagery cropped or rearranged
-* Horizontal galleries preserved as swipeable carousels
-* Decorative overlaps reduced
-* Outer padding narrowed
-* Calls to action expanded for touch interaction
+- Simplified transitions
+- Fewer image layers
+- Touch alternatives to hover
+- Reduced typography scale
+- Single-column sequences
+- Shorter movement distances
+- No custom cursor
+- Lower media complexity
 
-The challenge is preserving the site’s expressive personality without creating excessive scrolling or visual overload on small screens.
+The important principle is that mobile layouts should be recomposed rather than merely scaled down.
+
+## Principle to Extract
+
+For `nattapong.dev`:
+
+- Preserve semantic order: title, status, claim, evidence, limitation.
+- Stack or simplify before shrinking readable content.
+- Do not rely on hover.
+- Remove nonessential motion on mobile.
+- Do not make mobile users download effects intended only for desktop.
 
 # Accessibility
 
-Positive accessibility characteristics include:
+The original analysis identifies several risks:
 
-* A visible skip-to-content link
-* Semantic heading structure
-* Descriptive image alternative text
-* Clear navigation labels
-* Strong primary text contrast
-* Explicit button wording such as Get started and Contact sales ([Figma][1])
+- Heavy JavaScript dependence
+- Weak static fallback
+- Large amounts of motion
+- Nonstandard navigation
+- Custom cursor behavior
+- Small metadata
+- Possible low contrast
+- Visual previews without sufficient description
 
-Potential risks include:
+Responsible safeguards include:
 
-* Complex animated scenes
-* Large moving galleries
-* Dense mega menus
-* Text embedded inside product imagery
-* Color combinations within creative demonstrations
-* Interaction states that may depend heavily on hover
+- Reduced-motion support
+- Keyboard-accessible navigation
+- Visible focus
+- Semantic links
+- Descriptive alternative text
+- Screen-reader-friendly summaries
+- Functional non-WebGL fallback
+- Standard cursor behavior where required
 
-Reduced-motion support, keyboard navigation, visible focus states, and meaningful alternatives for animated demonstrations are especially important for this type of site.
+## Principle to Extract
+
+For `nattapong.dev`, accessibility is a governing constraint, not an optional correction after visual design.
+
+Core content must remain available without JavaScript, animation, imagery, or color interpretation.
 
 # UX Strengths
 
-* Strong and memorable brand expression
-* Product capabilities shown visually
-* Clear connection between design and development
-* Multiple entry points for different user roles
-* Effective balance of creativity and credibility
-* Strong social proof
-* Concise copy despite a large product ecosystem
-* Community content presented as part of the product’s value
-* Clear conversion actions throughout the page
-* Visual variety that keeps a long homepage engaging
+Source-derived strengths include:
+
+- The interface demonstrates creative-development ability directly.
+- Motion and interaction are coordinated.
+- The portfolio has a memorable identity.
+- Projects receive strong visual focus.
+- The shallow structure reduces informational clutter.
+- Transitions create continuity.
+- The site differentiates its author from conventional portfolios.
+
+## Relevance to nattapong.dev
+
+The most useful strengths are:
+
+- Interface quality can become evidence of care.
+- A shallow and deliberate structure can improve focus.
+- One restrained signature can improve memorability.
+- Motion is strongest when coordinated and purposeful.
 
 # UX Weaknesses
 
-* The expanding product ecosystem makes navigation increasingly complex.
-* New visitors may struggle to understand the difference between closely related products.
-* Highly expressive visuals can compete with core messages.
-* Frequent layout changes may reduce predictability.
-* Motion-heavy sections may create performance or accessibility concerns.
-* The homepage communicates breadth more effectively than depth.
-* Some users may need more direct guidance toward the most relevant starting point.
-* The large footer and mega menus may feel overwhelming.
+Source-derived weaknesses include:
 
-# Ideas to Reuse for nattapong.dev
+- Navigation may require learning.
+- Animation may delay project information.
+- JavaScript failure may leave weak fallback content.
+- Performance may vary across devices.
+- Motion-sensitive users may be uncomfortable.
+- Custom interactions may reduce predictability.
+- Visuals may overshadow technical contribution.
+- Mobile cannot reproduce every desktop interaction.
+- The experience may be excessive for visitors seeking quick facts.
 
-* Use real project interfaces as primary visual evidence.
-* Pair each project with one concise, confident statement.
-* Create deliberate contrast between spacious text sections and denser visual sections.
-* Use oversized typography for important personal-brand and engineering messages.
-* Let project content introduce color instead of applying excessive decoration everywhere.
-* Organize work by capability, such as designing, building, experimenting, and writing.
-* Use interactive demonstrations only when they reveal how a project works.
-* Include proof such as project outcomes, technologies, collaborators, or measurable improvements.
-* Treat resources, experiments, articles, and project documentation as part of the broader personal engineering website ecosystem.
-* Build a footer that helps visitors continue exploring rather than ending the experience abruptly.
+## Relevance to nattapong.dev
+
+These weaknesses are especially important because Nattapong’s site must communicate:
+
+- Evidence boundaries
+- Student context
+- Technical decisions
+- Research uncertainty
+- Learning progress
+- Limitations
+
+Any visual treatment that delays or obscures those facts should be rejected.
+
+# Principles to Adapt Carefully for nattapong.dev
+
+Adapt these principles:
+
+- Let interface quality demonstrate care and engineering judgment.
+- Use one coordinated motion language rather than unrelated effects.
+- Keep global navigation conventional and immediately understandable.
+- Build editorial indexes rather than a wall of identical cards.
+- Use expressive scale selectively to establish rhythm.
+- Recompose layouts for mobile rather than shrinking desktop structures.
+- Include reduced-motion behavior from the beginning.
+- Preserve complete semantic links and content beneath any optional enhancement.
+- Use project-detail pages for architecture, trade-offs, evidence, and limitations.
+- Allow one restrained interaction or transition only after it proves a real navigational or explanatory benefit.
+- Keep essential content visible before any interaction.
+- Treat no-JavaScript completeness as a baseline requirement.
+
+Do not adapt these source-specific patterns:
+
+- Custom cursor replacement
+- Hidden gesture-based navigation
+- Heavy WebGL or canvas effects
+- Cinematic project presentation
+- Project-specific visual systems
+- Image-led hierarchy without approved imagery
+- Award or prestige framing
+- Client-oriented conversion language
+- Interaction designed primarily for creative-industry juries
 
 # Things Not to Copy
 
-* Do not reproduce Figma’s irregular visual compositions directly.
-* Do not imitate its exact typography, cursor imagery, product mockups, or color combinations.
-* Do not create a large mega menu unless the website has enough content to justify it.
-* Do not use constant animation merely to appear creative.
-* Do not present every skill or experiment on the homepage.
-* Do not adopt Figma’s product-scale information architecture for a personal engineering website.
-* Do not sacrifice project clarity for visual spectacle.
-* Do not copy the “creative canvas” brand language unless it accurately represents your identity and work.
-* Do not use oversized headings without balancing them with useful evidence.
+- Do not reproduce Benoist’s transitions, typography, cursor style, navigation, or motion signature.
+- Do not make the site unusable without JavaScript.
+- Do not hide links behind gestures.
+- Do not apply visual effects to every technical surface.
+- Do not prioritize awards-style experimentation over engineering clarity.
+- Do not omit architecture, responsibility, constraints, evidence, or limitations.
+- Do not make mobile users load unnecessary desktop effects.
+- Do not use long intro animations.
+- Do not reduce body text or metadata below comfortable reading sizes.
+- Do not make every project a different interface.
+- Do not imitate creative-agency language.
+- Do not present learning as expertise.
+- Do not present static source review as runtime proof.
+- Do not create awards, client, metric, or professional-credibility theatre.
+- Do not use large imagery when no reviewed image exists.
+- Do not let animation become the evidence.
 
 # Recommendations for nattapong.dev
 
-Use Figma’s principle of demonstrating capability through the interface, but adapt it to a focused personal engineering website. Each major project could include one strong visual, one clear result, and a short explanation of the engineering or design challenge.
+Use Aristide Benoist’s portfolio as a reference for **authorship and coordinated interaction**, but transform those ideas through Nattapong’s approved evidence-led, static-first direction.
 
-Consider structuring the homepage around a small number of capability pathways, such as:
+Recommendations:
 
-* Build software
-* Explore systems
-* Design experiences
-* Document learning
+- Keep global navigation conventional and immediately understandable.
+- Identify Nattapong as a **Computer Engineering Student** using only approved wording.
+- Let the homepage demonstrate care through hierarchy, rhythm, typography, and truthful content—not cinematic effects.
+- Use the approved Project index and Booking API detail as the first visual vertical.
+- Present purpose, current state, verification, evidence, and limitations before optional expression.
+- Use an editorial project index rather than identical cards.
+- Keep the site primarily typographic until reviewed imagery or diagrams exist.
+- Use a light shared foundation across About, Projects, Research, and Learning.
+- Reserve contrasting technical surfaces for genuine evidence.
+- Advance the **Evidence Trace** idea—claim → evidence/source → limitation or next question—as the site’s restrained signature motif.
+- Consider at most one short, optional, nonessential transition after static navigation and reduced-motion behavior are complete.
+- Ensure every enhanced link remains a standard semantic link.
+- Recompose project layouts for mobile.
+- Keep technical depth readable and adjacent to the claim it supports.
+- Preserve the same navigation, state language, accessibility, and evidence grammar across all content families.
+- Reject project-specific themes, fake interfaces, fake terminals, decorative screenshots, and invented metrics.
+- Keep all final choices for fonts, colors, spacing, motion values, assets, and implementation in later approved decisions.
 
-These pathways should lead to real projects rather than broad marketing pages.
+# Reference Notes
 
-Use expressive typography selectively. One large statement in the hero and one strong heading per major section would create personality without making every section compete for attention.
+The following links were present in the source document. They were cleaned of tracking parameters where applicable but were not reverified during this revision.
 
-Allow project screenshots, diagrams, terminal output, prototypes, and experiments to introduce visual variety. Keep the surrounding interface neutral so the work remains the primary source of color.
-
-Use motion to explain behavior. Suitable examples could include a project architecture revealing itself, an interface state changing, or a technical workflow progressing through stages. Avoid animation that provides no additional understanding.
-
-Present technical breadth through curated examples rather than a large skills directory. A few projects showing frontend, backend, systems, and research capabilities would communicate more than an extensive list of tools.
-
-Add credible evidence near featured work, such as performance improvements, completed milestones, architecture decisions, GitHub activity, or lessons learned. This adapts Figma’s use of social proof to a personal engineering website context.
-
-Maintain generous spacing between major ideas, while allowing richer visual density inside project previews. This would preserve both clarity and creative energy.
-
-These recommendations are adaptable lessons from Figma’s homepage, not final design decisions for nattapong.dev.
-
-[1]: https://www.figma.com/ "Figma: The collaborative canvas for design, code, and AI"
-
+[1]: https://aristidebenoist.com/ "Aristide Benoist — Independent developer"
+[2]: https://www.linkedin.com/in/aristide-benoist "Aristide Benoist — LinkedIn"
+[3]: https://aristidebenoist.com/jenny-johannesson "Aristide Benoist — Jenny Johannesson"
+[4]: https://img1.wsimg.com/blobby/go/abb37b31-7c6a-4872-8e73-693e95a1ebb5/downloads/web_developer_website_examples.pdf "Web developer website examples"
+[5]: https://mank.aristidebenoist.com/actors "Mank the Unmaking — Actors"
