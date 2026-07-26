@@ -19,11 +19,96 @@ const additionalLimitations = limitations.filter(
     !limitation.claimIds?.some((claimId) => knownClaimIds.has(claimId)),
 );
 
+type Claim = ProjectRecord["claims"][number];
+type Evidence = ProjectRecord["evidence"][number];
+type Source = ProjectRecord["sources"][number];
+type Limitation = ProjectRecord["limitations"][number];
+
+interface ResolvedClaim {
+  claim: Claim;
+  label: string;
+  titleId: string;
+}
+
+interface SupportGroup {
+  claims: ResolvedClaim[];
+  evidence: Evidence[];
+  sources: Source[];
+  limitations: Limitation[];
+}
+
 const formatState = (value: string) =>
   value
     .split("-")
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
+
+const resolvedClaims: ResolvedClaim[] = claims.map((claim, index) => ({
+  claim,
+  label: `Claim ${String(index + 1).padStart(2, "0")}`,
+  titleId: `evidence-claim-${index + 1}`,
+}));
+
+const supportGroupsByRelationship = new Map<string, SupportGroup>();
+
+for (const resolvedClaim of resolvedClaims) {
+  const evidenceReferences = resolvedClaim.claim.evidenceRefs ?? [];
+  const claimEvidence = evidenceReferences
+    .map((reference) => evidenceById.get(reference.evidenceId))
+    .filter((item): item is Evidence => Boolean(item));
+  const claimSourceIds = [
+    ...new Set(claimEvidence.flatMap((item) => item.sourceIds ?? [])),
+  ];
+  const claimSources = claimSourceIds
+    .map((sourceId) => sourceById.get(sourceId))
+    .filter((source): source is Source => Boolean(source));
+  const claimLimitations = limitations.filter((limitation) =>
+    limitation.claimIds?.includes(resolvedClaim.claim.claimId),
+  );
+
+  const normalizedEvidenceReferences = evidenceReferences
+    .map((reference) => ({
+      evidenceId: reference.evidenceId,
+      requirement: reference.requirement,
+    }))
+    .sort((first, second) =>
+      `${first.evidenceId}:${first.requirement}`.localeCompare(
+        `${second.evidenceId}:${second.requirement}`,
+      ),
+    );
+  const normalizedEvidence = claimEvidence
+    .map((item) => ({
+      evidenceId: item.evidenceId,
+      verification: item.verification,
+      sourceIds: [...(item.sourceIds ?? [])].sort(),
+    }))
+    .sort((first, second) =>
+      first.evidenceId.localeCompare(second.evidenceId),
+    );
+
+  const relationshipKey = JSON.stringify({
+    evidenceReferences: normalizedEvidenceReferences,
+    evidence: normalizedEvidence,
+    sourceIds: claimSources.map((source) => source.sourceId).sort(),
+    limitationIds: claimLimitations
+      .map((limitation) => limitation.limitationId)
+      .sort(),
+  });
+  const existingGroup = supportGroupsByRelationship.get(relationshipKey);
+
+  if (existingGroup) {
+    existingGroup.claims.push(resolvedClaim);
+  } else {
+    supportGroupsByRelationship.set(relationshipKey, {
+      claims: [resolvedClaim],
+      evidence: claimEvidence,
+      sources: claimSources,
+      limitations: claimLimitations,
+    });
+  }
+}
+
+const supportGroups = [...supportGroupsByRelationship.values()];
 ---
 
 <section class="evidence-trace" aria-labelledby="evidence-trace-title">
@@ -38,101 +123,116 @@ const formatState = (value: string) =>
 
   <div class="evidence-trace__claims">
     {
-      claims.map((claim, index) => {
-        const claimEvidence = (claim.evidenceRefs ?? [])
-          .map((reference) => evidenceById.get(reference.evidenceId))
-          .filter((item): item is ProjectRecord["evidence"][number] =>
-            Boolean(item),
-          );
-        const claimSourceIds = new Set(
-          claimEvidence.flatMap((item) => item.sourceIds ?? []),
-        );
-        const claimSources = [...claimSourceIds]
-          .map((sourceId) => sourceById.get(sourceId))
-          .filter((source): source is ProjectRecord["sources"][number] =>
-            Boolean(source),
-          );
-        const claimLimitations = limitations.filter((limitation) =>
-          limitation.claimIds?.includes(claim.claimId),
-        );
-        const claimTitleId = `evidence-claim-${index + 1}`;
+      resolvedClaims.map(({ claim, label, titleId }) => (
+        <article class="evidence-claim" aria-labelledby={titleId}>
+          <header>
+            <p class="evidence-claim__number">{label}</p>
+            <h3 id={titleId}>{claim.statement}</h3>
+          </header>
+
+          <dl class="evidence-claim__state">
+            <div>
+              <dt>Claim state</dt>
+              <dd>{formatState(claim.state)}</dd>
+            </div>
+            <div>
+              <dt>Verification</dt>
+              <dd>{formatState(claim.verification)}</dd>
+            </div>
+          </dl>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="evidence-trace__support">
+    {
+      supportGroups.map((group, groupIndex) => {
+        const supportId = `evidence-support-${groupIndex + 1}`;
+        const isShared = group.claims.length > 1;
 
         return (
-          <article class="evidence-claim" aria-labelledby={claimTitleId}>
+          <section
+            class="evidence-support"
+            aria-labelledby={`${supportId}-title`}
+          >
             <header>
-              <p class="evidence-claim__number">
-                Claim {String(index + 1).padStart(2, "0")}
+              <p class="context-label">
+                {isShared ? "Shared support" : "Claim support"}
               </p>
-              <h3 id={claimTitleId}>{claim.statement}</h3>
+              <h3 id={`${supportId}-title`}>
+                {isShared
+                  ? `Shared review basis ${String(groupIndex + 1).padStart(2, "0")}`
+                  : `Review basis for ${group.claims[0].label}`}
+              </h3>
             </header>
 
-            <dl class="evidence-claim__state">
-              <div>
-                <dt>Claim state</dt>
-                <dd>{formatState(claim.state)}</dd>
-              </div>
-              <div>
-                <dt>Verification</dt>
-                <dd>{formatState(claim.verification)}</dd>
-              </div>
-            </dl>
+            <div class="evidence-support__applies">
+              <h4>Applies to</h4>
+              <ul>
+                {group.claims.map(({ claim, label, titleId }) => (
+                  <li>
+                    <a href={`#${titleId}`}>
+                      <span>{label}:</span> {claim.statement}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-            <section aria-labelledby={`${claimTitleId}-evidence`}>
-              <h4 id={`${claimTitleId}-evidence`}>Evidence</h4>
+            <section aria-labelledby={`${supportId}-evidence`}>
+              <h4 id={`${supportId}-evidence`}>Evidence</h4>
               <ul class="evidence-list">
-                {
-                  claimEvidence.map((item) => (
-                    <li>
-                      <strong>{item.title}</strong>
-                      <p>{item.purpose}</p>
-                      <p>{item.scope}</p>
-                      <dl>
-                        <div>
-                          <dt>Availability</dt>
-                          <dd>{formatState(item.availability)}</dd>
-                        </div>
-                        <div>
-                          <dt>Verification</dt>
-                          <dd>{formatState(item.verification)}</dd>
-                        </div>
-                      </dl>
-                    </li>
-                  ))
-                }
+                {group.evidence.map((item) => (
+                  <li>
+                    <strong>{item.title}</strong>
+                    <p>{item.purpose}</p>
+                    <p>{item.scope}</p>
+                    <dl>
+                      <div>
+                        <dt>Availability</dt>
+                        <dd>{formatState(item.availability)}</dd>
+                      </div>
+                      <div>
+                        <dt>Verification</dt>
+                        <dd>{formatState(item.verification)}</dd>
+                      </div>
+                    </dl>
+                  </li>
+                ))}
               </ul>
             </section>
 
-            <section aria-labelledby={`${claimTitleId}-sources`}>
-              <h4 id={`${claimTitleId}-sources`}>Sources</h4>
+            <section aria-labelledby={`${supportId}-sources`}>
+              <h4 id={`${supportId}-sources`}>Sources</h4>
               <ul class="source-list">
-                {
-                  claimSources.map((source) => (
-                    <li>
-                      <strong>{source.title}</strong>
-                      <span>{formatState(source.availability)}</span>
-                      {source.limitation && <p>{source.limitation}</p>}
-                    </li>
-                  ))
-                }
+                {group.sources.map((source) => (
+                  <li>
+                    <strong>{source.title}</strong>
+                    <span>{formatState(source.availability)}</span>
+                    {source.locator && <p>{source.locator}</p>}
+                    {source.limitation && <p>{source.limitation}</p>}
+                  </li>
+                ))}
               </ul>
             </section>
 
             {
-              claimLimitations.length > 0 && (
+              group.limitations.length > 0 && (
                 <section
                   class="claim-limitations"
-                  aria-labelledby={`${claimTitleId}-limitations`}
+                  aria-labelledby={`${supportId}-limitations`}
                 >
-                  <h4 id={`${claimTitleId}-limitations`}>Limitations</h4>
+                  <h4 id={`${supportId}-limitations`}>Limitations</h4>
                   <ul>
-                    {claimLimitations.map((limitation) => (
+                    {group.limitations.map((limitation) => (
                       <li>{limitation.statement}</li>
                     ))}
                   </ul>
                 </section>
               )
             }
-          </article>
+          </section>
         );
       })
     }
@@ -176,33 +276,23 @@ const formatState = (value: string) =>
 
   .evidence-trace__claims {
     display: grid;
-    gap: var(--space-component);
+    border-block-start: 1px solid var(--color-border);
   }
 
   .evidence-claim {
-    padding: clamp(1.25rem, 3vw, 2rem);
-    border: 1px solid var(--color-border);
-    border-inline-start: 0.3rem solid var(--color-accent);
-    border-radius: var(--radius-surface);
-    background: var(--color-evidence-surface);
+    display: grid;
+    gap: var(--space-component);
+    padding-block: var(--space-component);
+    border-block-end: 1px solid var(--color-border);
   }
 
   .evidence-claim > * {
     margin-block: 0;
   }
 
-  .evidence-claim > * + * {
-    margin-block-start: var(--space-component);
-  }
-
   .evidence-claim h3 {
     max-width: var(--measure-reading);
-    font-size: var(--step-2);
-  }
-
-  .evidence-claim h4 {
-    margin-block: 0 0.75rem;
-    font-size: var(--step-0);
+    font-size: var(--step-1);
   }
 
   .evidence-claim__number {
@@ -210,6 +300,10 @@ const formatState = (value: string) =>
     color: var(--color-secondary-text);
     font-family: var(--font-mono);
     font-size: var(--step--1);
+  }
+
+  .evidence-claim__state {
+    align-content: start;
   }
 
   .evidence-claim__state,
@@ -235,6 +329,57 @@ const formatState = (value: string) =>
   .evidence-claim dd,
   .evidence-list dd {
     margin: 0.2rem 0 0;
+  }
+
+  .evidence-trace__support {
+    display: grid;
+    gap: var(--space-component);
+  }
+
+  .evidence-support {
+    display: grid;
+    gap: var(--space-component);
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid var(--color-border);
+    border-inline-start: 0.3rem solid var(--color-accent);
+    border-radius: var(--radius-surface);
+    background: var(--color-evidence-surface);
+  }
+
+  .evidence-support > *,
+  .evidence-support header > * {
+    margin-block: 0;
+  }
+
+  .evidence-support header > * + * {
+    margin-block-start: 0.65rem;
+  }
+
+  .evidence-support h3 {
+    font-size: var(--step-2);
+  }
+
+  .evidence-support h4 {
+    margin-block: 0 0.75rem;
+    font-size: var(--step-0);
+  }
+
+  .evidence-support__applies ul {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .evidence-support__applies a {
+    display: inline-block;
+  }
+
+  .evidence-support__applies span {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    font-weight: 700;
   }
 
   .evidence-list,
@@ -274,26 +419,26 @@ const formatState = (value: string) =>
   }
 
   @media (min-width: 54rem) {
-    .evidence-trace__claims {
-      grid-template-columns: minmax(0, 1fr);
+    .evidence-claim {
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr);
+      column-gap: var(--space-section);
     }
 
-    .evidence-claim {
-      display: grid;
+    .evidence-support {
       grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
       column-gap: var(--space-section);
     }
 
-    .evidence-claim > header,
-    .evidence-claim > .evidence-claim__state {
+    .evidence-support > header,
+    .evidence-support > .evidence-support__applies {
       grid-column: 1;
     }
 
-    .evidence-claim > section {
+    .evidence-support > section {
       grid-column: 2;
     }
 
-    .evidence-claim > .claim-limitations {
+    .evidence-support > .claim-limitations {
       grid-column: 1 / -1;
     }
   }
