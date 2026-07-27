@@ -580,6 +580,17 @@ Four public v0.1 records were authored later in the separately completed content
 
 ## Deployment and Release
 
+**DEP-01A — Select Launch Platform and Define Launch Requirements**
+**Status:** Done · **Priority:** P1
+
+- **Platform decision:** Cloudflare Pages is the selected primary platform for the current Astro static output. It supports the `main` production branch, `dist` output, custom-domain HTTPS, preview deployments, and the intended canonical-host and redirect behavior without a framework-specific runtime. GitHub Pages is the fallback because it also supports the static output and custom domains, but would require more deployment-workflow and redirect handling. Vercel is compatible but provides no current-scope advantage over the selected static-first primary.
+- **Build and route boundary:** Production build command: `./node_modules/.bin/astro build`; output directory: `dist`. The current static site scope has five routes: `/`, `/projects/`, `/projects/booking-api-source-review/`, `/learning/`, and `/learning/guided-http-threadpool-learning/`.
+- **Domain direction:** Canonical host: `https://nattapong.dev`; redirect `https://www.nattapong.dev` to the canonical host. Production branch: `main`. Git remote, DNS, certificate, and provider-account configuration remain **Not implemented**.
+- **Language and discovery boundary:** Initial release remains English-only; no `/en/`, `/th/`, language switcher, or localization architecture is selected. Technical indexability supports branded discovery for `nattapong.dev` and `Nattapong Sangsana`; it does not promise a ranking position.
+- **SEO readiness:** Unique meaningful page titles are **Ready**. Detail-page descriptions are present, but index-page descriptions are **Missing before launch**. Canonical URLs and production site-URL configuration, `robots.txt`, sitemap, and a custom 404 page are **Missing before launch**. Open Graph metadata and basic WebSite/Person structured data are **Safe to add after launch**. Internal links among implemented routes are **Ready**.
+- **Next bounded task:** DEP-01B — Implement the minimum launch SEO foundation is **Blocked** pending separate owner authorization. It should add only the missing canonical/site configuration, index descriptions, robots, sitemap, and 404 foundation; it must not deploy, configure DNS, create a remote, add localization, or claim search ranking.
+- **Boundary:** No deployment, remote, DNS, package, application, metadata, SEO, or configuration implementation occurred. The Now queue remains empty.
+
 **REL-01 — Prepare, deploy, and validate an approved release**  
 **Status:** Later · **Priority:** P1
 
