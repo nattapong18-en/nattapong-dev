@@ -576,17 +576,18 @@ Four public v0.1 records were authored later in the separately completed content
 
 **Status:** Done · **Priority:** P2
 
-- **Completion reason:** Defined a Proposed minimum social metadata and static structured-data policy without implementing metadata.
-- **Decision record:** `reference/decisions/SEO-03-social-metadata-and-structured-data.md`.
+- **Completion reason:** Defined the social metadata and static structured-data policy later approved and implemented by SEO-03B.
+- **Decision record:** `reference/decisions/SEO-03-social-metadata-and-structured-data.md` — **Approved**.
 - **Boundary:** Current routes, visible content, canonical metadata, packages, deployment, and production remain unchanged. Owner approval is required before implementation.
 
 **SEO-03B — Implement Social Metadata and Structured Data**
 
-**Status:** Blocked · **Priority:** P2
+**Status:** Done · **Priority:** P2
 
-- **Blocker:** Owner approval of Proposed SEO-03 and separate implementation authorization.
-- **Proposed boundary:** Shared layout metadata plus homepage-only static WebSite and Person JSON-LD; no social image, browser JavaScript, package, route, content, or deployment change.
-- **Current state:** No social metadata or structured data has been implemented. The Now queue remains empty.
+- **Completion reason:** Implemented shared Open Graph and Twitter card metadata plus homepage-only static WebSite and Person JSON-LD.
+- **Approved boundary:** No social image, email in JSON-LD, browser JavaScript, package, route, content, analytics, deployment, or DNS change.
+- **Validation:** Astro sync, check, and static build passed. Generated HTML checks confirmed exact social-tag counts and source-value reuse on all five indexable routes, valid homepage-only WebSite and Person JSON-LD, preserved 404 `noindex`, no image/account metadata, and no browser JavaScript files.
+- **Current state:** The Now queue remains empty; no production review or further task is activated.
 
 ## Performance, Privacy, and Security
 

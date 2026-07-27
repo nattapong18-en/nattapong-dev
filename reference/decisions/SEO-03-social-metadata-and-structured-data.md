@@ -3,13 +3,24 @@
 # Status
 
 - **Decision ID:** SEO-03
-- **Status:** Proposed
+- **Status:** Approved
 - **Decision owner:** Nattapong
 - **Scope:** Minimum social metadata and static JSON-LD for the five approved public routes
-- **Implementation authorized:** No
-- **Owner approval required:** Yes
+- **Implementation authorized:** Yes — bounded static scope recorded below
+- **Owner approval required:** No — recorded below
 
 This proposal extends the existing canonical, description, robots, sitemap, and static HTML foundation. It is governed by the [project vision](../../docs/00-project-vision.md), [Design DNA](../design-dna.md), [VIS-01](VIS-01-nattapong-visual-direction.md), [VIS-02](VIS-02-refined-visual-identity-direction.md), and the [Task List](../../docs/09-task-list.md). It does not add a route, public content, image asset, browser runtime, package, or deployment change.
+
+# Owner Approval Record
+
+Nattapong approved the initial static metadata direction:
+
+- **No social image:** `og:image`, `twitter:image`, and related image fields remain omitted.
+- **Email privacy:** Person JSON-LD omits the approved public email address.
+- **Location precision:** Person JSON-LD uses country-level `Thailand` only.
+- **Entity properties:** The WebSite and Person property sets documented below are approved, including Nakhon Phanom University affiliation and GitHub-only `sameAs`.
+
+This approval does not authorize a social image asset, browser JavaScript, package, route, visible-content, analytics, deployment, DNS, or broader schema change.
 
 # Context
 
@@ -25,7 +36,7 @@ The canonical production host is `https://nattapong.dev`. The approved indexable
 
 # Open Graph Policy
 
-For each of the five indexable public routes, the first implementation should emit exactly one of each:
+For each of the five indexable public routes, the approved implementation emits exactly one of each:
 
 | Field | Source rule |
 | --- | --- |
@@ -40,7 +51,7 @@ The noindex custom 404 must not receive social metadata. The implementation must
 
 # Twitter Card Policy
 
-For each indexable route, the proposed initial card is:
+For each indexable route, the approved initial card is:
 
 - `twitter:card`: `summary`
 - `twitter:title`: the existing route title
@@ -62,7 +73,7 @@ No Twitter/X handle, creator, site account, or image field is proposed because n
 
 # WebSite Structured Data
 
-The homepage only should emit one static JSON-LD object with this exact property set:
+The homepage only emits one static JSON-LD object with this exact property set:
 
 ```json
 {
@@ -78,7 +89,7 @@ The description reuses approved visible homepage copy. Do not add `SearchAction`
 
 # Person Structured Data
 
-The homepage only should emit one static JSON-LD Person object with this proposed property set:
+The homepage only emits one static JSON-LD Person object with this approved property set:
 
 ```json
 {
@@ -105,9 +116,9 @@ The proposed object omits email, image, birth date, postal address, phone number
 
 Every proposed value is approved and visible or directly represented by the approved public identity: `Nattapong Sangsana`, `nattapong.dev`, Computer Engineering Student, Nakhon Phanom University, Thailand, and GitHub. Country-level location is the maximum proposed location precision. Although the email address is approved public contact information, this proposal omits it from JSON-LD to avoid increasing machine-readable exposure without a clear discovery need.
 
-# SEO-03B Proposed File Boundary
+# SEO-03B File Boundary
 
-The smallest likely implementation changes are:
+The approved implementation changes are:
 
 - `src/layouts/BaseLayout.astro` — shared Open Graph/Twitter fields, duplicate prevention, and an opt-in static JSON-LD slot or typed data prop.
 - `src/pages/index.astro` — pass the homepage-only WebSite and Person data through the shared layout.
@@ -126,17 +137,14 @@ A separately authorized implementation must verify:
 - Generated output still contains all five routes, custom 404, robots, and sitemap, while shipping no browser JavaScript files.
 - A separate production review validates deployed output, social-preview behavior where available, and source/deployment equivalence. It must not claim ranking or complete indexing.
 
+# Implementation Record
+
+SEO-03B implements shared social metadata in `src/layouts/BaseLayout.astro` and homepage-only static WebSite and Person JSON-LD in `src/pages/index.astro`. Astro sync, check, and static build passed. Generated HTML validation confirmed one required social field per indexable route, valid homepage JSON-LD, no image or account metadata, no JSON-LD outside the homepage, preserved 404 `noindex`, and no browser JavaScript files.
+
 # Deferred Scope
 
 Social image asset creation, richer schema types, Article, CreativeWork, BreadcrumbList, Organization, SearchAction, Open Graph image metadata, Twitter/X account metadata, About, Research, localization, additional public verticals, analytics, and ranking guarantees remain deferred.
 
-# Owner Decisions Required
-
-1. Approve or reject the no-image initial sharing policy; social image work remains a separate future asset task.
-2. Confirm that public email remains omitted from Person JSON-LD.
-3. Approve or reject country-level `Thailand` as the only location property in Person JSON-LD.
-4. Approve or reject the proposed WebSite and Person property sets, including `affiliation` and GitHub-only `sameAs`.
-
 # Consequences
 
-Approval would authorize only a later bounded SEO-03B implementation. It would make static route metadata more shareable and identify the homepage conservatively without changing visible content, adding social claims, or promising indexing or rankings.
+The approved implementation makes static route metadata more shareable and identifies the homepage conservatively without changing visible content, adding social claims, or promising indexing or rankings.

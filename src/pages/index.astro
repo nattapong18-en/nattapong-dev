@@ -4,12 +4,38 @@ import { getPublicContent } from "../lib/public-content.ts";
 
 const { about } = await getPublicContent();
 const boundary = about.data.limitations?.[0];
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "nattapong.dev",
+    url: "https://nattapong.dev/",
+    description: about.data.summary,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Nattapong Sangsana",
+    url: "https://nattapong.dev/",
+    jobTitle: "Computer Engineering Student",
+    affiliation: {
+      "@type": "CollegeOrUniversity",
+      name: "Nakhon Phanom University",
+    },
+    homeLocation: {
+      "@type": "Country",
+      name: "Thailand",
+    },
+    sameAs: ["https://github.com/nattapong18-en"],
+  },
+];
 ---
 
 <BaseLayout
   title={`${about.data.title} — Nattapong Sangsana`}
   description={about.data.summary}
   currentPath="/"
+  structuredData={structuredData}
 >
   <div class="page-shell">
     <header class="page-intro">

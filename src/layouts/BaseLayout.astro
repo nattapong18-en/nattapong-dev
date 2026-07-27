@@ -7,11 +7,19 @@ interface Props {
   description?: string;
   currentPath: string;
   noindex?: boolean;
+  structuredData?: Record<string, unknown>[];
 }
 
-const { title, description, currentPath, noindex = false } = Astro.props;
+const {
+  title,
+  description,
+  currentPath,
+  noindex = false,
+  structuredData = [],
+} = Astro.props;
 const site = Astro.site ?? new URL("https://nattapong.dev");
 const canonicalUrl = new URL(currentPath, site).href;
+const isIndexable = !noindex && Boolean(description);
 ---
 
 <!doctype html>
@@ -22,6 +30,30 @@ const canonicalUrl = new URL(currentPath, site).href;
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonicalUrl} />
+    {
+      isIndexable && (
+        <>
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="nattapong.dev" />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:locale" content="en_US" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={description} />
+        </>
+      )
+    }
+    {
+      structuredData.map((entity) => (
+        <script
+          is:inline
+          type="application/ld+json"
+          set:html={JSON.stringify(entity)}
+        />
+      ))
+    }
     {noindex && <meta name="robots" content="noindex" />}
   </head>
   <body>
