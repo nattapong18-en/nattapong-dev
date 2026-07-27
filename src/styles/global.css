@@ -107,6 +107,7 @@ h1 {
   margin-block: 0;
   font-size: var(--step-4);
   letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
 }
 
 h2 {
