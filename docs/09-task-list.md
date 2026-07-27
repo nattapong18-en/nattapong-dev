@@ -548,6 +548,30 @@ Four public v0.1 records were authored later in the separately completed content
 - **Validation:** Astro sync, check, and static build passed. Local checks covered semantic output, keyboard focus, fragment targets, reduced motion, JavaScript-disabled static output, 1440px/320px direct routes, and no ordinary horizontal overflow.
 - **Boundary:** No browser JavaScript, package, route, content, visual-identity, deployment, or production change occurred. The Now queue remains empty.
 
+**MOT-01C — Review Production Motion Layer**
+
+**Status:** Done · **Priority:** P3
+
+- **Completion reason:** Production review confirmed the approved CSS motion behavior, five public routes, custom 404, robots, sitemap, navigation, text-link and keyboard-focus feedback, Evidence Trace `:target`, mobile reflow, and reduced-motion behavior.
+- **Initial finding:** Cloudflare Web Analytics injected a browser beacon through external configuration. No repository implementation defect was identified.
+- **Boundary:** The review made no repository, deployment, DNS, or Cloudflare change.
+
+**MOT-01C-R1 — Re-verify Zero Production JavaScript**
+
+**Status:** Done · **Priority:** P3
+
+- **Completion reason:** After Cloudflare Web Analytics was disabled, production HTML re-verification found no inspected `<script` element, `cloudflareinsights` identifier, or `beacon.min.js` marker. All runtime checks continued to pass.
+- **Boundary:** No repository file changed; the resolved beacon was an external configuration issue.
+
+**MOT-01D — Record Production Motion Completion**
+
+**Status:** Done · **Priority:** P3
+
+- **Completion reason:** Recorded completion of the MOT-01 track within its approved minimal CSS-only scope. No remaining Must fix issue exists for this motion track.
+- **Production boundary:** `140ms` fast, `180ms` standard, `ease-out`, and a `1px` translation ceiling; no translation is currently used. Navigation and text-link feedback, persistent Evidence Trace `:target` emphasis, effectively immediate reduced-motion transitions, no smooth scrolling, and no browser JavaScript remain the implemented boundary.
+- **Deferred scope:** Richer motion, page transitions, page-entry animation, scroll reveal, parallax, animation runtime, visual redesign, Open Graph metadata, structured data, localization, About, Research, and additional public verticals remain deferred.
+- **Current state:** Production satisfies the no-browser-JavaScript boundary. The Now queue remains empty; no further task is activated.
+
 ## Performance, Privacy, and Security
 
 **PERF-01 — Review performance and progressive enhancement**  
