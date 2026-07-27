@@ -3,13 +3,24 @@
 # Status
 
 - **Decision ID:** VIS-02
-- **Status:** Proposed
+- **Status:** Approved
 - **Decision owner:** Nattapong
 - **Scope:** Refined visual identity direction for the completed First Visual Vertical
 - **Implementation authorized:** No
-- **Owner approval required:** Yes
+- **Owner approval required:** No — recorded below
 
-This proposal refines, but does not replace, the Approved [VIS-01 visual direction](VIS-01-nattapong-visual-direction.md). It records values for owner review only. No color, type, spacing, motion value, component change, route, or asset is approved or created by this record.
+This decision refines, but does not replace, the Approved [VIS-01 visual direction](VIS-01-nattapong-visual-direction.md). It approves direction and bounded reversible implementation values only. It does not authorize a color, type, spacing, motion, component, route, or asset change.
+
+# Owner Approval Record
+
+Nattapong approved the refined direction with these selections:
+
+- **1A — Palette:** Warm paper page foundation; mineral teal as the primary evidence, link, navigation, and technical signal; and amber as the limitation and verification-boundary signal.
+- **2B — Technical accent:** **Medium**. Technical labels, dividers, metadata hierarchy, and Evidence Trace differentiation may be clearly visible, but content remains editorial and technical styling must not become dashboard chrome, terminal visuals, dense control surfaces, decorative grids, excessive badges, neon styling, project-specific themes, or ornamental engineering diagrams.
+- **3B — Motion:** **Minimal CSS-only feedback**. Short, restrained feedback may clarify an existing link, focus state, or Evidence Trace relationship without JavaScript, hover-only meaning, delay, movement, reordering, or content loss.
+- **4B — Typography:** **Refined system-font stack**. Local system fonts may receive clearer role assignment while Thai/English readability, static rendering, and the external-font boundary remain intact.
+
+This approval does not authorize implementation, new routes, broader product scope, content changes, packages, configuration, assets, or deployment. A separate bounded implementation authorization remains required.
 
 # Context and Evidence Boundary
 
@@ -19,7 +30,7 @@ This proposal is governed by [VIS-01](VIS-01-nattapong-visual-direction.md), the
 
 # Decision Summary
 
-Propose a **warm, measured editorial signal system**: long-form pages keep their quiet paper-like field and generous reading rhythm, while a single mineral-teal signal and a restrained amber boundary make navigation, evidence, and uncertainty easier to recognize. This adds a distinct authored character beyond the neutral initial foundation while preserving VIS-01's semantic order, static completeness, Evidence Trace, and honest student context.
+The approved refinement is a **warm, measured editorial signal system**: long-form pages keep their quiet paper-like field and generous reading rhythm, while a single mineral-teal signal and a restrained amber boundary make navigation, evidence, and uncertainty easier to recognize. This adds a distinct authored character beyond the neutral initial foundation while preserving VIS-01's semantic order, static completeness, Evidence Trace, and honest student context.
 
 # Refined Identity Thesis
 
@@ -47,7 +58,7 @@ Propose a **warm, measured editorial signal system**: long-form pages keep their
 - Agency-like
 - Dashboard-like
 
-“Grounded” is proposed only as a supporting trait. It reinforces the existing Honest, Calm, and Human direction; it must not turn the site toward luxury, corporate polish, or professional-status signalling.
+“Grounded” is an approved supporting trait. It reinforces the existing Honest, Calm, and Human direction; it must not turn the site toward luxury, corporate polish, or professional-status signalling.
 
 # Reference Contribution Matrix
 
@@ -60,9 +71,9 @@ Propose a **warm, measured editorial signal system**: long-form pages keep their
 
 [Figma](../inspiration/figma/analysis.md), [Notion](../inspiration/notion/analysis.md), [Raycast](../inspiration/raycast/analysis.md), and [Stripe](../inspiration/stripe/analysis.md) were inventoried but add no separate active visual role for this three-route scope. Their useful system-consistency, modularity, workflow, and relationship lessons are already bounded by the shared grammar, Evidence Trace, and static content requirements; their product, dark, gradient, or asset-led patterns are not adopted.
 
-# Proposed Color Direction
+# Approved Color Direction
 
-The following are **proposed, reversible review values**, not approved permanent tokens. They form one light-first system and do not create dark mode.
+The following exact values are **approved, reversible implementation values** for the next separately authorized bounded implementation. They are not permanent immutable design-system tokens, do not create dark-mode equivalents, and still require accessibility validation after implementation.
 
 | Semantic token | Proposed value | Intended use | Reason and contrast relationship |
 | --- | --- | --- | --- |
@@ -77,11 +88,15 @@ The following are **proposed, reversible review values**, not approved permanent
 | `--color-focus` | `#A84708` | Visible keyboard focus outline | Calculated against `--color-page`: **5.21:1**; use with a non-color focus shape. |
 | `--color-limitation-text` | `#7A3E12` | Limitation heading or strong label only | Calculated against `--color-limitation-surface`: **7.21:1**; labels and prose still state the limit in words. |
 
-These local contrast calculations check important foreground/background pairs only; they are not a claim of formal WCAG conformance. Links, focus, evidence, and limitations must retain labels, underline/border treatment, or semantic structure so no relationship depends on color alone. The palette intentionally avoids Apple blue, Linear's dark treatment, Vercel monochrome, Stripe gradients, and project-specific accents.
+These local contrast calculations check important foreground/background pairs only; they are design inputs, not a claim of formal WCAG conformance. Links, focus, evidence, and limitations must retain labels, underline/border treatment, or semantic structure so no relationship depends on color alone. The palette intentionally avoids Apple blue, Linear's dark treatment, Vercel monochrome, Stripe gradients, and project-specific accents.
 
-# Typography Direction
+# Approved Technical-Accent Level
 
-Retain a refined local system-font strategy for the next layer. No external family, font download, or font dependency is proposed.
+The approved level is **Medium**. The next separately authorized implementation may use restrained technical labels, stronger Evidence Trace differentiation, precise dividers and metadata hierarchy, selective mineral-teal accent, and limited monospace or technical text roles when they are semantically useful. These accents must support the editorial engineering journal; they must not become dashboard chrome, fake terminals, dense control surfaces, decorative grids, excessive badges, neon styling, project-specific themes, or ornamental engineering diagrams.
+
+# Approved Typography Direction
+
+The approved direction is a **refined system-font stack**. The next separately authorized implementation may adjust local stack ordering, role assignment, weight, line height, letter spacing, responsive scale, and a local monospace stack for semantically useful technical identifiers. No external family, font download, remote font request, commercial-font assumption, or font dependency is approved.
 
 | Role | Proposed character and implementation direction |
 | --- | --- |
@@ -92,7 +107,7 @@ Retain a refined local system-font strategy for the next layer. No external fami
 | Technical identifier / code | Retain a compatible system monospace only for authentic identifiers, commands, technical labels, and evidence references; it must not become decorative developer texture. |
 | Link | Keep visible underlines or an equally persistent non-color affordance; accent color reinforces, rather than creates, link recognition. |
 
-The next implementation should use a refined system stack such as `ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif`, with a compatible `ui-monospace` stack. This is a role proposal, not a guarantee that every fallback is installed. Exact font family selection, final scales, line heights, and weights remain owner-review and later implementation decisions.
+The next implementation may use a refined system stack such as `ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif`, with a compatible `ui-monospace` stack. This does not guarantee that every fallback is installed. External fonts remain deferred and require a separate owner decision; final values remain bounded implementation decisions.
 
 # Spatial and Composition Direction
 
@@ -116,7 +131,7 @@ The next implementation should use a refined system stack such as `ui-sans-serif
 
 # Motion and Interaction Direction
 
-Static document completeness remains the default. This Proposed decision does not authorize motion implementation and does not change VIS-01's prohibition on routine page-entry animation.
+Static document completeness remains the default. The approved motion level is **Minimal CSS-only feedback**. A later separately authorized implementation may use short CSS transitions on color, border, underline, opacity, or similarly reversible non-layout properties only. It does not authorize motion implementation and does not change VIS-01's prohibition on routine page-entry animation.
 
 ## Permitted now: static state treatment
 
@@ -125,7 +140,7 @@ Static document completeness remains the default. This Proposed decision does no
 | Focus and current-route state | Keyboard focus or current location; orient a visitor. | Immediate state change; no delayed or animated focus. | Identical semantic link and visible focus state. | Focus and current location remain recognizable without color or movement. |
 | Evidence relationship | Normal document reading; explain the relationship through headings and order. | None. | Identical static Evidence Trace. | Claim, support/source, and limitation remain complete in HTML. |
 
-## Possible later, only after owner approval and a separate implementation task
+## Permitted in a later separately authorized implementation
 
 | Pattern | Trigger and purpose | Proposed duration and easing character | No-JavaScript and reduced-motion behavior | Information requirement |
 | --- | --- | --- | --- | --- |
@@ -134,9 +149,9 @@ Static document completeness remains the default. This Proposed decision does no
 
 ## Prohibited or deferred
 
-- Routine section-entry reveals, page transitions, index-to-detail transitions, masked or split-text reveals, and cinematic introductions remain prohibited or deferred under VIS-01.
+- Section-entry reveals, route or page transitions, index-to-detail transitions, masked or split-text reveals, scroll-triggered effects, animated backgrounds, and cinematic introductions remain prohibited or deferred under VIS-01.
 - The header must not hide, chase scroll position, or require interaction for navigation.
-- Custom cursor replacement, parallax, inertial scrolling, scroll hijacking, continuous movement, WebGL, Canvas decoration, and animation libraries remain prohibited or deferred.
+- Browser JavaScript, client directives, custom cursor replacement, parallax, inertial scrolling, scroll hijacking, continuous movement, WebGL, Canvas decoration, and animation libraries remain prohibited or deferred.
 - Any future coordinated timing is a separate owner decision and must preserve normal links, static content, no-JavaScript use, reduced-motion equivalence, and document order.
 
 # Responsive Identity
@@ -161,7 +176,7 @@ Keep a later implementation small and semantic:
 3. **Spacing and measure:** content, component, section, major; reading and evidence measures.
 4. **Border and radius:** divider, evidence edge, limitation boundary, restrained shared radius.
 5. **Focus:** color, outline thickness, offset, and persistent link treatment.
-6. **Motion:** only a small optional feedback duration/easing category, if later approved.
+6. **Motion:** only the approved small CSS-only feedback duration/easing category.
 
 These categories are proposed to avoid arbitrary one-off values. They do not authorize a complete token system, dark mode, or a design-library expansion.
 
@@ -173,9 +188,9 @@ These categories are proposed to avoid arbitrary one-off values. They do not aut
 4. **Aristide-style motion-first portfolio.** It would make interaction the proof, increase no-JavaScript and reduced-motion risk, and shift the site toward agency or award-oriented presentation.
 5. **Colorful card-based developer portfolio.** It would fragment the shared editorial grammar into generic visual modules and make limited real content appear inflated.
 
-# Proposed First Implementation Boundary
+# Approved First Implementation Boundary
 
-After owner approval and a separate bounded implementation authorization, the first application slice should remain inside the completed three-route vertical. Likely candidates are:
+After a separate bounded implementation authorization, the first application slice must remain inside the completed three-route vertical. Likely candidates are:
 
 - `src/styles/global.css` for the small semantic color, type, spacing, focus, and responsive-default layer.
 - `src/components/SiteHeader.astro` only if static active-route or identity markup needs a semantic adjustment.
@@ -184,13 +199,10 @@ After owner approval and a separate bounded implementation authorization, the fi
 
 That future task must not add routes, content, assets, screenshots, diagrams, dark mode, external fonts, browser JavaScript, framework integrations, a page-transition router, analytics, deployment, or a visual redesign. This record authorizes none of those changes.
 
-# Owner Review Questions
+# Owner Review Outcome
 
-1. Does the warm paper + mineral-teal + amber-boundary palette feel personally appropriate for `nattapong.dev`?
-2. Is the proposed degree of technical character—thin structural lines and evidence-only accents—right, or should it be quieter?
-3. Should the future implementation retain entirely static feedback, or may it later use the proposed short CSS-only link response under the stated safeguards?
-4. Does the typographic direction feel sufficiently authored while retaining local system fonts and the current reading comfort?
+The owner selected 1A warm paper/mineral teal/amber, 2B Medium technical accent, 3B Minimal CSS-only feedback, and 4B refined system-font stack. The current three-route website remains unchanged pending a separately authorized implementation task.
 
 # Non-Authorization
 
-VIS-02 is Proposed only. It does not approve or authorize CSS, components, pages, routes, design tokens, fonts, motion, assets, content, packages, configuration, deployment, analytics, or public claims. Owner review and approval, followed by a separate implementation authorization, are required before any visual change.
+VIS-02 is Approved direction only. It does not authorize CSS, components, pages, routes, design tokens, fonts, motion, assets, content, packages, configuration, deployment, analytics, or public claims. A separate implementation authorization is required before any visual change.
