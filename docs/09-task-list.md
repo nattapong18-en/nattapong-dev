@@ -585,7 +585,7 @@ Four public v0.1 records were authored later in the separately completed content
 
 - **Platform decision:** Cloudflare Pages is the selected primary platform for the current Astro static output. It supports the `main` production branch, `dist` output, custom-domain HTTPS, preview deployments, and the intended canonical-host and redirect behavior without a framework-specific runtime. GitHub Pages is the fallback because it also supports the static output and custom domains, but would require more deployment-workflow and redirect handling. Vercel is compatible but provides no current-scope advantage over the selected static-first primary.
 - **Build and route boundary:** Production build command: `./node_modules/.bin/astro build`; output directory: `dist`. The current static site scope has five routes: `/`, `/projects/`, `/projects/booking-api-source-review/`, `/learning/`, and `/learning/guided-http-threadpool-learning/`.
-- **Domain direction:** Canonical host: `https://nattapong.dev`; redirect `https://www.nattapong.dev` to the canonical host. Production branch: `main`. Git remote, DNS, certificate, and provider-account configuration remain **Not implemented**.
+- **Domain direction:** Canonical host: `https://nattapong.dev`; redirect `https://www.nattapong.dev` to the canonical host. Production branch: `main`. Git remote, DNS, certificate, and provider-account configuration were **Not implemented** at this decision stage and were completed later through DEP-01C and DEP-01D.
 - **Language and discovery boundary:** Initial release remains English-only; no `/en/`, `/th/`, language switcher, or localization architecture is selected. Technical indexability supports branded discovery for `nattapong.dev` and `Nattapong Sangsana`; it does not promise a ranking position.
 - **SEO readiness:** Unique meaningful page titles are **Ready**. Detail-page descriptions are present, but index-page descriptions are **Missing before launch**. Canonical URLs and production site-URL configuration, `robots.txt`, sitemap, and a custom 404 page are **Missing before launch**. Open Graph metadata and basic WebSite/Person structured data are **Safe to add after launch**. Internal links among implemented routes are **Ready**.
 - **Next bounded task:** DEP-01B — Implement the minimum launch SEO foundation was **Blocked** pending separate owner authorization and is completed below.
@@ -597,8 +597,36 @@ Four public v0.1 records were authored later in the separately completed content
 - **Completion:** Added the bounded production site configuration, self-referencing canonical metadata, unique index-page descriptions, crawl-permitting `robots.txt`, deterministic static sitemap, and noindex custom 404 page. No dependency, browser JavaScript, analytics, Open Graph, structured data, localization, deployment, remote, or DNS change occurred.
 - **Indexable boundary:** The canonical sitemap contains only `/`, `/projects/`, `/projects/booking-api-source-review/`, `/learning/`, and `/learning/guided-http-threadpool-learning/` on `https://nattapong.dev`. The initial release remains English-only; About, Research, localization, and motion remain deferred.
 - **Validation:** Astro sync, check, and static build passed. The generated output was inspected for canonical metadata, unique non-empty descriptions, robots and sitemap linkage, 404 `noindex`, the approved route boundary, and absence of browser JavaScript.
-- **Deployment boundary:** Git remote, DNS, HTTPS, provider-account configuration, and production deployment remain **Not implemented**. Open Graph metadata and WebSite/Person structured data remain deferred.
-- **Next bounded task:** DEP-01C — Prepare GitHub and Cloudflare Pages Deployment remains **Blocked** pending separate owner authorization. The Now queue remains empty.
+- **Deployment boundary:** Git remote, DNS, HTTPS, provider-account configuration, and production deployment were **Not implemented** at this implementation stage and were completed later through DEP-01C and DEP-01D. Open Graph metadata and WebSite/Person structured data remain deferred.
+- **Next bounded task:** DEP-01C — Prepare GitHub and Cloudflare Pages Deployment was completed later. The Now queue remains empty.
+
+**DEP-01C — Prepare GitHub and Cloudflare Pages Deployment**
+**Status:** Done · **Priority:** P1
+
+- **Completion:** Created the public GitHub repository `nattapong18-en/nattapong-dev`, configured `origin`, pushed `main`, and established upstream tracking. Cloudflare Pages Git integration was created for the repository, and the `nattapong-dev.pages.dev` deployment was verified.
+- **Boundary:** No repository source file changed during GitHub publication or Pages deployment. The deployment uses the static Astro build and ships no browser JavaScript.
+
+**DEP-01D — Configure nattapong.dev and Verify Production Domain**
+**Status:** Done · **Priority:** P1
+
+- **Completion:** The Cloudflare zone is active for `nattapong.dev`; the apex custom domain `https://nattapong.dev` is active with HTTPS verified. `https://www.nattapong.dev/*` permanently redirects to the apex with HTTP 301 while preserving path and query string.
+- **Validation:** The five approved production routes return HTTP 200. An unknown route returns the custom HTTP 404. `robots.txt` and `sitemap.xml` return HTTP 200, and no redirect loop was found.
+- **Boundary:** No repository file changed during domain, certificate, or redirect setup.
+
+**SEO-02 — Verify Google Search Console and Request Indexing**
+**Status:** Done · **Priority:** P1
+
+- **Completion:** The Google Search Console Domain property was verified through DNS ownership. `https://nattapong.dev/sitemap.xml` was submitted; the homepage is confirmed indexed, and remaining public URLs were tested as indexable and submitted for indexing where needed.
+- **Boundary:** This does not claim that every public URL is already indexed or guarantee any Google ranking.
+
+**LAUNCH-01 — Record Production Launch Completion**
+**Status:** Done · **Priority:** P1
+
+- **Completion:** Initial production launch completion recorded for the approved English-only static-site scope.
+- **Production boundary:** Canonical production host: `https://nattapong.dev`; `www` is redirect-only; Cloudflare Pages is the production host; GitHub is the source repository; and no browser JavaScript ships. The exact approved public routes are `/`, `/projects/`, `/projects/booking-api-source-review/`, `/learning/`, and `/learning/guided-http-threadpool-learning/`.
+- **Launch result:** No known Must fix issue remains from completed launch checks. The full long-term website is not represented as complete.
+- **Deferred scope:** Open Graph metadata; WebSite and Person structured data; animation expansion; Thai localization; About; Research; additional public verticals; formal accessibility certification; and guaranteed Google ranking remain deferred or unclaimed.
+- **Queue boundary:** The Now queue remains empty. MOT-01A — Define Purposeful Motion Layer is recommended as the next bounded task only; it is not activated.
 
 **REL-01 — Prepare, deploy, and validate an approved release**  
 **Status:** Later · **Priority:** P1
