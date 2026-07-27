@@ -108,13 +108,13 @@ Unknown implementation scope must say “Authorized files to be specified in the
 
 The operational governance instructions, local audit scope, workspace audit, recoverable Git baseline, CON-01, CON-02, the PRJ-01/PRJ-02 static audits, and GOV-04/GOV-05 synchronizations are complete. DEC-01 through DEC-06 are Approved and Done. FND-01 was implemented in commit `9290ec1` and public v0.1 content in commit `210280b`; VIS-01 is Approved.
 
-Implemented foundation: the minimal Astro and TypeScript foundation with manifest, lockfile, dependencies, and source configuration; the FND-01 semantic content foundation with four collections, shared and family schemas, V2/V3 validation modules, and non-public fixtures; and four approved public v0.1 records for About, Projects, Research, and Learning. DEC-06 records the static route direction, and VIS-01 records the visual direction and selected First Visual Vertical.
+Implemented foundation: the minimal Astro and TypeScript foundation with manifest, lockfile, dependencies, and source configuration; the FND-01 semantic content foundation with four collections, shared and family schemas, V2/V3 validation modules, and non-public fixtures; four approved public v0.1 records for About, Projects, Research, and Learning; and the First Visual Vertical at `/`, `/projects/`, and `/projects/booking-api-source-review/`. DEC-06 records the static route direction, and VIS-01 records the visual direction.
 
-Not implemented: public routes, pages, layouts, components, styling, the First Visual Vertical, visual assets, browser interaction, deployment, and publication. Selection of the First Visual Vertical does not authorize implementation. A separately authorized Booking API runtime-evidence scope remains an inactive candidate only after the historical environment-file risk and safe test resources are addressed.
+Not implemented: additional public routes and page families beyond the completed First Visual Vertical, visual assets, advanced browser interaction, deployment, and publication. The completed vertical does not select or authorize a next vertical. A separately authorized Booking API runtime-evidence scope remains an inactive candidate only after the historical environment-file risk and safe test resources are addressed.
 
 # Now — Immediate Tasks
 
-The Now queue is empty. Completion of the implemented foundation, approved content, and governing decisions does not automatically activate FND-02, NAV-01, VRT-02, route or page implementation, tooling, CI, tests, deployment, publication, or any other Next task.
+The Now queue is empty. Completion of the implemented foundation, approved content, governing decisions, and First Visual Vertical does not automatically activate FND-02, NAV-01, additional route or page implementation, tooling, CI, tests, deployment, publication, or any other Next task.
 
 # Next — Decision and Evidence Tasks
 
@@ -217,22 +217,24 @@ Four public v0.1 records were authored later in the separately completed content
 - **Boundaries:** Compare candidates against metadata, evidence, limitations, bilingual, responsive, access, optional fields, and failure needs. Do not implement.
 - **Deliverable:** Approved selection record, scope, required content, blockers, and acceptance cases.
 - **Acceptance / validation:** Choice is evidence-based and does not imply final homepage prominence.
-- **Dependencies / blockers:** CON-02 and implemented FND-01 supplied the selection inputs. The selected boundary remains unimplemented and requires separate preparation and owner authorization before VRT-02.
+- **Dependencies / blockers:** CON-02 and implemented FND-01 supplied the selection inputs. The selected boundary was later implemented through separately authorized VRT-02 work; any expansion still requires separate selection and owner authorization.
 - **Prohibited:** Selecting from visual polish alone.
 - **Documentation / report:** `reference/decisions/DEC-06-url-and-language-routing-direction.md` and `reference/decisions/VIS-01-nattapong-visual-direction.md`; selection is not implementation authorization.
 
 **VRT-02 — Implement and validate the first static vertical experience**  
-**Status:** Blocked · **Priority:** P1
+**Status:** Done · **Priority:** P1
 
 - **Source:** Phase 6; VRT-01.
 - **Objective / why now:** Validate the full content-to-presentation path before expansion.
 - **Reading:** All governing specs relevant to the selected path and VRT-01 scope.
-- **Authorization:** Requires audit; exact files specified in execution prompt.
-- **Inputs:** Approved content, foundation, navigation, artifacts, and acceptance cases.
-- **Boundaries:** Implement one static path with introduction, hierarchy, metadata, status/maturity/verification, limitation, evidence, relationships, responsive/bilingual/access behavior, and applicable unavailable/error states.
+- **Completion:** Implemented in `cf583dc70a31c12894c43a529d963e6fd1af2e55` (`Implement first visual vertical`); shared header identity changed to `nattapong.dev` in `6a9948a6161a7bcc046342df67ce3e359773640c` (`Update header site identity`); and Evidence Trace density was refined in `05958da421c59310412d51f5469f0983343a4641` (`Refine evidence trace density`).
+- **Review result:** VIS-02C completed as a read-only visual and accessibility review with no Must fix issue. Its one Should improve finding—repeated identical Evidence Trace support—was resolved by VIS-02D. VIS-02C has no commit because it did not modify the repository.
+- **Route boundary:** `/`, `/projects/`, and `/projects/booking-api-source-review/` only.
+- **Inputs:** Approved content, implemented FND-01 foundation, DEC-06 route direction, VIS-01 visual direction, and VRT-01 selection.
+- **Boundaries:** Implemented one static three-route journey with orientation, editorial Project index, Project detail, verification and limitation context, and Evidence Trace. No additional route, visual family, or next vertical was selected.
 - **Deliverable:** End-to-end representative experience and review findings.
-- **Acceptance / validation:** Direct entry, long reading, claim/evidence proximity, missing fields, keyboard, focus, touch, reflow, privacy, and optional failure pass.
-- **Dependencies / blockers:** FND-01 and VRT-01 are resolved inputs. FND-02, NAV-01, separate implementation preparation, owner authorization, and later validation remain required.
+- **Acceptance / validation:** Static build generated the three-route boundary with no browser JavaScript. Basic desktop, tablet, mobile, zoom-equivalent reflow, keyboard, no-JavaScript, and reduced-motion review passed. Deeper formal accessibility, cross-browser, and performance QA remains separate.
+- **Dependencies / blockers:** FND-01 and VRT-01 were resolved inputs; implementation preparation and owner authorization were completed for this scope. Any later expansion remains separately blocked.
 - **Prohibited:** Broad page-family buildout or motion before static acceptance.
 - **Documentation / report:** Changed files, checks, discovered structural problems, and authorized decision updates.
 
@@ -249,7 +251,7 @@ Four public v0.1 records were authored later in the separately completed content
 - **Boundaries:** Metadata, status/maturity/verification, figures/captions, callouts, disclosures, related content, documentation, and realistic tests as recurring need proves.
 - **Deliverable:** Lean components with contracts, states, bilingual/responsive/access behavior, misuse notes.
 - **Acceptance / validation:** No universal card, boolean explosion, or page-specific duplicate without reason.
-- **Dependencies / blockers:** VRT-02 remains a required later completion.
+- **Dependencies / blockers:** VRT-02 is Done; demonstrated recurrence, confirmed upcoming content, and separate authorization remain required.
 - **Prohibited:** Full speculative inventory.
 - **Documentation / report:** Components added/removed, evidence of recurrence, test coverage.
 
@@ -264,7 +266,7 @@ Four public v0.1 records were authored later in the separately completed content
 - **Boundaries:** Evidence frames, source/verification/captions, code/terminal/API, diagrams, tables/comparisons, responsive alternatives, redaction.
 - **Deliverable:** Artifact treatments validated with real evidence.
 - **Acceptance / validation:** Evidence remains readable, sourced, accessible, contextual, and nondecorative.
-- **Dependencies / blockers:** VRT-02; PRJ evidence where project-specific.
+- **Dependencies / blockers:** VRT-02 is Done; PRJ evidence and separate authorization remain required where project-specific.
 - **Prohibited:** Invented diagrams, benchmarks, terminal output, or library choice without gate.
 - **Documentation / report:** Artifacts tested, redactions, limitations, changed files.
 
@@ -279,7 +281,7 @@ Four public v0.1 records were authored later in the separately completed content
 - **Boundaries:** Implement only states relevant to existing scope with stable layout, announcements, and recovery.
 - **Deliverable:** State coverage matrix and implementations.
 - **Acceptance / validation:** No fake loading/success or color-only meaning; core context survives failure.
-- **Dependencies / blockers:** VRT-02 and relevant components.
+- **Dependencies / blockers:** VRT-02 is Done; relevant components and separate authorization remain required.
 - **Prohibited:** Placeholder features disguised as states.
 - **Documentation / report:** State scenarios, checks, missing recovery paths.
 
@@ -558,7 +560,7 @@ The CourtFit static repository-evidence and source privacy-boundary questions ar
 
 The stale CourtFit-governance inconsistency is resolved through GOV-05: `AGENTS.md`, `docs/07-project-rules.md`, and `docs/08-implementation-plan.md` now use the committed PRJ-02 evidence and preserve its runtime, provider, privacy, mobile, accessibility, Markdown, recommendation, testing, artifact, deployment, licensing, author-email, and publication blockers. This synchronization adds no new verification or implementation authority.
 
-DEC-03B resolves only the initial page-foundation direction, shared technical-surface direction, initial dual-theme status, one-maintainer maintenance direction, screenshot optionality, local/remote asset direction, and honest missing/unavailable-asset behavior. It approves one light-first shared foundation with bounded contrasting semantic technical surfaces and defers selectable dual themes. Actual colors, typography, theme and technical-surface implementation, contrast/focus, responsive and bilingual behavior, asset selection, privacy/redaction, rights/licensing, formats/delivery, quality tooling/execution, navigation and route implementation, First Visual Vertical implementation, deployment, and publication remain unresolved.
+DEC-03B resolves only the initial page-foundation direction, shared technical-surface direction, initial dual-theme status, one-maintainer maintenance direction, screenshot optionality, local/remote asset direction, and honest missing/unavailable-asset behavior. It approves one light-first shared foundation with bounded contrasting semantic technical surfaces and defers selectable dual themes. Actual colors, typography, broader theme and technical-surface implementation, contrast/focus, responsive and bilingual behavior, asset selection, privacy/redaction, rights/licensing, formats/delivery, quality tooling/execution, additional navigation and route implementation, further First Visual Vertical work, deployment, and publication remain unresolved.
 
 DEC-04B resolves only the overall layered-hybrid testing direction, Layers 0–8 responsibility model, smaller deterministic local baseline plus task-specific checks, future-CI mirroring direction, manual-review cadence, conditional-check policy, tiered capability-based supported-environment shape, risk-based release gates, non-numeric severity states, and explicit omission records. Exact quality tools, commands, configurations, CI provider/workflow, environment examples, thresholds, implementation, and executed evidence remain unresolved. No check result follows from approval.
 
@@ -579,8 +581,8 @@ The following unresolved blockers govern activation:
 | CourtFit streaming, Stop/Retry, mobile, accessibility, Markdown, recommendation, and test behavior remain unresolved | Decide incremental forwarding and message formatting; correct mobile action parity; verify cancellation/retry/responsive/accessibility/language behavior; obtain a verified shoe-data source where required; add an approved automated-test approach | PRJ-04, DEC-04, QA-01, A11Y-01, RWD-01 | Incremental-streaming, correct cancellation/retry, full responsive/accessibility, formatted-product, recommendation-accuracy, or passing-test claims |
 | CourtFit deployment and public artifacts remain unverified | Verify active deployment and source equivalence separately; review screenshots/artifacts, commit-author email, license/reuse terms, redaction, and publication approval | PRJ-04, EVD-01, PRV-01, REL-01 | Active-deployment claims, prominent repository/history use, artifact publication, or public project content |
 | No public-ready artifact set | Select actual artifacts, verify source/context, and complete redaction, rights, accessibility, and publication review | VRT-01/VRT-02/EVD-01/PRV-01 | Artifact-dependent implementation, repository promotion, or public evidence use |
-| Routes and navigation implementation is not authorized | DEC-06 resolves the v0.1 URL and language direction; separately authorize route and navigation implementation | NAV-01, VRT-02 | Route, page, language-switching, or navigation implementation |
-| First Visual Vertical is selected but not implemented | DEC-06 and VIS-01 select `/`, `/projects/`, and `/projects/booking-api-source-review/`; separately prepare and authorize implementation | VRT-02/CMP-01 | Route, page, layout, component, styling, or browser implementation |
+| Additional routes and navigation beyond the completed First Visual Vertical are not authorized | The completed scope is `/`, `/projects/`, and `/projects/booking-api-source-review/`; separately select and authorize any expansion | NAV-01, FND-02 | Additional route, page, language-switching, or navigation implementation |
+| No next vertical is selected | Preserve the completed three-route boundary and require separate owner selection and authorization before another vertical | VRT-01, VRT-02, CMP-01 | Additional page-family, route, layout, component, styling, or browser implementation |
 | DEC-04 quality direction is approved, but exact tooling, commands, configuration, CI, environment examples, thresholds, implementation, and executed evidence remain unresolved | Select each method only after matching implementation and separate authorization; execute applicable checks within later authorized tasks | FND-01, FND-02, RWD-01, A11Y-01, PERF-01, PRV-01, QA-01 | Quality-tool installation/configuration, CI creation, support claims, or passing-result claims |
 | DEC-05 deployment and privacy direction is approved, but provider selection, accounts, DNS, certificates, canonical-host behavior, commands, configuration, build artifacts, release scope, quality/privacy evidence, deployment execution, post-deployment verification, and recovery execution remain unresolved | Select and authorize each operational element only after implementation and QA/privacy readiness | REL-01, OPS-01 | Provider configuration, remote preview, deployment, release, recovery execution, or public operational claims |
 
@@ -894,8 +896,8 @@ DEC-02 (Done) + CON-01 (Done) + PRJ-01/PRJ-02 static evidence (Done) + GOV-04/GO
 CON-02 representative set (Done) ─► DEC-03 theme/asset direction (Done) + FND-01 semantic scope direction (Approved) ─► FND-01 implementation (Done) ─► public v0.1 content (Done)
 FND-01 implementation (Done) + public v0.1 content (Done) ─► DEC-06 (Approved) + VIS-01 (Approved) ─► First Visual Vertical selected: `/`, `/projects/`, `/projects/booking-api-source-review/`
 FND-01 implementation (Done) ─► FND-02 (Blocked) and NAV-01 (Blocked)
-FND-02 + NAV-01 + selected First Visual Vertical + separate implementation preparation and owner authorization ─► VRT-02 (Blocked)
-VRT-02 ─► CMP-01 / EVD-01 / STA-01 ─► PRJ-03 / PRJ-04 / RES-01 / LRN-01..04
+selected First Visual Vertical + separate implementation preparation and owner authorization ─► VRT-02 (Done: `/`, `/projects/`, `/projects/booking-api-source-review/`)
+VRT-02 (Done) ─► CMP-01 / EVD-01 / STA-01 remain separately blocked ─► PRJ-03 / PRJ-04 / RES-01 / LRN-01..04
 DEC-03 (Done) ─► theme/asset direction input for FND-02 / EVD-01 / RWD-01 / A11Y-01 / PERF-01 / PRV-01 / VRT-01; no task activation
 DEC-04 (Done) ─► quality direction input for FND-01 / FND-02 / NAV-01 / VRT-01 / VRT-02 / RWD-01 / A11Y-01 / PERF-01 / PRV-01 / QA-01 / REL-01 after DEC-05; no task activation
 DEC-05 (Done) ─► provider-independent content semantics / static core / direct-entry portability / VRT-01 / VRT-02 / EVD-01 / STA-01 / PERF-01 / PRV-01 / QA-01 / REL-01 / OPS-01; no task activation
@@ -905,7 +907,7 @@ representative release ─► RWD-01 + A11Y-01 + PERF-01 + PRV-01 ─► QA-01
 QA-01 + DEC-05 ─► REL-01 ─► OPS-01
 ```
 
-The Now queue is empty. DEC-01 through DEC-06 are Approved and Done; FND-01 and public v0.1 content are implemented; and VIS-01 is Approved. The First Visual Vertical is selected but unimplemented. FND-02, NAV-01, and VRT-02 remain Blocked and inactive. No governing decision authorizes route, page, layout, component, styling, asset, browser-interaction, deployment, or publication implementation.
+The Now queue is empty. DEC-01 through DEC-06 are Approved and Done; FND-01 and public v0.1 content are implemented; VIS-01 is Approved; and VRT-02 is Done for `/`, `/projects/`, and `/projects/booking-api-source-review/`. No next vertical is selected. FND-02 and NAV-01 remain Blocked and inactive, and no governing decision authorizes additional route, page, layout, component, styling, asset, browser-interaction, deployment, or publication implementation.
 
 # Validation and Completion Rules
 
@@ -964,7 +966,7 @@ DEC-04B resolved the overall testing approach, Layers 0–8, smaller determinist
 
 DEC-05B resolved D1 provider-neutral managed static hosting, A1 no analytics initially, `nattapong.dev` with verified HTTPS as the first-public-release boundary, separately reviewed remote previews, a static public email-link direction, no third parties by default, no runtime secret for the initial static core, minimal purpose-limited logs, revision-mapped known-good recovery, source/deployment-equivalence responsibility, post-deployment validation, and privacy-safe incident handling. Exact providers/accounts, DNS/certificates, canonical-host behavior, commands/configuration, release artifacts, preview controls, operational retention, recovery execution, public wording, and observed results remain open.
 
-FND-01B resolved the universal/separate/hybrid model choice, bounded About / Projects / Research / Learning topology, stable-ID versus slug identity, B2 translation-group strategy, hybrid claim/evidence representation direction, P1 public allowlist, V1–V4 responsibility layers, non-public fixture boundary, PM3 package-manager deferral, and bounded path direction. FND-01 later implemented the compatible Astro foundation and validation responsibilities, and the public v0.1 records were later authored separately. Route and page implementation, including the selected First Visual Vertical, remains a separate blocked scope.
+FND-01B resolved the universal/separate/hybrid model choice, bounded About / Projects / Research / Learning topology, stable-ID versus slug identity, B2 translation-group strategy, hybrid claim/evidence representation direction, P1 public allowlist, V1–V4 responsibility layers, non-public fixture boundary, PM3 package-manager deferral, and bounded path direction. FND-01 later implemented the compatible Astro foundation and validation responsibilities, and the public v0.1 records were later authored separately. The selected First Visual Vertical was subsequently implemented; further route and page implementation remains a separate blocked scope.
 
 - Which actual colors, typefaces, font loading, typography scale, spacing, motif, logo, icon set, semantic tokens, and project-specific visual variation should later evidence and prototypes support?
 - Which breakpoints, asset directories/names, image formats, responsive widths, compression, optimization, syntax highlighting, diagram tooling, screenshot tooling, video, or embed behavior are justified by real implementation and assets?
