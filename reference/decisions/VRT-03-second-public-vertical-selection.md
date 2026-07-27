@@ -3,14 +3,14 @@
 # Status
 
 - **Decision ID:** VRT-03
-- **Status:** Proposed — Awaiting Owner Approval
+- **Status:** Approved
 - **Decision owner:** Nattapong
 - **Scope:** Second public vertical selection only
 - **Implementation authorized:** No
 
 # Decision Summary
 
-Propose the **Learning** vertical as nattapong.dev's second public vertical. It would extend the current static, evidence-led journal with one approved learning-progress record while preserving the existing three-route website and its visual direction. This proposal selects neither implementation nor a broader sitemap change; owner approval and a separate implementation authorization remain required.
+Learning is approved as nattapong.dev's second public vertical. It extends the current static, evidence-led journal with one approved learning-progress record while preserving the existing three-route website and its visual direction. Approval selects neither implementation nor a broader sitemap change; a separate implementation authorization remains required.
 
 # Governing Inputs
 
@@ -28,13 +28,13 @@ Propose the **Learning** vertical as nattapong.dev's second public vertical. It 
 | --- | --- | --- | --- |
 | `/about/` | Complete approved identity record; static route contract already exists. | The homepage already renders its bounded orientation, learning directions, and limitation. A detail now would largely repeat that material without a distinct second journey or new evidence need. | Defer. Reconsider when approved background, experience, or contact material creates a genuinely deeper About record. |
 | `/research/` | Public-ready, review-approved record with a clear preparation question, scope, open questions, sources, and limitations. Fits the journal's uncertainty-led model. | The record is mixed-language, while real Thai/mixed-language rendering remains deferred from the bounded accessibility audit. Its preparation-only state requires especially careful presentation to avoid implying a selected topic, research approval, method, finding, or contribution. | Defer. Reconsider after separate mixed-language rendering validation and when the owner wants research preparation to be the next public emphasis. |
-| `/learning/` | One public-ready, review-approved English learning-progress record has a complete purpose, guided-learning context, changed understanding, gaps, claims, evidence, source context, and limitations. It directly supports the journal's learning-record purpose without claiming expertise. | Only one eligible record currently exists, so the index must remain useful at one item and scale editorially without a card wall. | **Propose now.** It is the smallest complete, honest expansion with no new dependency, configuration, or language-routing requirement. |
+| `/learning/` | One public-ready, review-approved English learning-progress record has a complete purpose, guided-learning context, changed understanding, gaps, claims, evidence, source context, and limitations. It directly supports the journal's learning-record purpose without claiming expertise. | Only one eligible record currently exists, so the index must remain useful at one item and scale editorially without a card wall. | **Approved.** It is the smallest complete, honest expansion with no new dependency, configuration, or language-routing requirement. |
 
-# Proposed Selection
+# Approved Selection
 
-Propose **Learning** as the second public vertical.
+Approve **Learning** as the second public vertical.
 
-The proposed route boundary is exactly:
+The approved route boundary is exactly:
 
 - `/learning/`
 - `/learning/guided-http-threadpool-learning/`
@@ -79,6 +79,13 @@ A later implementation authorization should require:
 - No claim of independent authorship, professional Rust expertise, completed research, selected research topic, verified runtime, test, benchmark, performance, or production outcome.
 - No selection of a third vertical or broader information-architecture redesign.
 
-# Owner Approval Requirement
+# Owner Approval Record
 
-This decision is **Proposed** only. Owner approval must confirm whether Learning should become the next public vertical before any implementation preparation or implementation task is authorized. Approval must not be inferred from this document, its route boundary, or the current public record.
+Nattapong approved Learning as the second public vertical with this exact route boundary:
+
+- `/learning/`
+- `/learning/guided-http-threadpool-learning/`
+
+This approval preserves About's deferral because its current record substantially duplicates the homepage orientation. It preserves Research's deferral because its preparation-only, mixed-language record requires separate rendering validation and particularly careful uncertainty presentation.
+
+The approval does not authorize implementation. No Learning page, detail route, navigation update, additional Learning record, package, configuration, browser JavaScript, or broader route expansion is approved. Static rendering and complete no-JavaScript navigation remain required for any later separately authorized implementation.

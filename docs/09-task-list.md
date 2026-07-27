@@ -245,12 +245,21 @@ Four public v0.1 records were authored later in the separately completed content
 **Status:** Done · **Priority:** P1
 
 - **Completion reason:** Compared the approved About, Research, and Learning public records against content readiness, visitor value, journal fit, route complexity, accessibility risk, honesty risk, reusability, and the smallest complete static slice.
-- **Output:** `reference/decisions/VRT-03-second-public-vertical-selection.md` — **Proposed — Awaiting Owner Approval**.
-- **Proposed vertical:** Learning, with the proposed route boundary `/learning/` and `/learning/guided-http-threadpool-learning/`. This is one proposed vertical; the current implemented website remains `/`, `/projects/`, and `/projects/booking-api-source-review/`.
-- **Implementation boundary:** No implementation is authorized. Owner approval and a separate bounded implementation authorization remain required.
+- **Output:** `reference/decisions/VRT-03-second-public-vertical-selection.md` — **Approved** through VRT-03A-R.
+- **Approved vertical:** Learning, with the approved route boundary `/learning/` and `/learning/guided-http-threadpool-learning/`. This is one approved vertical; the current implemented website remains `/`, `/projects/`, and `/projects/booking-api-source-review/`.
+- **Implementation boundary:** No implementation has occurred or is authorized. A separate bounded implementation authorization remains required.
 - **Deferred candidates:** About remains deferred because its current complete record would substantially duplicate the homepage orientation. Research remains deferred because its mixed-language, preparation-only record requires separate rendering validation and especially careful uncertainty presentation.
 - **Queue boundary:** The Now queue remains empty; no implementation task, next vertical, route, or navigation work was activated.
 - **Files changed:** `reference/decisions/VRT-03-second-public-vertical-selection.md` and `docs/09-task-list.md`.
+
+**VRT-03A-R — Approve Learning as Second Public Vertical**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Nattapong approved Learning as the second public vertical and approved `/learning/` and `/learning/guided-http-threadpool-learning/` as its exact route boundary.
+- **Decision record:** `reference/decisions/VRT-03-second-public-vertical-selection.md` — **Approved**.
+- **Implementation boundary:** No route, page, component, style, navigation, content, package, or configuration implementation occurred or is authorized. No additional Learning record or route is approved.
+- **Queue boundary:** The Now queue remains empty; a separate implementation authorization remains required.
 
 # Later — Shared System Expansion
 
