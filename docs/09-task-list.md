@@ -789,6 +789,16 @@ Done and Cancelled records retain stable ID, completion/cancellation reason, val
 - **Files changed:** `reference/decisions/VIS-01-nattapong-visual-direction.md` and `docs/09-task-list.md`.
 - **Follow-up:** Do not activate implementation automatically.
 
+**VIS-03A — Define Refined Visual Identity Direction**
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Synthesized the tracked reference research, completed three-route implementation, and owner feedback into a proposed refinement that preserves the current readable, calm, evidence-led presentation.
+- **Output:** `reference/decisions/VIS-02-refined-visual-identity-direction.md` — **Proposed**, awaiting owner review.
+- **Boundary:** The First Visual Vertical remains `/`, `/projects/`, and `/projects/booking-api-source-review/`; it is unchanged. No next vertical, route, content, motion, dark-mode, asset, or implementation task was activated.
+- **Implementation authorization:** None. Owner approval and a separate bounded implementation authorization remain required.
+- **Files changed:** `reference/decisions/VIS-02-refined-visual-identity-direction.md` and `docs/09-task-list.md`.
+- **Follow-up:** Keep the Now queue empty; do not activate implementation automatically.
+
 ## Completed Content Verification
 
 **CON-01 — Verify public profile and contact content**  
