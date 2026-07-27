@@ -430,19 +430,39 @@ Four public v0.1 records were authored later in the separately completed content
 ## Accessibility Validation
 
 **A11Y-01 — Complete accessibility validation and blocker remediation**  
-**Status:** Later · **Priority:** P0
+**Status:** Done · **Priority:** P0
 
 - **Source:** Phase 15; all accessibility requirements.
-- **Objective / why now:** Gate release after the coherent scope exists while accessibility has been integrated throughout.
-- **Reading:** Accessibility rules, component/motion contracts, release scope.
-- **Authorization:** Implementation and chosen test systems specified later.
-- **Inputs:** Landmarks, headings, keyboard, focus, names, states, color, tables, figures, diagrams, forms/media if present, motion, zoom/reflow, touch, direct entry.
-- **Boundaries:** Validate and remediate blockers; tools/thresholds require DEC-04.
-- **Deliverable:** Findings, blocker fixes, residual limitations.
-- **Acceptance / validation:** No known blocking access barrier remains.
-- **Dependencies / blockers:** Representative release; DEC-04.
-- **Prohibited:** Deferring known blockers to post-release.
-- **Documentation / report:** Methods, cases, fixes, omitted checks, files.
+- **Completion scope:** Bounded validation of the implemented static three-route First Visual Vertical: `/`, `/projects/`, and `/projects/booking-api-source-review/`.
+- **Outcome:** A11Y-01A demonstrated one blocker—homepage H1 horizontal overflow at 320px with the required text-spacing override. A11Y-01B resolved it with `h1 { overflow-wrap: anywhere; }` in commit `20e41598d97ff276af85a355eed29325c0539b74` (`Fix heading text-spacing reflow`).
+- **Revalidation:** Passed at 320px and 390px; 200%, 300%, and 400%-equivalent reflow; required text-spacing override; visible keyboard focus; no-JavaScript loading; reduced motion; and Astro sync, check, and static build.
+- **Current result:** No known accessibility blocker remains from this bounded audit.
+- **Deferred coverage:** This is not formal WCAG, screen-reader, Firefox, Safari, physical-device, performance, or real Thai/mixed-language rendering certification. Those scopes remain separately authorized and unverified.
+- **Boundary:** No route, content, component, visual-identity, package, configuration, or runtime scope changed beyond the one bounded CSS remediation.
+- **Follow-up:** Keep the Now queue empty; do not activate a further accessibility, release, or implementation task automatically.
+
+**A11Y-01A — Validate Accessibility**
+
+**Status:** Done · **Priority:** P0
+
+- **Completion reason:** Completed a read-only accessibility audit of the three-route static site. It examined semantic structure, accessibility tree and names, keyboard and focus behavior, zoom/reflow, contrast, Evidence Trace relationships, no-JavaScript use, reduced motion, and local browser coverage.
+- **Finding:** Demonstrated the homepage H1 text-spacing overflow blocker at 320px. No other blocker was demonstrated.
+- **Boundary:** No repository file changed; no formal accessibility certification was claimed.
+
+**A11Y-01B — Remediate Homepage Heading Text-Spacing Reflow**
+
+**Status:** Done · **Priority:** P0
+
+- **Completion reason:** Added `h1 { overflow-wrap: anywhere; }` in `src/styles/global.css` to resolve the demonstrated text-spacing reflow blocker.
+- **Implementation commit:** `20e41598d97ff276af85a355eed29325c0539b74` (`Fix heading text-spacing reflow`).
+- **Validation:** Bounded revalidation passed for the existing three routes with no content, route, visual-identity, or runtime expansion.
+
+**A11Y-01C — Record Accessibility Validation Completion**
+
+**Status:** Done · **Priority:** P0
+
+- **Completion reason:** Reconciled the audit, remediation, revalidation, and deferred-coverage state in this Task List.
+- **Boundary:** The Now queue remains empty; no additional task was activated.
 
 ## Motion and Optional Enhancement
 
