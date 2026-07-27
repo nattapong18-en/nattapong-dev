@@ -316,7 +316,16 @@ Four public v0.1 records were authored later in the separately completed content
 - **Completion reason:** Implemented the approved semantic homepage Contact section with visible `zpoloa0@gmail.com`, `mailto:zpoloa0@gmail.com`, and the descriptive GitHub link to `https://github.com/nattapong18-en`.
 - **Boundary:** No contact route, form, footer, primary-navigation item, phone, additional social account, copy-to-clipboard interaction, solicitation language, analytics, or browser JavaScript was added. Home Lab remains deferred because it has not started and no first record is ready.
 - **Validation:** Astro sync, check, and static build passed. Generated output confirmed one homepage Contact section, approved links, unchanged five-route boundary, custom 404, robots, sitemap, no excluded route, and no browser JavaScript. Bounded homepage checks covered 1440px/320px reading order, focus, email wrapping, and JavaScript-disabled completeness.
-- **Queue boundary:** CNT-01 is complete within its approved scope. The Now queue remains empty; no production review, Home Lab, or other task is activated.
+
+**CNT-01B-R1 — Refine Contact Visual Presentation**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Refined the existing semantic Contact section into a compact editorial panel with a neutral supporting sentence and clear Email/GitHub label-value rows.
+- **Files:** `src/pages/index.astro`, `src/styles/global.css`, `reference/decisions/CNT-01-minimal-contact-experience.md`, and `docs/09-task-list.md` only.
+- **Boundary:** Approved contact data and behavior remain unchanged. No route, form, footer, navigation item, analytics, browser JavaScript, new animation, or solicitation language was added. Home Lab remains deferred because it has not started and no first record is ready.
+- **Production-review state:** CNT-01C remains incomplete pending fresh production review. Cloudflare Email Address Obfuscation remains an external configuration remediation; no Cloudflare setting was changed in this task.
+- **Queue boundary:** The Now queue remains empty; CNT-01D, Home Lab, and other tasks are not activated.
 
 # Later — Shared System Expansion
 

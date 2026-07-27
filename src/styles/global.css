@@ -315,22 +315,53 @@ dd {
 .home-contact {
   max-width: var(--measure-reading);
   margin-block-start: var(--space-section);
+  padding: var(--space-component);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
 }
 
 .home-contact h2 {
   margin-block-start: 0;
 }
 
-.home-contact ul {
+.home-contact p {
+  max-width: 46ch;
+}
+
+.home-contact dl {
   display: grid;
-  gap: 0.5rem;
   margin: var(--space-component) 0 0;
   padding: 0;
-  list-style: none;
+  border-block-start: 1px solid var(--color-border);
+}
+
+.home-contact dl div {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+  padding-block: 0.7rem;
+  border-block-end: 1px solid var(--color-border);
+}
+
+.home-contact dt {
+  color: var(--color-text-secondary);
+  font-family: var(--font-metadata);
+  font-size: var(--step--1);
+  font-weight: 750;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.home-contact dd {
+  min-width: 0;
+  margin: 0;
+  font-size: var(--step-1);
 }
 
 .home-contact a {
   overflow-wrap: anywhere;
+  font-weight: 650;
 }
 
 .project-list {
@@ -538,6 +569,12 @@ dd {
 
   .orientation-grid section:nth-child(2) {
     margin-block-start: var(--space-component);
+  }
+
+  .home-contact dl div {
+    grid-template-columns: minmax(7rem, 0.35fr) minmax(0, 1fr);
+    align-items: baseline;
+    column-gap: var(--space-component);
   }
 
   .project-summary {

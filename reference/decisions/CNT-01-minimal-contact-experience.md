@@ -113,6 +113,12 @@ Deferred: shared footer; `/contact/`; contact form; mail-delivery provider; CAPT
 
 CNT-01B added one semantic homepage Contact section after the existing primary and boundary content. It uses the approved visible email, static `mailto:` link, and descriptive GitHub link. The bounded `global.css` adjustment supplies section rhythm and safe long-link wrapping; no route, form, footer, navigation item, browser JavaScript, analytics, or solicitation language was added. Validation is recorded in the Task List.
 
+# Visual Refinement Record
+
+CNT-01B-R1 refined the existing Contact section after production review found that its initial presentation read as disconnected appended text. The approved contact data, link behavior, and functional scope remain unchanged. The section now uses one compact editorial surface with restrained border and warm-paper surface treatment, a neutral supporting sentence, and semantic label/value rows for Email and GitHub. It does not adopt amber limitation emphasis, new motion, a route, form, footer, navigation item, analytics, or browser JavaScript.
+
+The Cloudflare Email Address Obfuscation finding remains an external configuration remediation. CNT-01C remains incomplete pending a fresh production review after the external setting and this refinement are deployed.
+
 # Consequences
 
 This proposal adds a small static contact affordance only after separate approval. It preserves the current public routes, navigation, visual identity, no-browser-JavaScript boundary, privacy limits, and Home Lab deferral. It does not promise availability or create a contact-processing system.
