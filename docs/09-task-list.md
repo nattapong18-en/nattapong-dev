@@ -572,6 +572,22 @@ Four public v0.1 records were authored later in the separately completed content
 - **Deferred scope:** Richer motion, page transitions, page-entry animation, scroll reveal, parallax, animation runtime, visual redesign, Open Graph metadata, structured data, localization, About, Research, and additional public verticals remain deferred.
 - **Current state:** Production satisfies the no-browser-JavaScript boundary. The Now queue remains empty; no further task is activated.
 
+**SEO-03A — Define Social Metadata and Structured Data**
+
+**Status:** Done · **Priority:** P2
+
+- **Completion reason:** Defined a Proposed minimum social metadata and static structured-data policy without implementing metadata.
+- **Decision record:** `reference/decisions/SEO-03-social-metadata-and-structured-data.md`.
+- **Boundary:** Current routes, visible content, canonical metadata, packages, deployment, and production remain unchanged. Owner approval is required before implementation.
+
+**SEO-03B — Implement Social Metadata and Structured Data**
+
+**Status:** Blocked · **Priority:** P2
+
+- **Blocker:** Owner approval of Proposed SEO-03 and separate implementation authorization.
+- **Proposed boundary:** Shared layout metadata plus homepage-only static WebSite and Person JSON-LD; no social image, browser JavaScript, package, route, content, or deployment change.
+- **Current state:** No social metadata or structured data has been implemented. The Now queue remains empty.
+
 ## Performance, Privacy, and Security
 
 **PERF-01 — Review performance and progressive enhancement**  
