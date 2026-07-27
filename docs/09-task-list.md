@@ -286,6 +286,19 @@ Four public v0.1 records were authored later in the separately completed content
 - **Current boundary:** The website contains five static public routes: `/`, `/projects/`, `/projects/booking-api-source-review/`, `/learning/`, and `/learning/guided-http-threadpool-learning/`.
 - **Queue and scope boundary:** About and Research remain deferred. No next vertical, implementation task, or deployment task is selected or activated; the Now queue remains empty.
 
+## Next Public Vertical Selection
+
+**VRT-04A — Select the Next Public Vertical**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Compared Home Lab, Engineering Notes, About, Research, and System Programming against distinctness, evidence, growth, identity, honesty, implementation, and public-readiness criteria.
+- **Output:** `reference/decisions/VRT-04-next-public-vertical.md` — **Proposed** and awaiting owner approval.
+- **Selected candidate:** Home Lab, proposed at `/home-lab/`, subject to a separate approved first-record evidence gate. The Raspberry Pi Personal Cloud direction is treated as evolving personal infrastructure work; only its verified current NAS state may enter a future public record.
+- **Deferred candidates:** Engineering Notes lacks approved records; About remains duplicative of homepage orientation; Research retains mixed-language and preparation-only presentation constraints; and System Programming lacks a bounded public record.
+- **Implementation boundary:** No route, content, navigation, component, CSS, package, configuration, deployment, or public claim was implemented. VRT-04B remains **Blocked** pending owner approval and reviewed first-record evidence.
+- **Queue boundary:** The Now queue remains empty; no implementation or other task is activated.
+
 # Later — Shared System Expansion
 
 **CMP-01 — Extract and document recurring shared components**  
