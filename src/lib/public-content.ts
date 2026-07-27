@@ -12,6 +12,7 @@ import {
 import {
   assertNoRouteCollisions,
   filterPublicationEligible,
+  learningDetailPath,
   prepareEligibleFamilyRecords,
   projectDetailPath,
   requireExpectedRecord,
@@ -19,10 +20,12 @@ import {
 } from "./public-routing.ts";
 
 const expectedAboutRecordId = "about-profile";
+const expectedLearningRecordId = "learning-rust-http";
 
 export type PublicContent = {
   about: CollectionEntry<"about">;
   projects: CollectionEntry<"projects">[];
+  learning: CollectionEntry<"learning">[];
 };
 
 let publicContentPromise: Promise<PublicContent> | undefined;
@@ -60,9 +63,16 @@ async function loadPublicContent(): Promise<PublicContent> {
     expectedAboutRecordId,
     "about",
   );
+  const learningRecord = requireExpectedRecord(
+    eligibleRecords,
+    expectedLearningRecordId,
+    "learning",
+  );
   const projectRecords = prepareEligibleFamilyRecords(records, "projects");
+  const learningRecords = prepareEligibleFamilyRecords(records, "learning");
 
   requireFamilyRecords(projectRecords, "projects");
+  requireFamilyRecords(learningRecords, "learning");
 
   const about = aboutEntries.find(
     (entry) => entry.data.recordId === aboutRecord.recordId,
@@ -89,6 +99,31 @@ async function loadPublicContent(): Promise<PublicContent> {
     return entry;
   });
 
+  const learningByRecordId = new Map(
+    learningEntries.map((entry) => [entry.data.recordId, entry]),
+  );
+  const learning = learningRecords.map((record) => {
+    const entry = learningByRecordId.get(record.recordId);
+
+    if (!entry) {
+      throw new Error(
+        `Eligible Learning record "${record.recordId}" has no matching collection entry.`,
+      );
+    }
+
+    return entry;
+  });
+
+  if (
+    !learning.some(
+      (entry) => entry.data.recordId === learningRecord.recordId,
+    )
+  ) {
+    throw new Error(
+      `Required Learning record "${learningRecord.recordId}" is missing from eligible collection entries.`,
+    );
+  }
+
   assertNoRouteCollisions([
     { path: "/", sourceId: "home" },
     { path: "/projects/", sourceId: "projects-index" },
@@ -96,9 +131,14 @@ async function loadPublicContent(): Promise<PublicContent> {
       path: projectDetailPath(entry.data.slug, entry.data.recordId),
       sourceId: entry.data.recordId,
     })),
+    { path: "/learning/", sourceId: "learning-index" },
+    ...learning.map((entry) => ({
+      path: learningDetailPath(entry.data.slug, entry.data.recordId),
+      sourceId: entry.data.recordId,
+    })),
   ]);
 
-  return { about, projects };
+  return { about, projects, learning };
 }
 
 export function getPublicContent(): Promise<PublicContent> {

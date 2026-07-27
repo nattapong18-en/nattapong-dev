@@ -1,11 +1,16 @@
 ---
-import type { ProjectRecord } from "../content/schema/families.ts";
+import type {
+  ContentClaim,
+  ContentEvidence,
+  ContentLimitation,
+  ContentSource,
+} from "../content/schema/shared.ts";
 
 interface Props {
-  claims: ProjectRecord["claims"];
-  evidence: ProjectRecord["evidence"];
-  sources: ProjectRecord["sources"];
-  limitations: ProjectRecord["limitations"];
+  claims: ContentClaim[];
+  evidence: ContentEvidence[];
+  sources: ContentSource[];
+  limitations: ContentLimitation[];
 }
 
 const { claims, evidence, sources, limitations } = Astro.props;
@@ -19,10 +24,10 @@ const additionalLimitations = limitations.filter(
     !limitation.claimIds?.some((claimId) => knownClaimIds.has(claimId)),
 );
 
-type Claim = ProjectRecord["claims"][number];
-type Evidence = ProjectRecord["evidence"][number];
-type Source = ProjectRecord["sources"][number];
-type Limitation = ProjectRecord["limitations"][number];
+type Claim = ContentClaim;
+type Evidence = ContentEvidence;
+type Source = ContentSource;
+type Limitation = ContentLimitation;
 
 interface ResolvedClaim {
   claim: Claim;

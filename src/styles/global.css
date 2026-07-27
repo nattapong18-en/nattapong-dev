@@ -230,7 +230,9 @@ dd {
 
 .orientation-grid h2,
 .project-list h2,
-.project-detail h2 {
+.project-detail h2,
+.learning-list h2,
+.learning-detail h2 {
   margin-block-start: 0;
 }
 
@@ -368,6 +370,110 @@ dd {
   max-width: var(--measure-reading);
 }
 
+.learning-list {
+  display: grid;
+  gap: 0;
+  margin-block-start: var(--space-section);
+  border-block-start: 1px solid var(--color-border);
+}
+
+.learning-summary {
+  display: grid;
+  gap: var(--space-component);
+  padding-block: var(--space-section);
+  border-block-end: 1px solid var(--color-border);
+}
+
+.learning-summary__primary,
+.learning-summary__context {
+  min-width: 0;
+}
+
+.learning-summary__primary > *:last-child,
+.learning-summary__context > *:last-child {
+  margin-block-end: 0;
+}
+
+.learning-summary h2 {
+  font-size: var(--step-3);
+}
+
+.learning-summary__context {
+  display: grid;
+  align-content: start;
+  gap: var(--space-component);
+}
+
+.learning-summary__context section > * {
+  margin-block: 0;
+}
+
+.learning-summary__context section > * + * {
+  margin-block-start: 0.5rem;
+}
+
+.learning-facts,
+.learning-progress {
+  display: grid;
+  gap: var(--space-component);
+  margin: 0;
+  padding-inline-start: var(--space-content);
+  border-inline-start: 0.18rem solid var(--color-accent);
+}
+
+.learning-facts div,
+.learning-progress div {
+  min-width: 0;
+}
+
+.learning-facts dt,
+.learning-progress dt {
+  color: var(--color-accent);
+  font-family: var(--font-metadata);
+  font-size: var(--step--1);
+  font-weight: 750;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.learning-facts dd,
+.learning-progress dd {
+  margin: 0.35rem 0 0;
+}
+
+.learning-gap-list {
+  margin: 0;
+  padding-inline-start: 1.25rem;
+}
+
+.learning-gap-list li + li {
+  margin-block-start: 0.45rem;
+}
+
+.learning-detail__intro,
+.learning-detail__progress,
+.learning-narrative {
+  max-width: var(--measure-reading);
+}
+
+.learning-detail__facts,
+.learning-detail__progress,
+.learning-narrative {
+  margin-block-start: var(--space-section);
+}
+
+.learning-detail__progress > h2 {
+  margin-block-end: var(--space-component);
+}
+
+.learning-detail__gaps {
+  margin-block-start: var(--space-component);
+}
+
+.learning-detail__gaps h3 {
+  margin-block-end: var(--space-content);
+}
+
 .prose > :first-child {
   margin-block-start: 0;
 }
@@ -396,8 +502,14 @@ dd {
     column-gap: var(--space-section);
   }
 
-  .project-facts {
+  .project-facts,
+  .learning-facts {
     align-content: start;
+  }
+
+  .learning-summary {
+    grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
+    column-gap: var(--space-section);
   }
 }
 

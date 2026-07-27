@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublicContent } from "../../lib/public-content.ts";
+
+const { learning } = await getPublicContent();
+---
+
+<BaseLayout title="Learning — Nattapong Sangsana" currentPath="/learning/">
+  <div class="page-shell">
+    <header class="page-intro">
+      <p class="context-label">Public learning record</p>
+      <h1>Learning</h1>
+    </header>
+
+    <div class="learning-list">
+      {
+        learning.map((entry) => {
+          const progress = entry.data.learningProgress;
+          const primaryLimitation = entry.data.limitations?.[0];
+
+          return (
+            <article class="learning-summary">
+              <div class="learning-summary__primary">
+                <h2>
+                  <a href={`/learning/${entry.data.slug}/`}>
+                    {entry.data.title}
+                  </a>
+                </h2>
+                <p class="lede">{entry.data.summary}</p>
+                {progress?.guidance && (
+                  <p>
+                    <strong>Guided context:</strong> {progress.guidance}
+                  </p>
+                )}
+              </div>
+
+              <div class="learning-summary__context">
+                {progress && (
+                  <>
+                    <section aria-labelledby={`changed-${entry.data.slug}`}>
+                      <h3 id={`changed-${entry.data.slug}`}>
+                        Changed understanding
+                      </h3>
+                      <p>{progress.changedUnderstanding}</p>
+                    </section>
+
+                    <section aria-labelledby={`gaps-${entry.data.slug}`}>
+                      <h3 id={`gaps-${entry.data.slug}`}>Current gaps</h3>
+                      <ul class="learning-gap-list">
+                        {progress.currentGaps.map((gap) => <li>{gap}</li>)}
+                      </ul>
+                    </section>
+                  </>
+                )}
+
+                {primaryLimitation && (
+                  <p class="limitation-note">
+                    <strong>Limitation:</strong>{" "}
+                    {primaryLimitation.statement}
+                  </p>
+                )}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</BaseLayout>

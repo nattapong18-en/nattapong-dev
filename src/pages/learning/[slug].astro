@@ -1,0 +1,128 @@
+---
+import {
+  render,
+  type CollectionEntry,
+} from "astro:content";
+
+import EvidenceTrace from "../../components/EvidenceTrace.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublicContent } from "../../lib/public-content.ts";
+
+export async function getStaticPaths() {
+  const { learning } = await getPublicContent();
+
+  return learning.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"learning">;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const currentPath = `/learning/${entry.data.slug}/`;
+const progress = entry.data.learningProgress;
+const claims = entry.data.claims ?? [];
+const evidence = entry.data.evidence ?? [];
+const sources = entry.data.sources ?? [];
+const limitations = entry.data.limitations ?? [];
+const hasEvidenceTrace =
+  claims.length > 0 &&
+  evidence.length > 0 &&
+  sources.length > 0 &&
+  limitations.length > 0;
+const learningKind = entry.data.learningKind
+  .split("-")
+  .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+  .join(" ");
+const verification = entry.data.verification
+  .split("-")
+  .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+  .join(" ");
+---
+
+<BaseLayout
+  title={`${entry.data.title} — Nattapong Sangsana`}
+  description={entry.data.summary}
+  currentPath={currentPath}
+>
+  <article class="page-shell learning-detail">
+    <header class="learning-detail__intro">
+      <p class="context-label">Learning record</p>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">{entry.data.summary}</p>
+    </header>
+
+    <dl class="learning-facts learning-detail__facts">
+      <div>
+        <dt>Record type</dt>
+        <dd>{learningKind}</dd>
+      </div>
+      <div>
+        <dt>Verification</dt>
+        <dd>{verification}</dd>
+      </div>
+    </dl>
+
+    {
+      progress && (
+        <section
+          class="learning-detail__progress"
+          aria-labelledby="learning-progress-title"
+        >
+          <h2 id="learning-progress-title">Learning progress</h2>
+          <dl class="learning-progress">
+            <div>
+              <dt>Starting point</dt>
+              <dd>{progress.startingPoint}</dd>
+            </div>
+            {progress.guidance && (
+              <div>
+                <dt>Guided context</dt>
+                <dd>{progress.guidance}</dd>
+              </div>
+            )}
+            <div>
+              <dt>Changed understanding</dt>
+              <dd>{progress.changedUnderstanding}</dd>
+            </div>
+          </dl>
+
+          <section
+            class="learning-detail__gaps limitation-note"
+            aria-labelledby="current-gaps-title"
+          >
+            <h3 id="current-gaps-title">Current gaps</h3>
+            <ul class="learning-gap-list">
+              {progress.currentGaps.map((gap) => <li>{gap}</li>)}
+            </ul>
+          </section>
+        </section>
+      )
+    }
+
+    <section
+      class="learning-narrative"
+      aria-labelledby="learning-narrative-title"
+    >
+      <h2 id="learning-narrative-title">Learning narrative</h2>
+      <div class="prose">
+        <Content />
+      </div>
+    </section>
+
+    {
+      hasEvidenceTrace && (
+        <EvidenceTrace
+          claims={claims}
+          evidence={evidence}
+          sources={sources}
+          limitations={limitations}
+        />
+      )
+    }
+  </article>
+</BaseLayout>

@@ -113,7 +113,7 @@ export function requireFamilyRecords(
 ): void {
   if (!records.some((record) => record.family === family)) {
     throw new Error(
-      `The First Visual Vertical requires at least one eligible "${family}" record.`,
+      `Public routing requires at least one eligible "${family}" record.`,
     );
   }
 }
@@ -121,6 +121,11 @@ export function requireFamilyRecords(
 export function projectDetailPath(slug: string, sourceId: string): string {
   assertSafeRouteSlug(slug, sourceId);
   return `/projects/${slug}/`;
+}
+
+export function learningDetailPath(slug: string, sourceId: string): string {
+  assertSafeRouteSlug(slug, sourceId);
+  return `/learning/${slug}/`;
 }
 
 export function assertNoRouteCollisions(
