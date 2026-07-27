@@ -38,8 +38,10 @@
   --measure-reading: 68ch;
   --measure-wide: 76rem;
   --radius-surface: 0.45rem;
-  --duration-feedback: 140ms;
-  --easing-feedback: ease-out;
+  --motion-fast: 140ms;
+  --motion-standard: 180ms;
+  --motion-easing: ease-out;
+  --motion-translation-max: 1px;
 }
 
 *,
@@ -75,15 +77,16 @@ a {
   text-decoration-thickness: 0.09em;
   text-underline-offset: 0.18em;
   transition:
-    color var(--duration-feedback) var(--easing-feedback),
-    text-decoration-thickness var(--duration-feedback) var(--easing-feedback),
-    text-underline-offset var(--duration-feedback) var(--easing-feedback),
-    background-color var(--duration-feedback) var(--easing-feedback),
-    border-color var(--duration-feedback) var(--easing-feedback),
-    box-shadow var(--duration-feedback) var(--easing-feedback);
+    color var(--motion-fast) var(--motion-easing),
+    text-decoration-thickness var(--motion-fast) var(--motion-easing),
+    text-underline-offset var(--motion-fast) var(--motion-easing),
+    background-color var(--motion-fast) var(--motion-easing),
+    border-color var(--motion-fast) var(--motion-easing),
+    box-shadow var(--motion-fast) var(--motion-easing);
 }
 
-a:hover {
+a:hover,
+a:focus-visible {
   text-decoration-thickness: 0.14em;
   text-underline-offset: 0.25em;
 }
@@ -186,11 +189,30 @@ dd {
   text-decoration: none;
 }
 
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: inset 0 -0.14rem 0 var(--color-accent);
+}
+
 .site-nav a[aria-current] {
   background: var(--color-evidence-surface);
   color: var(--color-text);
   font-weight: 700;
   box-shadow: inset 0 -0.18rem 0 var(--color-accent);
+}
+
+.evidence-claim h3 {
+  scroll-margin-block: 1rem;
+  transition:
+    background-color var(--motion-standard) var(--motion-easing),
+    box-shadow var(--motion-standard) var(--motion-easing);
+}
+
+.evidence-claim h3:target {
+  background: var(--color-evidence-surface);
+  box-shadow: inset 0.2rem 0 0 var(--color-accent);
 }
 
 .page-shell {

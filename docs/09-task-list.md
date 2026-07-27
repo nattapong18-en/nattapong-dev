@@ -515,7 +515,7 @@ Four public v0.1 records were authored later in the separately completed content
 ## Motion and Optional Enhancement
 
 **MOT-01 — Add only demonstrated motion and optional enhancement**  
-**Status:** Later · **Priority:** P3
+**Status:** Done · **Priority:** P3
 
 - **Source:** Phase 13; animation/component rules.
 - **Objective / why now:** Improve verified feedback or explanation only after static behavior is stable.
@@ -528,23 +528,25 @@ Four public v0.1 records were authored later in the separately completed content
 - **Dependencies / blockers:** Static acceptance, verified behavior, accessibility/performance baseline.
 - **Prohibited:** Routine reveals, ambient motion, polish-only animation, unverified sequences.
 - **Documentation / report:** Purpose, mappings, checks, files, removed motion.
+- **Completion:** Approved minimal CSS-only feedback was implemented by MOT-01B; broader motion remains deferred.
 
 **MOT-01A — Define Purposeful Motion Layer**
 
 **Status:** Done · **Priority:** P3
 
-- **Completion reason:** Defined a Proposed CSS-only feedback direction without implementing motion.
-- **Decision record:** `reference/decisions/MOT-01-purposeful-motion-layer.md`.
+- **Completion reason:** Defined the motion direction later approved and implemented by MOT-01B.
+- **Decision record:** `reference/decisions/MOT-01-purposeful-motion-layer.md` — **Approved**.
 - **Boundary:** Existing static behavior, routes, content, visual identity, browser-JavaScript boundary, and production deployment remain unchanged.
 - **Follow-up:** Owner review is required before a bounded implementation task can be authorized.
 
 **MOT-01B — Implement Purposeful Motion Layer**
 
-**Status:** Blocked · **Priority:** P3
+**Status:** Done · **Priority:** P3
 
-- **Blocker:** Owner approval of Proposed MOT-01 and separate implementation authorization.
-- **Proposed boundary:** Shared CSS only, with an Evidence Trace semantic hook only if demonstrably necessary; no JavaScript, package, route, content, or visual-identity redesign.
-- **Current state:** No motion implementation has occurred. The Now queue remains empty.
+- **Completion reason:** Implemented the approved CSS-only feedback layer in `src/styles/global.css` without translation or component changes.
+- **Approved tokens:** `140ms` fast, `180ms` standard, `ease-out`, and a `1px` maximum translation ceiling; underline, color, and border feedback remain primary.
+- **Validation:** Astro sync, check, and static build passed. Local checks covered semantic output, keyboard focus, fragment targets, reduced motion, JavaScript-disabled static output, 1440px/320px direct routes, and no ordinary horizontal overflow.
+- **Boundary:** No browser JavaScript, package, route, content, visual-identity, deployment, or production change occurred. The Now queue remains empty.
 
 ## Performance, Privacy, and Security
 

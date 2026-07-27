@@ -3,13 +3,24 @@
 # Status
 
 - **Decision ID:** MOT-01
-- **Status:** Proposed
+- **Status:** Approved
 - **Decision owner:** Nattapong
 - **Scope:** A minimal, CSS-only feedback layer for the existing static public routes
-- **Implementation authorized:** No
-- **Owner approval required:** Yes
+- **Implementation authorized:** Yes — bounded CSS-only scope recorded below
+- **Owner approval required:** No — recorded below
 
 This proposal builds on the Approved [VIS-01 visual direction](VIS-01-nattapong-visual-direction.md), Approved [VIS-02 refined visual identity direction](VIS-02-refined-visual-identity-direction.md), [Design DNA](../design-dna.md), and [animation specification](../../docs/06-animation-spec.md). It does not alter the current visual identity, content, routes, or static-first architecture.
+
+# Owner Approval Record
+
+Nattapong approved the CSS-only motion scope with these constraints:
+
+- **Tokens:** fast `140ms`, standard `180ms`, `ease-out`, and a maximum translation of `1px`.
+- **Primary feedback:** underline, color, and border feedback for existing navigation and text links.
+- **Evidence Trace:** a persistent, restrained `:target` emphasis after intentional fragment navigation.
+- **Translation:** permitted only on a clearly interactive bounded surface, never ordinary text links, never above `1px`, and not required by the first implementation.
+
+This approval does not authorize browser JavaScript, packages, page transitions, content changes, route changes, a visual-identity redesign, deployment, or any broader motion system.
 
 # Context
 
@@ -34,9 +45,9 @@ These are the current approved feedback defaults, not evidence for a broader ani
 4. **Keyboard-equivalent.** Pointer hover may enhance feedback, but focus receives an equally clear final state and no interaction depends on hover.
 5. **Reduced motion is complete.** Reduced motion reaches the same final visual states immediately, with no lost orientation or information.
 
-# Approved Candidate Behaviors
+# Approved Behaviors
 
-These are proposed candidates for a separately authorized MOT-01B implementation; they are not implemented or approved by this record.
+These behaviors are approved only for the bounded MOT-01B implementation. They remain optional feedback; static document meaning and focus visibility remain the source of truth.
 
 | Area | Candidate behavior | Purpose | Static requirement |
 | --- | --- | --- | --- |
@@ -51,13 +62,13 @@ The first implementation should retain the existing feedback tempo and introduce
 
 ```css
 --motion-fast: 140ms;
---motion-standard: 200ms;
+--motion-standard: 180ms;
 --motion-easing: ease-out;
 --motion-translation-max: 1px;
 ```
 
 - `140ms` aligns with the current `--duration-feedback` value for small link and navigation feedback.
-- `200ms` is reserved for a one-time local Evidence Trace target emphasis; it remains within VIS-02's proposed `160–220ms` range.
+- `180ms` is reserved for a one-time local Evidence Trace target emphasis; it remains within VIS-02's proposed `160–220ms` range.
 - `ease-out` retains the existing feedback character rather than importing a branded timing curve.
 - `1px` is a strict ceiling, not a default: navigation and text links should use no translation. Any use must be limited to an existing interactive surface and must not shift layout, obscure focus, or alter reading order.
 
@@ -76,9 +87,9 @@ The first implementation should retain the existing feedback tempo and introduce
 - Custom cursors, cursor replacement, WebGL, Canvas decoration, animation libraries, browser JavaScript, client directives, and motion runtimes.
 - Flashing, pulsing, or repeated Evidence Trace emphasis; motion-only meaning; or translation that creates layout shift or makes noninteractive content look actionable.
 
-# MOT-01B Proposed File Boundary
+# MOT-01B File Boundary
 
-The smallest candidate implementation is CSS-only:
+The approved implementation is CSS-only:
 
 - `src/styles/global.css` — shared motion tokens, existing link/navigation feedback, target emphasis, and reduced-motion behavior.
 
@@ -100,16 +111,14 @@ A separately authorized implementation must verify:
 - Desktop, 320px, and 200%–400% reflow preserve wrapping, focus visibility, and no ordinary horizontal overflow.
 - Reduced motion reaches all final states immediately and loses no content, relationship, or focus information.
 
+# Implementation Record
+
+MOT-01B implemented the approved shared CSS feedback in `src/styles/global.css`. Existing claim-heading fragment IDs were sufficient, so `src/components/EvidenceTrace.astro` remained unchanged. Translation was not used. Astro sync, check, and static build passed; local browser checks covered direct routes, 1440px and 320px reflow, visible keyboard focus, fragment targets, reduced motion, and JavaScript-disabled static output.
+
 # Deferred Motion
 
 Coordinated page continuity, any index-to-detail transition, scroll-independent section choreography, richer relationship visualization, and all browser-JavaScript or runtime-driven motion remain deferred. They require separate evidence of visitor value, accessibility and performance review, and a future owner decision; they are not MOT-01B candidates.
 
-# Owner Decisions Required
-
-1. Approve or reject the proposed CSS-only micro-feedback scope and token values (`140ms`, `200ms`, `ease-out`, `1px` maximum translation).
-2. Approve or reject a one-time, persistent Evidence Trace `:target` emphasis after intentional fragment navigation.
-3. Choose whether the first implementation must remain underline/color/border-only (`0px` translation in practice) or may use the proposed `1px` ceiling on an existing interactive surface after visual review.
-
 # Consequences
 
-Approval would authorize only a later, separately bounded MOT-01B implementation. It would preserve the calm editorial system by making motion a local confirmation mechanism rather than a visual identity redesign. Rejection leaves the current fully usable static feedback baseline intact.
+The approved implementation preserves the calm editorial system by making motion a local confirmation mechanism rather than a visual identity redesign. Richer motion remains deferred and requires a future owner decision.
