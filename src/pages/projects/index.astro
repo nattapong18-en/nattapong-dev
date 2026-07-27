@@ -5,7 +5,11 @@ import { getPublicContent } from "../../lib/public-content.ts";
 const { projects } = await getPublicContent();
 ---
 
-<BaseLayout title="Projects — Nattapong Sangsana" currentPath="/projects/">
+<BaseLayout
+  title="Projects — Nattapong Sangsana"
+  description="Nattapong Sangsana’s public engineering project records, with evidence, verification boundaries, and limitations."
+  currentPath="/projects/"
+>
   <div class="page-shell">
     <header class="page-intro">
       <p class="context-label">Public engineering record</p>

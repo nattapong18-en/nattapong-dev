@@ -588,8 +588,17 @@ Four public v0.1 records were authored later in the separately completed content
 - **Domain direction:** Canonical host: `https://nattapong.dev`; redirect `https://www.nattapong.dev` to the canonical host. Production branch: `main`. Git remote, DNS, certificate, and provider-account configuration remain **Not implemented**.
 - **Language and discovery boundary:** Initial release remains English-only; no `/en/`, `/th/`, language switcher, or localization architecture is selected. Technical indexability supports branded discovery for `nattapong.dev` and `Nattapong Sangsana`; it does not promise a ranking position.
 - **SEO readiness:** Unique meaningful page titles are **Ready**. Detail-page descriptions are present, but index-page descriptions are **Missing before launch**. Canonical URLs and production site-URL configuration, `robots.txt`, sitemap, and a custom 404 page are **Missing before launch**. Open Graph metadata and basic WebSite/Person structured data are **Safe to add after launch**. Internal links among implemented routes are **Ready**.
-- **Next bounded task:** DEP-01B — Implement the minimum launch SEO foundation is **Blocked** pending separate owner authorization. It should add only the missing canonical/site configuration, index descriptions, robots, sitemap, and 404 foundation; it must not deploy, configure DNS, create a remote, add localization, or claim search ranking.
+- **Next bounded task:** DEP-01B — Implement the minimum launch SEO foundation was **Blocked** pending separate owner authorization and is completed below.
 - **Boundary:** No deployment, remote, DNS, package, application, metadata, SEO, or configuration implementation occurred. The Now queue remains empty.
+
+**DEP-01B — Implement Minimum Launch SEO Foundation**
+**Status:** Done · **Priority:** P1
+
+- **Completion:** Added the bounded production site configuration, self-referencing canonical metadata, unique index-page descriptions, crawl-permitting `robots.txt`, deterministic static sitemap, and noindex custom 404 page. No dependency, browser JavaScript, analytics, Open Graph, structured data, localization, deployment, remote, or DNS change occurred.
+- **Indexable boundary:** The canonical sitemap contains only `/`, `/projects/`, `/projects/booking-api-source-review/`, `/learning/`, and `/learning/guided-http-threadpool-learning/` on `https://nattapong.dev`. The initial release remains English-only; About, Research, localization, and motion remain deferred.
+- **Validation:** Astro sync, check, and static build passed. The generated output was inspected for canonical metadata, unique non-empty descriptions, robots and sitemap linkage, 404 `noindex`, the approved route boundary, and absence of browser JavaScript.
+- **Deployment boundary:** Git remote, DNS, HTTPS, provider-account configuration, and production deployment remain **Not implemented**. Open Graph metadata and WebSite/Person structured data remain deferred.
+- **Next bounded task:** DEP-01C — Prepare GitHub and Cloudflare Pages Deployment remains **Blocked** pending separate owner authorization. The Now queue remains empty.
 
 **REL-01 — Prepare, deploy, and validate an approved release**  
 **Status:** Later · **Priority:** P1

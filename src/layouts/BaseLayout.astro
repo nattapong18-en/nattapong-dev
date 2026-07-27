@@ -6,9 +6,12 @@ interface Props {
   title: string;
   description?: string;
   currentPath: string;
+  noindex?: boolean;
 }
 
-const { title, description, currentPath } = Astro.props;
+const { title, description, currentPath, noindex = false } = Astro.props;
+const site = Astro.site ?? new URL("https://nattapong.dev");
+const canonicalUrl = new URL(currentPath, site).href;
 ---
 
 <!doctype html>
@@ -18,6 +21,8 @@ const { title, description, currentPath } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex" />}
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>

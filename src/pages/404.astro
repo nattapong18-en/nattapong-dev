@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page not found — Nattapong Sangsana"
+  description="The requested page is unavailable on nattapong.dev."
+  currentPath="/404.html"
+  noindex={true}
+>
+  <div class="page-shell">
+    <header class="page-intro">
+      <p class="context-label">Unavailable route</p>
+      <h1>Page not found</h1>
+      <p class="lede">
+        The requested page is unavailable. You can continue from one of the
+        current public records below.
+      </p>
+    </header>
+
+    <nav aria-label="Available public records">
+      <ul class="scope-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/learning/">Learning</a></li>
+      </ul>
+    </nav>
+  </div>
+</BaseLayout>

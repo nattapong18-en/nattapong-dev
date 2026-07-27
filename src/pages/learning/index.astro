@@ -5,7 +5,11 @@ import { getPublicContent } from "../../lib/public-content.ts";
 const { learning } = await getPublicContent();
 ---
 
-<BaseLayout title="Learning — Nattapong Sangsana" currentPath="/learning/">
+<BaseLayout
+  title="Learning — Nattapong Sangsana"
+  description="Guided learning records from Nattapong Sangsana, with changed understanding, current gaps, and explicit limitations."
+  currentPath="/learning/"
+>
   <div class="page-shell">
     <header class="page-intro">
       <p class="context-label">Public learning record</p>
