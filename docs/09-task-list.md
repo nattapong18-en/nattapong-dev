@@ -327,6 +327,16 @@ Four public v0.1 records were authored later in the separately completed content
 - **Production-review state:** CNT-01C remains incomplete pending fresh production review. Cloudflare Email Address Obfuscation remains an external configuration remediation; no Cloudflare setting was changed in this task.
 - **Queue boundary:** The Now queue remains empty; CNT-01D, Home Lab, and other tasks are not activated.
 
+**CNT-01B-R2 — Replace Contact Panel with Editorial Footer**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Replaced the homepage Contact panel with a quiet homepage-local editorial footer containing the approved identity context, Email and GitHub links, and copyright line.
+- **Files:** `src/pages/index.astro`, `src/styles/global.css`, `reference/decisions/CNT-01-minimal-contact-experience.md`, and `docs/09-task-list.md` only.
+- **Boundary:** The approved email and GitHub behavior remain unchanged. No shared footer, route, form, navigation item, icon, animation, analytics, browser JavaScript, or solicitation language was added.
+- **Production-review state:** CNT-01C remains incomplete pending fresh production review. Cloudflare Email Address Obfuscation remains an external configuration remediation; no Cloudflare setting was changed in this task.
+- **Queue boundary:** The Now queue remains empty; CNT-01D, Home Lab, and other tasks are not activated.
+
 # Later — Shared System Expansion
 
 **CMP-01 — Extract and document recurring shared components**  

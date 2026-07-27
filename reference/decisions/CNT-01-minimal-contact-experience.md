@@ -119,6 +119,10 @@ CNT-01B-R1 refined the existing Contact section after production review found th
 
 The Cloudflare Email Address Obfuscation finding remains an external configuration remediation. CNT-01C remains incomplete pending a fresh production review after the external setting and this refinement are deployed.
 
+# Editorial Footer Record
+
+CNT-01B-R2 replaces the homepage Contact panel with a homepage-local editorial footer. It preserves the same approved email and GitHub links, adds the approved name, role, and copyright context, and uses a restrained top divider rather than a contained card surface. The footer is not shared site chrome: it does not add a global footer, route, navigation item, form, icon, animation, analytics, browser JavaScript, or solicitation language. Email and GitHub remain two columns on desktop and stack naturally on narrow screens.
+
 # Consequences
 
 This proposal adds a small static contact affordance only after separate approval. It preserves the current public routes, navigation, visual identity, no-browser-JavaScript boundary, privacy limits, and Home Lab deferral. It does not promise availability or create a contact-processing system.
