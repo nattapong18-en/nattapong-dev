@@ -529,6 +529,23 @@ Four public v0.1 records were authored later in the separately completed content
 - **Prohibited:** Routine reveals, ambient motion, polish-only animation, unverified sequences.
 - **Documentation / report:** Purpose, mappings, checks, files, removed motion.
 
+**MOT-01A — Define Purposeful Motion Layer**
+
+**Status:** Done · **Priority:** P3
+
+- **Completion reason:** Defined a Proposed CSS-only feedback direction without implementing motion.
+- **Decision record:** `reference/decisions/MOT-01-purposeful-motion-layer.md`.
+- **Boundary:** Existing static behavior, routes, content, visual identity, browser-JavaScript boundary, and production deployment remain unchanged.
+- **Follow-up:** Owner review is required before a bounded implementation task can be authorized.
+
+**MOT-01B — Implement Purposeful Motion Layer**
+
+**Status:** Blocked · **Priority:** P3
+
+- **Blocker:** Owner approval of Proposed MOT-01 and separate implementation authorization.
+- **Proposed boundary:** Shared CSS only, with an Evidence Trace semantic hook only if demonstrably necessary; no JavaScript, package, route, content, or visual-identity redesign.
+- **Current state:** No motion implementation has occurred. The Now queue remains empty.
+
 ## Performance, Privacy, and Security
 
 **PERF-01 — Review performance and progressive enhancement**  
