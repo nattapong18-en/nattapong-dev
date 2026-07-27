@@ -246,8 +246,8 @@ Four public v0.1 records were authored later in the separately completed content
 
 - **Completion reason:** Compared the approved About, Research, and Learning public records against content readiness, visitor value, journal fit, route complexity, accessibility risk, honesty risk, reusability, and the smallest complete static slice.
 - **Output:** `reference/decisions/VRT-03-second-public-vertical-selection.md` — **Approved** through VRT-03A-R.
-- **Approved vertical:** Learning, with the approved route boundary `/learning/` and `/learning/guided-http-threadpool-learning/`. This is one approved vertical; the current implemented website remains `/`, `/projects/`, and `/projects/booking-api-source-review/`.
-- **Implementation boundary:** No implementation has occurred or is authorized. A separate bounded implementation authorization remains required.
+- **Approved vertical:** Learning, with the approved route boundary `/learning/` and `/learning/guided-http-threadpool-learning/`. This is one approved vertical; it was later implemented through VRT-03C.
+- **Implementation boundary:** No implementation occurred as part of VRT-03A. A separate bounded implementation authorization was required and was later provided for VRT-03C.
 - **Deferred candidates:** About remains deferred because its current complete record would substantially duplicate the homepage orientation. Research remains deferred because its mixed-language, preparation-only record requires separate rendering validation and especially careful uncertainty presentation.
 - **Queue boundary:** The Now queue remains empty; no implementation task, next vertical, route, or navigation work was activated.
 - **Files changed:** `reference/decisions/VRT-03-second-public-vertical-selection.md` and `docs/09-task-list.md`.
@@ -258,8 +258,33 @@ Four public v0.1 records were authored later in the separately completed content
 
 - **Completion reason:** Nattapong approved Learning as the second public vertical and approved `/learning/` and `/learning/guided-http-threadpool-learning/` as its exact route boundary.
 - **Decision record:** `reference/decisions/VRT-03-second-public-vertical-selection.md` — **Approved**.
-- **Implementation boundary:** No route, page, component, style, navigation, content, package, or configuration implementation occurred or is authorized. No additional Learning record or route is approved.
-- **Queue boundary:** The Now queue remains empty; a separate implementation authorization remains required.
+- **Implementation boundary:** No route, page, component, style, navigation, content, package, or configuration implementation occurred as part of VRT-03A-R. Its separate implementation authorization was later completed through VRT-03C; no additional Learning record or route is approved.
+- **Queue boundary:** The Now queue remains empty; no further implementation authorization is activated by this approval record.
+
+**VRT-03C — Implement Learning Public Vertical**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion:** Implemented in `bc6d7d372eb1766bd4222c32de3ec7132d3037e5` (`Implement Learning public vertical`).
+- **Route boundary:** `/learning/` and `/learning/guided-http-threadpool-learning/` were added to the existing static public website. Learning was added to the static primary navigation.
+- **Implementation outcome:** Existing shared routing, content validation, Evidence Trace, and visual foundation were extended for the approved Learning record. No browser JavaScript, package, or configuration was added.
+- **Validation:** Existing content fixtures, Astro sync, Astro check, and static build passed. The generated public boundary contains five static routes: `/`, `/projects/`, `/projects/booking-api-source-review/`, `/learning/`, and `/learning/guided-http-threadpool-learning/`.
+
+**VRT-03D — Review Learning Public Vertical**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion:** Completed as a read-only review with no Must fix issue and no Should improve issue.
+- **Review outcome:** Learning clearly communicates guided learning rather than expertise; the index and detail are sufficiently distinct; and Evidence Trace is appropriate for Learning.
+- **Validation:** Responsive, keyboard, text-spacing, no-JavaScript, and reduced-motion checks passed within the bounded review. No formal accessibility, screen-reader, cross-browser, physical-device, or Thai/mixed-language certification is claimed.
+
+**VRT-03E — Record Learning Public Vertical Completion**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion:** Learning public vertical completion recorded after VRT-03C implementation and VRT-03D read-only review.
+- **Current boundary:** The website contains five static public routes: `/`, `/projects/`, `/projects/booking-api-source-review/`, `/learning/`, and `/learning/guided-http-threadpool-learning/`.
+- **Queue and scope boundary:** About and Research remain deferred. No next vertical, implementation task, or deployment task is selected or activated; the Now queue remains empty.
 
 # Later — Shared System Expansion
 
