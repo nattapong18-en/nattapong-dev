@@ -299,6 +299,18 @@ Four public v0.1 records were authored later in the separately completed content
 - **Implementation boundary:** No route, content, navigation, component, CSS, package, configuration, deployment, or public claim was implemented. VRT-04B remains **Blocked** pending owner approval and reviewed first-record evidence.
 - **Queue boundary:** The Now queue remains empty; no implementation or other task is activated.
 
+## Minimal Contact Experience
+
+**CNT-01A — Define Minimal Contact Experience**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Compared a homepage block, shared footer links, dedicated contact route, and contact form against the current static site, identity boundary, privacy, accessibility, and maintenance scope.
+- **Output:** `reference/decisions/CNT-01-minimal-contact-experience.md` — **Proposed** and awaiting owner approval.
+- **Proposed direction:** A compact homepage-end Contact section with visible email and GitHub semantic links only. No availability, employment, client, internship, or collaboration language is proposed.
+- **Implementation boundary:** No contact UI, route, form, navigation, footer, CSS, JavaScript, package, configuration, deployment, or public content was implemented. CNT-01B remains **Blocked** pending owner approval.
+- **Queue and vertical boundary:** The Now queue remains empty. VRT-04B remains blocked because Home Lab has not started and its first record is not ready; no vertical or contact implementation task is activated.
+
 # Later — Shared System Expansion
 
 **CMP-01 — Extract and document recurring shared components**  
