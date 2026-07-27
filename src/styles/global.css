@@ -1,25 +1,29 @@
 /*
- * Concrete values in this file are reversible First Visual Vertical
- * implementation defaults, not approved permanent design tokens.
+ * Concrete values in this file are Approved, reversible VIS-02 implementation
+ * values and feedback defaults, not immutable permanent design tokens.
  */
 
 :root {
   color-scheme: light;
-  --color-page: #f5f3ed;
-  --color-surface: #fffefa;
-  --color-evidence-surface: #edf3ef;
-  --color-limitation-surface: #f6eee4;
-  --color-text: #202724;
-  --color-secondary-text: #52605a;
-  --color-accent: #235f50;
-  --color-accent-strong: #16483c;
-  --color-border: #cbd2cd;
-  --color-strong-border: #9a7650;
-  --color-focus: #9a4d00;
+  --color-page: #f4f1e8;
+  --color-surface: #fffdf8;
+  --color-evidence-surface: #e5f0ea;
+  --color-limitation-surface: #f8ede2;
+  --color-text: #1d2924;
+  --color-text-secondary: #4b5c54;
+  --color-border: #c8d1ca;
+  --color-accent: #126a59;
+  --color-focus: #a84708;
+  --color-limitation-text: #7a3e12;
+  --color-limitation-border: var(--color-focus);
+  --font-display:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Tahoma, "Noto Sans Thai", "Noto Sans", sans-serif;
   --font-body:
-    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Thai",
-    "Noto Sans", sans-serif;
-  --font-mono:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Tahoma, "Noto Sans Thai", "Noto Sans", sans-serif;
+  --font-metadata: var(--font-body);
+  --font-technical:
     ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --step--1: clamp(0.82rem, 0.8rem + 0.1vw, 0.9rem);
   --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.1rem);
@@ -34,6 +38,8 @@
   --measure-reading: 68ch;
   --measure-wide: 76rem;
   --radius-surface: 0.45rem;
+  --duration-feedback: 140ms;
+  --easing-feedback: ease-out;
 }
 
 *,
@@ -64,25 +70,34 @@ svg {
 }
 
 a {
-  color: var(--color-accent-strong);
+  color: var(--color-accent);
   text-decoration-line: underline;
   text-decoration-thickness: 0.09em;
   text-underline-offset: 0.18em;
+  transition:
+    color var(--duration-feedback) var(--easing-feedback),
+    text-decoration-thickness var(--duration-feedback) var(--easing-feedback),
+    text-underline-offset var(--duration-feedback) var(--easing-feedback),
+    background-color var(--duration-feedback) var(--easing-feedback),
+    border-color var(--duration-feedback) var(--easing-feedback),
+    box-shadow var(--duration-feedback) var(--easing-feedback);
 }
 
 a:hover {
-  text-decoration-thickness: 0.16em;
+  text-decoration-thickness: 0.14em;
+  text-underline-offset: 0.25em;
 }
 
 :focus-visible {
   outline: 0.2rem solid var(--color-focus);
-  outline-offset: 0.22rem;
+  outline-offset: 0.24rem;
 }
 
 h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-display);
   line-height: 1.15;
   text-wrap: balance;
 }
@@ -133,6 +148,7 @@ dd {
 
 .site-header {
   border-block-end: 1px solid var(--color-border);
+  background: var(--color-page);
 }
 
 .site-header__inner {
@@ -146,8 +162,10 @@ dd {
 
 .site-identity {
   color: var(--color-text);
+  font-family: var(--font-display);
   font-size: var(--step-0);
   font-weight: 750;
+  letter-spacing: -0.015em;
   text-decoration: none;
 }
 
@@ -161,12 +179,14 @@ dd {
   min-height: 2.75rem;
   padding: 0.55rem 0.8rem;
   border-radius: var(--radius-surface);
-  color: var(--color-secondary-text);
+  color: var(--color-text-secondary);
+  font-family: var(--font-metadata);
+  font-weight: 600;
   text-decoration: none;
 }
 
 .site-nav a[aria-current] {
-  background: var(--color-surface);
+  background: var(--color-evidence-surface);
   color: var(--color-text);
   font-weight: 700;
   box-shadow: inset 0 -0.18rem 0 var(--color-accent);
@@ -182,11 +202,12 @@ dd {
 
 .context-label {
   margin-block: 0 0.75rem;
-  color: var(--color-secondary-text);
-  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-family: var(--font-technical);
   font-size: var(--step--1);
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
 }
 
 .lede {
@@ -251,9 +272,11 @@ dd {
 .limitation-note {
   max-width: var(--measure-reading);
   padding: var(--space-component);
-  border: 1px solid var(--color-strong-border);
+  border: 1px solid var(--color-border);
+  border-inline-start: 0.25rem solid var(--color-limitation-border);
   border-radius: var(--radius-surface);
   background: var(--color-limitation-surface);
+  color: var(--color-limitation-text);
 }
 
 .home-boundary {
@@ -294,6 +317,8 @@ dd {
   display: grid;
   gap: var(--space-component);
   margin: 0;
+  padding-inline-start: var(--space-content);
+  border-inline-start: 0.18rem solid var(--color-accent);
 }
 
 .project-facts div {
@@ -302,9 +327,16 @@ dd {
 
 .project-facts dt,
 .technology-list strong {
-  color: var(--color-secondary-text);
+  color: var(--color-text-secondary);
+  font-family: var(--font-metadata);
   font-size: var(--step--1);
   font-weight: 750;
+}
+
+.project-facts dt {
+  color: var(--color-accent);
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
 }
 
 .project-facts dd {
@@ -389,5 +421,7 @@ dd {
   *::before,
   *::after {
     scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
   }
 }

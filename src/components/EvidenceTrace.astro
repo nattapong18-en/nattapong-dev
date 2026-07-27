@@ -283,7 +283,18 @@ const supportGroups = [...supportGroupsByRelationship.values()];
     display: grid;
     gap: var(--space-component);
     padding-block: var(--space-component);
+    padding-inline: clamp(0.75rem, 2vw, 1.25rem);
     border-block-end: 1px solid var(--color-border);
+    border-inline-start: 0.18rem solid transparent;
+    scroll-margin-block-start: 1rem;
+    transition:
+      background-color 180ms var(--easing-feedback),
+      border-color 180ms var(--easing-feedback);
+  }
+
+  .evidence-claim:target {
+    border-inline-start-color: var(--color-accent);
+    background: var(--color-evidence-surface);
   }
 
   .evidence-claim > * {
@@ -297,9 +308,12 @@ const supportGroups = [...supportGroupsByRelationship.values()];
 
   .evidence-claim__number {
     margin: 0 0 0.65rem;
-    color: var(--color-secondary-text);
-    font-family: var(--font-mono);
+    color: var(--color-accent);
+    font-family: var(--font-technical);
     font-size: var(--step--1);
+    font-weight: 700;
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
   }
 
   .evidence-claim__state {
@@ -321,9 +335,16 @@ const supportGroups = [...supportGroupsByRelationship.values()];
 
   .evidence-claim dt,
   .evidence-list dt {
-    color: var(--color-secondary-text);
+    color: var(--color-text-secondary);
+    font-family: var(--font-metadata);
     font-size: var(--step--1);
     font-weight: 700;
+  }
+
+  .evidence-claim dt {
+    color: var(--color-accent);
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
   }
 
   .evidence-claim dd,
@@ -361,6 +382,7 @@ const supportGroups = [...supportGroupsByRelationship.values()];
 
   .evidence-support h4 {
     margin-block: 0 0.75rem;
+    color: var(--color-accent);
     font-size: var(--step-0);
   }
 
@@ -377,7 +399,7 @@ const supportGroups = [...supportGroupsByRelationship.values()];
   }
 
   .evidence-support__applies span {
-    font-family: var(--font-mono);
+    font-family: var(--font-technical);
     font-size: var(--step--1);
     font-weight: 700;
   }
@@ -402,16 +424,24 @@ const supportGroups = [...supportGroupsByRelationship.values()];
 
   .source-list span {
     display: block;
-    color: var(--color-secondary-text);
+    color: var(--color-text-secondary);
+    font-family: var(--font-metadata);
     font-size: var(--step--1);
   }
 
   .claim-limitations,
   .additional-limitations {
     padding: var(--space-component);
-    border: 1px solid var(--color-strong-border);
+    border: 1px solid var(--color-border);
+    border-inline-start: 0.25rem solid var(--color-limitation-border);
     border-radius: var(--radius-surface);
     background: var(--color-limitation-surface);
+    color: var(--color-limitation-text);
+  }
+
+  .claim-limitations h4,
+  .additional-limitations h3 {
+    color: var(--color-limitation-text);
   }
 
   .additional-limitations h3 {
