@@ -306,10 +306,17 @@ Four public v0.1 records were authored later in the separately completed content
 **Status:** Done · **Priority:** P1
 
 - **Completion reason:** Compared a homepage block, shared footer links, dedicated contact route, and contact form against the current static site, identity boundary, privacy, accessibility, and maintenance scope.
-- **Output:** `reference/decisions/CNT-01-minimal-contact-experience.md` — **Proposed** and awaiting owner approval.
-- **Proposed direction:** A compact homepage-end Contact section with visible email and GitHub semantic links only. No availability, employment, client, internship, or collaboration language is proposed.
-- **Implementation boundary:** No contact UI, route, form, navigation, footer, CSS, JavaScript, package, configuration, deployment, or public content was implemented. CNT-01B remains **Blocked** pending owner approval.
-- **Queue and vertical boundary:** The Now queue remains empty. VRT-04B remains blocked because Home Lab has not started and its first record is not ready; no vertical or contact implementation task is activated.
+- **Output:** `reference/decisions/CNT-01-minimal-contact-experience.md` — **Approved** through CNT-01B.
+- **Approved direction:** A compact homepage-end Contact section with visible email and GitHub semantic links only. No availability, employment, client, internship, or collaboration language is present.
+
+**CNT-01B — Implement Minimal Contact Experience**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Implemented the approved semantic homepage Contact section with visible `zpoloa0@gmail.com`, `mailto:zpoloa0@gmail.com`, and the descriptive GitHub link to `https://github.com/nattapong18-en`.
+- **Boundary:** No contact route, form, footer, primary-navigation item, phone, additional social account, copy-to-clipboard interaction, solicitation language, analytics, or browser JavaScript was added. Home Lab remains deferred because it has not started and no first record is ready.
+- **Validation:** Astro sync, check, and static build passed. Generated output confirmed one homepage Contact section, approved links, unchanged five-route boundary, custom 404, robots, sitemap, no excluded route, and no browser JavaScript. Bounded homepage checks covered 1440px/320px reading order, focus, email wrapping, and JavaScript-disabled completeness.
+- **Queue boundary:** CNT-01 is complete within its approved scope. The Now queue remains empty; no production review, Home Lab, or other task is activated.
 
 # Later — Shared System Expansion
 

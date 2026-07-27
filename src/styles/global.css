@@ -312,6 +312,27 @@ dd {
   margin-block-start: 0;
 }
 
+.home-contact {
+  max-width: var(--measure-reading);
+  margin-block-start: var(--space-section);
+}
+
+.home-contact h2 {
+  margin-block-start: 0;
+}
+
+.home-contact ul {
+  display: grid;
+  gap: 0.5rem;
+  margin: var(--space-component) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-contact a {
+  overflow-wrap: anywhere;
+}
+
 .project-list {
   display: grid;
   gap: 0;

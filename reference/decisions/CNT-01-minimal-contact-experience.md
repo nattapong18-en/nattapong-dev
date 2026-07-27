@@ -3,13 +3,24 @@
 # Status
 
 - **Decision ID:** CNT-01
-- **Status:** Proposed
+- **Status:** Approved
 - **Decision owner:** Nattapong
 - **Scope:** A minimal static contact presentation using approved public contact data
-- **Implementation authorized:** No
-- **Owner approval required:** Yes
+- **Implementation authorized:** Yes — bounded static scope recorded below
+- **Owner approval required:** No — recorded below
 
 This proposal follows the [Project Vision](../../docs/00-project-vision.md), [Design DNA](../design-dna.md), [DEC-05 — Deployment, Analytics, and Privacy Direction](DEC-05-deployment-analytics-and-privacy-direction.md), the approved [VIS-01](VIS-01-nattapong-visual-direction.md) and [VIS-02](VIS-02-refined-visual-identity-direction.md) directions, the [Task List](../../docs/09-task-list.md), and the proposed [VRT-04](VRT-04-next-public-vertical.md) boundary. It does not select, authorize, or begin Home Lab work.
+
+# Owner Approval Record
+
+Nattapong approved:
+
+1. a compact Contact block near the end of the homepage;
+2. visible `zpoloa0@gmail.com` with `mailto:zpoloa0@gmail.com`;
+3. the descriptive GitHub-profile link to `https://github.com/nattapong18-en`; and
+4. continued deferral of a contact route, form, shared footer, primary-navigation item, additional contact fields, solicitation language, copy-to-clipboard interaction, and browser JavaScript.
+
+This approval authorizes only the bounded implementation below. It does not authorize Home Lab, another public vertical, deployment, DNS, analytics, or broader content changes.
 
 # Context
 
@@ -24,9 +35,9 @@ nattapong.dev is a public, static personal engineering record with a homepage th
 | Dedicated `/contact/` route | Gives contact its own direct-entry URL. | Insufficient content for a distinct page; adds route, navigation, metadata, and maintenance scope without improving the initial task. | Defer. |
 | Contact form | Could collect messages without exposing an address. | Requires submission handling, spam/abuse, privacy, accessibility, failure states, and likely third-party or server capability; none is approved. | Defer. |
 
-# Proposed Direction
+# Approved Direction
 
-Propose one compact **Contact** section near the end of the homepage, after the current orientation and boundary material. Its purpose is only: provide the approved ways to find or contact Nattapong. It must use semantic text links, retain the current calm editorial structure, and remain complete in static HTML.
+Use one compact **Contact** section near the end of the homepage, after the current orientation and boundary material. Its purpose is only: provide the approved ways to find or contact Nattapong. It must use semantic text links, retain the current calm editorial structure, and remain complete in static HTML.
 
 # Purpose and Placement
 
@@ -67,14 +78,14 @@ The approved email is intentionally public for this bounded presentation; it mus
 
 Do not add a primary-navigation item, dedicated contact route, footer, or mobile-menu behavior. The existing Home, Projects, and Learning navigation remains unchanged. A later revisit requires demonstrated content or visitor need and a separate decision.
 
-# CNT-01B Proposed File Boundary
+# CNT-01B Implementation File Boundary
 
-CNT-01B remains blocked pending owner approval. The smallest likely implementation boundary is:
+CNT-01B is authorized within this exact boundary:
 
 - modify `src/pages/index.astro` to add the semantic Contact region using only the two approved links;
 - modify `src/styles/global.css` only if existing homepage, link, focus, spacing, and responsive rules cannot present that region coherently.
 
-No shared layout, header, route, form handler, package, configuration, analytics, deployment, DNS, content-record, or browser-JavaScript change is proposed.
+No shared layout, header, route, form handler, package, configuration, analytics, deployment, DNS, content-record, or browser-JavaScript change is authorized.
 
 # Validation Requirements
 
@@ -91,12 +102,16 @@ A later implementation authorization should require:
 
 Deferred: shared footer; `/contact/`; contact form; mail-delivery provider; CAPTCHA; anti-spam service; analytics; contact preferences; availability or solicitation language; response-time statement; icons; additional social accounts; location or phone contact; Home Lab implementation; localization; and further public verticals.
 
-# Owner Decisions Required
+# Approved Owner Decisions
 
-1. Approve the homepage-end Contact block rather than a shared footer.
-2. Approve visible `zpoloa0@gmail.com` with a static `mailto:` link.
-3. Approve the descriptive GitHub-profile link to `https://github.com/nattapong18-en`.
-4. Confirm that a route, form, solicitation language, and additional contact fields remain deferred.
+1. Homepage-end Contact block rather than a shared footer.
+2. Visible `zpoloa0@gmail.com` with a static `mailto:` link.
+3. Descriptive GitHub-profile link to `https://github.com/nattapong18-en`.
+4. Continued deferral of a route, form, solicitation language, and additional contact fields.
+
+# Implementation Record
+
+CNT-01B added one semantic homepage Contact section after the existing primary and boundary content. It uses the approved visible email, static `mailto:` link, and descriptive GitHub link. The bounded `global.css` adjustment supplies section rhythm and safe long-link wrapping; no route, form, footer, navigation item, browser JavaScript, analytics, or solicitation language was added. Validation is recorded in the Task List.
 
 # Consequences
 
