@@ -589,6 +589,24 @@ Four public v0.1 records were authored later in the separately completed content
 - **Validation:** Astro sync, check, and static build passed. Generated HTML checks confirmed exact social-tag counts and source-value reuse on all five indexable routes, valid homepage-only WebSite and Person JSON-LD, preserved 404 `noindex`, no image/account metadata, and no browser JavaScript files.
 - **Current state:** The Now queue remains empty; no production review or further task is activated.
 
+**SEO-03C — Review Production Social Metadata and Structured Data**
+
+**Status:** Done · **Priority:** P2
+
+- **Completion reason:** Production review confirmed that all five approved routes passed required Open Graph and Twitter metadata duplicate and value checks; homepage-only WebSite and Person JSON-LD parsed successfully; privacy and public-claim boundaries passed; and no executable browser JavaScript was found.
+- **Production boundary:** The custom unknown route returns HTTP 404 with `noindex`; `robots.txt` and `sitemap.xml` return HTTP 200. No Must fix or Should improve finding remains.
+- **Boundary:** The review made no repository, deployment, DNS, or Cloudflare change.
+
+**SEO-03D — Record Production Social Metadata Completion**
+
+**Status:** Done · **Priority:** P2
+
+- **Completion reason:** Recorded completion of the SEO-03 track within its approved static metadata and homepage structured-data scope. No remaining production blocker exists.
+- **Approved boundary:** Each of the five indexable routes emits `og:type=website`, `og:site_name=nattapong.dev`, `og:title`, `og:description`, `og:url`, and `og:locale=en_US`; plus `twitter:card=summary`, `twitter:title`, and `twitter:description`. The homepage alone emits static WebSite JSON-LD (`@context`, `@type`, `name`, `url`, `description`) and Person JSON-LD (`@context`, `@type`, `name`, `url`, `jobTitle`, `affiliation`, country-level Thailand location, GitHub-only `sameAs`).
+- **Privacy boundary:** No email in JSON-LD, social image, Twitter/X account, phone, exact address, `knowsAbout`, `SearchAction`, ratings, reviews, awards, or unsupported professional claim is present.
+- **Deferred scope:** Social image asset creation, `og:image`, `twitter:image`, richer schema types, Article, CreativeWork, BreadcrumbList, Open Graph expansion, localization, About, Research, additional public verticals, analytics, and ranking analysis or guarantees remain deferred.
+- **Current state:** SEO-03 is complete within its approved scope. The Now queue remains empty; no further SEO, route, localization, or public-vertical task is activated.
+
 ## Performance, Privacy, and Security
 
 **PERF-01 — Review performance and progressive enhancement**  
