@@ -238,6 +238,20 @@ Four public v0.1 records were authored later in the separately completed content
 - **Prohibited:** Broad page-family buildout or motion before static acceptance.
 - **Documentation / report:** Changed files, checks, discovered structural problems, and authorized decision updates.
 
+## Second Public Vertical Selection
+
+**VRT-03A — Select Second Public Vertical**
+
+**Status:** Done · **Priority:** P1
+
+- **Completion reason:** Compared the approved About, Research, and Learning public records against content readiness, visitor value, journal fit, route complexity, accessibility risk, honesty risk, reusability, and the smallest complete static slice.
+- **Output:** `reference/decisions/VRT-03-second-public-vertical-selection.md` — **Proposed — Awaiting Owner Approval**.
+- **Proposed vertical:** Learning, with the proposed route boundary `/learning/` and `/learning/guided-http-threadpool-learning/`. This is one proposed vertical; the current implemented website remains `/`, `/projects/`, and `/projects/booking-api-source-review/`.
+- **Implementation boundary:** No implementation is authorized. Owner approval and a separate bounded implementation authorization remain required.
+- **Deferred candidates:** About remains deferred because its current complete record would substantially duplicate the homepage orientation. Research remains deferred because its mixed-language, preparation-only record requires separate rendering validation and especially careful uncertainty presentation.
+- **Queue boundary:** The Now queue remains empty; no implementation task, next vertical, route, or navigation work was activated.
+- **Files changed:** `reference/decisions/VRT-03-second-public-vertical-selection.md` and `docs/09-task-list.md`.
+
 # Later — Shared System Expansion
 
 **CMP-01 — Extract and document recurring shared components**  
